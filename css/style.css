@@ -168,13 +168,13 @@ button::-moz-focus-inner {
 	position:relative;
 	z-index:10;
 	margin:0 0 17px;
-	background:url('../img/header_bg.png') repeat-x top;
+	background:url('../img/header_bg.png') repeat-x bottom;
 	border-bottom:3px solid #dfdfde;
 }
 .header > div {
 	position:relative;
 	width:960px;
-	height:57px;
+	height:59px;
 	margin:0 auto;
 }
 .header .logo {
@@ -182,13 +182,13 @@ button::-moz-focus-inner {
 	left:0;
 	top:0;
 	width:317px;
-	height:101px;
+	height:103px;
 	background:url('../img/header_logo.png') no-repeat left top;
 }
 .header .logo img {
 	position:absolute;
 	left:19px;
-	top:4px;
+	top:6px;
 }
 .header .logo .city {
 	position:absolute;
@@ -208,10 +208,27 @@ button::-moz-focus-inner {
 .header .logo .city:hover span {
 	border-bottom:1px dashed transparent;
 }
+.header .logo .language {
+	position:absolute;
+	right:43px;
+	top:60px;
+	color:#4b4b4b;
+	font-size:12px;
+	line-height:15px;
+	cursor:pointer;
+	background:none;
+}
+.header .logo .language span {
+	display:block;
+	border-bottom:1px dashed #4b4b4b;
+}
+.header .logo .language:hover span {
+	border-bottom:1px dashed transparent;
+}
 .header .user {
 	position:absolute;
 	left:334px;
-	top:17px;
+	top:19px;
 	padding:0 0 0 16px;
 	margin:0;
 	background:url('../img/header_user.png') no-repeat left 3px;
@@ -222,7 +239,7 @@ button::-moz-focus-inner {
 	line-height:17px;
 	padding:0 0 0 7px;
 	margin:0 0 0 5px;
-	background:url('../img/header_user_li.png') no-repeat left 3px;
+	background:url('../img/header_user_li.png') no-repeat left 4px;
 }
 .header .user li:first-child {
 	padding-left:0;
@@ -240,7 +257,7 @@ button::-moz-focus-inner {
 .header .nav {
 	position:absolute;
 	right:216px;
-	top:16px;
+	top:18px;
 	margin:0;
 }
 .header .nav li {
@@ -263,7 +280,7 @@ button::-moz-focus-inner {
 .header .add {
 	position:absolute;
 	right:0;
-	top:14px;
+	top:16px;
 	width:188px;
 	color:#ffffff;
 	font-size:18px;
@@ -276,6 +293,149 @@ button::-moz-focus-inner {
 }
 .header .add:hover {
 	background-position:0 -27px;
+}
+.header .userpanel {
+	display:none;
+	position:absolute;
+	left:334px;
+	width:626px;
+	top:6px;
+	margin:0;
+}
+.header .userpanel li {
+	float:left;
+	padding:0 0 0 20px;
+	margin:0 0 0 18px;
+}
+.header .userpanel li:first-child {
+	margin-left:0;
+}
+.header .userpanel li a {
+	color:#ffffff;
+	text-decoration:none;
+}
+.header .userpanel li a:hover {
+	text-decoration:underline;
+}
+.header .userpanel .messages {
+	width:102px;
+	background:url('../img/userpanel_messages_icon.png') no-repeat left 2px;
+}
+.header .userpanel .notifications {
+	width:116px;
+	background:url('../img/userpanel_notification_icon.png') no-repeat left 2px;
+}
+.header .userpanel .mytasks {
+	width:94px;
+	background:url('../img/userpanel_mytasks_icon.png') no-repeat left 2px;
+}
+.header .userpanel .todotasks {
+	width:92px;
+	background:url('../img/userpanel_todotasks_icon.png') no-repeat left 2px;
+}
+.header .userpanel .profile {
+	width:50px;
+	background:url('../img/userpanel_profile_icon.png') no-repeat left 2px;
+}
+.header.autorized .userpanel {
+	display:block;
+}
+.header.autorized > div {
+	height:86px;
+}
+.header.autorized .logo {
+	height:130px;
+	background:url('../img/header_autorized_logo.png') no-repeat left top;
+}
+.header.autorized .logo img {
+	top:24px;
+}
+.header.autorized .logo .city {
+	top:84px;
+}
+.header.autorized .logo .language {
+	top:84px;
+}
+.header.autorized .user {
+	top:47px;
+	background:url('../img/header_autorized_user.png') no-repeat left 3px;
+}
+.header.autorized .user li a {
+	border-bottom:1px solid #ffffff;
+}
+.header.autorized .user li a:hover {
+	border-bottom:1px solid transparent;
+}
+.header.autorized .nav {
+	top:46px;
+}
+.header.autorized .add {
+	top:44px;
+}
+.header.fixed {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	background:#026947;
+	border-bottom-width:0;
+}
+.header.fixed > div {
+	height:28px;
+}
+.header.fixed .logo {
+	display:none;
+}
+.header.fixed .user {
+	left:0;
+	top:4px;
+}
+.header.fixed .popup {
+	top:48px;
+	margin-left:-500px;
+}
+.header.fixed .popup.registration {
+	margin-left:-438px;
+}
+.header.fixed .nav {
+	top:3px;
+	right:196px;
+}
+.header.fixed .add {
+	top:0;
+	width:auto;
+	line-height:25px;
+	padding:0;
+	background:none;
+}
+.header.fixed .add:hover {
+	background-position:0 0;
+}
+.header.fixed span {
+	border-bottom:1px solid #ffffff;
+}
+.header.fixed:hover span {
+	border-bottom:1px solid transparent;
+}
+.header.autorized.fixed .user {
+	display:none;
+}
+.header.autorized.fixed .userpanel {
+	left:0;
+	top:6px;
+	width:554px;
+}
+.header.autorized.fixed .userpanel .messages {
+	width:84px;
+}
+.header.autorized.fixed .userpanel .notifications {
+	width:98px;
+}
+.header.autorized.fixed .userpanel .mytasks {
+	width:76px;
+}
+.header.autorized.fixed .userpanel .todotasks {
+	width:74px;
 }
 
 /* Index */
@@ -3378,7 +3538,7 @@ button::-moz-focus-inner {
 	display:none;
 	position:absolute;
 	left:50%;
-	top:51px;
+	top:53px;
 	width:344px;
 	padding:12px 21px 2px 19px;
 	margin-left:-166px;

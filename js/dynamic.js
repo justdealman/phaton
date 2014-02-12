@@ -41,6 +41,29 @@
 	    $('.reviewu > div > span').css({'left': rm+'px'});
     }
 });
+function float() {
+	if ($('.header').hasClass('autorized')) {
+		var headerheight = 116;
+	}
+	else {
+		var headerheight = 79;
+	}
+
+	if ($(window).scrollTop() > headerheight) {
+		$('.header').addClass('fixed');
+		$('.wrapper').css({'padding-top': headerheight+'px'});
+	}
+	else {
+		$('.header').removeClass('fixed');
+		$('.wrapper').css({'padding-top': '0'});
+	}
+}
+$(window).scroll(function(){
+	float();
+});
+$(window).load(function(){
+	float();
+});
 $(document).ready(function() {
 	$('.index .carousel').jcarousel({
 		scroll: 1,
@@ -216,16 +239,28 @@ $(document).ready(function() {
 	/* Added 09 Jan 2014 */
 	$('.header .popup .form .tip, .header .popup .options > div > div').append('<span></span>');
 	$('.header .popup').append('<span class="arrow"></span><span class="close"></span>');
-	$('.header .user .login a').click(function() {
+	$('.header .user .login a').click(function(event) {
 		$('.header .popup.registration').slideUp(0);
 		$('.header .popup.login').slideToggle(0);
+		$(this).parent().siblings().removeClass('active');
 		$(this).parent().toggleClass('active');
+		$('html').one('click',function() {
+			$('.header .popup').slideUp(0);
+			$('.header .user li').removeClass('active');
+		});
+		event.stopPropagation();
 		return false;
 	});
-	$('.header .user .registration a').click(function() {
+	$('.header .user .registration a').click(function(event) {
 		$('.header .popup.login').slideUp(0);
 		$('.header .popup.registration').slideToggle(0);
+		$(this).parent().siblings().removeClass('active');
 		$(this).parent().toggleClass('active');
+		$('html').one('click',function() {
+			$('.header .popup').slideUp(0);
+			$('.header .user li').removeClass('active');
+		});
+		event.stopPropagation();
 		return false;
 	});
 	$('.header .popup .close').click(function() {
