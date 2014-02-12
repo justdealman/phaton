@@ -1,0 +1,306 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="249" height="51" alt="">
+					<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="registration">
+				<div class="warning">
+					<h3>Внимание!</h3>
+					<p>Мы проводим удаленную верификацию всех исполнителей. Пожалуйста, перед заполнением формы проверьте, что у вас имеется: отсканированная копия или фотокопия 2-5 страниц паспорта, ваше фото с открытым паспортом, для физических лиц дополнительно копия квитанции за коммунальные услуги для подтверждения адреса; для юридических лиц дополнительно копия ИНН, копия квитанции за коммунальные услуги для подтверждения адреса — если фактический адрес не совпадает с адресом регистрации.</p>
+					<p>Мы гарантируем конфиденциальность полученных сведений.</p>
+					<p>При попытке фальсификации копий или нарушений правил работы в системе администратор вправе запретить Вам использование сервиса. Мы искренне надеемся, что этого не произойдет. Успехов в работе!</p>
+				</div>
+				<div>
+					<div>
+						<p>* Тип исполнителя:</p>
+						<select>
+							<option>Физическое лицо</option>
+							<option>Физическое лицо</option>
+						</select>
+					</div>
+					<div>
+						<p>* Тип исполнителя:</p> <input type="text" value="Ивашина">
+					</div>
+					<div>
+						<p>* Имя:</p> <input type="text" value="Люся">
+					</div>
+					<div>
+						<p>Отчество:</p> <input type="text">
+					</div>
+					<div>
+						<p>Дата рождения:</p>
+						<span class="day">
+							<select>
+								<option>5</option>
+								<option>5</option>
+							</select>
+						</span>
+						<span class="month">
+							<select>
+								<option>августа</option>
+								<option>августа</option>
+							</select>
+						</span>
+						<span class="year">
+							<select>
+								<option>1988</option>
+								<option>1988</option>
+							</select>
+						</span>
+					</div>
+					<div class="photo">
+						<p>Фото:</p>
+						<img src="./img/registration_photo.png" width="149" height="104" alt="">
+						<p><a href="#">Выбрать другое фото</a> <span>JPG, PNG, не более 5 Мб.</span></p>
+					</div>
+					<div>
+						<p>* Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
+					</div>
+					<div>
+						<p>* E-mail:</p> <input type="text" value="ivashina@gmail.com">
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>* Специализации: <span>Максимум - 10</span></p>
+						<select>
+							<option></option>
+							<option>Специализация 1</option>
+						</select>
+						<p class="list"><span>Перевод текстов <em></em></span> <span>Парикмахер <em></em></span></p>
+					</div>
+					<div>
+						<p>* Средняя цена в час:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
+					</div>
+					<div>
+						<p>Описание:</p>
+						<div class="description">
+							<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! А еще я пишу статьи. Обращайтесь :)</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2>Где вы находитесь?</h2>
+					<div>
+						<p>* Посткод:</p> <input type="text">
+					</div>
+					<div>
+						<p>* Город/край/поселок:</p> <input type="text">
+					</div>
+					<div>
+						<p>* Улица/проезд/переулок:</p> <input type="text"> <p>* Дом:</p> <input type="text" class="number">
+					</div>
+					<div class="map">
+						<p>* Адрес на карте:</p>
+						<div>
+							<div>
+								<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+								<script charset="utf-8" type="text/javascript">new DGWidgetLoader({"width":"720","height":"257","wid":"5515467363f70dcad27b414b86a1444e","pos":{"lon":"83.674747297387","lat":"53.330397051188","zoom":"15"},"opt":{"ref":"hidden","card":["name","contacts"],"city":"barnaul"},"org":[{"id":"563479234547619"}]});</script>
+							</div>
+							<p>Вы можете скорректирвоать положение метки, перетаскивая ее мышью.</p>
+							<p><i>Совет: Если Вы беспокоитесь о конфиденциальности адреса, сместите метку немного в сторону от точного адреса</i></p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2>Где вы готовы работать?</h2>
+					<p>Вы можете выбрать неограниченное количество населенных пунктов, в которые Вы готовы выехать для работы.</p>
+					<div>
+						<p>* Город/край/поселок:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
+						<p class="list"><span>Санкт-Петербург <em></em></span> <span>Одинцово <em></em></span></p>
+					</div>
+				</div>
+				<div>
+					<h2>Верификация</h2>
+					<p>Мы проводим удаленную проверку исполнителей, чтобы заказчики могли доверять Вам через наши гарантии. Данные строго конфиденциальны и раскрываются правоохранительным органам только по запросу суда в случае доказанного причинения вреда имуществу или здоровью заказчика.</p>
+					<div>
+						<p>* Копии паспорта: <span>Непустые развороты</span></p>
+						<div class="files">
+							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
+							<ul>
+								<li>Страница 1.jpg</li>
+								<li>Страница 2.jpg</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<p>* Ваше фото с паспортом: <span>Разворот с Вашим ФИО</span></p>
+						<div class="files">
+							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
+							<ul>
+								<li>Я с паспортом</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<p>* Подтверждение адреса: <span>Квитанция за коммунальные услуги</span></p>
+						<div class="files">
+							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
+							<ul>
+								<li>Квитанция.jpg</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>* Пароль:</p> <input type="text">
+					</div>
+					<div>
+						<p>* Повторите пароль:</p> <input type="text">
+					</div>
+					<p class="agreement"><input type="checkbox" checked> Я согласен с <a href="#">правилами использования серсива</a></p>
+				</div>
+				<button class="submit">Зарегистрироваться</button>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+					<li>
+						<ul>
+							<li><a href="#">Исполнители</a></li>
+							<li><a href="#">Задачи</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">О компании</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Условия использования</a></li>
+							<li><a href="#">Правила сервиса</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>

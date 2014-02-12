@@ -1,0 +1,364 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="249" height="51" alt="">
+					<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="goback">
+				<p><a href="#">Вернуться к списку задач</a></p>
+			</div>
+			<div class="grid">
+				<div class="col3">
+					<div class="taski">
+						<h3><span class="number">Задача N 1256547</span> <span class="stage searching">Идет поиск исполнителя</span> <span class="deadline soon">01:12:50</span></h3>
+						<h1>Отвезти договор из Ботанический сад до Химки <span class="like"></span></h1>
+						<h5><span class="address">Москва, 2-я Брестская ул. 37 - м. Пушкинская (15 км)</span> <span class="price">Вы получите: <strong>1100<em>o</em></strong></span></h5>
+						<ul class="requirements">
+							<li><strong>Выполнить с</strong> 21.09.2013 12:00 <strong>по</strong> 28.09.2013 18:00</li>
+							<li><strong>Задача актуальна</strong> до 28.09.2013</li>
+							<li><strong>При себе иметь 2000 рублей</strong> на оплату товара.</li>
+						</ul>
+						<p>Эта недавно отремонтированная квартира предлагает идеальное размещение для одного или пары со спальней, гостиной, столовой, bethroom и в комплекте с полностью оборудованной кухней кошерного размера. В нескольких минутах ходьбы от пляжа, рынка и центра города, это прекрасное место, чтобы прийти и насладиться красивым городом сторону пляжа Нетании. Ранее доме благочестивой раввин Иегуда Лусон, эта квартира приносит удачу тем, кто проживает там :)</p>
+						<div class="more">
+							<p>Эта недавно отремонтированная квартира предлагает идеальное размещение для одного или пары со спальней, гостиной, столовой, bethroom и в комплекте с полностью оборудованной кухней кошерного размера. В нескольких минутах ходьбы от пляжа, рынка и центра города, это прекрасное место, чтобы прийти и насладиться красивым городом сторону пляжа Нетании. Ранее доме благочестивой раввин Иегуда Лусон, эта квартира приносит удачу тем, кто проживает там :)</p>
+							<p>Эта недавно отремонтированная квартира предлагает идеальное размещение для одного или пары со спальней, гостиной, столовой, bethroom и в комплекте с полностью оборудованной кухней кошерного размера. В нескольких минутах ходьбы от пляжа, рынка и центра города, это прекрасное место, чтобы прийти и насладиться красивым городом сторону пляжа Нетании. Ранее доме благочестивой раввин Иегуда Лусон, эта квартира приносит удачу тем, кто проживает там :)</p>
+						</div>
+						<p class="more"><span class="show"><a href="#">Показать полностью</a></span> <span class="data">Сегодня в 15:27</span></p>
+						<ul class="files">
+							<li class="pdf"><a href="#">Пропуск</a> (pdf, 3.5 Мб)</li>
+							<li class="xls"><a href="#">План проезда</a> (xls, 1.2 Мб)</li>
+						</ul>
+					</div>
+					<div class="offers">
+						<h2>Предложения (5) <span class="add"><a href="#">Добавить предложение</a></span></h2>
+						<div>
+							<div class="th">
+								<p class="price up">Показать полностью</p>
+								<p class="name"><span>Исполнитель</span></p>
+								<p class="deadline"><span>Срок действия</span></p>
+							</div>
+							<div class="td">
+								<div class="short">
+									<p class="price"><strong>400</strong> руб</p>
+									<p class="name"><a href="#">Роман Реутов</a></p>
+									<p class="deadline soon"><span>01:12:50</span></p>
+									<p class="more"><span>Подробности</span></p>
+									<p class="less"><span>Свернуть подробности</span></p>
+								</div>
+								<div class="more">
+									<div>
+										<div class="description">
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей), и оплачиваете курьеру 300 рублей при получении груза. Курьер также доставит документы, подтверждающие грузоперевозку.</p>
+										</div>
+										<div class="buttons">
+											<button class="accept">Принять предложение</button>
+											<button class="trade">Торговаться</button>
+										</div>
+									</div>
+									<h4>
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+										<span class="like active"></span>
+									</h4>
+								</div>
+							</div>
+							<div class="td">
+								<div class="short">
+									<p class="price"><strong>380</strong> руб</p>
+									<p class="name"><a href="#">Люся Ивашина</a></p>
+									<p class="deadline far"><span>До 18 сентября</span></p>
+									<p class="more"><span>Подробности</span></p>
+									<p class="less"><span>Свернуть подробности</span></p>
+								</div>
+								<div class="more">
+									<div>
+										<div class="description">
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей), и оплачиваете курьеру 300 рублей при получении груза. Курьер также доставит документы, подтверждающие грузоперевозку.</p>
+										</div>
+										<div class="buttons">
+											<button class="accept">Принять предложение</button>
+											<button class="trade">Торговаться</button>
+										</div>
+									</div>
+									<h4>
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+										<span class="like active"></span>
+									</h4>
+								</div>
+							</div>
+							<div class="td active">
+								<div class="short">
+									<p class="price"><strong>300</strong> руб</p>
+									<p class="name"><a href="#">TRANCO</a></p>
+									<p class="deadline medium"><span>06:14:10</span></p>
+									<p class="more"><span>Подробности</span></p>
+									<p class="less"><span>Свернуть подробности</span></p>
+								</div>
+								<div class="more">
+									<div>
+										<div class="description">
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей), и оплачиваете курьеру 300 рублей при получении груза. Курьер также доставит документы, подтверждающие грузоперевозку.</p>
+										</div>
+										<div class="buttons">
+											<button class="accept">Принять предложение</button>
+											<button class="trade">Торговаться</button>
+										</div>
+									</div>
+									<h4>
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+										<span class="like active"></span>
+									</h4>
+								</div>
+							</div>
+							<div class="td old">
+								<div class="short">
+									<p class="price"><strong>380</strong> руб</p>
+									<p class="name"><a href="#">Роман Петров</a></p>
+									<p class="deadline"><span>Недействительно</span></p>
+									<p class="more"><span>Подробности</span></p>
+									<p class="less"><span>Свернуть подробности</span></p>
+								</div>
+								<div class="more">
+									<div>
+										<div class="description">
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей), и оплачиваете курьеру 300 рублей при получении груза. Курьер также доставит документы, подтверждающие грузоперевозку.</p>
+										</div>
+										<div class="buttons">
+											<button class="accept">Принять предложение</button>
+											<button class="trade">Торговаться</button>
+										</div>
+									</div>
+									<h4>
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+										<span class="like active"></span>
+									</h4>
+								</div>
+							</div>
+							<div class="td">
+								<div class="short">
+									<p class="price"><strong>300</strong> руб</p>
+									<p class="name"><a href="#">Александра Попова</a></p>
+									<p class="deadline far"><span>15:10:55</span></p>
+									<p class="more"><span>Подробности</span></p>
+									<p class="less"><span>Свернуть подробности</span></p>
+								</div>
+								<div class="more">
+									<div>
+										<div class="description">
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей), и оплачиваете курьеру 300 рублей при получении груза. Курьер также доставит документы, подтверждающие грузоперевозку.</p>
+										</div>
+										<div class="buttons">
+											<button class="accept">Принять предложение</button>
+											<button class="trade">Торговаться</button>
+										</div>
+									</div>
+									<h4>
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+										<span class="like active"></span>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col1">
+					<div class="map">
+						<div>
+							<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+							<script charset="utf-8" type="text/javascript">new DGWidgetLoader({"width":"234","height":"235","wid":"5515467363f70dcad27b414b86a1444e","pos":{"lon":"83.674747297387","lat":"53.330397051188","zoom":"15"},"opt":{"ref":"hidden","card":["name","contacts"],"city":"barnaul"},"org":[{"id":"563479234547619"}]});</script>
+						</div>
+					</div>
+					<div class="hirercard">
+						<h3>Заказчик</h3>
+						<div>
+							<div>
+								<img src="./img/hirer1.jpg" width="234" height="162" alt="">
+							</div>
+							<h2><a href="#">Ольга Романовская</a></h2>
+							<p>Москва, 38 лет</p>
+							<h4>
+								<span class="thumbsup" title="кол-во поставленных задач">1025</span>
+								<span class="reviews" title="кол-во отзывов">
+									<em class="positive"><a href="#">954</a></em>
+									<em class="negative"><a href="#">12</a></em>
+								</span>
+							</h4>
+						</div>
+						<p><a href="#">Отправить сообщение</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+					<li>
+						<ul>
+							<li><a href="#">Исполнители</a></li>
+							<li><a href="#">Задачи</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">О компании</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Условия использования</a></li>
+							<li><a href="#">Правила сервиса</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>

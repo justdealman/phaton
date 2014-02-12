@@ -1,0 +1,313 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="249" height="51" alt="">
+					<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="goback">
+				<p><a href="#">Вернуться к списку исполнителей</a></p>
+			</div>
+			<div class="useri">
+				<div class="important">
+					<div>
+						<img src="./img/user.jpg" width="250" height="207" alt="">
+					</div>
+					<p class="givetask"><a href="#">Назначить задачу</a></p>
+					<p class="message"><a href="#">Отправить сообщение</a></p>
+					<p class="favorite"><a href="#">Люся у вас в избранном</a></p>
+				</div>
+				<div class="information">
+					<div class="name">
+						<h1>Люся Ивашина Люся Ивашина Люся Ивашина</h1>
+						<p class="activity free" title="исполнитель свободен">Free</p>
+						<p class="status online" title="исполнитель онлайн"><span></span> Online</p>
+					</div>
+					<div class="data">
+						<p>24 года; Московская область, Одинцово, пр. Ленина, 95</p>
+						<p class="experience">На сайте 3 года 2 мес.</p>
+					</div>
+					<div class="description">
+						<div class="quality">
+							<h4>
+								<span class="rating" title="рейтинг">9,2</span>
+								<span class="reviews" title="кол-во отзывов">
+									<em class="positive"><a href="#">954</a></em>
+									<em class="negative"><a href="#">12</a></em>
+								</span>
+								<span class="thumbsup" title="кол-во выполенных задач">1025</span>
+							</h4>
+							<p>Качество: 8,1</p>
+							<p>Вежливость: 10</p>
+							<p>Цена: 7,1</p>
+						</div>
+						<p class="price">1100<em>o</em></p>
+						<p class="services">Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+						<p class="places"><span>Готова работать в городах:</span> Одинцово, Реутово, Москва, Химки <a href="#">и еще 3 города</a></p>
+						<div class="about">
+							<div>
+								<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания!</p>
+							</div>
+						</div>
+					</div>
+					<ul class="achievements">
+						<li><img src="./img/achievement1_icon.png" width="63" height="64" alt=""> Выполнить 1000 задач</li>
+						<li><img src="./img/achievement2_icon.png" width="63" height="64" alt=""> Выполнить задачи из 3 специализаций</li>
+					</ul>
+				</div>
+			</div>
+			<div class="reviewu">
+				<ul class="nav">
+					<li class="reviews active"><a href="#"><span>Отзывы</span> (954)</a></li>
+					<li class="tasks"><a href="#"><span>Задачи</span> (1025)</a></li>
+					<li class="portfolio"><a href="#"><span>Портфолио</span> (350)</a></li>
+				</ul>
+				<div class="leave">
+					<h2>Оставить отзыв</h2>
+					<div>
+						<p class="wide">
+							<span>За задачу:</span>
+							<select>
+								<option>Помочь с уборкой (N 2556)</option>
+								<option>Помочь с уборкой (N 2556)</option>
+							</select>
+						</p>
+					</div>
+					<div>
+						<h3>Оцените работу исполнителя:</h3>
+						<p>
+							<span>В целом:</span>
+							<select>
+								<option>Положительно</option>
+								<option>Положительно</option>
+							</select>
+						</p>
+						<ul class="marks">
+							<li><span>Качество:</span> <div class="ratingbig"></div></li>
+							<li><span>Вежливость:</span> <div class="ratingbig"></div></li>
+							<li><span>Цена:</span> <div class="ratingbig"></div></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Текст отзыва:</h3>
+						<p class="area"><textarea cols="100" rows="4"></textarea></p>
+					</div>
+					<div>
+						<h3>Быстрый отзыв</h3>
+						<div class="prepared">
+							<ul>
+								<li><a href="#pre1">5</a></li>
+								<li><a href="#pre2">4</a></li>
+								<li><a href="#pre3">3</a></li>
+								<li><a href="#pre4">2</a></li>
+								<li><a href="#pre5">1</a></li>
+							</ul>
+							<div>
+								<div id="pre1">
+									<p>Все отлично, большое спасибо! Рекомендую!</p>
+								</div>
+								<div id="pre2">
+									<p>Хорошо</p>
+								</div>
+								<div id="pre3">
+									<p>Удовлетворительно</p>
+								</div>
+								<div id="pre4">
+									<p>Плохо</p>
+								</div>
+								<div id="pre5">
+									<p>Очень плохо</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="submit">Добавить</button>
+				</div>
+				<div class="all">
+					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">Только автору задачи, исполнителем которой является данный пользователь</span></h5>
+					<div>
+						<img src="./img/userr1.jpg" width="79" height="79" alt="">
+						<div>
+							<h3><span class="theme"><a href="#">Петр Кащенко</a> по задаче <a href="#">Помочь с уборкой</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+							<ul class="marks">
+								<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+								<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+								<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+							</ul>
+							<div class="comment">
+								<img src="./img/avatar1.jpg" width="41" height="37" alt="">
+								<div>
+									<h4>Люся Ивашина</h4>
+									<div>
+										<p>Спасибо Петр! С Вами было тоже очень приятно работать!</p>
+										<p class="data">Сегодня, 13:54</p>
+									</div>
+								</div>
+							</div>
+							<h6><span class="answer"><a href="#">Ответить</a></span> <span class="tip">Только автору отзыва и исполнителю</span></h6>
+						</div>
+					</div>
+					<div>
+						<img src="./img/userr2.jpg" width="79" height="79" alt="">
+						<div>
+							<h3><span class="theme"><a href="#">Елизавета Зорина</a> по задаче <a href="#">Решить задания для ЕГЭ по математике часть C</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+							<ul class="marks">
+								<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+								<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+								<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+					<li>
+						<ul>
+							<li><a href="#">Исполнители</a></li>
+							<li><a href="#">Задачи</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">О компании</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Условия использования</a></li>
+							<li><a href="#">Правила сервиса</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>
