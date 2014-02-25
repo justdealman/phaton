@@ -111,26 +111,24 @@
 			<div class="registration">
 				<div class="warning">
 					<h3>Внимание!</h3>
-					<p>Мы проводим удаленную верификацию всех исполнителей. Пожалуйста, перед заполнением формы проверьте, что у вас имеется: отсканированная копия или фотокопия 2-5 страниц паспорта, ваше фото с открытым паспортом, для физических лиц дополнительно копия квитанции за коммунальные услуги для подтверждения адреса; для юридических лиц дополнительно копия ИНН, копия квитанции за коммунальные услуги для подтверждения адреса — если фактический адрес не совпадает с адресом регистрации.</p>
-					<p>Мы гарантируем конфиденциальность полученных сведений.</p>
 					<p>При попытке фальсификации копий или нарушений правил работы в системе администратор вправе запретить Вам использование сервиса. Мы искренне надеемся, что этого не произойдет. Успехов в работе!</p>
 				</div>
 				<div>
 					<div>
-						<p>* Тип исполнителя:</p>
-						<select>
-							<option>Физическое лицо</option>
-							<option>Физическое лицо</option>
+						<p><em>*</em> Тип аккаунта:</p>
+						<select class="type">
+							<option value="individual">Физическое лицо</option>
+							<option value="legal">Юридическое лицо</option>
 						</select>
 					</div>
-					<div>
-						<p>* Тип исполнителя:</p> <input type="text" value="Ивашина">
+					<div class="legal">
+						<p><em>*</em> Наименование компании:</p> <span class="element"><input type="text" value="ООО «Трейл»"></span>
 					</div>
 					<div>
-						<p>* Имя:</p> <input type="text" value="Люся">
+						<p><em>*</em> Фамилия :</p> <span class="element"><input type="text" value="Ивашина"></span>
 					</div>
 					<div>
-						<p>Отчество:</p> <input type="text">
+						<p><em>*</em> Имя:</p> <span class="element"><input type="text" value="Люся"></span>
 					</div>
 					<div>
 						<p>Дата рождения:</p>
@@ -159,44 +157,186 @@
 						<p><a href="#">Выбрать другое фото</a> <span>JPG, PNG, не более 5 Мб.</span></p>
 					</div>
 					<div>
-						<p>* Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
+						<p><em>*</em> Контактный телефон:</p> <span class="element"><input type="text" value="8 956 544 12 23"></span>
 					</div>
 					<div>
-						<p>* E-mail:</p> <input type="text" value="ivashina@gmail.com">
+						<p><em>*</em> Город:</p> <span class="element"><input type="text" value="Барнаул"></span>
+					</div>
+					<div>
+						<p><em>*</em> E-mail:</p> <span class="element error"><input type="text" value="ivashina-gmail.com"></span>
 					</div>
 				</div>
 				<div>
-					<div>
-						<p>* Специализации: <span>Максимум - 10</span></p>
-						<select>
-							<option></option>
-							<option>Специализация 1</option>
-						</select>
-						<p class="list"><span>Перевод текстов <em></em></span> <span>Парикмахер <em></em></span></p>
+					<div class="performer">
+						<p><input type="checkbox"> Планирую работать как исполнитель</p>
+					</div>
+				</div>
+				<div class="optional">
+					<div class="specialization">
+						<p><em>*</em> <a href="#">Выбрать специализацию</a> <span>(максимум - 10)</span></p>
+						<p class="list"></p>
+						<div class="modal absolute">
+							<div class="specselect">
+								<ul>
+									<li>
+										<h5>Помощь по дому / хозяйству</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Купить / Доставить</h5>
+										<ul>
+											<li><span><input type="checkbox">Еда из ресторана / кофе</span></li>
+											<li><span><input type="checkbox">Подарить цветы</span></li>
+											<li><span><input type="checkbox">Курьерская работа</span></li>
+											<li><span><input type="checkbox">Продукты</span></li>
+											<li><span><input type="checkbox">Одежда</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Переезд / Водители</h5>
+										<ul>
+											<li><span><input type="checkbox">Водители</span></li>
+											<li><span><input type="checkbox">Грузоперевозки</span></li>
+											<li><span><input type="checkbox">Упаковка</span></li>
+											<li><span><input type="checkbox">Погрузка / разгрузка</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Мероприятия / Праздники</h5>
+										<ul>
+											<li><span><input type="checkbox">Аниматоры / Ведущие</span></li>
+											<li><span><input type="checkbox">Детский досуг</span></li>
+											<li><span><input type="checkbox">Фото / Видео</span></li>
+											<li><span><input type="checkbox">Организация праздника</span></li>
+											<li><span><input type="checkbox">Раздача / расклейка листовок</span></li>
+											<li><span><input type="checkbox">Тайный покупатель</span></li>
+											<li><span><input type="checkbox">Подбор персонала</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Красота и здоровье</h5>
+										<ul>
+											<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+											<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+											<li><span><input type="checkbox">Массаж</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Бизнес / Учеба / Страхование</h5>
+										<ul>
+											<li><span><input type="checkbox">Административная работа</span></li>
+											<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+											<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+											<li><span><input type="checkbox">Бухгалтерия</span></li>
+											<li><span><input type="checkbox">Юридические услуги</span></li>
+											<li><span><input type="checkbox">Аудит</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+											<li><span><input type="checkbox">Сопровождение</span></li>
+											<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Красота и здоровье</h5>
+										<ul>
+											<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+											<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+											<li><span><input type="checkbox">Массаж</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Бизнес / Учеба / Страхование</h5>
+										<ul>
+											<li><span><input type="checkbox">Административная работа</span></li>
+											<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+											<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+											<li><span><input type="checkbox">Бухгалтерия</span></li>
+											<li><span><input type="checkbox">Юридические услуги</span></li>
+											<li><span><input type="checkbox">Аудит</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+											<li><span><input type="checkbox">Сопровождение</span></li>
+											<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+								</ul>
+								<div>
+									<button class="select">Выбрать</button>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div>
-						<p>* Средняя цена в час:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
+						<p><em>*</em> Средняя цена в час, минуту, секунду:</p> <span class="element"><input type="text" class="number" value="1100"></span> <p>рублей</p>
 					</div>
 					<div>
 						<p>Описание:</p>
 						<div class="description">
-							<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! А еще я пишу статьи. Обращайтесь :)</p>
+							<textarea cols="100" rows="3" placeholder="Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! А еще я пишу статьи. Обращайтесь :)"></textarea>
 						</div>
 					</div>
 				</div>
-				<div>
+				<div class="optional">
 					<h2>Где вы находитесь?</h2>
 					<div>
-						<p>* Посткод:</p> <input type="text">
+						<p><em>*</em> Посткод:</p> <span class="element"><input type="text"></span>
 					</div>
 					<div>
-						<p>* Город/край/поселок:</p> <input type="text">
+						<p><em>*</em> Город/край/поселок:</p> <span class="element"><input type="text"></span>
 					</div>
 					<div>
-						<p>* Улица/проезд/переулок:</p> <input type="text"> <p>* Дом:</p> <input type="text" class="number">
+						<p><em>*</em> Улица/проезд/переулок:</p> <span class="element"><input type="text"></span> <p>* Дом:</p> <span class="element"><input type="text" class="number"></span>
 					</div>
 					<div class="map">
-						<p>* Адрес на карте:</p>
+						<p><em>*</em> Адрес на карте:</p>
 						<div>
 							<div>
 								<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
@@ -207,19 +347,19 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div class="optional">
 					<h2>Где вы готовы работать?</h2>
 					<p>Вы можете выбрать неограниченное количество населенных пунктов, в которые Вы готовы выехать для работы.</p>
 					<div>
-						<p>* Город/край/поселок:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
+						<p><em>*</em> Город/край/поселок:</p> <span class="element"><input type="text"></span>
 						<p class="list"><span>Санкт-Петербург <em></em></span> <span>Одинцово <em></em></span></p>
 					</div>
 				</div>
-				<div>
+				<!--<div>
 					<h2>Верификация</h2>
 					<p>Мы проводим удаленную проверку исполнителей, чтобы заказчики могли доверять Вам через наши гарантии. Данные строго конфиденциальны и раскрываются правоохранительным органам только по запросу суда в случае доказанного причинения вреда имуществу или здоровью заказчика.</p>
 					<div>
-						<p>* Копии паспорта: <span>Непустые развороты</span></p>
+						<p><em>*</em> Копии паспорта: <span>Непустые развороты</span></p>
 						<div class="files">
 							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
 							<ul>
@@ -229,7 +369,7 @@
 						</div>
 					</div>
 					<div>
-						<p>* Ваше фото с паспортом: <span>Разворот с Вашим ФИО</span></p>
+						<p><em>*</em> Ваше фото с паспортом: <span>Разворот с Вашим ФИО</span></p>
 						<div class="files">
 							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
 							<ul>
@@ -238,7 +378,7 @@
 						</div>
 					</div>
 					<div>
-						<p>* Подтверждение адреса: <span>Квитанция за коммунальные услуги</span></p>
+						<p><em>*</em> Подтверждение адреса: <span>Квитанция за коммунальные услуги</span></p>
 						<div class="files">
 							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
 							<ul>
@@ -246,13 +386,13 @@
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				<div>
 					<div>
-						<p>* Пароль:</p> <input type="text">
+						<p><em>*</em> Пароль:</p> <span class="element"><input type="text"></span>
 					</div>
 					<div>
-						<p>* Повторите пароль:</p> <input type="text">
+						<p><em>*</em> Повторите пароль:</p> <span class="element"><input type="text"></span>
 					</div>
 					<p class="agreement"><input type="checkbox" checked> Я согласен с <a href="#">правилами использования серсива</a></p>
 				</div>

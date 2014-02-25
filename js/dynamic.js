@@ -40,6 +40,7 @@
         var rm = rl.left+(rw/2);
 	    $('.reviewu > div > span').css({'left': rm+'px'});
     }
+	$('.content .registration > div.optional').delay(150).fadeOut(0);
 });
 function float() {
 	if ($('.header').hasClass('autorized')) {
@@ -48,7 +49,6 @@ function float() {
 	else {
 		var headerheight = 79;
 	}
-
 	if ($(window).scrollTop() > headerheight) {
 		$('.header').addClass('fixed');
 		$('.wrapper').css({'padding-top': headerheight+'px'});
@@ -279,8 +279,9 @@ $(document).ready(function() {
 		$(this).parents('.form').siblings('.form').fadeIn(0);
 		return false;
 	});
-	$('.taskadd > div > div p.list span em, .registration > div > div p.list span em').click(function() {
+	$('.taskadd > div > div p.list span em, .registration > div > div p.list span em').bind('click', function() {
 		$(this).parent().fadeOut(0);
+		return false;
 	});
 	$('.taskadd > div > div .files li').append('<em></em>');
 	$('.taskadd > div > div .files li em').click(function() {
@@ -313,4 +314,81 @@ $(document).ready(function() {
 	});
 	$('.registration > div > div .description, .registration > div .files ul li').append('<em></em>');
 	$('.taskadd > div.employer .tip p:last-child').css({'margin-bottom': '0 !important'});
+	
+	$('.registration div.legal').hide();
+    $('.registration select.type').change(function() {
+		if( $(this).val() == 'legal') {
+            $('.registration div.legal').show();
+		}
+		if( $(this).val() == 'individual') {
+            $('.registration div.legal').hide();
+		}
+    });	
+    $('.content .registration > div > div.performer p input[type="checkbox"]').change(function() {
+        if($(this).is(':checked')) {
+            $('.content .registration > div.optional').show();
+        }
+        else {
+            $('.content .registration > div.optional').hide();
+		}		
+    });
+	$('.content .registration > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
+	$('.modal').append('<span class="close"></span>');
+	$('.modal').append('<span class="arrow"></span>');
+	$('.modal .close').click(function() {
+		$(this).parent().stop(true, true).fadeOut(150);
+		return false;
+	});
+	$('.content .registration > div > .specialization > p > a').bind('click', function() {
+		$(this).parents('.specialization').find('.modal').fadeIn(150);
+		/*$(this).parents('.specialization').find('p.list span').each(function() {
+			var addedspec = $(this).text();
+			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('input[type="checkbox"]').prop('checked', true);
+			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('.checker span').addClass('checked');
+		});*/
+		return false;
+	});
+	$('.specselect > ul > li > ul > li > span').toggle(
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
+			$(this).parent().find('.checker span').addClass('checked');
+			return false;
+		},
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
+			$(this).parent().find('.checker span').removeClass('checked');
+			return false;
+		}
+	);
+	$('.specselect > div button.select').bind('click', function() {
+		$(this).parents('.specselect').find('h6').remove();
+		var specmax = 10;
+		var specnum = $(this).parents('.specselect').find('input[type="checkbox"]:checked').size();
+		if (specnum > specmax) {
+			var specdiff = specnum-specmax;
+			$(this).parents('.specselect').append('<h6>Вы превысили максимальное допустимое число специализаций! Для продолжения избавьтесь по меньшей мере от '+specdiff+' шт.</h6>');
+		}
+		else {
+			$(this).parents('.specialization').find('p.list').empty();
+			$(this).parents('.specselect').find('input[type="checkbox"]:checked').each(function() {
+				var selspec = $(this).parent().parent().parent().text();
+				$(this).parents('.specialization').find('p.list').append('<span>'+selspec+'<em></em></span>');
+			});
+			$(this).parents('.modal').stop(true, true).fadeOut(150);
+			$(this).parents('.specialization').find('p.list span em').bind('click', function() {
+				$(this).parent().fadeOut(0);
+				return false;
+			});
+		}
+		return false;
+	});
+	$('input, textarea').each(function () {
+		$(this).data('holder',$(this).attr('placeholder'));
+		$(this).focusin(function(){
+			$(this).attr('placeholder','');
+		});
+		$(this).focusout(function(){
+			$(this).attr('placeholder',$(this).data('holder'));
+		});
+	});
 });

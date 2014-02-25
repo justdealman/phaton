@@ -4122,13 +4122,26 @@ button::-moz-focus-inner {
 	line-height:22px;
 	font-weight:300;
 	vertical-align:top;
-	padding:3px 0 4px 11px;
-	margin:0;
+	padding:3px 0 4px;
+	margin:0 0 0 12px;
+}
+.content .registration > div > div > p > em {
+	float:left;
+	display:block;
+	color:#000000;
+	font-style:normal;
+	margin:0 0 0 -12px;
 }
 .content .registration > div > div p:first-child {
 	position:relative;
-	width:226px;
+	width:214px;
 	padding:1px 0 4px;
+}
+.content .registration > div > div.performer p {
+	width:auto !important;
+}
+.content .registration > div > div.performer p .checker {
+	margin:-3px 14px 0 -11px;
 }
 .content .registration > div > div p:first-child > span {
 	position:absolute;
@@ -4168,7 +4181,6 @@ button::-moz-focus-inner {
 	border-bottom:1px solid #e6b131;
 }
 .content .registration > div > div input[type="text"], .content .registration > div > div textarea {
-	display:inline-block;
 	width:315px;
 	vertical-align:top;
 	padding:3px 8px;
@@ -4180,6 +4192,30 @@ button::-moz-focus-inner {
 	-webkit-box-shadow:inset 3px 3px 5px #f2f2f2;
 	-moz-box-shadow:inset 3px 3px 5px #f2f2f2;
 	box-shadow:inset 3px 3px 5px #f2f2f2;
+}
+.content .registration > div > div input[type="text"]:focus, .content .registration > div > div textarea:focus {
+	border:1px solid #e6b131;
+}
+.content .registration > div > div span.element.error input[type="text"], .content .registration > div > div span.element.error textarea {
+	border:1px solid #ee4036;
+}
+.content .registration > div > div span.element {
+	position:relative;
+	display:inline-block;
+	margin:0 0 0 11px;
+}
+.content .registration > div > div span.element input[type="text"], .content .registration > div > div span.element textarea {
+	margin:0;
+}
+.content .registration > div > div span.element.error:after {
+	content:"";
+	position:absolute;
+	right:7px;
+	top:6px;
+	display:block;
+	width:16px;
+	height:16px;
+	background:url('../img/alert_icon.png') no-repeat left top;
 }
 .content .registration > div > div .selector {
 	width:323px !important;
@@ -4224,7 +4260,7 @@ button::-moz-focus-inner {
 	color:#ffffff;
 	font-size:12px;
 	line-height:15px;
-	margin:0 0 -8px 214px;
+	margin:0 0 -8px 225px;
 }
 .content .registration > div > div p.list span {
 	position:relative;
@@ -4261,6 +4297,20 @@ button::-moz-focus-inner {
 	width:12px;
 	height:23px;
 	background:url('../img/registration_description_em.png') no-repeat left top;
+}
+.content .registration > div > div .description textarea {
+	width:666px;
+	min-height:48px;
+	font-size:14px;
+	line-height:16px;
+	vertical-align:top;
+	padding:26px 26px 26px;
+	margin:-26px 0 -16px -26px;
+	background:#e8e8e8;
+	border:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
 }
 .content .registration > div > div .description p {
 	width:auto !important;
@@ -4366,4 +4416,139 @@ button::-moz-focus-inner {
 }
 .content .registration button.submit:hover {
 	background-position:0 -27px;
+}
+.content .registration > div > .specialization {
+	position:relative;
+}
+.content .registration > div > .specialization > p {
+	display:block;
+}
+.content .registration > div > .specialization > p:first-child {
+	width:960px !important;
+}
+.content .registration > div > .specialization > p > a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px dotted #000000;
+}
+.content .registration > div > .specialization > p:first-child > span {
+	display:inline-block !important;
+	position:static !important;
+	left:auto;
+	top:auto;
+	max-width:auto;
+}
+.content .registration > div > .specialization > p.list {
+	width:735px;
+}
+
+/* Modal */
+
+.modal {
+	display:none;
+	padding:15px 18px 7px;
+	background:#ffffff;
+	border:5px solid #00ac64;
+	-webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+	box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+	behavior:url('./pie.htc');
+}
+.modal.absolute {
+	position:absolute;
+	left:0;
+	top:45px;
+	width:914px;
+	z-index:1;
+}
+.modal .arrow {
+	position:absolute;
+	left:32px;
+	top:-22px;
+	display:block;
+	width:30px;
+	height:22px;
+	background:url('../img/modal_arrow.png') no-repeat left top;
+}
+.modal .close {
+	position:absolute;
+	right:6px;
+	top:5px;
+	display:block;
+	width:13px;
+	height:15px;
+	cursor:pointer;
+	background:url('../img/modal_close.png') no-repeat left top;
+}
+.specselect > ul {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 15px;
+}
+.specselect > ul > li {
+	display:inline-block;
+	width:216px;
+	vertical-align:top;
+	margin:0 10px 9px 0;
+}
+.specselect > ul > li h5 {
+	width:216px;
+	color:#000000;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 8px;
+}
+.specselect > ul > li > ul {
+	margin:0 0 8px;
+}
+.specselect > ul > li > ul > li {
+	clear:both;
+	overflow:hidden;
+	color:#666666;
+	font-size:14px;
+	line-height:14px;
+	margin:0 0 4px;
+}
+.specselect > ul > li > ul > li > span {
+	float:left;
+	display:block;
+	font-weight:normal;
+	cursor:pointer;
+	padding:0 0 0 22px;
+}
+.specselect > ul > li > ul > li .checker {
+	position:relative;
+	z-index:-1;
+	float:left;
+	margin:1px 10px 0 -22px;
+}
+.specselect > div {
+	text-align:right;
+	margin:0 1px 15px 0;
+}
+.specselect h6 {
+	color:#ee4036;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+	text-align:right;
+	padding:0;
+	margin:20px 0 15px;
+}
+.specselect > div button {
+	display:inline-block;
+	width:186px;
+	color:#ffffff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:2px 0 6px;
+	background:url('../img/modal_button.png') no-repeat left top;
+}
+.specselect > div button:hover {
+	background-position:0 -30px;
 }
