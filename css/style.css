@@ -4196,26 +4196,26 @@ button::-moz-focus-inner {
 .content .registration > div > div input[type="text"]:focus, .content .registration > div > div textarea:focus {
 	border:1px solid #e6b131;
 }
-.content .registration > div > div span.element.error input[type="text"], .content .registration > div > div span.element.error textarea {
+.content .registration > div > div input[type="text"].error, .content .registration > div > div textarea.error {
 	border:1px solid #ee4036;
 }
-.content .registration > div > div span.element {
+.content .registration > div > div span.erroricon {
 	position:relative;
 	display:inline-block;
-	margin:0 0 0 11px;
+	width:28px;
+	height:27px;
+	vertical-align:top;
+	margin:0 0 0 -31px;
+	background:url('../img/alert_icon.png') no-repeat 5px 6px;
 }
-.content .registration > div > div span.element input[type="text"], .content .registration > div > div span.element textarea {
-	margin:0;
-}
-.content .registration > div > div span.element.error:after {
-	content:"";
-	position:absolute;
-	right:7px;
-	top:6px;
+.content .registration > div > div p.errormessage {
 	display:block;
-	width:16px;
-	height:16px;
-	background:url('../img/alert_icon.png') no-repeat left top;
+	width:333px;
+	color:#ee4036;
+	font-size:12px;
+	line-height:16px;
+	padding:0;
+	margin:5px 0 0 240px;
 }
 .content .registration > div > div .selector {
 	width:323px !important;
