@@ -244,24 +244,24 @@ $(document).ready(function() {
 		$('.header .popup.login').slideToggle(0);
 		$(this).parent().siblings().removeClass('active');
 		$(this).parent().toggleClass('active');
-		$('html').one('click',function() {
-			$('.header .popup').slideUp(0);
-			$('.header .user li').removeClass('active');
-		});
-		event.stopPropagation();
-		return false;
+		//$('html').one('click',function() {
+		//	$('.header .popup').slideUp(0);
+		//	$('.header .user li').removeClass('active');
+		//});
+		//event.stopPropagation();
+		//return false;
 	});
 	$('.header .user .registration a').click(function(event) {
 		$('.header .popup.login').slideUp(0);
 		$('.header .popup.registration').slideToggle(0);
 		$(this).parent().siblings().removeClass('active');
 		$(this).parent().toggleClass('active');
-		$('html').one('click',function() {
-			$('.header .popup').slideUp(0);
-			$('.header .user li').removeClass('active');
-		});
-		event.stopPropagation();
-		return false;
+		//$('html').one('click',function() {
+		//	$('.header .popup').slideUp(0);
+		//	$('.header .user li').removeClass('active');
+		//});
+		//event.stopPropagation();
+		//return false;
 	});
 	$('.header .popup .close').click(function() {
 		$(this).parent().slideUp(0);
@@ -339,7 +339,7 @@ $(document).ready(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
 	});
-	$('.content .registration > div > .specialization > p > a').bind('click', function() {
+	$('.specialization > p > a').bind('click', function() {
 		$(this).parents('.specialization').find('.modal').fadeIn(150);
 		/*$(this).parents('.specialization').find('p.list span').each(function() {
 			var addedspec = $(this).text();
@@ -390,5 +390,17 @@ $(document).ready(function() {
 		$(this).focusout(function(){
 			$(this).attr('placeholder',$(this).data('holder'));
 		});
+	});
+	$('.col1 .catspec > div > ul > li.sub > ul').hide();
+	$('.col1 .catspec > div > ul > li.sub > a').click(function() {
+		$(this).parent().children('ul').slideToggle(0);
+		return false;
+	}).filter(':first').click();
+	$('.col1 .catspec > div').jScrollPane({
+		verticalDragMinHeight: 45,
+		verticalDragMaxHeight: 45,
+		horizontalDragMinWidth: 45,
+		horizontalDragMaxWidth: 45,
+		autoReinitialise: true
 	});
 });

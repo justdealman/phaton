@@ -10,7 +10,9 @@
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/jqueryui.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
 	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
 	<script type="text/javascript" src="./js/raty.js"></script>
 	<script type="text/javascript" src="./js/slider.js"></script>
 	<script type="text/javascript" src="./js/uniform.js"></script>
@@ -119,15 +121,147 @@
 							<div>
 								<p>* Название задачи:</p> <input type="text">
 							</div>
-							<div>
-								<p>* Специализация</p>
-								<select>
-									<option></option>
-									<option>Наименование</option>
-								</select>
-								<p class="list">
-									<span>Курьер на общественном транспорте <em title="удалить специализацию"></em></span> <span>Курьер на личном автомобиле <em title="удалить специализацию"></em></span>
-								</p>
+							<div class="specialization">
+								<p><em>*</em> <a href="#">Выбрать специализацию</a> <span>(максимум - 10)</span></p>
+								<p class="list"></p>
+								<div class="modal absolute">
+									<div class="specselect">
+										<ul>
+											<li>
+												<h5>Помощь по дому / хозяйству</h5>
+												<ul>
+													<li><span><input type="checkbox">Уборка / Домработница</span></li>
+													<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+													<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+													<li><span><input type="checkbox">Приготовление еды</span></li>
+													<li><span><input type="checkbox">Сборка мебели</span></li>
+													<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+													<li><span><input type="checkbox">Пошив</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Купить / Доставить</h5>
+												<ul>
+													<li><span><input type="checkbox">Еда из ресторана / кофе</span></li>
+													<li><span><input type="checkbox">Подарить цветы</span></li>
+													<li><span><input type="checkbox">Курьерская работа</span></li>
+													<li><span><input type="checkbox">Продукты</span></li>
+													<li><span><input type="checkbox">Одежда</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Переезд / Водители</h5>
+												<ul>
+													<li><span><input type="checkbox">Водители</span></li>
+													<li><span><input type="checkbox">Грузоперевозки</span></li>
+													<li><span><input type="checkbox">Упаковка</span></li>
+													<li><span><input type="checkbox">Погрузка / разгрузка</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Мероприятия / Праздники</h5>
+												<ul>
+													<li><span><input type="checkbox">Аниматоры / Ведущие</span></li>
+													<li><span><input type="checkbox">Детский досуг</span></li>
+													<li><span><input type="checkbox">Фото / Видео</span></li>
+													<li><span><input type="checkbox">Организация праздника</span></li>
+													<li><span><input type="checkbox">Раздача / расклейка листовок</span></li>
+													<li><span><input type="checkbox">Тайный покупатель</span></li>
+													<li><span><input type="checkbox">Подбор персонала</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Уход / Сопровождение / Дети</h5>
+												<ul>
+													<li><span><input type="checkbox">Уборка / Домработница</span></li>
+													<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+													<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+													<li><span><input type="checkbox">Приготовление еды</span></li>
+													<li><span><input type="checkbox">Сборка мебели</span></li>
+													<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+													<li><span><input type="checkbox">Пошив</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Красота и здоровье</h5>
+												<ul>
+													<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+													<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+													<li><span><input type="checkbox">Массаж</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Бизнес / Учеба / Страхование</h5>
+												<ul>
+													<li><span><input type="checkbox">Административная работа</span></li>
+													<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+													<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+													<li><span><input type="checkbox">Бухгалтерия</span></li>
+													<li><span><input type="checkbox">Юридические услуги</span></li>
+													<li><span><input type="checkbox">Аудит</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Уход / Сопровождение / Дети</h5>
+												<ul>
+													<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+													<li><span><input type="checkbox">Сопровождение</span></li>
+													<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Уход / Сопровождение / Дети</h5>
+												<ul>
+													<li><span><input type="checkbox">Уборка / Домработница</span></li>
+													<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+													<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+													<li><span><input type="checkbox">Приготовление еды</span></li>
+													<li><span><input type="checkbox">Сборка мебели</span></li>
+													<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+													<li><span><input type="checkbox">Пошив</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Красота и здоровье</h5>
+												<ul>
+													<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+													<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+													<li><span><input type="checkbox">Массаж</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Бизнес / Учеба / Страхование</h5>
+												<ul>
+													<li><span><input type="checkbox">Административная работа</span></li>
+													<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+													<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+													<li><span><input type="checkbox">Бухгалтерия</span></li>
+													<li><span><input type="checkbox">Юридические услуги</span></li>
+													<li><span><input type="checkbox">Аудит</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+											<li>
+												<h5>Уход / Сопровождение / Дети</h5>
+												<ul>
+													<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+													<li><span><input type="checkbox">Сопровождение</span></li>
+													<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+													<li><span><input type="checkbox">Прочее</span></li>
+												</ul>
+											</li>
+										</ul>
+										<div>
+											<button class="select">Выбрать</button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div>
 								<p>* Описание работ:</p>
