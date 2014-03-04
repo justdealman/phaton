@@ -1992,46 +1992,114 @@ button::-moz-focus-inner {
 .useri .important .favorite a {
 	border-bottom:1px dashed #000000;
 }
+.useri .important .additional {
+	height:auto;
+	margin:0;
+}
+.useri .important .additional p {
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	padding:0;
+	margin:0 0 10px;
+}
+.useri .important .additional p a {
+	color:#e6b131;
+	text-decoration:none;
+	border-bottom:1px dashed #e6b131;
+}
+.useri .important .additional p a:hover {
+	border-bottom:1px dashed transparent;
+}
+.useri .important .additional p.edit {
+	margin-top:13px;
+}
+.useri .important .video {
+	height:auto !important;
+	margin-top:19px;
+}
+.grid .useri .important .video {
+	margin:0 0 20px;
+}
 .useri .information {
 	float:right;
 	width:664px;
 }
+.col4 {
+	float:left;
+	width:760px;
+	margin:0 0 0 10px;
+}
+.grid .useri .important {
+	margin-top:5px;
+}
+.grid .useri .information {
+	width:479px;
+}
 .useri .information .name {
+	position:relative;
 	clear:both;
 	overflow:hidden;
+	padding-right:80px;
 	margin:0 0 10px;
 }
 .useri .information .name h1 {
-	float:left;
-	width:84%;
+	display:inline-block;
 	color:#00ab63;
 	font-size:48px;
 	line-height:48px;
 	font-weight:300;
+	vertical-align:top;
 	padding:0;
 	margin:0;
 }
+.grid .useri .information .name {
+	overflow:visible;
+	padding-right:170px;
+	margin:0 0 13px;
+}
+.grid .useri .information .name .selector {
+	position:absolute;
+	right:0;
+	top:3px;
+	width:140px !important;
+}
+.grid .useri .information .name .selector span {
+	width:116px !important;
+}
+.grid .useri .information .name h1 {
+	color:#000000;
+	font-size:24px;
+	line-height:27px;
+}
 .useri .information .name .activity {
-	float:right;
-	display:block;
+	display:inline-block;
 	color:#ffffff;
 	font-size:18px;
 	line-height:22px;
 	font-weight:300;
 	text-transform:uppercase;
+	vertical-align:top;
 	padding:3px 7px;
-	margin:0 0 0 18px;
+	margin:15px 0 0 13px;
 }
 .useri .information .name .activity.free {
 	background:#4bc390;
 }
+.grid .useri .information .name .activity {
+	font-size:12px;
+	line-height:16px;
+	padding:0 3px 1px 2px;
+	margin:5px 0 0 13px;
+}
 .useri .information .name .status {
-	float:right;
+	position:absolute;
+	right:0;
+	top:29px;
 	color:#00ab63;
 	font-size:14px;
 	line-height:17px;
 	text-transform:uppercase;
-	margin:12px 0 0;
 }
 .useri .information .name .status span {
 	float:left;
@@ -2073,6 +2141,7 @@ button::-moz-focus-inner {
 	color:#999999;
 	font-size:14px;
 	line-height:17px;
+	font-weight:300;
 	margin:0;
 }
 .useri .information .data .experience {
@@ -2083,28 +2152,34 @@ button::-moz-focus-inner {
 	overflow:hidden;
 	margin:0 0 4px;
 }
-.useri .information .description .quality {
-	float:right;
+.useri .quality {
 	width:234px;
+	height:auto !important;
 	padding:0 0 11px;
 	margin:18px 0 12px 18px;
 	background:#00ab63;
 }
-.useri .information .description .quality p {
-	color:#ffffff;
-	font-size:14px;
-	line-height:14px;
-	padding:0;
-	margin:0 13px;
+.useri .important .quality {
+	margin:-13px 0 11px;
 }
-.useri .information .description .quality h4 {
+.useri .information .description .quality {
+	float:right;
+}
+.useri .quality p {
+	color:#ffffff !important;
+	font-size:14px !important;
+	line-height:14px !important;
+	padding:0 !important;
+	margin:0 13px !important;
+}
+.useri .quality h4 {
 	clear:both;
 	overflow:hidden;
 	font-weight:normal;
 	padding:8px 12px 3px;
 	margin:0 0 8px;
 }
-.useri .information .description .quality h4 span.rating {
+.useri .quality h4 span.rating {
 	float:left;
 	display:block;
 	color:#ffffff;
@@ -2115,14 +2190,14 @@ button::-moz-focus-inner {
 	margin:0 14px 0 0;
 	background:url('../img/userc_star_icon.png') no-repeat left 4px;
 }
-.useri .information .description .quality h4 span.reviews {
+.useri .quality h4 span.reviews {
 	float:left;
 	display:block;
 	padding:0 0 0 24px;
 	margin:5px 0 2px;
 	background:url('../img/userc_review_icon.png') no-repeat left 1px;
 }
-.useri .information .description .quality h4 span.reviews em {
+.useri .quality h4 span.reviews em {
 	float:left;
 	display:block;
 	font-size:14px;
@@ -2132,31 +2207,31 @@ button::-moz-focus-inner {
 	margin:0 0 0 5px;
 	background:url('../img/userc_review_em.png') no-repeat left 2px;
 }
-.useri .information .description .quality h4 span.reviews em:first-child {
+.useri .quality h4 span.reviews em:first-child {
 	padding-left:0;
 	margin-left:0;
 	background:none;
 }
-.useri .information .description .quality h4 span.reviews em a {
+.useri .quality h4 span.reviews em a {
 	text-decoration:none;
 }
-.useri .information .description .quality h4 span.reviews em a:hover {
+.useri .quality h4 span.reviews em a:hover {
 	text-decoration:underline;
 }
-.useri .information .description .quality h4 span.reviews em.positive {
+.useri .quality h4 span.reviews em.positive {
 	color:#ffffff;
 	font-weight:bold;
 }
-.useri .information .description .quality h4 span.reviews em.positive a {
+.useri .quality h4 span.reviews em.positive a {
 	color:#ffffff;
 }
-.useri .information .description .quality h4 span.reviews em.negative {
+.useri .quality h4 span.reviews em.negative {
 	color:#ee4036;
 }
-.useri .information .description .quality h4 span.reviews em.negative a {
+.useri .quality h4 span.reviews em.negative a {
 	color:#ee4036;
 }
-.useri .information .description .quality h4 span.thumbsup {
+.useri .quality h4 span.thumbsup {
 	float:right;
 	display:block;
 	color:#ffffff;
@@ -2192,6 +2267,7 @@ button::-moz-focus-inner {
 	line-height:22px;
 	font-weight:normal;
 	margin:0 0 10px;
+	background:url('../img/userc_price_icon.png') no-repeat left 6px;
 }
 .useri .information .description p.price em {
 	font-size:19px;
@@ -2222,16 +2298,29 @@ button::-moz-focus-inner {
 .useri .information .description .about > div > span {
 	position:absolute;
 	left:-11px;
-	bottom:17px;
+	top:50%;
 	display:block;
 	width:12px;
 	height:21px;
+	margin-top:-11px;
 	background:url('../img/useri_about_span.png') no-repeat left top;
 }
 .useri .information .description .about > div p {
 	line-height:16px;
 	padding:0;
 	margin:0;
+}
+.useri .information .description .about > div p a {
+	color:#000000;
+	text-decoration:underline;
+	border-bottom-width:0;
+}
+.useri .information .description .about > div p a:hover {
+	text-decoration:none;
+}
+.useri .information .description .about .hidden {
+	display:none;
+	color:#000000;
 }
 .useri .information .achievements {
 	clear:both;
@@ -2255,6 +2344,90 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:5px;
+}
+.grid .useri .information .achievements {
+	width:480px;
+	margin:37px 0 20px;
+}
+.grid .useri .information .achievements li {
+	font-size:14px;
+	line-height:17px;
+}
+.grid .useri .information .achievements li {
+	width:150px;
+	padding:0 0 0 80px;
+	margin:0 20px 16px 0 !important;
+}
+.grid .useri .information .achievements li:nth-child(2n) {
+	margin-right:0 !important;
+}
+.grid .useri .information .achievements li img {
+	top:-3px;
+}
+.usernav {
+	float:left;
+	width:180px;
+	margin:0 10px 0 10px;
+}
+.usernav ul {
+	margin:0 0 20px;
+}
+.usernav ul li {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:300;
+	padding:0 0 6px 30px;
+	margin:0 0 6px;
+}
+.usernav ul li a {
+	color:#000000;
+}
+.usernav ul li.active a {
+	color:#e6b131;
+	text-decoration:none;
+}
+.usernav ul .profile {
+	background:url('../img/user_givetask_icon.png') no-repeat left 5px;
+}
+.usernav ul .profile.active {
+	background:url('../img/user_givetask_active_icon.png') no-repeat left 5px;
+}
+.usernav ul .tasks {
+	background:url('../img/userc_services_icon.png') no-repeat left 5px;
+}
+.usernav ul .tasks.active {
+	background:url('../img/userc_services_active_icon.png') no-repeat left 5px;
+}
+.usernav ul .mytasks {
+	background:url('../img/userc_mytasks_icon.png') no-repeat left 5px;
+}
+.usernav ul .mytasks.active {
+	background:url('../img/userc_mytasks_active_icon.png') no-repeat left 5px;
+}
+.usernav ul .favorite {
+	background:url('../img/user_favorite_icon.png') no-repeat left 7px;
+}
+.usernav ul .favorite.active {
+	background:url('../img/user_favorite_active_icon.png') no-repeat left 7px;
+}
+.usernav ul .messages {
+	background:url('../img/user_message_icon.png') no-repeat left 6px;
+}
+.usernav ul .messages.active {
+	background:url('../img/user_message_active_icon.png') no-repeat left 6px;
+}
+.usernav ul .notifications {
+	background:url('../img/user_notification_icon.png') no-repeat left 6px;
+}
+.usernav ul .notifications.active {
+	background:url('../img/user_notification_active_icon.png') no-repeat left 6px;
+}
+.usernav ul .medals {
+	background:url('../img/user_medal_icon.png') no-repeat left 5px;
+}
+.usernav ul .medals.active {
+	background:url('../img/user_medal_active_icon.png') no-repeat left 5px;
 }
 .reviewu {
 	position:relative;
@@ -2315,7 +2488,7 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:-15px;
-	display:block;
+	display:none;
 	width:27px;
 	height:16px;
 	margin-left:-13px;
@@ -2366,6 +2539,9 @@ button::-moz-focus-inner {
 	padding:0 0 10px;
 	background:url('../img/line_bg.png') repeat-x bottom;
 }
+.grid .reviewu > div > div > div {
+	width:635px;
+}
 .reviewu > div > div > div h3 {
 	clear:both;
 	overflow:hidden;
@@ -2374,12 +2550,21 @@ button::-moz-focus-inner {
 	line-height:17px;
 	font-weight:300;
 	padding:0;
-	margin:0 18px 38px 0;
+	margin:0 18px 18px 0;
+}
+.grid .reviewu > div > div > div h3 {
+	margin:0 18px 18px 0;
 }
 .reviewu > div > div > div h3 span.theme {
 	float:left;
 	display:block;
+	min-height:34px;
 	padding:1px 0 0;
+	width:auto;
+}
+.grid .reviewu > div > div > div h3 span.theme {
+	width:380px;
+	min-height:17px;
 }
 .reviewu > div > div > div h3 span.theme a {
 	color:#e6b131;
@@ -2399,7 +2584,7 @@ button::-moz-focus-inner {
 	line-height:16px;
 	font-weight:300;
 	text-align:justify;
-	margin:0 140px 18px 0;
+	margin:0 85px 18px 0;
 }
 .reviewu > div > div > div .marks {
 	margin:0 0 23px;
@@ -2435,6 +2620,9 @@ button::-moz-focus-inner {
 .reviewu > div > div > div > .comment > div {
 	float:right;
 	width:720px;
+}
+.grid .reviewu > div > div > div > .comment > div {
+	width:520px;
 }
 .reviewu > div > div > div > .comment > div h4 {
 	color:#666666;
@@ -2499,6 +2687,9 @@ button::-moz-focus-inner {
 	box-shadow:3px 3px 5px #cccccc;
 	behavior:url('./pie.htc');
 }
+.grid .reviewu > .leave {
+	width:670px;
+}
 .reviewu > .leave > .close {
 	position:absolute;
 	right:7px;
@@ -2513,7 +2704,7 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:0;
 	top:-23px;
-	display:block;
+	display:none;
 	width:28px;
 	height:23px;
 	margin-left:-18px;
@@ -3747,7 +3938,7 @@ button::-moz-focus-inner {
 	margin:0;
 }
 .h1 {
-	padding:0 0 30px;
+	padding:0 0 25px;
 	margin:-13px 0 34px;
 	background:url('../img/line_bg.png') repeat-x bottom;
 }
@@ -4153,7 +4344,10 @@ button::-moz-focus-inner {
 	font-size:14px;
 	line-height:16px;
 }
-.content .registration > div > div.photo img {
+.content .registration > div > div.photo {
+	position:relative;
+}
+.content .registration > div > div.photo img.current {
 	display:inline-block;
 	max-width:149px;
 	margin:6px 8px 3px 11px;
@@ -4172,6 +4366,9 @@ button::-moz-focus-inner {
 	display:block;
 	margin:10px 0 0;
 }
+.content .registration > div > div.photo p span:first-child {
+	margin-top:0;
+}
 .content .registration > div > div.photo p a {
 	color:#e6b131;
 	text-decoration:none;
@@ -4180,6 +4377,65 @@ button::-moz-focus-inner {
 .content .registration > div > div.photo p a:hover {
 	border-bottom:1px solid #e6b131;
 }
+.content .registration > div > div.photo .modal {
+	top:5px;
+	left:105px;
+	width:664px;
+	padding:15px 38px 7px;
+}
+.content .registration > div > div.photo .modal .arrow {
+	display:none;
+}
+.content .registration > div > div.photo .modal p {
+	color:#000000;
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 18px;
+}
+.content .registration > div > div.photo .modal .crop {
+	position:relative;
+	min-height:240px;
+	margin:0 0 22px;
+}
+.content .registration > div > div.photo .modal .crop #crop {
+	max-width:364px;
+}
+.content .registration > div > div.photo .modal .crop > .preview {
+	overflow:hidden;
+	position:absolute;
+	left:425px;
+	top:0;
+	width:234px;
+	height:163px;
+}
+.content .registration > div > div.photo .modal .buttons {
+	position:absolute;
+	left:425px;
+	bottom:0;
+}
+.content .registration > div > div.photo .modal .buttons button {
+	width:186px;
+	color:#ffffff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:0 0 5px;
+	margin:8px 0 0;
+}
+.content .registration > div > div.photo .modal .buttons .save {
+	background:url('../img/modal_save.png') no-repeat left top;
+}
+.content .registration > div > div.photo .modal .buttons .cancel {
+	background:url('../img/modal_cancel.png') no-repeat left top;
+}
+.content .registration > div > div.photo .modal .buttons button:hover {
+	background-position:0 -27px;
+}
+
+
+
 .content .registration > div > div input[type="text"], .content .registration > div > div textarea {
 	width:315px;
 	vertical-align:top;
@@ -4480,6 +4736,14 @@ button::-moz-focus-inner {
 	cursor:pointer;
 	background:url('../img/modal_close.png') no-repeat left top;
 }
+.modal h2 {
+	color:#000000;
+	font-size:24px;
+	line-height:27px;
+	font-weight:300;
+	padding:0;
+	margin:8px 0 17px !important;
+}
 .specselect > ul {
 	clear:both;
 	overflow:hidden;
@@ -4666,4 +4930,172 @@ button::-moz-focus-inner {
 	background:#eeeef4;
 	float:left;
 	height:100%;
+}
+
+/* Image crop */
+
+/* jquery.Jcrop.css v0.9.12 - MIT License */
+/*
+  The outer-most container in a typical Jcrop instance
+  If you are having difficulty with formatting related to styles
+  on a parent element, place any fixes here or in a like selector
+
+  You can also style this element if you want to add a border, etc
+  A better method for styling can be seen below with .jcrop-light
+  (Add a class to the holder and style elements for that extended class)
+*/
+.jcrop-holder {
+  direction: ltr;
+  text-align: left;
+}
+/* Selection Border */
+.jcrop-vline,
+.jcrop-hline {
+  background: #ffffff url("Jcrop.gif");
+  font-size: 0;
+  position: absolute;
+}
+.jcrop-vline {
+  height: 100%;
+  width: 1px !important;
+}
+.jcrop-vline.right {
+  right: 0;
+}
+.jcrop-hline {
+  height: 1px !important;
+  width: 100%;
+}
+.jcrop-hline.bottom {
+  bottom: 0;
+}
+/* Invisible click targets */
+.jcrop-tracker {
+  height: 100%;
+  width: 100%;
+  /* "turn off" link highlight */
+  -webkit-tap-highlight-color: transparent;
+  /* disable callout, image save panel */
+  -webkit-touch-callout: none;
+  /* disable cut copy paste */
+  -webkit-user-select: none;
+}
+/* Selection Handles */
+.jcrop-handle {
+  background-color: #333333;
+  border: 1px #eeeeee solid;
+  width: 7px;
+  height: 7px;
+  font-size: 1px;
+}
+.jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+.jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+.jcrop-handle.ord-e {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 50%;
+}
+.jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 50%;
+}
+.jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+.jcrop-handle.ord-ne {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 0;
+}
+.jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -4px;
+  margin-right: -4px;
+  right: 0;
+}
+.jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+/* Dragbars */
+.jcrop-dragbar.ord-n,
+.jcrop-dragbar.ord-s {
+  height: 7px;
+  width: 100%;
+}
+.jcrop-dragbar.ord-e,
+.jcrop-dragbar.ord-w {
+  height: 100%;
+  width: 7px;
+}
+.jcrop-dragbar.ord-n {
+  margin-top: -4px;
+}
+.jcrop-dragbar.ord-s {
+  bottom: 0;
+  margin-bottom: -4px;
+}
+.jcrop-dragbar.ord-e {
+  margin-right: -4px;
+  right: 0;
+}
+.jcrop-dragbar.ord-w {
+  margin-left: -4px;
+}
+/* The "jcrop-light" class/extension */
+.jcrop-light .jcrop-vline,
+.jcrop-light .jcrop-hline {
+  background: #ffffff;
+  filter: alpha(opacity=70) !important;
+  opacity: .70!important;
+}
+.jcrop-light .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #000000;
+  border-color: #ffffff;
+  border-radius: 3px;
+}
+/* The "jcrop-dark" class/extension */
+.jcrop-dark .jcrop-vline,
+.jcrop-dark .jcrop-hline {
+  background: #000000;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+.jcrop-dark .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-radius: 3px;
+}
+/* Simple macro to turn off the antlines */
+.solid-line .jcrop-vline,
+.solid-line .jcrop-hline {
+  background: #ffffff;
+}
+/* Fix for twitter bootstrap et al. */
+.jcrop-holder img,
+img.jcrop-preview {
+  max-width: none;
 }

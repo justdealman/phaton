@@ -36,11 +36,15 @@
 	});
 	var rl = $('.reviewu .nav li.active').position();
 	var rw = $('.reviewu .nav li.active').width();
-	if(rm) {
+	if(rw) {
         var rm = rl.left+(rw/2);
 	    $('.reviewu > div > span').css({'left': rm+'px'});
+	    $('.reviewu > div > span, .reviewu > .leave > span').fadeIn(150);
     }
 	$('.content .registration > div.optional').delay(150).fadeOut(0);
+});
+$(document).ready(function() {
+	$('.reviewu > div > span, .reviewu > .leave > span').hide();
 });
 function float() {
 	if ($('.header').hasClass('autorized')) {
@@ -403,4 +407,47 @@ $(document).ready(function() {
 		horizontalDragMaxWidth: 45,
 		autoReinitialise: true
 	});
+	$('.description .about .more').live('click', function() {
+		$(this).parent().find('.hidden').show();
+		$(this).empty().text('Скрыть...');
+		$(this).removeClass('more').addClass('less');
+		return false;
+	});
+	$('.description .about .less').live('click', function() {
+		$(this).parent().find('.hidden').hide();
+		$(this).empty().text('Подробнее...');
+		$(this).removeClass('less').addClass('more');
+		return false;
+	});
+	$('.photo span.edit a').click(function() {
+		$(this).parents('.photo').find('.modal').fadeIn(150);
+		return false;
+	});
+	$('#crop').Jcrop({
+		bgOpacity: 0.5,
+		bgColor: 'black',
+		onChange: showPreview,
+		onSelect: showPreview,
+		aspectRatio: 234/163,
+		minSize: [86, 60],
+	}, function(){
+		api = this;
+		api.setSelect([0,0,0+234,0+163]);
+		api.setOptions({ bgFade: true });
+	});
+	var $preview = $('#preview');
+	function showPreview(coords) {
+		if (parseInt(coords.w) > 0) {
+			var rx = 234 / coords.w;
+			var ry = 163 / coords.h;
+			var origx = $('#crop').width();
+			var origy = $('#crop').height();
+			$('#preview').css({
+				width: Math.round(rx * origx) + 'px',
+				height: Math.round(ry * origy) + 'px',
+				marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+				marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			});
+		}
+	}
 });

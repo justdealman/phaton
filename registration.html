@@ -8,6 +8,7 @@
 	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jcrop.js"></script>
 	<script type="text/javascript" src="./js/jqueryui.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/jscrollpane.js"></script>
@@ -155,8 +156,27 @@
 					</div>
 					<div class="photo">
 						<p>Фото:</p>
-						<img src="./img/registration_photo.png" width="149" height="104" alt="">
-						<p><a href="#">Выбрать другое фото</a> <span>JPG, PNG, не более 5 Мб.</span></p>
+						<img src="./img/registration_photo.png" width="149" height="104" class="current" alt="">
+						<p>
+							<span><a href="#">Выбрать другое фото</a></span>
+							<span class="edit"><a href="#">Редактировать</a></span>
+							<span><a href="#">Удалить</a></span>
+							<span>JPG, PNG, не более 5 Мб.</span>
+						</p>
+						<div class="modal absolute">
+							<h2>Редактирование фотографии</h2>
+							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
+							<div class="crop">
+								<img src="./img/photo_original.jpg" width="364" height="320" id="crop" alt="">
+								<div class="preview">
+									<img src="./img/photo_original.jpg" width="364" height="320" id="preview" alt="">
+								</div>
+								<div class="buttons">
+									<button class="save">Сохранить</button>
+									<button class="cancel">Отменить</button>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div>
 						<p><em>*</em> Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
