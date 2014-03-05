@@ -16,7 +16,7 @@
 		var w = 960 - $(this).children('h1').width() - 38;
 		$(this).children('div').width(w);
 		var d = w - $(this).find('h5').width() - 40;
-		$(this).find('div > div > div').width(d);
+		$(this).find('div > div.description > div').width(d);
 	});
 	$('.filter .price .range').each(function() {
 		handle = $(this).find('.ui-slider-handle');    
@@ -41,7 +41,7 @@
 	    $('.reviewu > div > span').css({'left': rm+'px'});
 	    $('.reviewu > div > span, .reviewu > .leave > span').fadeIn(150);
     }
-	$('.content .registration > div.optional').delay(150).fadeOut(0);
+	$('.content .userform > div.optional').delay(150).fadeOut(0);
 });
 $(document).ready(function() {
 	$('.reviewu > div > span, .reviewu > .leave > span').hide();
@@ -91,7 +91,7 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 		return false;
 	});
-	$('.userc > div h5 span.like, .taski h1 .like, .offers > div > .td > div.more h4 .like').click(function() {
+	$('.userc > div h5 span.like, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
@@ -316,27 +316,27 @@ $(document).ready(function() {
 			$(this).css({'margin-top': '-8px'});
 		}
 	});
-	$('.registration > div > div .description, .registration > div .files ul li').append('<em></em>');
+	$('.userform > div > div .description, .userform > div .files ul li').append('<em></em>');
 	$('.taskadd > div.employer .tip p:last-child').css({'margin-bottom': '0 !important'});
 	
-	$('.registration div.legal').hide();
-    $('.registration select.type').change(function() {
+	$('.userform div.legal').hide();
+    $('.userform select.type').change(function() {
 		if( $(this).val() == 'legal') {
-            $('.registration div.legal').show();
+            $('.userform div.legal').show();
 		}
 		if( $(this).val() == 'individual') {
-            $('.registration div.legal').hide();
+            $('.userform div.legal').hide();
 		}
     });	
-    $('.content .registration > div > div.performer p input[type="checkbox"]').change(function() {
+    $('.content .userform > div > div.performer p input[type="checkbox"]').change(function() {
         if($(this).is(':checked')) {
-            $('.content .registration > div.optional').show();
+            $('.content .userform > div.optional').show();
         }
         else {
-            $('.content .registration > div.optional').hide();
+            $('.content .userform > div.optional').hide();
 		}		
     });
-	$('.content .registration > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
+	$('.content .userform > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
 	$('.modal').append('<span class="close"></span>');
 	$('.modal').append('<span class="arrow"></span>');
 	$('.modal .close').click(function() {
@@ -449,5 +449,8 @@ $(document).ready(function() {
 				marginTop: '-' + Math.round(ry * coords.y) + 'px'
 			});
 		}
+	}
+	if ( $('.ctitle .sort').length > 0 ) {
+		$('.ctitle h1').css({'margin-top': '18px'});
 	}
 });
