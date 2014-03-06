@@ -8,7 +8,6 @@
 	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
-	<script type="text/javascript" src="./js/jcrop.js"></script>
 	<script type="text/javascript" src="./js/jqueryui.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/jscrollpane.js"></script>
@@ -119,89 +118,96 @@
 					<ul>
 						<li class="profile"><a href="#">Профиль</a></li>
 						<li class="tasks"><a href="#">Мои задачи</a></li>
+						<li class="mytasks"><a href="#">Задачи мне</a></li>
 						<li class="favorite"><a href="#">Избранное</a></li>
 						<li class="messages"><a href="#">Сообщения</a> (4)</li>
-						<li class="notifications"><a href="#">Уведомления</a> (5)</li>
+						<li class="notifications active"><a href="#">Уведомления</a> (5)</li>
+						<li class="medals"><a href="#">Награды</a></li>
 					</ul>
 				</div>
 				<div class="col4">
-					<div class="userform">
-						<div>
-							<div>
-								<p><em>*</em> Фамилия :</p> <input type="text" value="Романовская">
-							</div>
-							<div>
-								<p><em>*</em> Имя:</p> <input type="text" value="Ольга">
-							</div>
-							<div>
-								<p><em>*</em> Дата рождения:</p>
-								<span class="day">
-									<select>
-										<option>5</option>
-										<option>5</option>
-									</select>
-								</span>
-								<span class="month">
-									<select>
-										<option>августа</option>
-										<option>августа</option>
-									</select>
-								</span>
-								<span class="year">
-									<select>
-										<option>1988</option>
-										<option>1988</option>
-									</select>
-								</span>
-							</div>
-							<div class="photo">
-								<p>Фото:</p>
-								<img src="./img/registration_photo.png" width="149" height="104" class="current" alt="">
-								<p>
-									<span><a href="#">Выбрать другое фото</a></span>
-									<span class="edit"><a href="#">Редактировать</a></span>
-									<span><a href="#">Удалить</a></span>
-									<span>JPG, PNG, не более 5 Мб.</span>
-								</p>
-								<div class="modal absolute">
-									<h2>Редактирование фотографии</h2>
-									<p>Выберите область, которая будет показываться на вашей аватарке.</p>
-									<div class="crop">
-										<img src="./img/photo_original.jpg" width="364" height="320" id="crop" alt="">
-										<div class="preview">
-											<img src="./img/photo_original.jpg" width="364" height="320" id="preview" alt="">
-										</div>
-										<div class="buttons">
-											<button class="save">Сохранить</button>
-											<button class="cancel">Отменить</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div>
-								<p><em>*</em> Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
-							</div>
-							<div>
-								<p><em>*</em> Город:</p> <input type="text" value="Барнаул" class="error"> <span class="erroricon"></span> <p class="errormessage">Город не должен находиться в Сибири!</p>
-							</div>
-							<div>
-								<p><em>*</em> E-mail:</p> <input type="text" value="ivashina-gmail.com">
-							</div>
+					<div class="notifications">
+						<div class="newest">
+							<h6>4 минуты назад</h6>
+							<h2>Поступило новое предложение</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть предложение</a></h5>
+						</div>
+						<div class="newest">
+							<h6>10 минут назад</h6>
+							<h2>Поступило новое встречное предложение</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"
+							<p>Заказчик предлагает выполнить задачу за <strong>380 рублей</strong></p>
+							<p><span>Комментарий: <em>“Давайте ни мне ни вам)”</em></span></p>
+							<ul>
+								<li><a href="#">Принять</a></li>
+								<li><a href="#">Отказаться</a></li>
+							</ul>
+						</div>
+						<div class="newest">
+							<h6>20 минут назад</h6>
+							<h2>Поздравляем! Заказчик выбрал Вас в качестве исполнителя!</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
+						</div>
+						<div class="newest">
+							<h6>4 часа назад</h6>
+							<h2>Задача отменена</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
+						</div>
+						<div class="newest">
+							<h6>8 часов назад</h6>
+							<h2>Заказчик назначил Вам личную задачу!</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
+							<ul>
+								<li><a href="#">Принять</a></li>
+								<li><a href="#">Отказаться</a></li>
+								<li><a href="#">Торговаться</a></li>
+							</ul>
 						</div>
 						<div>
-							<h2>Смена пароля</h2>
-							<div>
-								<p><em>*</em> Новый пароль:</p> <input type="text">
-							</div>
-							<div>
-								<p><em>*</em> Старый пароль:</p> <input type="text">
-							</div>
-							<div>
-								<p><em>*</em> Повторите пароль:</p> <input type="text">
-							</div>
+							<h6>12 часов назад</h6>
+							<h2>Получен новый отзыв</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
 						</div>
-						<p class="cancel"><a href="#">Отмена</a></p>
-						<button class="save">Сохранить</button>
+						<div>
+							<h6>12.09.2013 в 15:44</h6>
+							<h2>Поступило новый отзыв</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
+						</div>
+						<div>
+							<h6>12.09.2013 в 12:22</h6>
+							<h2>Поступило новый отзыв</h2>
+							<p>по задаче №1256547 "Отвезти договор из Ботанический сад до Химки"</p>
+							<h5><a href="#">Смотреть отзыв</a></h5>
+						</div>
+					</div>
+					<div class="pagination">
+						<ul class="navigation">
+							<li><a href="#">1</a></li>
+							<li class="active"><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li>...</li>
+							<li><a href="#">125</a></li>
+						</ul>
+						<ul class="quantity">
+							<li>Показать по:</li>
+							<li class="active"><a href="#">8</a></li>
+							<li><a href="#">32</a></li>
+							<li><a href="#">65</a></li>
+							<li><a href="#">110</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

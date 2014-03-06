@@ -451,6 +451,6 @@ $(document).ready(function() {
 		}
 	}
 	if ( $('.ctitle .sort').length > 0 ) {
-		$('.ctitle h1').css({'margin-top': '18px'});
+		$('.ctitle h1').css({'margin-top': '14px'});
 	}
 });
