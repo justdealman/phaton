@@ -2111,6 +2111,11 @@ button::-moz-focus-inner {
 	margin:0 0 27px;
 	background:url('../img/line_bg.png') repeat-x top;
 }
+.goback.list {
+	padding:0;
+	margin:-8px 0 28px;
+	background:none;
+}
 .goback p {
 	font-size:14px;
 	line-height:17px;
@@ -2198,6 +2203,8 @@ button::-moz-focus-inner {
 	width:664px;
 }
 .col4 {
+	position:relative;
+	z-index:0;
 	float:left;
 	width:760px;
 	margin:0 0 0 10px;
@@ -2537,6 +2544,8 @@ button::-moz-focus-inner {
 	top:-3px;
 }
 .usernav {
+	position:relative;
+	z-index:1;
 	float:left;
 	width:180px;
 	margin:0 10px 0 10px;
@@ -4932,10 +4941,6 @@ button::-moz-focus-inner {
 .col4 .specialization .modal.absolute .arrow {
 	left:232px;
 }
-
-
-
-
 .col4 .notifications {
 	margin:0 0 35px 44px;
 }
@@ -5015,7 +5020,347 @@ button::-moz-focus-inner {
 	text-decoration:none;
 	border-bottom:1px dashed #e6b131;
 }
-
+.dialog {
+	position:relative;
+	margin:30px 0 37px 44px;
+	padding:4px;
+	background:#ffffff;
+	border:1px dashed #bfbfbe;
+}
+.dialog > span {
+	position:absolute;
+	left:38px;
+	top:-15px;
+	display:block;
+	width:29px;
+	height:15px;
+	background:url('../img/dialog_span.png') no-repeat left top;
+}
+.dialog > div {
+	min-height:65px;
+	margin:0 0 1px;
+	background:url('../img/dialog_line.png') no-repeat 110px bottom;
+}
+.dialog > div.unread {
+	background:#f3f3f3;
+}
+.dialog.message > div {
+	cursor:pointer;
+}
+.dialog.message > div:last-child {
+	background:#ffffff;
+}
+.dialog.message > div:hover {
+	background:#e8e8e8;
+}
+.dialog.message > div.new {
+	background:#f3f3f3 !important;
+}
+.dialog.message > div.new:hover {
+	background:#e8e8e8 !important;
+}
+.dialog > div .photo {
+	position:relative;
+	display:inline-block;
+	width:82px;
+	height:57px;
+	padding:4px;
+	vertical-align:middle;
+	margin:0 12px 0 0;
+}
+.dialog > div .photo .online {
+	position:absolute;
+	left:4px;
+	bottom:4px;
+	display:block;
+	width:13px;
+	height:13px;
+	background:#8cc640;
+	animation-name:online;
+	animation-duration:1s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+	-webkit-animation-name:online;
+	-webkit-animation-duration:1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-name:online;
+	-moz-animation-duration:1s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:linear;
+	-ms-animation-name:online;
+	-ms-animation-duration:1s;
+	-ms-animation-iteration-count:infinite;
+	-ms-animation-timing-function:linear;
+	-o-animation-name:online;
+	-o-animation-duration:1s;
+	-o-animation-iteration-count:infinite;
+	-o-animation-timing-function:linear;
+}
+.dialog > div .name {
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+	width:150px;
+	color:#000000;
+	font-size:16px;
+	line-height:20px;
+	font-weight:normal;
+	white-space:nowrap;
+	vertical-align:middle;
+	padding:4px;
+	margin:0 12px 2px 0;
+}
+.dialog > div .name a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px dashed #000000;
+}
+.dialog > div .text {
+	display:inline-block;
+	padding:6px 0;
+	margin:4px 17px 0 0;
+	vertical-align:middle;
+}
+.dialog > div .text p {
+	color:#000000;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	margin:0 0 4px;
+}
+.dialog > div.unread .text p {
+	font-size:14px;
+	line-height:16px;
+}
+.dialog > div .data {
+	display:inline-block;
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	font-weight:300;
+	padding:4px;
+	vertical-align:bottom;
+	margin:0 0 5px;
+}
+.dialog > div .data span {
+	clear:both;
+	overflow:hidden;
+	display:block;
+	font-size:14px;
+	line-height:16px;
+	font-weight:bold;
+	margin:0 0 4px;
+}
+.dialog > div .data span em {
+	float:right;
+	display:block;
+	color:#e6b131;
+	font-style:normal;
+	padding:1px 0 0 20px;
+	background:url('../img/user_message_active_icon.png') no-repeat left 3px;
+}
+.dialog > div.unread .data {
+	vertical-align:middle;
+	margin:0;
+}
+.dialog.message > div .data {
+	vertical-align:middle;
+}
+.dialog.message > div.new .data {
+	vertical-align:bottom;
+}
+.dialog .answer {
+	background:#00ab63;
+}
+.dialog .answer .name {
+	width:25px;
+	color:#ffffff;
+}
+.dialog .answer textarea {
+	display:inline-block;
+	width:460px;
+	min-height:40px;
+	color:#000000;
+	font-size:14px;
+	line-height:16px;
+	font-weight:300;
+	vertical-align:middle;
+	padding:4px 9px;
+	margin:8px 4px 7px 0;
+	background:#ffffff url('../img/dialog_textarea.png') repeat-x top;
+	border:1px solid #cccccc;
+	resize:vertical;
+	overflow:hidden;
+}
+.dialog .answer button.submit {
+	display:inline-block;
+	width:58px;
+	height:50px;
+	cursor:pointer;
+	vertical-align:top;
+	margin:8px 0 7px;
+	background:#8cc63e url('../img/dialog_submit.png') no-repeat center center;
+}
+.col4 .warning {
+	padding:23px 0 0;
+	margin:0 0 25px 42px;
+	background:url('../img/line_bg.png') repeat-x top;
+}
+.col4 .warning > div {
+	padding:0 0 16px;
+	background:url('../img/line_bg.png') repeat-x bottom;
+}
+.col4 .warning > div h5 {
+	color:#ee4036;
+	font-size:24px;
+	line-height:28px;
+	font-weight:300;
+	padding:0;
+	margin:0 0 8px;
+}
+.col4 .warning > div p {
+	color:#999999;
+	font-size:16px;
+	line-height:20px;
+	margin:0 0 20px;
+}
+.col4 .card {
+	margin:0 0 25px 44px;
+}
+.col4 .card .photo {
+	display:inline-block;
+	width:250px;
+	vertical-align:top;
+	margin:5px 65px 0 0;
+}
+.col4 .card .photo > div {
+	margin:0 0 20px;
+}
+.col4 .card .photo p {
+	font-size:14px;
+	line-height:16px;
+	margin:0 0 16px;
+}
+.col4 .card .photo p a {
+	color:#e6b131;
+}
+.col4 .card .information {
+	display:inline-block;
+	width:400px;
+	vertical-align:top;
+	margin:-1px -3px 0 0;
+}
+.col4 .card .information h2 {
+	color:#000000;
+	font-size:24px;
+	line-height:28px;
+	font-weight:300;
+	padding:0;
+	margin:0 0 31px;
+}
+.col4 .card .information h6 {
+	color:#999999;
+	font-size:14px;
+	line-height:16px;
+	font-weight:300;
+	padding:0;
+	margin:-19px 0 31px;
+}
+.col4 .card .information ul {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 27px;
+}
+.col4 .card .information ul li {
+	float:left;
+	color:#000000;
+	font-size:14px;
+	line-height:16px;
+	font-weight:300;
+	margin:0 0 0 28px;
+}
+.col4 .card .information ul li:first-child {
+	margin-left:0;
+}
+.col4 .card .information ul li.thumbsup {
+	padding:0 0 0 25px;
+	background:url('../img/userc_thumbsup_icon.png') no-repeat left top;
+}
+.col4 .card .information ul li.review {
+	padding:0 0 0 24px;
+	background:url('../img/userc_review_icon.png') no-repeat left top;
+}
+.col4 .card .information ul li.review a {
+	text-decoration:none;
+}
+.col4 .card .information ul li.review a:hover {
+	text-decoration:underline;
+}
+.col4 .card .information ul li.review a.positive {
+	color:#00ac64;
+	font-weight:bold;
+}
+.col4 .card .information ul li.review a.negative {
+	color:#ee4037;
+}
+.col4 .card .information > div {
+	margin:0 0 27px;
+}
+.col4 .card .information > div p {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:300;
+	padding:0 0 0 25px;
+	margin:0 0 8px;
+}
+.col4 .card .information > div p.phone {
+	background:url('../img/card_phone_icon.png') no-repeat 2px 2px;
+}
+.col4 .card .information > div p.email {
+	background:url('../img/card_email_icon.png') no-repeat 1px 7px;
+}
+.awards {
+	margin:0 0 71px;
+}
+.awards > div {
+	width:760px;
+	padding:58px 0 0 200px;
+	margin:0 0 44px -200px;
+	background:url('../img/line_bg.png') repeat-x top;
+}
+.awards > div:first-child {
+	padding-top:0;
+	background:none;
+}
+.awards > div p {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:300;
+	margin:0 0 17px;
+}
+.awards > div ul {
+	margin:0 0 -20px;
+}
+.awards > div ul li {
+	display:inline-block;
+	clear:both;
+	overflow:hidden;
+	width:180px;
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:300;
+	vertical-align:top;
+	padding:0 0 0 82px;
+	margin:0 66px 37px 0;
+}
+.awards > div ul li img {
+	float:left;
+	margin:5px 0 0 -82px;
+}
 
 /* Modal */
 

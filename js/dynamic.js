@@ -67,8 +67,63 @@ $(window).scroll(function(){
 });
 $(window).load(function(){
 	float();
+	$('.dialog > div').each(function() {
+		if ( $(this).height() > 65 || $(this).hasClass('answer') ) {
+			$(this).find('.photo, .name').css({'vertical-align': 'top'});
+			var nh = (51 - $(this).find('.name').height() ) / 2;
+			$(this).find('.name').css({'margin-top': nh+'px'});
+		}
+	});
 });
+
 $(document).ready(function() {
+	$('.dialog > div textarea').keyup(function(e) {
+		while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css('borderTopWidth')) + parseFloat($(this).css('borderBottomWidth'))) {
+			$(this).height($(this).height()+1);
+		};
+	});
+	$('.dialog > div').each(function() {
+		var tw = 404-$(this).find('.data').width();
+		$(this).find('.text').css({'width': tw+'px'});
+	});
+	$('.dialog.message > div.new').each(function() {
+		$(this).prev().css({'background': '#ffffff'});
+	})
+	$('.dialog.message > div:last-child').each(function() {
+		$(this).css({'background': '#ffffff'});
+	})
+	$('.dialog.message > div').not(':last, .new').hover(
+		function() {
+			$(this).prev().css({'background': 'none'});
+			$(this).css({'background': '#e8e8e8'});
+		},
+		function() {
+			if ( $(this).next().attr('class') == 'new' ) {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+			else {
+				$(this).css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+		}
+	);
+	$('.dialog.message > div').filter(':last').hover(
+		function() {
+			$(this).prev().css({'background': '#ffffff'});
+			$(this).css({'background': '#e8e8e8'});
+		},
+		function() {
+			if ( $(this).attr('class') == 'new' ) {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'none'});
+			}
+			else {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+		}
+	);
 	$('.index .carousel').jcarousel({
 		scroll: 1,
 		animation: 500,
@@ -423,6 +478,8 @@ $(document).ready(function() {
 		$(this).parents('.photo').find('.modal').fadeIn(150);
 		return false;
 	});
+	$('.dialog').append('<span></span>');
+	$('.dialog .read').filter(':last').css({'background': 'none'});
 	$('#crop').Jcrop({
 		bgOpacity: 0.5,
 		bgColor: 'black',

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="249" height="51" alt="">
+					<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="h1">
+				<h1>Личный кабинет</h1>
+			</div>
+			<div class="goback list">
+				<p><a href="#">Вернуться к списку собеседников</a></p>
+			</div>
+			<div class="grid">
+				<div class="usernav">
+					<ul>
+						<li class="profile"><a href="#">Профиль</a></li>
+						<li class="tasks"><a href="#">Мои задачи</a></li>
+						<li class="mytasks"><a href="#">Задачи мне</a></li>
+						<li class="favorite"><a href="#">Избранное</a></li>
+						<li class="messages active"><a href="#">Сообщения</a> (4)</li>
+						<li class="notifications"><a href="#">Уведомления</a> (5)</li>
+						<li class="medals"><a href="#">Награды</a></li>
+					</ul>
+				</div>
+				<div class="col4">
+					<div class="dialog">
+						<div class="read">
+							<div class="photo">
+								<img src="./img/dialog_user1.png" width="82" height="57" alt="">
+							</div>
+							<p class="name">Вы</p>
+							<div class="text">
+								<p>Вы можете взять мой ноутбук, но для этого вам нужно будет заехать ко мне в офис на старом арбате, до 12 часов</p>
+							</div>
+							<p class="data">5 минут назад</p>
+						</div>
+						<div class="read">
+							<div class="photo">
+								<img src="./img/dialog_user1.png" width="82" height="57" alt="">
+							</div>
+							<p class="name">Вы</p>
+							<div class="text">
+								<p>Деньги за задание Вам отдаст Алина.</p>
+							</div>
+							<p class="data">5 минут назад</p>
+						</div>
+						<div class="unread">
+							<div class="photo">
+								<span class="online"></span>
+								<img src="./img/dialog_user2.png" width="82" height="57" alt="">
+							</div>
+							<p class="name"><a href="#">Люся Ивашина</a></p>
+							<div class="text">
+								<p>Мы вышлем документы в пятницу.</p>
+							</div>
+							<p class="data">2 часа назад</p>
+						</div>
+						<div class="unread">
+							<div class="photo">
+								<span class="online"></span>
+								<img src="./img/dialog_user2.png" width="82" height="57" alt="">
+							</div>
+							<p class="name"><a href="#">Люся Ивашина</a></p>
+							<div class="text">
+								<p>Спасибо.</p>
+							</div>
+							<p class="data">18.09.2013</p>
+						</div>
+						<div class="unread">
+							<div class="photo">
+								<span class="online"></span>
+								<img src="./img/dialog_user2.png" width="82" height="57" alt="">
+							</div>
+							<p class="name"><a href="#">Люся Ивашина</a></p>
+							<div class="text">
+								<p>Было приятно с Вами работать! Обращайтесь...</p>
+							</div>
+							<p class="data">18.09.2013</p>
+						</div>
+						<div class="answer">
+							<div class="photo">
+								<span class="online"></span>
+								<img src="./img/dialog_user2.png" width="82" height="57" alt="">
+							</div>
+							<p class="name">Вы:</p>
+							<textarea cols="100" rows="2">До завтра!</textarea>
+							<button class="submit"></button>
+						</div>
+					</div>
+					<div class="warning">
+						<div>
+							<h5>Внимание!</h5>
+							<p>Сообщения проверяются модератором.</p>
+							<p>Не разрешается передавать исполнителю и запрашивать у исполнителя контактные данные (телефон, адрес, email, идентификаторы, ссылки на страницы в социальных сетях и другое) в любом виде.</p>
+							<p>Не разрешается передавать исполнителю и запрашивать у исполнителя контактные данные (телефон, адрес, email, идентификаторы, ссылки на страницы в социальных сетях и другое) в любом виде.</p>
+							<p>Пожалуйста, не нарушайте правила сервиса.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+					<li>
+						<ul>
+							<li><a href="#">Исполнители</a></li>
+							<li><a href="#">Задачи</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">О компании</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Условия использования</a></li>
+							<li><a href="#">Правила сервиса</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>
