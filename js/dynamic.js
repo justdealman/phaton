@@ -83,7 +83,7 @@ $(document).ready(function() {
 		};
 	});
 	$('.dialog > div').each(function() {
-		var tw = 404-$(this).find('.data').width();
+		var tw = 400-$(this).find('.data').width();
 		$(this).find('.text').css({'width': tw+'px'});
 	});
 	$('.dialog.message > div.new').each(function() {
