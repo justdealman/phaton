@@ -1,0 +1,489 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="249" height="51" alt="">
+					<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ctitle">
+				<h1>Исполнители</h1>
+				<div>
+					<div class="description">
+						<div>
+							<p>Выберите нужную специализацию и посмотрите наших исполнителей! Назначьте задачу понравившемуся.</p>
+						</div>
+						<h5>40 312 исполнителей в 298 городах</h5>
+					</div>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="col1">
+					<div class="catspec">
+						<h2>Исполнители</h2>
+						<div>
+							<ul>
+								<li class="sub">
+									<a href="#">Помощь по дому / хозяйству</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Красота и здоровье</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Купить / Доставить</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Бизнес / Учеба / Страхование</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Переезд / Водители</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Интернет / Компьютер</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Мероприятия / Праздники</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Животные</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+								<li class="sub">
+									<a href="#">Уход / Сопровождение / Дети</a>
+									<ul>
+										<li><a href="#">Уборка / Домработница</a></li>
+										<li><a href="#">Мелкий бытовой ремонт</a></li>
+										<li><a href="#">Ремонт / настройка техники</a></li>
+										<li><a href="#">Приготовление еды</a></li>
+										<li><a href="#">Сборка мебели</a></li>
+										<li><a href="#">Сезонная работа на участке</a></li>
+										<li><a href="#">Пошив</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter">
+						<div>
+							<h3>Специализации</h3>
+							<p>
+								<select>
+									<option></option>
+									<option>Первая</option>
+								</select>
+							</p>
+							<p class="list">
+								<span>Перевод текстов <em title="удалить специализацию"></em></span> <span>Парикмахер <em title="удалить специализацию"></em></span>
+							</p>
+						</div>
+						<div class="rating">
+							<h3>Рейтинг</h3>
+							<div class="slider">
+								<div class="range"></div>
+							</div>
+						</div>
+						<div class="price">
+							<h3>Цена за час</h3>
+							<p class="interval">
+								<input type="text" class="min" value="1000"> <span>—</span> <input type="text" class="max" value="7000"> <span>руб.</span>
+							</p>
+							<div class="slider">
+								<div class="range"></div>
+							</div>
+						</div>
+						<div>
+							<h3>Ключевое слово <span class="tip"></span></h3>
+							<p><input type="text"></p>
+							<ul class="values">
+								<li><input type="checkbox" name="c1" checked> Только свободные</li>
+								<li><input type="checkbox" name="c1"> Только online</li>
+								<li><input type="checkbox" name="c1"> Только с положительными отзывами</li>
+								<li><input type="checkbox" name="c1"> Только коммерческие</li>
+								<li><input type="checkbox" name="c1"> Только частные</li>
+							</ul>
+						</div>
+						<button class="submit">Найти</button>
+						<button class="clear"><span>Сбросить фильтр</span></button>
+					</div>
+				</div>
+				<div class="col3">
+					<div class="sort user">
+						<p>Вам подходит 125 исполнителей</p>
+						<div class="view">
+							<p>Вид:</p>
+							<ul>
+								<li class="type1 active" title="отображать списком"></li>
+								<li class="type2" title="отображать сеткой"></li>
+							</ul>
+						</div>
+						<div class="priority">
+							<p>Сортировать:</p>
+							<select>
+								<option>По рейтингу</option>
+								<option>По рейтингу</option>
+							</select>
+						</div>
+					</div>
+					<div class="bigmap">
+						<div>
+							<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+							<script charset="utf-8" type="text/javascript">new DGWidgetLoader({"width":"716","height":"535","wid":"5515467363f70dcad27b414b86a1444e","pos":{"lon":"83.674747297387","lat":"53.330397051188","zoom":"15"},"opt":{"ref":"hidden","card":["name","contacts"],"city":"barnaul"},"org":[{"id":"563479234547619"}]});</script>
+						</div>
+					</div>
+					<ul class="carousel">
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person1.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type1" title="значение 1"></li>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+									<span class="online" title="исполнитель онлайн"></span>
+									<p title="исполнитель свободен">Free</p>
+								</div>
+								<h3><a href="#">Люся Ивашина</a></h3>
+								<h5>Пеший курьер</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person2.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type3" title="значение 3"></li>
+									</ul>
+								</div>
+								<h3><a href="#">Даниил Нестеров</a></h3>
+								<h5>Мелкий бытовой ремонт</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person3.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+								</div>
+								<h3><a href="#">TRANCO</a></h3>
+								<h5>Работы по дереву</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person4.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type1" title="значение 1"></li>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+									<span class="online" title="исполнитель онлайн"></span>
+								</div>
+								<h3><a href="#">Роман Петров</a></h3>
+								<h5>Аэрография</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person5.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type3" title="значение 3"></li>
+									</ul>
+									<p title="исполнитель свободен">Free</p>
+								</div>
+								<h3><a href="#">Александра Попова</a></h3>
+								<h5>Пеший курьер</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person1.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type1" title="значение 1"></li>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+									<span class="online" title="исполнитель онлайн"></span>
+									<p title="исполнитель свободен">Free</p>
+								</div>
+								<h3><a href="#">Люся Ивашина</a></h3>
+								<h5>Пеший курьер</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person2.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type3" title="значение 3"></li>
+									</ul>
+								</div>
+								<h3><a href="#">Даниил Нестеров</a></h3>
+								<h5>Мелкий бытовой ремонт</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person3.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+								</div>
+								<h3><a href="#">TRANCO</a></h3>
+								<h5>Работы по дереву</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person4.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type1" title="значение 1"></li>
+										<li class="type2" title="значение 2"></li>
+									</ul>
+									<span class="online" title="исполнитель онлайн"></span>
+								</div>
+								<h3><a href="#">Роман Петров</a></h3>
+								<h5>Аэрография</h5>
+							</div>
+						</li>
+						<li>
+							<div class="person">
+								<div>
+									<img src="./img/person5.jpg" width="150" height="104" alt="">
+									<ul>
+										<li class="type3" title="значение 3"></li>
+									</ul>
+									<p title="исполнитель свободен">Free</p>
+								</div>
+								<h3><a href="#">Александра Попова</a></h3>
+								<h5>Пеший курьер</h5>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+					<li>
+						<ul>
+							<li><a href="#">Исполнители</a></li>
+							<li><a href="#">Задачи</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">О компании</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Условия использования</a></li>
+							<li><a href="#">Правила сервиса</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>

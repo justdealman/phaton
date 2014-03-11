@@ -75,7 +75,6 @@ $(window).load(function(){
 		}
 	});
 });
-
 $(document).ready(function() {
 	$('.dialog > div textarea').keyup(function(e) {
 		while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css('borderTopWidth')) + parseFloat($(this).css('borderBottomWidth'))) {
@@ -124,14 +123,41 @@ $(document).ready(function() {
 			}
 		}
 	);
-	$('.index .carousel').jcarousel({
+	$('.infoblock .quote').append('<span></span>');
+	$('.offers > div > .td .modal.absolute .quote').append('<span></span>');
+	$('.offers > div > .td .modal.absolute .options .cancel a').click(function() {
+		$(this).parents('.modal').fadeOut(150);
+		return false;
+	});
+	$('.offers > div > .td > div.more > div .buttons button.accept').click(function() {
+		$(this).parents('.td').find('.modal').fadeIn(150);
+		return false;
+	});
+	$('.searchresult').each(function() {
+		var marginmap = ( $(this).find('.taskc').height() - $(this).find('.map').height() ) / 2;
+		$(this).find('.map').css({'margin-top': marginmap+'px'});
+	});
+	$('.col1 .faqnav li').append('<span></span>');
+	$('.col3 .faq > div h3 span').click(function() {
+		$(this).parent().parent().toggleClass('active');
+		return false;
+	}).filter(':first').click();
+	$('.carousel').jcarousel({
 		scroll: 1,
 		animation: 500,
 		easing: 'easeInOutCubic'
 	});
+	var faq = $('.col3 .faq');
+	$('.col1 .faqnav li a').click(function () {
+		faq.hide();
+		faq.filter(this.hash).stop(true, true).fadeIn(0);
+		$('.col1 .faqnav li').removeClass('active');
+		$(this).parent().addClass('active');
+		return false;
+	}).filter(':first').click();
 	$('.categories > div > div > div p, .useri .information .description .about > div, .reviewu > div, .reviewu > .leave > div > .prepared > div').append('<span></span>');
 	$('.reviewu > .leave').append('<button class="close"></button>');
-	$('select, input[type="checkbox"], input[type="file"]').uniform();
+	$('select, input[type="checkbox"], input[type="radio"], input[type="file"]').uniform();
 	$('.filter p.list span em').click(function() {
 		$(this).parent().fadeOut(0);
 		return false;
@@ -261,10 +287,12 @@ $(document).ready(function() {
 	);
 	$('.offers > div > .td p.more span').click(function() {
 		$(this).parents('.td').addClass('active');
+		$('.offers > div > .td .modal').fadeOut(150);
 		return false;
 	});
 	$('.offers > div > .td p.less span').click(function() {
 		$(this).parents('.td').removeClass('active');
+		$('.offers > div > .td .modal').fadeOut(150);
 		return false;
 	});
 //	$('.ratingsmall').raty({
