@@ -1,0 +1,505 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+				<img src="./img/logo.png" width="249" height="51" alt="">
+				<button class="city"><span>Владивосток</span></button>
+				</div>
+				<ul class="user">
+				<li class="login"><a href="#">Вход</a></li>
+				<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+				<li><a href="#">Исполнители</a></li>
+				<li><a href="#">Задачи</a></li>
+				</ul>
+				<button class="add">+ Добавить задачу</button>
+				<div class="popup login">
+				<h2>Вход</h2>
+				<div class="form">
+					<p><span>E-mail:</span> <input type="text"></p>
+					<p><span>Пароль:</span> <input type="text"></p>
+					<p class="recover"><a href="#">Забыли пароль?</a></p>
+					<button class="submit">Войти</button>
+					<div class="tip">
+						<p>Или войдите, используя свой аккаунт в социальной сети</p>
+					</div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="popup registration">
+				<h2>Регистрация</h2>
+				<div class="options">
+					<div>
+						<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+						<div>
+							<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+						</div>
+					</div>
+					<div>
+						<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+						<div>
+							<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+						</div>
+					</div>
+				</div>
+				<div class="form customer">
+					<p><span>Имя:</span> <input type="text"></p>
+					<p><span>E-mail:</span> <input type="text"></p>
+					<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+					<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+					<button class="submit">Зарегистрироваться</button>
+					<div class="tip">
+						<p>Или войдите, используя свой аккаунт в социальной сети</p>
+					</div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+				</div>
+				<div class="form performer">
+					<p><span>Имя:</span> <input type="text"></p>
+					<p><span>E-mail:</span> <input type="text"></p>
+					<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+					<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+					<button class="submit">Зарегистрироваться</button>
+					<div class="tip">
+						<p>Или войдите, используя свой аккаунт в социальной сети</p>
+					</div>
+					<ul class="social">
+						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+					</ul>
+					<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="searchform">
+				<h3>Быстрый поиск</h3>
+				<p><input type="text" placeholder="Отвезти"></p>
+				<button class="submit"></button>
+			</div>
+			<div class="ctitle">
+				<h1>Исполнители</h1>
+				<div>
+				<div class="description">
+					<h6><a href="#"><span>Смотреть всех</span></a></h6>
+					<h5>40 312 исполнителей в 298 городах</h5>
+				</div>
+				</div>
+			</div>
+			<div class="searchresult">
+				<div class="userc">
+				<div>
+					<div>
+						<img src="./img/userc1.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type1">
+							<span class="medal1"><em></em></span>
+							</li>
+							<li class="type2" title="значение 2"></li>
+						</ul>
+						<span class="online" title="исполнитель онлайн"></span>
+						<p title="исполнитель свободен">Free</p>
+					</div>
+					<h3><a href="#">Люся Ивашина</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,2</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">954</a></em>
+							<em class="negative"><a href="#">12</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+					</h4>
+					<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+					<h5>
+						<span class="like active"></span>
+						<span class="price">1100<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc2.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type3" title="значение 3"></li>
+						</ul>
+					</div>
+					<h3><a href="#">Даниил Нестеров</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,1</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">813</a></em>
+							<em class="negative"><a href="#">1</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">955</span>
+					</h4>
+					<p>Мелкий бытовой ремонт, Ремонт и сборка мебели, Сантехники, Ремонт дверей и окон <a href="#">и еще 2</a></p>
+					<h5>
+						<span class="like"></span>
+						<span class="price">800<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc3.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type2" title="значение 2"></li>
+						</ul>
+					</div>
+					<h3><a href="#">TRANCO</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,1</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">954</a></em>
+							<em class="negative"><a href="#">12</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+					</h4>
+					<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+					<h5>
+						<span class="like"></span>
+						<span class="price">1100<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc4.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type1" title="значение 1"></li>
+							<li class="type2" title="значение 2"></li>
+						</ul>
+					</div>
+					<h3><a href="#">Роман Петров</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,2</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">954</a></em>
+							<em class="negative"><a href="#">12</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+					</h4>
+					<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+					<h5>
+						<span class="like active"></span>
+						<span class="price">1100<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc5.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type3" title="значение 3"></li>
+						</ul>
+						<p title="исполнитель свободен">Free</p>
+					</div>
+					<h3><a href="#">Александра Попова</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,1</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">813</a></em>
+							<em class="negative"><a href="#">1</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">955</span>
+					</h4>
+					<p>Мелкий бытовой ремонт, Ремонт и сборка мебели, Сантехники, Ремонт дверей и окон <a href="#">и еще 2</a></p>
+					<h5>
+						<span class="like"></span>
+						<span class="price">800<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc6.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type2" title="значение 2"></li>
+						</ul>
+					</div>
+					<h3><a href="#">Василий Иванов</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,1</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">954</a></em>
+							<em class="negative"><a href="#">12</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+					</h4>
+					<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+					<h5>
+						<span class="like"></span>
+						<span class="price">1100<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc1.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type1">
+							<span class="medal1"><em></em></span>
+							</li>
+							<li class="type2" title="значение 2"></li>
+						</ul>
+						<span class="online" title="исполнитель онлайн"></span>
+						<p title="исполнитель свободен">Free</p>
+					</div>
+					<h3><a href="#">Люся Ивашина</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,2</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">954</a></em>
+							<em class="negative"><a href="#">12</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+					</h4>
+					<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+					<h5>
+						<span class="like active"></span>
+						<span class="price">1100<em>o</em></span>
+					</h5>
+				</div>
+				<div>
+					<div>
+						<img src="./img/userc2.jpg" width="234" height="163" alt="">
+						<ul>
+							<li class="type3" title="значение 3"></li>
+						</ul>
+					</div>
+					<h3><a href="#">Даниил Нестеров</a></h3>
+					<h4>
+						<span class="rating" title="рейтинг">9,1</span>
+						<span class="reviews" title="кол-во отзывов">
+							<em class="positive"><a href="#">813</a></em>
+							<em class="negative"><a href="#">1</a></em>
+						</span>
+						<span class="thumbsup" title="кол-во выполненных задач">955</span>
+					</h4>
+					<p>Мелкий бытовой ремонт, Ремонт и сборка мебели, Сантехники, Ремонт дверей и окон <a href="#">и еще 2</a></p>
+					<h5>
+						<span class="like"></span>
+						<span class="price">800<em>o</em></span>
+					</h5>
+				</div>
+				</div>
+				<p>Вы можете дополнительно отфильтровать и отсортировать исполнителей <a href="#"><span>в каталоге исполнителей</span></a></p>
+			</div>
+			<div class="ctitle">
+				<h1>Задачи</h1>
+				<div>
+					<div class="description">
+						<h6><a href="#"><span>Смотреть все</span></a></h6>
+						<h5>Вам подходят 1 244 задачи</h5>
+					</div>
+				</div>
+			</div>
+			<div class="searchresult">
+				<div class="map">
+					<h2>На карте:</h2>
+					<div>
+						<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+						<script charset="utf-8" type="text/javascript">new DGWidgetLoader({"width":"234","height":"235","wid":"5515467363f70dcad27b414b86a1444e","pos":{"lon":"83.674747297387","lat":"53.330397051188","zoom":"15"},"opt":{"ref":"hidden","card":["name","contacts"],"city":"barnaul"},"org":[{"id":"563479234547619"}]});</script>
+					</div>
+				</div>
+				<div class="taskc">
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Обработка pdf файлов, вставка текста, колонтитулов</h2>
+								<h4><span>1100<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location remotely">Удаленное выполнение</p>
+								<p class="deadline soon">01:12:50</p>
+								<p class="offers">нет предложений</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Отвезти договор из Ботанический сад до Химки</h2>
+								<h4><span>400<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location address">Москва, 2-я Брестская ул. 37 - м. Пушкинская (15 км)</p>
+								<p class="deadline medium">01:12:50</p>
+								<p class="offers">нет предложений</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Установить МФУ в офис</h2>
+								<h4><span>1000<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location address">Москва, ул. Чертановская, дом 66</p>
+								<p class="deadline far">До 18 ноября</p>
+								<p class="offers">2 предложения</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Обработка pdf файлов, вставка текста, колонтитулов</h2>
+								<h4><span>1100<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location remotely">Удаленное выполнение</p>
+								<p class="deadline soon">01:12:50</p>
+								<p class="offers">нет предложений</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Отвезти договор из Ботанический сад до Химки</h2>
+								<h4><span>400<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location address">Москва, 2-я Брестская ул. 37 - м. Пушкинская (15 км)</p>
+								<p class="deadline medium">01:12:50</p>
+								<p class="offers">нет предложений</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Установить МФУ в офис</h2>
+								<h4><span>1000<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location address">Москва, ул. Чертановская, дом 66</p>
+								<p class="deadline far">До 18 ноября</p>
+								<p class="offers">2 предложения</p>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							<div class="information">
+								<ul>
+								<li>Уникальные задачи</li>
+								<li>Прочее</li>
+								</ul>
+								<h2>Обработка pdf файлов, вставка текста, колонтитулов</h2>
+								<h4><span>1100<em>o</em></span></h4>
+							</div>
+							<div class="options">
+								<p class="location remotely">Удаленное выполнение</p>
+								<p class="deadline soon">01:12:50</p>
+								<p class="offers">нет предложений</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<p>Вы можете дополнительно отфильтровать и отсортировать задачи <a href="#"><span>в каталоге задач</span></a></p>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="information">
+				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
+			</div>
+			<div class="links">
+				<ul class="nav">
+				<li>
+					<ul>
+						<li><a href="#">Исполнители</a></li>
+						<li><a href="#">Задачи</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">О компании</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Условия использования</a></li>
+						<li><a href="#">Правила сервиса</a></li>
+					</ul>
+				</li>
+				</ul>
+				<div>
+				<ul class="social">
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+				</ul>
+				<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>

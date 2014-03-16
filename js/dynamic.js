@@ -69,16 +69,97 @@ $(window).scroll(function(){
 });
 $(window).load(function(){
 	float();
+	$('.dialog > div').each(function() {
+		if ( $(this).height() > 65 || $(this).hasClass('answer') ) {
+			$(this).find('.photo, .name').css({'vertical-align': 'top'});
+			var nh = (51 - $(this).find('.name').height() ) / 2;
+			$(this).find('.name').css({'margin-top': nh+'px'});
+		}
+	});
 });
 $(document).ready(function() {
-	$('.index .carousel').jcarousel({
+	$('.dialog > div textarea').keyup(function(e) {
+		while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css('borderTopWidth')) + parseFloat($(this).css('borderBottomWidth'))) {
+			$(this).height($(this).height()+1);
+		};
+	});
+	$('.dialog > div').each(function() {
+		var tw = 400-$(this).find('.data').width();
+		$(this).find('.text').css({'width': tw+'px'});
+	});
+	$('.dialog.message > div.new').each(function() {
+		$(this).prev().css({'background': '#ffffff'});
+	})
+	$('.dialog.message > div:last-child').each(function() {
+		$(this).css({'background': '#ffffff'});
+	})
+	$('.dialog.message > div').not(':last, .new').hover(
+		function() {
+			$(this).prev().css({'background': 'none'});
+			$(this).css({'background': '#e8e8e8'});
+		},
+		function() {
+			if ( $(this).next().attr('class') == 'new' ) {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+			else {
+				$(this).css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+		}
+	);
+	$('.dialog.message > div').filter(':last').hover(
+		function() {
+			$(this).prev().css({'background': '#ffffff'});
+			$(this).css({'background': '#e8e8e8'});
+		},
+		function() {
+			if ( $(this).attr('class') == 'new' ) {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'none'});
+			}
+			else {
+				$(this).css({'background': 'none'});
+				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
+			}
+		}
+	);
+	$('.infoblock .quote').append('<span></span>');
+	$('.offers > div > .td .modal.absolute .quote').append('<span></span>');
+	$('.offers > div > .td .modal.absolute .options .cancel a').click(function() {
+		$(this).parents('.modal').fadeOut(150);
+		return false;
+	});
+	$('.offers > div > .td > div.more > div .buttons button.accept').click(function() {
+		$(this).parents('.td').find('.modal').fadeIn(150);
+		return false;
+	});
+	$('.searchresult').each(function() {
+		var marginmap = ( $(this).find('.taskc').height() - $(this).find('.map').height() ) / 2;
+		$(this).find('.map').css({'margin-top': marginmap+'px'});
+	});
+	$('.col1 .faqnav li').append('<span></span>');
+	$('.col3 .faq > div h3 span').click(function() {
+		$(this).parent().parent().toggleClass('active');
+		return false;
+	}).filter(':first').click();
+	$('.carousel').jcarousel({
 		scroll: 1,
 		animation: 500,
 		easing: 'easeInOutCubic'
 	});
+	var faq = $('.col3 .faq');
+	$('.col1 .faqnav li a').click(function () {
+		faq.hide();
+		faq.filter(this.hash).stop(true, true).fadeIn(0);
+		$('.col1 .faqnav li').removeClass('active');
+		$(this).parent().addClass('active');
+		return false;
+	}).filter(':first').click();
 	$('.categories > div > div > div p, .useri .information .description .about > div, .reviewu > div, .reviewu > .leave > div > .prepared > div').append('<span></span>');
 	$('.reviewu > .leave').append('<button class="close"></button>');
-	$('select, input[type="checkbox"], input[type="file"]').uniform();
+	$('select, input[type="checkbox"], input[type="radio"], input[type="file"]').uniform();
 	$('.filter p.list span em').click(function() {
 		$(this).parent().fadeOut(0);
 		return false;
@@ -208,10 +289,12 @@ $(document).ready(function() {
 	);
 	$('.offers > div > .td p.more span').click(function() {
 		$(this).parents('.td').addClass('active');
+		$('.offers > div > .td .modal').fadeOut(150);
 		return false;
 	});
 	$('.offers > div > .td p.less span').click(function() {
 		$(this).parents('.td').removeClass('active');
+		$('.offers > div > .td .modal').fadeOut(150);
 		return false;
 	});
 //	$('.ratingsmall').raty({
@@ -345,7 +428,49 @@ $(document).ready(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
 	});
-
+	$('.specialization > p > a').bind('click', function() {
+		$(this).parents('.specialization').find('.modal').fadeIn(150);
+		/*$(this).parents('.specialization').find('p.list span').each(function() {
+			var addedspec = $(this).text();
+			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('input[type="checkbox"]').prop('checked', true);
+			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('.checker span').addClass('checked');
+		});*/
+		return false;
+	});
+	$('.specselect > ul > li > ul > li > span').toggle(
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
+			$(this).parent().find('.checker span').addClass('checked');
+			return false;
+		},
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
+			$(this).parent().find('.checker span').removeClass('checked');
+			return false;
+		}
+	);
+	$('.specselect > div button.select').bind('click', function() {
+		$(this).parents('.specselect').find('h6').remove();
+		var specmax = 10;
+		var specnum = $(this).parents('.specselect').find('input[type="checkbox"]:checked').size();
+		if (specnum > specmax) {
+			var specdiff = specnum-specmax;
+			$(this).parents('.specselect').append('<h6>Вы превысили максимальное допустимое число специализаций! Для продолжения избавьтесь по меньшей мере от '+specdiff+' шт.</h6>');
+		}
+		else {
+			$(this).parents('.specialization').find('p.list').empty();
+			$(this).parents('.specselect').find('input[type="checkbox"]:checked').each(function() {
+				var selspec = $(this).parent().parent().parent().text();
+				$(this).parents('.specialization').find('p.list').append('<span>'+selspec+'<em></em></span>');
+			});
+			$(this).parents('.modal').stop(true, true).fadeOut(150);
+			$(this).parents('.specialization').find('p.list span em').bind('click', function() {
+				$(this).parent().fadeOut(0);
+				return false;
+			});
+		}
+		return false;
+	});
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
 		$(this).focusin(function(){
@@ -384,6 +509,9 @@ $(document).ready(function() {
         $('#start_crop').trigger('click');
 		return false;
 	});
+	$('.dialog').append('<span></span>');
+	$('.dialog .read').filter(':last').css({'background': 'none'});
+
 
 	var $preview = $('#preview');
 	function showPreview(coords) {
