@@ -506,30 +506,46 @@ $(document).ready(function() {
 		$(this).removeClass('less').addClass('more');
 		return false;
 	});
+	$('.dialog').append('<span></span>');
+	$('.dialog .read').filter(':last').css({'background': 'none'});
 	$('.photo span.edit a').click(function() {
 		$(this).parents('.photo').find('.modal').fadeIn(150);
         $('#start_crop').trigger('click');
+		var jw = $('#crop').width();
+		var jh = $('#crop').height();
+		var fw = 364;
+		var fh = fw/jw*jh;
+		$('#crop, .jcrop-holder, .jcrop-holder img').css({'width': fw+'px', 'height': fh+'px'});
+		$('.jcrop-tracker').css({'width': fw+4+'px', 'height': fh+4+'px'});
+		$('#crop').Jcrop({
+			bgOpacity: 0.5,
+			bgColor: 'black',
+			onChange: showPreview,
+			onSelect: showPreview,
+			aspectRatio: 234/163,
+			minSize: [86, 60],
+		}, function(){
+			api = this;
+			api.setSelect([0,0,0+234,0+163]);
+			api.setOptions({ bgFade: true });
+		});
+		var $preview = $('#preview');
+		function showPreview(coords) {
+			if (parseInt(coords.w) > 0) {
+				var rx = 234 / coords.w;
+				var ry = 163 / coords.h;
+				var origx = $('#crop').width();
+				var origy = $('#crop').height();
+				$('#preview').css({
+					width: Math.round(rx * origx) + 'px',
+					height: Math.round(ry * origy) + 'px',
+					marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+					marginTop: '-' + Math.round(ry * coords.y) + 'px'
+				});
+			}
+		}
 		return false;
 	});
-	$('.dialog').append('<span></span>');
-	$('.dialog .read').filter(':last').css({'background': 'none'});
-
-
-	var $preview = $('#preview');
-	function showPreview(coords) {
-		if (parseInt(coords.w) > 0) {
-			var rx = 234 / coords.w;
-			var ry = 163 / coords.h;
-			var origx = $('#crop').width();
-			var origy = $('#crop').height();
-			$('#preview').css({
-				width: Math.round(rx * origx) + 'px',
-				height: Math.round(ry * origy) + 'px',
-				marginLeft: '-' + Math.round(rx * coords.x) + 'px',
-				marginTop: '-' + Math.round(ry * coords.y) + 'px'
-			});
-		}
-	}
 	if ( $('.ctitle .sort').length > 0 ) {
 		$('.ctitle h1').css({'margin-top': '14px'});
 	}

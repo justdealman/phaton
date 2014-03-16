@@ -4790,9 +4790,6 @@ button::-moz-focus-inner {
 	min-height:240px;
 	margin:0 0 22px;
 }
-.content .userform > div > div.photo .modal .crop #crop {
-	max-width:364px;
-}
 .content .userform > div > div.photo .modal .crop > .preview {
 	overflow:hidden;
 	position:absolute;
@@ -6137,4 +6134,11 @@ button::-moz-focus-inner {
 }
 .jcrop-dragbar.ord-w {
 	margin-left:-4px;
+}
+
+/* Google map fix */
+
+.userform #map_canvas, .userform #map_canvas > div {
+	width:720px;
+	height:257px;
 }
