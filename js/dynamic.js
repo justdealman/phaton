@@ -41,7 +41,9 @@
 	    $('.reviewu > div > span').css({'left': rm+'px'});
 	    $('.reviewu > div > span, .reviewu > .leave > span').fadeIn(150);
     }
-	$('.content .userform > div.optional').delay(150).fadeOut(0);
+    if(!$('.content .userform > div > div.performer p input[type="checkbox"]').is(':checked')) {
+	    $('.content .userform > div.optional').delay(150).fadeOut(0);
+    }
 });
 $(document).ready(function() {
 	$('.reviewu > div > span, .reviewu > .leave > span').hide();
@@ -343,49 +345,7 @@ $(document).ready(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
 	});
-	$('.specialization > p > a').bind('click', function() {
-		$(this).parents('.specialization').find('.modal').fadeIn(150);
-		/*$(this).parents('.specialization').find('p.list span').each(function() {
-			var addedspec = $(this).text();
-			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('input[type="checkbox"]').prop('checked', true);
-			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('.checker span').addClass('checked');
-		});*/
-		return false;
-	});
-	$('.specselect > ul > li > ul > li > span').toggle(
-		function() {
-			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
-			$(this).parent().find('.checker span').addClass('checked');
-			return false;
-		},
-		function() {
-			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
-			$(this).parent().find('.checker span').removeClass('checked');
-			return false;
-		}
-	);
-	$('.specselect > div button.select').bind('click', function() {
-		$(this).parents('.specselect').find('h6').remove();
-		var specmax = 10;
-		var specnum = $(this).parents('.specselect').find('input[type="checkbox"]:checked').size();
-		if (specnum > specmax) {
-			var specdiff = specnum-specmax;
-			$(this).parents('.specselect').append('<h6>Вы превысили максимальное допустимое число специализаций! Для продолжения избавьтесь по меньшей мере от '+specdiff+' шт.</h6>');
-		}
-		else {
-			$(this).parents('.specialization').find('p.list').empty();
-			$(this).parents('.specselect').find('input[type="checkbox"]:checked').each(function() {
-				var selspec = $(this).parent().parent().parent().text();
-				$(this).parents('.specialization').find('p.list').append('<span>'+selspec+'<em></em></span>');
-			});
-			$(this).parents('.modal').stop(true, true).fadeOut(150);
-			$(this).parents('.specialization').find('p.list span em').bind('click', function() {
-				$(this).parent().fadeOut(0);
-				return false;
-			});
-		}
-		return false;
-	});
+
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
 		$(this).focusin(function(){
@@ -421,20 +381,10 @@ $(document).ready(function() {
 	});
 	$('.photo span.edit a').click(function() {
 		$(this).parents('.photo').find('.modal').fadeIn(150);
+        $('#start_crop').trigger('click');
 		return false;
 	});
-	$('#crop').Jcrop({
-		bgOpacity: 0.5,
-		bgColor: 'black',
-		onChange: showPreview,
-		onSelect: showPreview,
-		aspectRatio: 234/163,
-		minSize: [86, 60],
-	}, function(){
-		api = this;
-		api.setSelect([0,0,0+234,0+163]);
-		api.setOptions({ bgFade: true });
-	});
+
 	var $preview = $('#preview');
 	function showPreview(coords) {
 		if (parseInt(coords.w) > 0) {

@@ -347,6 +347,10 @@ button::-moz-focus-inner {
 	width:50px;
 	background:url('../img/userpanel_profile_icon.png') no-repeat left 2px;
 }
+.header .userpanel .logout {
+    width:50px;
+    background:url('../img/userpanel_logout_icon.png') no-repeat left 2px;
+}
 .header.autorized .userpanel {
 	display:block;
 }
