@@ -4746,6 +4746,10 @@ button::-moz-focus-inner {
 	font-size:14px;
 	line-height:17px;
 }
+.content .userform > div > div.photo  .controls {
+	display:inline-block;
+	vertical-align:top;
+}
 .content .userform > div > div.photo p:first-child {
 	color:#000000;
 	font-size:18px;
