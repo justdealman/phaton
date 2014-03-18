@@ -165,25 +165,15 @@
 								<span class="edit"><a href="#">Редактировать</a></span>
 								<span><a href="#">Удалить</a></span>
 								<span>JPG, PNG, не более 5 Мб.</span>
-								<span><a href="#" class="changeimg">Сменить картинку</a></span>
 							</p>
 						</div>
-						<script type="text/javascript">
-							$('.changeimg').bind('click', function() {
-								$('#crop').attr('src', './img/home_bg.png');
-								$('#preview').attr('src', './img/home_bg.png');
-								alert('Картинка поменялась!');
-								api.destroy();
-								return false;
-							});
-						</script>
 						<div class="modal absolute">
 							<h2>Редактирование фотографии</h2>
 							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
 							<div class="crop">
-								<img src="./img/01.jpg" id="crop" alt="">
+								<img src="http://cs313330.vk.me/v313330653/aa1f/OqjDB5ipbT4.jpg" width="200" height="200" id="crop" alt="">
 								<div class="preview">
-									<img src="./img/01.jpg" width="2560" height="1600" id="preview" alt="">
+									<img src="http://cs313330.vk.me/v313330653/aa1f/OqjDB5ipbT4.jpg" width="200" height="200" id="preview" alt="">
 								</div>
 								<div class="buttons">
 									<button class="save">Сохранить</button>

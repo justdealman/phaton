@@ -508,7 +508,8 @@ $(document).ready(function() {
 	});
 	$('.dialog').append('<span></span>');
 	$('.dialog .read').filter(':last').css({'background': 'none'});
-	$('.photo span.edit a').click(function() {
+	
+	$('.photo span.edit a').bind('click', function() {
 		$(this).parents('.photo').find('.modal').fadeIn(150);
         $('#start_crop').trigger('click');
 		var jw = $('#crop').width();

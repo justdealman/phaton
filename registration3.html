@@ -168,15 +168,15 @@
 								<span><a href="#" class="changeimg">Сменить картинку</a></span>
 							</p>
 						</div>
-						<script type="text/javascript">
-							$('.changeimg').bind('click', function() {
-								$('#crop').attr('src', './img/home_bg.png');
-								$('#preview').attr('src', './img/home_bg.png');
-								alert('Картинка поменялась!');
-								api.destroy();
-								return false;
-							});
-						</script>
+							<script type="text/javascript">
+								$('.changeimg').click(function() {
+									$('#crop').attr('src', './img/home_bg.png');
+									$('#preview').attr('src', './img/home_bg.png');
+									alert('Картинка поменялась!');
+									api.destroy();
+									return false;
+								});
+							</script>
 						<div class="modal absolute">
 							<h2>Редактирование фотографии</h2>
 							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
