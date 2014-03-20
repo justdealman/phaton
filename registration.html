@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jquery.fineuploader-3.4.1.min.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
-	<script type="text/javascript" src="./js/jcrop.js"></script>
+	<script type="text/javascript" src="./js/imgareaselect.js"></script>
 	<script type="text/javascript" src="./js/jqueryui.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/jscrollpane.js"></script>
@@ -168,29 +168,25 @@
 								<span><a href="#" class="changeimg">Сменить картинку</a></span>
 							</p>
 						</div>
-						<script type="text/javascript">
-							$('.changeimg').bind('click', function() {
-								$('#crop').attr('src', './img/home_bg.png');
-								$('#preview').attr('src', './img/home_bg.png');
-								alert('Картинка поменялась!');
-								api.destroy();
-								return false;
-							});
-						</script>
 						<div class="modal absolute">
 							<h2>Редактирование фотографии</h2>
 							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
 							<div class="crop">
-								<img src="./img/01.jpg" id="crop" alt="">
-								<div class="preview">
-									<img src="./img/01.jpg" width="2560" height="1600" id="preview" alt="">
-								</div>
 								<div class="buttons">
 									<button class="save">Сохранить</button>
 									<button class="cancel">Отменить</button>
 								</div>
 							</div>
 						</div>
+						<script type="text/javascript">
+							$('.changeimg').bind('click', function() {
+								$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();	
+								var newimgpath = './img/header_bg.png';
+								alert('Картинка поменялась на '+newimgpath);
+								$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+newimgpath+'" alt=""><div>');
+								return false;
+							});
+						</script>
 					</div>
 					<div>
 						<p><em>*</em> Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
@@ -484,22 +480,5 @@
 	<div class="home">
 		<span>Наверх</span>
 	</div>
-	<script type="text/javascript">
-		jQuery(window).on('load',function() {
-var FineUploader_FineUploader = new qq.FineUploader({'element':document.getElementById("FineUploader"),'debug':false,'multiple':false,'autoUpload':true,'request':{'endpoint':'/index.php?r=site/photoUploadRaw','params':{'YII_CSRF_TOKEN':'94f4f698bf4820d96d3ee4bd848536c7bd4f928b'}},'retry':{'enableAuto':false,'preventRetryResponseProperty':false},'chunking':{'enable':true,'partSize':100},'callbacks':{'onComplete':function(id, name, response){
-                                    var img = response.folder+response.filename;
-                                    $('.photo > img').attr('src', img);
-
-                                    if($('#crop').data('Jcrop') != undefined) {
-                                        $('#crop').data('Jcrop').setImage(img);
-                                        $('#preview').attr('src', img).removeAttr('style');
-                                    } else {
-                                        $('#crop').attr('src', img);
-                                        $('.jcrop-holder img').attr('src', img);
-                                        $('#preview').attr('src', img);
-                                    }
-                                }},'validation':{'allowedExtensions':['jpg','jpeg','png'],'sizeLimit':2097152},'text':{'uploadButton':'Выбрать другое фото'},'messages':{'tooManyItemsError':'Ошибка','typeError':'Файл {file} имеет неверное расширение. Разрешены файлы только с расширениями: {extensions}.','sizeError':'Размер файла {file} велик, максимальный размер {sizeLimit}.','minSizeError':'Размер файла {file} мал, минимальный размер {minSizeLimit}.','emptyError':'{file} is empty, please select files again without it.','onLeave':'The files are being uploaded, if you leave now the upload will be cancelled.'}});
-});
-	</script>
 </body>
 </html>

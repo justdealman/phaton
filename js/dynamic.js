@@ -57,7 +57,7 @@ function float() {
 	}
 	if ($(window).scrollTop() > headerheight) {
 		$('.header').addClass('fixed');
-		$('.wrapper').css({'padding-top': headerheight+'px'});
+		$('.wrapper').css({'padding-top': headerheight-17+'px'});
 	}
 	else {
 		$('.header').removeClass('fixed');
@@ -508,45 +508,57 @@ $(document).ready(function() {
 	});
 	$('.dialog').append('<span></span>');
 	$('.dialog .read').filter(':last').css({'background': 'none'});
-	
-	$('.photo span.edit a').bind('click', function() {
-		$(this).parents('.photo').find('.modal').fadeIn(150);
-        $('#start_crop').trigger('click');
+
+	function preview(img, selection) { 
 		var jw = $('#crop').width();
 		var jh = $('#crop').height();
 		var fw = 364;
 		var fh = fw/jw*jh;
-		$('#crop, .jcrop-holder, .jcrop-holder img').css({'width': fw+'px', 'height': fh+'px'});
-		$('.jcrop-tracker').css({'width': fw+4+'px', 'height': fh+4+'px'});
-		$('#crop').Jcrop({
-			bgOpacity: 0.5,
-			bgColor: 'black',
-			onChange: showPreview,
-			onSelect: showPreview,
-			aspectRatio: 234/163,
-			minSize: [86, 60],
-		}, function(){
-			api = this;
-			api.setSelect([0,0,0+234,0+163]);
-			api.setOptions({ bgFade: true });
+	
+		var scaleX = 234 / (selection.width || 1);
+		var scaleY = 163 / (selection.height || 1);
+  
+		$('.photo .modal .preview img').css({
+			width: Math.round(scaleX * fw) + 'px',
+			height: Math.round(scaleY * fh) + 'px',
+			marginLeft: '-' + Math.round(scaleX * selection.x1) + 'px',
+			marginTop: '-' + Math.round(scaleY * selection.y1) + 'px'
 		});
-		var $preview = $('#preview');
-		function showPreview(coords) {
-			if (parseInt(coords.w) > 0) {
-				var rx = 234 / coords.w;
-				var ry = 163 / coords.h;
-				var origx = $('#crop').width();
-				var origy = $('#crop').height();
-				$('#preview').css({
-					width: Math.round(rx * origx) + 'px',
-					height: Math.round(ry * origy) + 'px',
-					marginLeft: '-' + Math.round(rx * coords.x) + 'px',
-					marginTop: '-' + Math.round(ry * coords.y) + 'px'
-				});
-			}
+	}
+
+
+	$('.photo span.edit a').bind('click', function() {
+		if ( $('.photo .modal .crop #crop').length == 0 ) {
+			var imgpath = './img/01.jpg';
+			$('.photo .modal .crop').append('<img src="'+imgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+imgpath+'" alt=""><div>');
 		}
+		$(this).parents('.photo').find('.modal').fadeIn(150);
+		var jw = $('#crop').width();
+		var jh = $('#crop').height();
+		var fw = 364;
+		var fh = fw/jw*jh;
+		$('.photo .modal .crop #crop, .photo .modal .crop .preview img').css({'width': fw+'px', 'height': fh+'px'});
+		$('#crop').css({'width': fw+'px', 'height': fh+'px'});
+		$('#crop').imgAreaSelect({
+			handles: true,
+			aspectRatio: '234:163',
+			minWidth: 80,
+			minHeight: 80*(163/234),
+			x1: 0, y1: 0, x2: 182, y2: 182*(163/234),
+			onInit: preview,
+			onSelectChange: preview,
+		});
 		return false;
 	});
+	$('.photo .modal .close').bind('click', function() {
+		alert('Удаляем плагин, а также все связанные с ним картинки');
+		$('#crop').imgAreaSelect({
+			remove: true
+		});
+		$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();
+		return false;
+	});
+
 	if ( $('.ctitle .sort').length > 0 ) {
 		$('.ctitle h1').css({'margin-top': '14px'});
 	}
