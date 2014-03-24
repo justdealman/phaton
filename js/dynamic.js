@@ -34,18 +34,26 @@
 		handle.eq(0).append('<span>3</span>');
 		handle.eq(1).append('<span>9</span>');
 	});
-	var rl = $('.reviewu .nav li.active').position();
-	var rw = $('.reviewu .nav li.active').width();
-	if(rw) {
-        var rm = rl.left+(rw/2);
-	    $('.reviewu > div > span').css({'left': rm+'px'});
-	    $('.reviewu > div > span, .reviewu > .leave > span').fadeIn(150);
-    }
+	$('.reviewu > div#reviews, .reviewu > div#tasks, .reviewu > div#portfolio').each(function() {
+		var rl = $(this).parent().find('.nav li').filter('.'+$(this).attr('id')).position();
+		var rw = $(this).parent().find('.nav li').filter('.'+$(this).attr('id')).width();
+		var rm = rl.left+(rw/2);
+		$(this).children('span').css({'left': rm+'px'});
+		$(this).children('span').fadeIn(150);
+	});
+	$('.reviewu > .leave').each(function() {
+		var rl = $(this).parent().find('.nav li').filter(':first').position();
+		var rw = $(this).parent().find('.nav li').filter(':first').width();
+		var rm = rl.left+(rw/2);
+		$(this).children('span').css({'left': rm+'px'});
+		$(this).children('span').fadeIn(150);
+	});
     if(!$('.content .userform > div > div.performer p input[type="checkbox"]').is(':checked')) {
 	    $('.content .userform > div.optional').delay(150).fadeOut(0);
     }
 });
 $(document).ready(function() {
+	$('.reviewu > div').append('<span></span>');
 	$('.reviewu > div > span, .reviewu > .leave > span').hide();
 });
 function float() {
@@ -252,21 +260,31 @@ $(document).ready(function() {
 //			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
 //		}
 //	});
-	var prepared = $('.reviewu > .leave > div > .prepared > div > div');
-	prepared.hide();
+
+//	var prepared = $('.reviewu > .leave > div > .prepared > div > div');
+//	prepared.hide();
+//	$('.reviewu > .leave > div > .prepared ul li a').click(function () {
+//		prepared.hide();
+//		prepared.filter(this.hash).stop(true, true).fadeIn(0);
+//		$(this).parents('ul').find('li').removeClass('active');
+//		$(this).parent().addClass('active');
+//		var pl = $(this).parent('li').position();
+//		var pw = $(this).parent('li').width();
+//		var pm = pl.left+(pw/2)-12;
+//		$(this).parents('.prepared').children('div').children('span').css({'left': pm+'px'});
+//		return false;
+//	});
+//	$('.reviewu > .leave > div > .prepared > div > div').filter(':first').fadeIn(0);
+//	$('.reviewu > .leave > div > .prepared ul li:first-child').addClass('active');
+
 	$('.reviewu > .leave > div > .prepared ul li a').click(function () {
-		prepared.hide();
-		prepared.filter(this.hash).stop(true, true).fadeIn(0);
-		$(this).parents('ul').find('li').removeClass('active');
+		var pr = $(this).attr('href');
+		$(this).parents('.prepared').find('ul li').removeClass('active');
 		$(this).parent().addClass('active');
-		var pl = $(this).parent('li').position();
-		var pw = $(this).parent('li').width();
-		var pm = pl.left+(pw/2)-12;
-		$(this).parents('.prepared').children('div').children('span').css({'left': pm+'px'});
+		var pt = $(this).parents('.prepared').find('div'+pr+' p').text();
+		$(this).parents('.leave').find('.area textarea').empty().text(pt);
 		return false;
 	});
-	$('.reviewu > .leave > div > .prepared > div > div').filter(':first').fadeIn(0);
-	$('.reviewu > .leave > div > .prepared ul li:first-child').addClass('active');
 	$('.reviewu > .leave > .close').click(function() {
 		$(this).parent().fadeOut(0);
 		return false;
@@ -297,24 +315,24 @@ $(document).ready(function() {
 		$('.offers > div > .td .modal').fadeOut(150);
 		return false;
 	});
-//	$('.ratingsmall').raty({
-//		number: 10,
-//		width: 222,
-//		readOnly: true,
-//		path: 'img/rate_small',
-//		score: function() {
-//			return $(this).attr('data-score');
-//		}
-//	});
-//	$('.ratingbig').raty({
-//		number: 10,
-//		width: 422,
-//		readOnly: false,
-//		path: 'img/rate_big',
-//		score: function() {
-//			return $(this).attr('data-score');
-//		}
-//	});
+	$('.ratingsmall').raty({
+		number: 10,
+		width: 222,
+		readOnly: true,
+		path: 'img/rate_small',
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+	$('.ratingbig').raty({
+		number: 10,
+		width: 422,
+		readOnly: false,
+		path: 'img/rate_big',
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
 	$('.reviewu > div:last-child > div').filter(':last').children('div').css({'padding': '0', 'margin': '0 0 -9px', 'background': 'none'});
 	$('.taskc > div .information ul li:last-child, .index .carousel .task > div ul li:last-child').css({'padding-right': '0', 'margin-right': '0', 'background': 'none'});
 	$('.categories ul > li > ul  > li:last-child a').css({'text-decoration': 'underline'});
@@ -526,7 +544,6 @@ $(document).ready(function() {
 		});
 	}
 
-
 	$('.photo span.edit a').bind('click', function() {
 		if ( $('.photo .modal .crop #crop').length == 0 ) {
 			var imgpath = './img/01.jpg';
@@ -550,6 +567,14 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	$('.photo .modal .save').click(function() {
+		var original = $('#crop');
+		var originalWidth = original[0].naturalWidth;
+		var ratio = originalWidth/364;
+		alert('Множитель для координат — '+ratio);
+		return false;
+	});
+	
 	$('.photo .modal .close').bind('click', function() {
 		alert('Удаляем плагин, а также все связанные с ним картинки');
 		$('#crop').imgAreaSelect({
@@ -562,4 +587,46 @@ $(document).ready(function() {
 	if ( $('.ctitle .sort').length > 0 ) {
 		$('.ctitle h1').css({'margin-top': '14px'});
 	}
+	
+	$('.useri .information .description .contacts > button').click(function() {
+		$(this).parent().find('.modal').fadeIn(150);
+		return false;
+	});
+	$('.useri .information .description .contacts').each(function() {
+		var udc = 664-$(this).children().filter(':first').width()-158;
+		$(this).find('.modal').css({'width': udc+'px'});
+	});
+	var reviewu = $('.reviewu > div');
+	reviewu.hide();
+	$('.reviewu .nav li a').click(function () {
+		reviewu.hide();
+		var ra = $(this).parent().attr('class').split(' ')[0];
+		reviewu.filter('#'+ra).stop(true, true).fadeIn(0);
+		$(this).parent().siblings().removeClass('active');
+		$(this).parent().addClass('active');
+		$(this).parents('.reviewu').find('div.leave').fadeOut(150);
+		return false;
+	}).filter(':odd').click();
+	$('.reviewu > div.tasksview .thead').each(function() {
+		var nw = $(this).width() - $(this).find('.price').width() - $(this).find('.status').width() - $(this).find('.review').width() - $(this).find('.data').width() - ( $(this).children().size() * 12) - 12;
+		$(this).find('.title').css({'width': nw+'px'});
+	});
+	$('.reviewu > div.tasksview .tbody .preview').each(function() {
+		var nw = $(this).width() - $(this).find('.price').width() - $(this).find('.status').width() - $(this).find('.review').width() - $(this).find('.data').width() - ( $(this).children().size() * 12) + 12;
+		$(this).find('.title').css({'width': nw+'px'});
+	});
+	$('.reviewu > div.tasksview .tbody .preview .review .drop').toggle(
+		function() {
+			$(this).parents('.tbody').addClass('active');
+			$(this).empty().text('Свернуть отзыв');
+			return false;
+		},
+		function() {
+			$(this).parents('.tbody').removeClass('active');
+			$(this).empty().text('Смотреть отзыв');
+			return false;
+		}
+	);
+	$('.reviewu > div.tasksview .tbody').filter(':last').find('.preview').css({'border-bottom-width': '0'});
+	$('.reviewu > div.tasksview .tbody').filter(':last').find('.message > div').css({'margin-bottom': '-18px', 'background': 'none'});
 });

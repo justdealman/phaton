@@ -2112,7 +2112,7 @@ button::-moz-focus-inner {
 	display:block;
 	color:#ee4036;
 	padding:0 0 0 25px;
-	background:url('../img/userc_price_icon.png') no-repeat left 5px;
+	background:url('../img/userc_price_icon2.png') no-repeat 4px 5px;
 }
 .userc > div h5 span.price em {
 	font-size:19px;
@@ -2120,6 +2120,12 @@ button::-moz-focus-inner {
 	font-style:normal;
 	font-family:'Rouble', sans-serif;
 	margin:0 0 0 3px;
+}
+.userc > div h5 span.price.pound em {
+	font-size:18px;
+	font-weight:bold;
+	font-family:'Segoe UI', sans-serif;
+	padding:0 0 0 3px;
 }
 .userc .next {
 	float:left;
@@ -2476,7 +2482,7 @@ button::-moz-focus-inner {
 	line-height:22px;
 	font-weight:normal;
 	margin:0 0 10px;
-	background:url('../img/userc_price_icon.png') no-repeat left 6px;
+	background:url('../img/userc_price_icon2.png') no-repeat 4px 5px;
 }
 .useri .information .description p.price em {
 	font-size:19px;
@@ -2485,12 +2491,67 @@ button::-moz-focus-inner {
 	font-family:'Rouble', sans-serif;
 	margin:0 0 0 3px;
 }
+.useri .information .description p.price.pound em {
+	font-size:18px;
+	font-weight:bold;
+	font-family:'Segoe UI', sans-serif;
+	padding:0 0 0 3px;
+}
 .useri .information .description p.services {
 	background:url('../img/userc_services_icon.png') no-repeat left 2px;
 }
 .useri .information .description p.places {
 	background:url('../img/userc_places_icon.png') no-repeat left 2px;
 }
+.useri .information .description .contacts {
+	position:relative;
+}
+.useri .information .description .contacts div {
+	display:inline-block;
+	vertical-align:middle;
+}
+.useri .information .description p.phone {
+	background:url('../img/card_phone_icon.png') no-repeat left 1px;
+}
+.useri .information .description p.email {
+	background:url('../img/card_email_icon.png') no-repeat left 5px;
+}
+.useri .information .description .contacts .more {
+	display:inline-block;
+	width:19px;
+	height:18px;
+	vertical-align:middle;
+	cursor:pointer;
+	margin:-10px 0 0 30px;
+	background:url('../img/useri_contacts_more.png') no-repeat left top;
+}
+.useri .information .description .contacts .modal {
+	display:none;
+	position:absolute;
+	left:auto;
+	right:0;
+	top:1px;
+	z-index:10;
+	width:200px;
+	padding:16px 35px 16px 20px !important;
+}
+.useri .information .description .contacts .modal .arrow {
+	left:-22px;
+	top:6px;
+	width:22px;
+	height:30px;
+	background:url('../img/modal_arrow_left.png') no-repeat left top;
+}
+.useri .information .description .contacts .modal p {
+	color:#666666;
+	font-size:14px;
+	line-height:18px;
+	font-weight:300;
+	padding:0;
+	margin:0;
+}
+
+
 .useri .information .description .about {
 	clear:both;
 	overflow:hidden;
@@ -2707,7 +2768,7 @@ button::-moz-focus-inner {
 .reviewu .nav li.active a span {
 	border-bottom:1px dashed transparent;
 }
-.reviewu > div {
+.reviewu > div.all {
 	position:relative;
 	padding:4px;
 	background:#ffffff;
@@ -2723,7 +2784,7 @@ button::-moz-focus-inner {
 	margin-left:-13px;
 	background:url('../img/reviewu_div_span.png') no-repeat left top;
 }
-.reviewu > div h5 {
+.reviewu > div.all h5 {
 	clear:both;
 	overflow:hidden;
 	color:#999999;
@@ -2734,44 +2795,44 @@ button::-moz-focus-inner {
 	margin:0 0 15px;
 	background:#e8e8e8;
 }
-.reviewu > div h5 span.tip {
+.reviewu > div.all h5 span.tip {
 	float:right;
 	display:block;
 	padding:0 0 2px;
 }
-.reviewu > div h5 span.leave {
+.reviewu > div.all h5 span.leave {
 	float:left;
 	display:block;
 	padding:0 0 2px 26px;
 	background:url('../img/reviewu_leave_icon.png') no-repeat left 3px;
 }
-.reviewu > div h5 span.leave a {
+.reviewu > div.all h5 span.leave a {
 	color:#e6b131;
 	text-decoration:none;
 	border-bottom:1px dashed #e6b131;
 }
-.reviewu > div h5 span.leave a:hover {
+.reviewu > div.all h5 span.leave a:hover {
 	border-bottom:1px dashed transparent;
 }
-.reviewu > div > div {
+.reviewu > div.all > div {
 	clear:both;
 	overflow:hidden;
 	margin:0 0 24px 13px;
 }
-.reviewu > div > div > img {
+.reviewu > div.all > div > img {
 	float:left;
 	margin:5px 0 0;
 }
-.reviewu > div > div > div {
+.reviewu > div.all > div > div {
 	float:right;
 	width:834px;
 	padding:0 0 10px;
 	background:url('../img/line_bg.png') repeat-x bottom;
 }
-.grid .reviewu > div > div > div {
+.grid .reviewu > div.all > div > div {
 	width:635px;
 }
-.reviewu > div > div > div h3 {
+.reviewu > div.all > div > div h3 {
 	clear:both;
 	overflow:hidden;
 	color:#999999;
@@ -2781,33 +2842,33 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 18px 18px 0;
 }
-.grid .reviewu > div > div > div h3 {
+.grid .reviewu > div.all > div > div h3 {
 	margin:0 18px 18px 0;
 }
-.reviewu > div > div > div h3 span.theme {
+.reviewu > div.all > div > div h3 span.theme {
 	float:left;
 	display:block;
 	min-height:34px;
 	padding:1px 0 0;
 	width:auto;
 }
-.grid .reviewu > div > div > div h3 span.theme {
+.grid .reviewu > div.all > div > div h3 span.theme {
 	width:380px;
 	min-height:17px;
 }
-.reviewu > div > div > div h3 span.theme a {
+.reviewu > div.all > div > div h3 span.theme a {
 	color:#e6b131;
 	font-weight:bold;
 }
-.reviewu > div > div > div h3 span.data {
+.reviewu > div.all > div > div h3 span.data {
 	float:right;
 	display:block;
 	padding:1px 0 0 26px;
 }
-.reviewu > div > div > div h3 span.data.positive {
+.reviewu > div.all > div > div h3 span.data.positive {
 	background:url('../img/reviewu_data_positive.png') no-repeat left top;
 }
-.reviewu > div > div > div > p {
+.reviewu > div.all > div > div > p {
 	color:#999999;
 	font-size:14px;
 	line-height:16px;
@@ -2815,64 +2876,64 @@ button::-moz-focus-inner {
 	text-align:justify;
 	margin:0 85px 18px 0;
 }
-.reviewu > div > div > div .marks {
+.reviewu > div.all > div > div .marks {
 	margin:0 0 23px;
 }
-.reviewu > div > div > div .marks li {
+.reviewu > div.all > div > div .marks li {
 	height:16px;
 	color:#999999;
 	font-size:14px;
 	line-height:16px;
 	margin:0 0 9px;
 }
-.reviewu > div > div > div .marks li span {
+.reviewu > div.all > div > div .marks li span {
 	float:left;
 	display:block;
 	width:86px;
 	margin:0 4px 0 0;
 }
-.reviewu > div > div > div .marks li .ratingsmall {
+.reviewu > div.all > div > div .marks li .ratingsmall {
 	float:left;
 }
-.reviewu > div > div > div > .comment {
+.reviewu > div.all > div > div > .comment {
 	clear:both;
 	overflow:hidden;
 	padding:8px 20px 9px 34px;
 	margin:0 0 18px;
 	background:#e8e8e8 url('../img/review_answer_icon.png') no-repeat 12px center;
 }
-.reviewu > div > div > div > .comment > img {
+.reviewu > div.all > div > div > .comment > img {
 	float:left;
 	width:41px;
 	margin:0 0 -2px;
 }
-.reviewu > div > div > div > .comment > div {
+.reviewu > div.all > div > div > .comment > div {
 	float:right;
 	width:720px;
 }
-.grid .reviewu > div > div > div > .comment > div {
+.grid .reviewu > div.all > div > div > .comment > div {
 	width:520px;
 }
-.reviewu > div > div > div > .comment > div h4 {
+.reviewu > div.all > div > div > .comment > div h4 {
 	color:#666666;
 	font-size:14px;
 	line-height:16px;
 	padding:0;
 	margin:0 0 2px;
 }
-.reviewu > div > div > div > .comment > div p {
+.reviewu > div.all > div > div > .comment > div p {
 	float:left;
 	color:#999999;
 	font-size:14px;
 	line-height:16px;
 	margin:0 0 2px;
 }
-.reviewu > div > div > div > .comment > div p.data {
+.reviewu > div.all > div > div > .comment > div p.data {
 	float:right;
 	display:block;
 	margin:0 0 0 4px;
 }
-.reviewu > div > div > div h6 {
+.reviewu > div.all > div > div h6 {
 	clear:both;
 	overflow:hidden;
 	color:#999999;
@@ -2883,23 +2944,186 @@ button::-moz-focus-inner {
 	margin:-13px 0 18px;
 	background:#e8e8e8;
 }
-.reviewu > div > div > div h6 .answer {
+.reviewu > div.all > div > div h6 .answer {
 	float:left;
 	display:block;
 	padding:0 0 0 22px;
 	background:url('../img/review_answer_icon.png') no-repeat left 7px;
 }
-.reviewu > div > div > div h6 .answer a {
+.reviewu > div.all > div > div h6 .answer a {
 	color:#e6b849;
 	text-decoration:none;
 	border-bottom:1px dashed #e6b849;
 }
-.reviewu > div > div > div h6 .answer a:hover {
+.reviewu > div.all > div > div h6 .answer a:hover {
 	border-bottom:1px dashed transparent;
 }
-.reviewu > div > div > div h6 .tip {
+.reviewu > div.all > div > div h6 .tip {
 	float:right;
 	display:block;
+}
+.reviewu > div.tasksview {
+	position:relative;
+	padding:4px 4px 10px;
+	background:#ffffff;
+	border:1px dashed #c3c3c2;
+}
+.reviewu > div.tasksview .thead {
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 7px;
+	background:#cccccc;
+}
+.reviewu > div.tasksview .thead p {
+	display:inline-block;
+	vertical-align:top;
+	padding:5px 0 6px 12px;
+	margin:0 -4px 0 0;
+}
+.reviewu > div.tasksview .thead p:last-child {
+	padding-right:12px;
+}
+.reviewu > div.tasksview p.price {
+	width:94px;
+}
+.reviewu > div.tasksview p.status {
+	width:92px;
+}
+.reviewu > div.tasksview p.review {
+	width:208px;
+}
+.reviewu > div.tasksview p.data {
+	width:70px;
+}
+.reviewu > div.tasksview .tbody {
+	margin:0 12px;
+}
+.reviewu > div.tasksview .tbody .preview {
+	border-bottom:1px solid #cccccc;
+}
+.reviewu > div.tasksview .tbody .preview p {
+	display:inline-block;
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	font-weight:300;
+	vertical-align:top;
+	padding:6px 0 5px 12px;
+	margin:0 -3px 0 0;
+}
+.reviewu > div.tasksview .tbody .preview p:first-child {
+	padding-left:0;
+}
+.reviewu > div.tasksview .tbody .preview .title {
+	color:#4b4b4b;
+	font-size:18px;
+	line-height:20px;
+	font-weight:600;
+	padding:3px 0 6px 12px;
+}
+.reviewu > div.tasksview .tbody .preview .price span  {
+	display:block;
+	color:#ee4036;
+	font-size:18px;
+	line-height:22px;
+	padding:0 0 0 20px;
+	margin:-3px 0 -1px;
+	background:url('../img/userc_price_icon2.png') no-repeat 1px 5px;
+}
+.reviewu > div.tasksview .tbody .preview .price span em {
+	font-size:19px;
+	font-weight:bold;
+	font-style:normal;
+	font-family:'Rouble', sans-serif;
+	margin:0 0 0 3px;
+}
+.reviewu > div.tasksview .tbody .preview .price.pound span em {
+	font-size:18px;
+	font-weight:bold;
+	font-family:'Segoe UI', sans-serif;
+	padding:0 0 0 3px;
+}
+.reviewu > div.tasksview .tbody .preview .status.process {
+	color:#ff931e;
+}
+.reviewu > div.tasksview .tbody .preview .status.done {
+	color:#00ab63;
+}
+.reviewu > div.tasksview .tbody .preview .rating {
+	display:inline-block;
+	color:#4b4b4b;
+	font-size:20px;
+	line-height:20px;
+	font-weight:bold;
+	vertical-align:top;
+	padding:0 0 0 26px;
+	margin:-3px 0 0;
+	background:url('../img/userc_star_icon.png') no-repeat left 2px;
+}
+.reviewu > div.tasksview .tbody .preview .review .drop {
+	float:right;
+	display:block;
+	color:#4b4b4b;
+	text-decoration:none;
+	border-bottom:1px dashed #4b4b4b;
+}
+.reviewu > div.tasksview .tbody.active .preview {
+	border-bottom-width:0;
+}
+.reviewu > div.tasksview .tbody.active .message {
+	display:block;
+}
+.reviewu > div.tasksview .tbody .message {
+	display:none;
+	padding:15px 0 0;
+	margin:20px 0 10px 102px;
+	background:url('../img/line_bg.png') repeat-x top;
+}
+.reviewu > div.tasksview .tbody .message > img {
+	float:left;
+	margin:4px 0 0 -102px;
+}
+.reviewu > div.tasksview .tbody .message > div {
+	padding:0 0 12px;
+	background:url('../img/line_bg.png') repeat-x bottom;
+}
+.reviewu > div.tasksview .tbody .message > div h3 {
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	padding:0;
+	margin:0 0 16px;
+}
+.reviewu > div.tasksview .tbody .message > div h3 a {
+	color:#e6b131;
+}
+.reviewu > div.tasksview .tbody .message > div p {
+	color:#999999;
+	font-size:14px;
+	line-height:16px;
+	font-weight:300;
+	text-align:justify;
+	margin:0 85px 18px 0;
+}
+.reviewu > div.tasksview .tbody .message > div .marks {
+	margin:0 0 18px;
+}
+.reviewu > div.tasksview .tbody .message > div .marks li {
+	height:16px;
+	color:#999999;
+	font-size:14px;
+	line-height:16px;
+	margin:0 0 9px;
+}
+.reviewu > div.tasksview .tbody .message > div .marks li span {
+	float:left;
+	display:block;
+	width:86px;
+	margin:0 4px 0 0;
+}
+.reviewu > div.tasksview .tbody .message > div .marks li .ratingsmall {
+	float:left;
 }
 .reviewu > .leave {
 	display:none;
@@ -3072,6 +3296,7 @@ button::-moz-focus-inner {
 	background:#ee4036;
 }
 .reviewu > .leave > div > .prepared > div {
+	display:none;
 	position:relative;
 	padding:7px 21px 9px;
 	background:#ffffff;

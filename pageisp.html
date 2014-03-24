@@ -149,9 +149,19 @@
 							<p>Вежливость: 10</p>
 							<p>Цена: 7,1</p>
 						</div>
-						<p class="price">1100<em>o</em></p>
+						<p class="price rouble">1100<em>o</em></p>
 						<p class="services">Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
 						<p class="places"><span>Готова работать в городах:</span> Одинцово, Реутово, Москва, Химки <a href="#">и еще 3 города</a></p>
+						<div class="contacts">
+							<div>
+								<p class="phone">8-925-633-2255</p>
+								<p class="email">romanovskaya@gmail.com</p>
+							</div>
+							<button class="more"></button>
+							<div class="modal">
+								<p>Отвезти договор из Ботанический сад до Химки 21.03.2014, с 14:00 до 15:00, можете?</p>
+							</div>
+						</div>
 						<div class="about">
 							<div>
 								<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! <span class="hidden">Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания!</span> <a href="#" class="more">Подробнее...</a></p>
@@ -166,9 +176,9 @@
 			</div>
 			<div class="reviewu">
 				<ul class="nav">
-					<li class="reviews active"><a href="#"><span>Отзывы</span> (954)</a></li>
-					<li class="tasks"><a href="#"><span>Задачи</span> (1025)</a></li>
-					<li class="portfolio"><a href="#"><span>Портфолио</span> (350)</a></li>
+					<li class="reviews active"><a href="#reviews"><span>Отзывы</span> (954)</a></li>
+					<li class="tasks"><a href="#tasks"><span>Задачи</span> (1025)</a></li>
+					<li class="portfolio"><a href="#portfolio"><span>Портфолио</span> (350)</a></li>
 				</ul>
 				<div class="leave">
 					<h2>Оставить отзыв</h2>
@@ -231,7 +241,7 @@
 					</div>
 					<button class="submit">Добавить</button>
 				</div>
-				<div class="all">
+				<div class="all" id="reviews">
 					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">Только автору задачи, исполнителем которой является данный пользователь</span></h5>
 					<div>
 						<img src="./img/userr1.jpg" width="79" height="79" alt="">
@@ -268,6 +278,96 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div class="tasksview" id="tasks">
+					<div class="thead">
+						<p class="title">Задачи</p>
+						<p class="price">Цена</p>
+						<p class="status">Статус</p>
+						<p class="review">Отзыв</p>
+						<p class="data">Дата</p>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Установить ip камеру, провод и роутер</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status process">Выполняется</p>
+							<p class="review">Заказчик пока не оставил отзыв</p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Нужен дизайнер для создания моноргаммы</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status process">Выполняется</p>
+							<p class="review">Заказчик пока не оставил отзыв</p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Помочь с уборкой</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status done">Завершена</p>
+							<p class="review"><span class="rating">9,2</span> <a href="#" class="drop">Смотреть отзыв</a></p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+						<div class="message">
+							<img src="./img/userr2.jpg" width="79" height="79" alt="">
+							<div>
+								<h3><a href="#">Пётр Кащенко</a></h3>
+								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Установить ip камеру, провод и роутер</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status process">Выполняется</p>
+							<p class="review">Заказчик пока не оставил отзыв</p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Нужен дизайнер для создания моноргаммы</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status process">Выполняется</p>
+							<p class="review">Заказчик пока не оставил отзыв</p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="preview">
+							<p class="title">Помочь с уборкой</p>
+							<p class="price rouble"><span>1100<em>o</em></span></p>
+							<p class="status done">Завершена</p>
+							<p class="review"><span class="rating">9,2</span> <a href="#" class="drop">Смотреть отзыв</a></p>
+							<p class="data">24.03.2014г.</p>
+						</div>
+						<div class="message">
+							<img src="./img/userr2.jpg" width="79" height="79" alt="">
+							<div>
+								<h3><a href="#">Пётр Кащенко</a></h3>
+								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="all" id="portfolio">
+					<h5>Портфолио</h5>
 				</div>
 			</div>
 		</div>
