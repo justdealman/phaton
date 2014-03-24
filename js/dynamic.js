@@ -524,14 +524,31 @@ $(document).ready(function() {
 			marginLeft: '-' + Math.round(scaleX * selection.x1) + 'px',
 			marginTop: '-' + Math.round(scaleY * selection.y1) + 'px'
 		});
+
+        setCoords(selection);
 	}
 
+    function setCoords(selection) {
+        $('input[name="crop_x"]').val(selection.x1);
+        $('input[name="crop_y"]').val(selection.y1);
+        $('input[name="crop_x2"]').val(selection.x2);
+        $('input[name="crop_y2"]').val(selection.y2);
+        $('input[name="crop_w"]').val(selection.width);
+        $('input[name="crop_h"]').val(selection.height);
+    }
 
+
+    var ias;
 	$('.photo span.edit a').bind('click', function() {
 		if ( $('.photo .modal .crop #crop').length == 0 ) {
 			var imgpath = './img/01.jpg';
 			$('.photo .modal .crop').append('<img src="'+imgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+imgpath+'" alt=""><div>');
 		}
+
+        var onSelectEnd = function(img, selection) {
+            setCoords(selection);
+        };
+
 		$(this).parents('.photo').find('.modal').fadeIn(150);
 		var jw = $('#crop').width();
 		var jh = $('#crop').height();
@@ -547,15 +564,15 @@ $(document).ready(function() {
 			x1: 0, y1: 0, x2: 182, y2: 182*(163/234),
 			onInit: preview,
 			onSelectChange: preview,
+            onSelectEnd: onSelectEnd
 		});
 		return false;
 	});
+
 	$('.photo .modal .close').bind('click', function() {
-		alert('Удаляем плагин, а также все связанные с ним картинки');
 		$('#crop').imgAreaSelect({
 			remove: true
 		});
-		$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();
 		return false;
 	});
 
