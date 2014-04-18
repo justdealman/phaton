@@ -653,4 +653,12 @@ $(document).ready(function() {
 		$(this).parents('.offers').find('.modal.addtask').fadeIn(150);
 		return false;
 	});
+	$('.bubblesuccess').click(function() {
+		$('.bubble.success').stop(true, true).fadeIn(150).delay(2000).fadeOut(150);
+		return false;
+	});
+	$('.bubbleerror').click(function() {
+		$('.bubble.error').stop(true, true).fadeIn(150).delay(2000).fadeOut(150);
+		return false;
+	});
 });
