@@ -77,13 +77,13 @@ $(window).scroll(function(){
 });
 $(window).load(function(){
 	float();
-	$('.dialog > div').each(function() {
+	/*$('.dialog > div').each(function() {
 		if ( $(this).height() > 65 || $(this).hasClass('answer') ) {
 			$(this).find('.photo, .name').css({'vertical-align': 'top'});
 			var nh = (51 - $(this).find('.name').height() ) / 2;
 			$(this).find('.name').css({'margin-top': nh+'px'});
 		}
-	});
+	});*/
 });
 $(document).ready(function() {
 	$('.dialog > div textarea').keyup(function(e) {
@@ -92,7 +92,7 @@ $(document).ready(function() {
 		};
 	});
 	$('.dialog > div').each(function() {
-		var tw = 400-$(this).find('.data').width();
+		var tw = 576-$(this).find('.data').width();
 		$(this).find('.text').css({'width': tw+'px'});
 	});
 	$('.dialog.message > div.new').each(function() {
@@ -296,11 +296,13 @@ $(document).ready(function() {
 	$('.taski p.more .show a').toggle( 
 		function() {
 			$(this).parents('.taski').find('div.more').fadeIn(0);
+			$(this).parent().addClass('active');
 			$(this).empty().text('Свернуть');
 			return false;
 		},
 		function() {
 			$(this).parents('.taski').find('div.more').fadeOut(0);
+			$(this).parent().removeClass('active');
 			$(this).empty().text('Показать полностью');
 			return false;
 		}
@@ -443,7 +445,6 @@ $(document).ready(function() {
     });
 	$('.content .userform > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
 	$('.modal').append('<span class="close"></span>');
-	$('.modal').append('<span class="arrow"></span>');
 	$('.modal .close').click(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
@@ -524,7 +525,6 @@ $(document).ready(function() {
 		$(this).removeClass('less').addClass('more');
 		return false;
 	});
-	$('.dialog').append('<span></span>');
 	$('.dialog .read').filter(':last').css({'background': 'none'});
 
 	function preview(img, selection) { 
@@ -647,4 +647,10 @@ $(document).ready(function() {
 	);
 	$('.reviewu > div.tasksview .tbody').filter(':last').find('.preview').css({'border-bottom-width': '0'});
 	$('.reviewu > div.tasksview .tbody').filter(':last').find('.message > div').css({'margin-bottom': '-18px', 'background': 'none'});
+	$('.offers > div > .td > div.more > div.information').append('<span></span>');
+	$('.dialog .answer .area').append('<span></span>');
+	$('.offers h2 .add').click(function() {
+		$(this).parents('.offers').find('.modal.addtask').fadeIn(150);
+		return false;
+	});
 });

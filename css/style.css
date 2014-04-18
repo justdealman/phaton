@@ -97,7 +97,7 @@ table td {
 :focus {
 	outline:none;
 }
-img {
+img2 {
 	padding:0;
 	margin:0;
 	border:0;
@@ -195,7 +195,7 @@ button::-moz-focus-inner {
 	height:103px;
 	background:url('../img/header_logo.png') no-repeat left top;
 }
-.header .logo img {
+.header .logo img2 {
 	position:absolute;
 	left:19px;
 	top:6px;
@@ -361,7 +361,7 @@ button::-moz-focus-inner {
 	height:130px;
 	background:url('../img/header_autorized_logo.png') no-repeat left top;
 }
-.header.autorized .logo img {
+.header.autorized .logo img2 {
 	top:24px;
 }
 .header.autorized .logo .city {
@@ -827,7 +827,7 @@ button::-moz-focus-inner {
 	width:150px;
 	height:104px;
 }
-.carousel .person > div > img {
+.carousel .person > div > img2 {
 	position:relative;
 	width:150px !important;
 	height:104px !important;
@@ -1052,12 +1052,12 @@ button::-moz-focus-inner {
 .structure ul li:nth-child(2n) {
 	background-position:right 30px;
 }
-.structure ul li > img {
+.structure ul li > img2 {
 	position:absolute;
 	left:96px;
 	top:51px;
 }
-.structure ul li:nth-child(2n) > img {
+.structure ul li:nth-child(2n) > img2 {
 	left:auto;
 	right:96px;
 }
@@ -1899,7 +1899,7 @@ button::-moz-focus-inner {
 	width:234px;
 	height:163px;
 }
-.userc > div > div > img {
+.userc > div > div > img2 {
 	position:relative;
 	width:234px !important;
 	height:163px !important;
@@ -2610,7 +2610,7 @@ button::-moz-focus-inner {
 	padding:0 0 0 82px;
 	margin:0 56px 16px 0;
 }
-.useri .information .achievements li img {
+.useri .information .achievements li img2 {
 	position:absolute;
 	left:0;
 	top:5px;
@@ -2631,7 +2631,7 @@ button::-moz-focus-inner {
 .grid .useri .information .achievements li:nth-child(2n) {
 	margin-right:0 !important;
 }
-.grid .useri .information .achievements li img {
+.grid .useri .information .achievements li img2 {
 	top:-3px;
 }
 .usernav {
@@ -2819,7 +2819,7 @@ button::-moz-focus-inner {
 	overflow:hidden;
 	margin:0 0 24px 13px;
 }
-.reviewu > div.all > div > img {
+.reviewu > div.all > div > img2 {
 	float:left;
 	margin:5px 0 0;
 }
@@ -2902,7 +2902,7 @@ button::-moz-focus-inner {
 	margin:0 0 18px;
 	background:#e8e8e8 url('../img/review_answer_icon.png') no-repeat 12px center;
 }
-.reviewu > div.all > div > div > .comment > img {
+.reviewu > div.all > div > div > .comment > img2 {
 	float:left;
 	width:41px;
 	margin:0 0 -2px;
@@ -3080,7 +3080,7 @@ button::-moz-focus-inner {
 	margin:20px 0 10px 102px;
 	background:url('../img/line_bg.png') repeat-x top;
 }
-.reviewu > div.tasksview .tbody .message > img {
+.reviewu > div.tasksview .tbody .message > img2 {
 	float:left;
 	margin:4px 0 0 -102px;
 }
@@ -3507,7 +3507,7 @@ button::-moz-focus-inner {
 .hirercard > div > div {
 	height:162px;
 }
-.hirercard > div > div img {
+.hirercard > div > div img2 {
 	width:234px !important;
 	height:162px !important;
 }
@@ -3947,7 +3947,7 @@ button::-moz-focus-inner {
 .offers > div > .td .modal.absolute .employer {
 	margin:0 6px 31px;
 }
-.offers > div > .td .modal.absolute .employer img {
+.offers > div > .td .modal.absolute .employer img2 {
 	display:inline-block;
 	vertical-align:middle;
 	margin:0 27px 0 0;
@@ -4701,7 +4701,7 @@ button::-moz-focus-inner {
 	font-weight:300;
 	margin:0 0 10px;
 }
-.taskadd > div > div ul li img {
+.taskadd > div > div ul li img2 {
 	float:left;
 	margin:-2px 10px 0 0;
 }
@@ -4837,7 +4837,7 @@ button::-moz-focus-inner {
 .taskadd > div.employer > div input {
 	width:263px;
 }
-.taskadd > div.employer .photo img {
+.taskadd > div.employer .photo img2 {
 	display:inline-block;
 	max-width:141px;
 	margin:4px 0 0 11px;
@@ -4961,7 +4961,7 @@ button::-moz-focus-inner {
 .content .userform > div > div.photo {
 	position:relative;
 }
-.content .userform > div > div.photo img.current {
+.content .userform > div > div.photo img2.current {
 	display:inline-block;
 	max-width:149px;
 	margin:6px 8px 3px 11px;
@@ -5769,7 +5769,7 @@ button::-moz-focus-inner {
 	padding:0 0 0 82px;
 	margin:0 66px 37px 0;
 }
-.awards > div ul li img {
+.awards > div ul li img2 {
 	float:left;
 	margin:5px 0 0 -82px;
 }
@@ -6372,31 +6372,31 @@ button::-moz-focus-inner {
 	height:257px;
 }
 
-/* ImgAreaSelect animated border style */
+/* img2AreaSelect animated border style */
 
-.imgareaselect-border1 {
+.img2areaselect-border1 {
 	background:url('../img/border-anim-v.gif') repeat-y left top;
 }
-.imgareaselect-border2 {
+.img2areaselect-border2 {
     background:url('../img/border-anim-h.gif') repeat-x left top;
 }
-.imgareaselect-border3 {
+.img2areaselect-border3 {
     background:url('../img/border-anim-v.gif') repeat-y right top;
 }
-.imgareaselect-border4 {
+.img2areaselect-border4 {
     background:url('../img/border-anim-h.gif') repeat-x left bottom;
 }
-.imgareaselect-border1, .imgareaselect-border2, .imgareaselect-border3, .imgareaselect-border4 {
+.img2areaselect-border1, .img2areaselect-border2, .img2areaselect-border3, .img2areaselect-border4 {
     filter:alpha(opacity=50);
 	opacity:0.5;
 }
-.imgareaselect-handle {
+.img2areaselect-handle {
     background-color:#fff;
 	border:solid 1px #000;
     filter:alpha(opacity=50);
 	opacity:0.5;
 }
-.imgareaselect-outer {
+.img2areaselect-outer {
 	background-color:#000;
     filter:alpha(opacity=50);
 	opacity:0.5;
