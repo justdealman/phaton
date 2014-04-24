@@ -4,7 +4,7 @@
 	<title>Phaton</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
-	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
 	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
@@ -23,8 +23,8 @@
 		<div class="header">
 			<div>
 				<div class="logo">
-					<img src="./img/logo.png" width="249" height="51" alt="">
-					<button class="city"><span>Владивосток</span></button>
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">In English</a></p>
 				</div>
 				<ul class="user">
 					<li class="login"><a href="#">Вход</a></li>
@@ -34,7 +34,7 @@
 					<li><a href="#">Исполнители</a></li>
 					<li><a href="#">Задачи</a></li>
 				</ul>
-				<button class="add">+ Добавить задачу</button>
+				<button class="add">Добавить задачу</button>
 				<div class="popup login">
 					<h2>Вход</h2>
 					<div class="form">
@@ -115,68 +115,76 @@
 			</div>
 			<div class="useri">
 				<div class="important">
-					<div>
-						<img src="./img/user.jpg" width="250" height="207" alt="">
+					<span class="show"></span>
+					<ul class="nav">
+						<li class="profile active"><a href="#">Профиль</a></li>
+						<li class="tasks"><a href="#">Мои задачи</a></li>
+						<li class="mytasks"><a href="#">Задачи мне</a></li>
+						<li class="favorite"><a href="#">Избранное</a></li>
+						<li class="notifications"><a href="#">Уведомления</a> (5)</li>
+						<li class="awards"><a href="#">Награды</a></li>
+					</ul>
+					<div class="photo">
+						<img src="./img/user.png" width="124" height="124" alt="">
 					</div>
 					<p class="givetask"><a href="#">Назначить задачу</a></p>
-					<p class="message"><a href="#">Отправить сообщение</a></p>
-					<p class="favorite"><a href="#">Люся у вас в избранном</a></p>	
+					<p class="favorite"><a href="#">Люся у вас в избранном</a></p>
 					<div class="video">
-						<iframe src="http://player.vimeo.com/video/87817306" width="250" height="139" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<!--<iframe src="http://player.vimeo.com/video/87817306" width="230" height="127" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
 					</div>
 				</div>
 				<div class="information">
 					<div class="name">
 						<h1>Люся Ивашина</h1>
-						<p class="activity free" title="исполнитель свободен">Free</p>
-						<p class="status online" title="исполнитель онлайн"><span></span> Online</p>
+						<p class="status online" title="исполнитель онлайн"><span></span> онлайн</p>
 					</div>
 					<div class="data">
 						<p>24 года; Московская область, Одинцово, пр. Ленина, 95</p>
 						<p class="experience">На сайте 3 года 2 мес.</p>
 					</div>
+					<p class="price rouble">1100<em>p</em></p>
 					<div class="description">
+						<h4>
+							<span class="rating" title="рейтинг">9,2</span>
+							<span class="reviews" title="кол-во отзывов">
+								<em class="positive"><a href="#">954</a></em>
+								<em class="negative"><a href="#">12</a></em>
+							</span>
+							<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+						</h4>
 						<div class="quality">
-							<h4>
-								<span class="rating" title="рейтинг">9,2</span>
-								<span class="reviews" title="кол-во отзывов">
-									<em class="positive"><a href="#">954</a></em>
-									<em class="negative"><a href="#">12</a></em>
-								</span>
-								<span class="thumbsup" title="кол-во выполенных задач">1025</span>
-							</h4>
 							<p>Качество: 8,1</p>
 							<p>Вежливость: 10</p>
 							<p>Цена: 7,1</p>
 						</div>
-						<p class="price rouble">1100<em>o</em></p>
-						<p class="services">Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
-						<p class="places"><span>Готова работать в городах:</span> Одинцово, Реутово, Москва, Химки <a href="#">и еще 3 города</a></p>
 						<div class="contacts">
-							<div>
-								<p class="phone">8-925-633-2255</p>
-								<p class="email">romanovskaya@gmail.com</p>
-							</div>
-							<button class="more"></button>
-							<div class="modal">
-								<p>Отвезти договор из Ботанический сад до Химки 21.03.2014, с 14:00 до 15:00, можете?</p>
-							</div>
+							<p>Тел.: 8-925-633-2255</p>
+							<p>E-mail: romanovskaya@gmail.com</p>
 						</div>
-						<div class="about">
-							<div>
-								<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! <span class="hidden">Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания!</span> <a href="#" class="more">Подробнее...</a></p>
-							</div>
+						<button class="more"></button>
+						<div class="modal">
+							<p>Отвезти договор из Ботанический сад до Химки 21.03.2014, с 14:00 до 15:00, можете?</p>
 						</div>
 					</div>
-					<ul class="achievements">
-						<li><img src="./img/achievement1_icon.png" width="63" height="64" alt=""> Выполнить 1000 задач</li>
-						<li><img src="./img/achievement2_icon.png" width="63" height="64" alt=""> Выполнить задачи из 3 специализаций</li>
+					<ul class="services">
+						<li><span>Уборка / Домработница</span></li>
+						<li><span>Приготовление еды</span></li>
+						<li><span>Еда из ресторана</span></li>
+						<li><span>Водители</span></li>
+						<li><span>Грузоперевозки</span></li>
+						<li><span>Детский досуг</span></li>
+						<li><span>Уборка / Домработница</span></li>
+						<li><span>Уборка / Домработница</span></li>
 					</ul>
+					<p class="places"><span>Готова работать в городах:</span> Одинцово, Реутово, Москва, Химки <a href="#">и еще 3 города</a></p>
+					<div class="about">
+						<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! <span class="hidden">Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания!</span> <a href="#" class="more">Подробнее...</a></p>
+					</div>
 				</div>
 			</div>
 			<div class="reviewu">
 				<ul class="nav">
-					<li class="reviews active"><a href="#reviews"><span>Отзывы</span> (954)</a></li>
+					<li class="reviews"><a href="#reviews"><span>Отзывы</span> (954)</a></li>
 					<li class="tasks"><a href="#tasks"><span>Задачи</span> (1025)</a></li>
 					<li class="portfolio"><a href="#portfolio"><span>Портфолио</span> (350)</a></li>
 				</ul>
@@ -242,40 +250,75 @@
 					<button class="submit">Добавить</button>
 				</div>
 				<div class="all" id="reviews">
-					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">Только автору задачи, исполнителем которой является данный пользователь</span></h5>
+					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">(Только автору задачи, исполнителем которой является данный пользователь)</span></h5>
 					<div>
-						<img src="./img/userr1.jpg" width="79" height="79" alt="">
+						<img src="./img/userr1.png" width="123" height="124" alt="">
 						<div>
-							<h3><span class="theme"><a href="#">Петр Кащенко</a> по задаче <a href="#">Помочь с уборкой</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
-							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
-							<ul class="marks">
-								<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
-								<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-								<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
-							</ul>
-							<div class="comment">
-								<img src="./img/avatar1.jpg" width="41" height="37" alt="">
-								<div>
-									<h4>Люся Ивашина</h4>
-									<div>
-										<p>Спасибо Петр! С Вами было тоже очень приятно работать!</p>
-										<p class="data">Сегодня, 13:54</p>
+							<h3><span class="theme"><a href="#" class="name">Петр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<div class="text">
+								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+								</ul>
+								<div class="dialog">
+									<div class="read">
+										<div class="photo">
+											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+										</div>
+										<div class="text">
+											<h3>TRANCO</h3>
+											<p>Реквизиты мы вам скинем на почту.</p>
+										</div>
+										<p class="data">5 минут назад</p>
+									</div>
+									<div class="answer">
+										<div class="photo">
+											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+										</div>
+										<div class="area">
+											<textarea cols="100" rows="2">Ура!</textarea>
+										</div>
+										<button class="submit"></button>
 									</div>
 								</div>
 							</div>
-							<h6><span class="answer"><a href="#">Ответить</a></span> <span class="tip">Только автору отзыва и исполнителю</span></h6>
 						</div>
 					</div>
 					<div>
-						<img src="./img/userr2.jpg" width="79" height="79" alt="">
+						<img src="./img/userr2.png" width="123" height="124" alt="">
 						<div>
-							<h3><span class="theme"><a href="#">Елизавета Зорина</a> по задаче <a href="#">Решить задания для ЕГЭ по математике часть C</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
-							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
-							<ul class="marks">
-								<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
-								<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-								<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
-							</ul>
+							<h3><span class="theme"><a href="#" class="name">Елизавета Зорина</a> по задаче <a href="#" class="task">Решить задания для ЕГЭ по математике</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<div class="text">
+								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+								</ul>
+								<div class="dialog">
+									<div class="read">
+										<div class="photo">
+											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+										</div>
+										<div class="text">
+											<h3>TRANCO</h3>
+											<p>Реквизиты мы вам скинем на почту.</p>
+										</div>
+										<p class="data">5 минут назад</p>
+									</div>
+									<div class="answer">
+										<div class="photo">
+											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+										</div>
+										<div class="area">
+											<textarea cols="100" rows="2">Ура!</textarea>
+										</div>
+										<button class="submit"></button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -283,7 +326,6 @@
 					<div class="thead">
 						<p class="title">Задачи</p>
 						<p class="price">Цена</p>
-						<p class="status">Статус</p>
 						<p class="review">Отзыв</p>
 						<p class="data">Дата</p>
 					</div>
@@ -291,7 +333,6 @@
 						<div class="preview">
 							<p class="title">Установить ip камеру, провод и роутер</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status process">Выполняется</p>
 							<p class="review">Заказчик пока не оставил отзыв</p>
 							<p class="data">24.03.2014г.</p>
 						</div>
@@ -300,7 +341,6 @@
 						<div class="preview">
 							<p class="title">Нужен дизайнер для создания моноргаммы</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status process">Выполняется</p>
 							<p class="review">Заказчик пока не оставил отзыв</p>
 							<p class="data">24.03.2014г.</p>
 						</div>
@@ -309,20 +349,21 @@
 						<div class="preview">
 							<p class="title">Помочь с уборкой</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status done">Завершена</p>
 							<p class="review"><span class="rating">9,2</span> <a href="#" class="drop">Смотреть отзыв</a></p>
 							<p class="data">24.03.2014г.</p>
 						</div>
 						<div class="message">
-							<img src="./img/userr2.jpg" width="79" height="79" alt="">
+							<img src="./img/userr1.png" width="123" height="124" alt="">
 							<div>
-								<h3><a href="#">Пётр Кащенко</a></h3>
-								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
-								<ul class="marks">
-									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
-									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
-								</ul>
+								<h3><a href="#" class="name">Пётр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></h3>
+								<div class="text">
+									<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+									<ul class="marks">
+										<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+										<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+										<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -330,7 +371,6 @@
 						<div class="preview">
 							<p class="title">Установить ip камеру, провод и роутер</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status process">Выполняется</p>
 							<p class="review">Заказчик пока не оставил отзыв</p>
 							<p class="data">24.03.2014г.</p>
 						</div>
@@ -339,7 +379,6 @@
 						<div class="preview">
 							<p class="title">Нужен дизайнер для создания моноргаммы</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status process">Выполняется</p>
 							<p class="review">Заказчик пока не оставил отзыв</p>
 							<p class="data">24.03.2014г.</p>
 						</div>
@@ -348,65 +387,115 @@
 						<div class="preview">
 							<p class="title">Помочь с уборкой</p>
 							<p class="price rouble"><span>1100<em>o</em></span></p>
-							<p class="status done">Завершена</p>
 							<p class="review"><span class="rating">9,2</span> <a href="#" class="drop">Смотреть отзыв</a></p>
 							<p class="data">24.03.2014г.</p>
 						</div>
 						<div class="message">
-							<img src="./img/userr2.jpg" width="79" height="79" alt="">
+							<img src="./img/userr2.png" width="123" height="124" alt="">
 							<div>
-								<h3><a href="#">Пётр Кащенко</a></h3>
-								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
-								<ul class="marks">
-									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
-									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
-								</ul>
+								<h3><a href="#" class="name">Пётр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></h3>
+								<div class="text">
+									<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+									<ul class="marks">
+										<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+										<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
+										<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="all" id="portfolio">
-					<h5>Портфолио</h5>
+				<div class="portfolio" id="portfolio">
+					<div>
+						<div class="photos">
+							<div class="main">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img1" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img2" alt="">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img3" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img4" alt="">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img5" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img6" alt="">
+							</div>
+							<ul>
+								<li><a href="#img1"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img2"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img3"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img4"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img5"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img6"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
+							</ul>
+						</div>
+						<h3>Установка забора на дачном участке.</h3>
+						<div class="message">
+							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка</p>
+						</div>
+					</div>
+					<div>
+						<div class="photos">
+							<div class="main">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img1" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img2" alt="">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img3" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img4" alt="">
+								<img src="./img/portfolio1.png" width="181" height="181" id="img5" alt="">
+								<img src="./img/portfolio2.png" width="181" height="181" id="img6" alt="">
+							</div>
+							<ul>
+								<li><a href="#img1"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img2"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img3"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img4"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img5"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img6"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
+							</ul>
+						</div>
+						<h3>Установка забора на дачном участке.</h3>
+						<div class="message">
+							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="footer">
-			<div class="information">
-				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
-				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
-				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
-			</div>
-			<div class="links">
-				<ul class="nav">
-					<li>
-						<ul>
-							<li><a href="#">Исполнители</a></li>
-							<li><a href="#">Задачи</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">О компании</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="#">Условия использования</a></li>
-							<li><a href="#">Правила сервиса</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div>
-					<ul class="social">
-						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Исполнители</a></li>
+								<li><a href="#">Задачи</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
 					</ul>
-					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
