@@ -57,31 +57,33 @@ input[type="search"]:active {
 div.selector {
 	position:relative;
 	overflow:hidden;
-	width:224px !important;
-	color:#000000;
+	width:236px !important;
 	font-size:14px;
 	line-height:18px;
-	font-weight:300;
-	padding:0 0 0 8px;
 	background:#ffffff;
-	border:1px solid #cecece;
-	border-top:1px solid #d4d4d4;
-	border-bottom:1px solid #d4d4d4;
-	box-shadow:inset 3px 3px 5px #f2f2f2;
+	font-size:14px;
+	border:2px solid #999999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:inset 7px 7px 10px #f2f2f2;
+	-moz-box-shadow:inset 7px 7px 10px #f2f2f2;
+	box-shadow:inset 7px 7px 10px #f2f2f2;
+	behavior:url('./pie.htc');
 }
 div.selector span {
     text-overflow:ellipsis;
     display:block;
     overflow:hidden;
     white-space:nowrap;
-    background:url('../img/select_arrow.png') no-repeat right top;
-	color:#000000 !important;
-	font-size:14px;
+    background:url('../img/select_arrow.png') no-repeat right 10px;
+	color:#666666 !important;
+	font-size:14px !important;
 	line-height:18px;
 	height:18px;
-	padding:4px 24px 3px 0;
+	padding:4px 26px 3px 7px !important;
     cursor:pointer;
-	width:200px !important;
+	width:203px !important;
 }
 div.selector.fixedWidth {
     width:190px;
@@ -108,8 +110,9 @@ div.checker {
   position:relative; 
 }
 div.checker, div.checker span, div.checker input {
-    width:14px;
-    height:14px;
+    width:18px;
+    height:18px;
+	cursor:pointer;
 }
 div.checker span {
     display:-moz-inline-box;
@@ -120,7 +123,7 @@ div.checker span {
     background:url('../img/checkbox_bg.png') no-repeat left top;
 }
 div.checker span.checked {
-    background-position:0 -14px;
+    background-position:0 -18px;
 }
 div.checker input {
     opacity:0;
