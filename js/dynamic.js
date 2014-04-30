@@ -12,60 +12,52 @@
 		}, 1000);
 		return false;
 	});
-	$('.ctitle').each(function() {
+	/*$('.ctitle').each(function() {
 		var w = 960 - $(this).children('h1').width() - 38;
 		$(this).children('div').width(w);
 		var d = w - $(this).find('h5').width() - 40;
 		$(this).find('div > div.description > div').width(d);
-	});
+	});*/
 	$('.filter .price .range').each(function() {
 		handle = $(this).find('.ui-slider-handle');    
 		var start = $(this).parent().parent().find('.min').val();
 		handle.eq(0).addClass('first').append('<span>'+start+'</span>');
-		var mf = handle.eq(0).find('span').width() / 2 + 4;
-		handle.eq(0).find('span').css({'margin-left': -mf+'px'});
 		var end = $(this).parent().parent().find('.max').val();
 		handle.eq(1).addClass('second').append('<span>'+end+'</span>');
-		var ms = handle.eq(1).find('span').width() / 2 + 4;
-		handle.eq(1).find('span').css({'margin-left': -ms+'px'});
 	});
 	$('.filter .rating .range').each(function() {
 		handle = $(this).find('.ui-slider-handle');
 		handle.eq(0).append('<span>3</span>');
 		handle.eq(1).append('<span>9</span>');
 	});
-	$('.reviewu > div#reviews, .reviewu > div#tasks, .reviewu > div#portfolio').each(function() {
+	$('.reviewu div#reviews, .reviewu div#tasks, .reviewu div#portfolio').each(function() {
 		var rl = $(this).parent().find('.nav li').filter('.'+$(this).attr('id')).position();
 		var rw = $(this).parent().find('.nav li').filter('.'+$(this).attr('id')).width();
 		var rm = rl.left+(rw/2);
 		$(this).children('span').css({'left': rm+'px'});
 		$(this).children('span').fadeIn(150);
 	});
-	$('.reviewu > .leave').each(function() {
+	/*$('.reviewu .leave').each(function() {
 		var rl = $(this).parent().find('.nav li').filter(':first').position();
 		var rw = $(this).parent().find('.nav li').filter(':first').width();
 		var rm = rl.left+(rw/2);
 		$(this).children('span').css({'left': rm+'px'});
 		$(this).children('span').fadeIn(150);
-	});
+	});*/
     if(!$('.content .userform > div > div.performer p input[type="checkbox"]').is(':checked')) {
 	    $('.content .userform > div.optional').delay(150).fadeOut(0);
     }
 });
-$(document).ready(function() {
-	$('.reviewu > div').append('<span></span>');
-	$('.reviewu > div > span, .reviewu > .leave > span').hide();
-});
 function float() {
 	if ($('.header').hasClass('autorized')) {
-		var headerheight = 116;
+		var headerheight = 109;
 	}
 	else {
-		var headerheight = 79;
+		var headerheight = 81;
 	}
 	if ($(window).scrollTop() > headerheight) {
 		$('.header').addClass('fixed');
-		$('.wrapper').css({'padding-top': headerheight-17+'px'});
+		$('.wrapper').css({'padding-top': headerheight+18+'px'});
 	}
 	else {
 		$('.header').removeClass('fixed');
@@ -165,8 +157,7 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 		return false;
 	}).filter(':first').click();
-	$('.categories > div > div > div p, .reviewu > div, .reviewu > .leave > div > .prepared > div').append('<span></span>');
-	$('.reviewu > .leave').append('<button class="close"></button>');
+	$('.categories > div > div > div p, .reviewu div.all, .reviewu div.tasksview, .reviewu div.portfolio').append('<span class="arrow"></span>');
 	$('select, input[type="checkbox"], input[type="radio"], input[type="file"]').uniform();
 	$('.filter p.list span em').click(function() {
 		$(this).parent().fadeOut(0);
@@ -177,40 +168,36 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		return false;
 	});
-
-	$('.userc > div h5 span.like, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
+	$('.pagination .quantity li a').click(function() {
+		$(this).parents('.quantity').children().removeClass('active');
+		$(this).parent().addClass('active');
+		return false;
+	});
+	$('.userc > div h5 span.like em, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
-//	$('.filter .price .range').slider({
-//		min: 0,
-//		max: 10000,
-//		step: 100,
-//		values: [1000,7000],
-//		range: true,
-//		stop: function(event, ui) {
-//			$(this).parent().parent().find('.min').val($(this).slider('values',0));
-//			$(this).parent().parent().find('.max').val($(this).slider('values',1));
-//			handle = $(this).find('.ui-slider-handle');
-//			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-//			var mf = handle.eq(0).find('span').width() / 2 + 4;
-//			handle.eq(0).find('span').css({'margin-left': -mf+'px'});
-//			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-//			var ms = handle.eq(1).find('span').width() / 2 + 4;
-//			handle.eq(1).find('span').css({'margin-left': -ms+'px'});
-//		},
-//		slide: function(event, ui){
-//			$(this).parent().parent().find('.min').val($(this).slider('values',0));
-//			$(this).parent().parent().find('.max').val($(this).slider('values',1));
-//			handle = $(this).find('.ui-slider-handle');
-//			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-//			var mf = handle.eq(0).find('span').width() / 2 + 4;
-//			handle.eq(0).find('span').css({'margin-left': -mf+'px'});
-//			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-//			var ms = handle.eq(1).find('span').width() / 2 + 4;
-//			handle.eq(1).find('span').css({'margin-left': -ms+'px'});
-//		}
-//	});
+  	$('.filter .price .range').slider({
+  		min: 0,
+  		max: 10000,
+  		step: 100,
+  		values: [1000,7000],
+  		range: true,
+  		stop: function(event, ui) {
+  			$(this).parent().parent().find('.min').val($(this).slider('values',0));
+  			$(this).parent().parent().find('.max').val($(this).slider('values',1));
+  			handle = $(this).find('.ui-slider-handle');
+  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
+  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
+  		},
+  		slide: function(event, ui){
+  			$(this).parent().parent().find('.min').val($(this).slider('values',0));
+  			$(this).parent().parent().find('.max').val($(this).slider('values',1));
+  			handle = $(this).find('.ui-slider-handle');
+  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
+  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
+  		}
+  	});
 	$('.filter .price').each(function() {
 		$(this).find('.min').change(function(){
 			var value1 = $(this).parents('.price').find('.min').val();
@@ -222,8 +209,6 @@ $(document).ready(function() {
 			$(this).parents('.price').find('.range').slider('values',0,value1);
 			handle = $(this).parents('.price').find('.ui-slider-handle');    
 			handle.eq(0).empty().append('<span>'+$(this).parents('.price').find('.range').slider("values",0)+'</span>');
-			var mf = handle.eq(0).find('span').width() / 2 + 4;
-			handle.eq(0).find('span').css({'margin-left': -mf+'px'});
 		});
 		$(this).find('.max').change(function(){
 			var value1 = $(this).parents('.price').find('.min').val();
@@ -236,44 +221,34 @@ $(document).ready(function() {
 			$(this).parents('.price').find('.range').slider('values',1,value2);
 			handle = $(this).parents('.price').find('.ui-slider-handle');    
 			handle.eq(1).empty().append('<span>'+$(this).parents('.price').find('.range').slider("values",1)+'</span>');
-			var ms = handle.eq(1).find('span').width() / 2 + 4;
-			handle.eq(1).find('span').css({'margin-left': -ms+'px'});
 		});
 	});
-//	$('.filter .rating .range').slider({
-//		min: 0,
-//		max: 10,
-//		values: [3,9],
-//		range: true,
-//		stop: function(event, ui) {
-//			handle = $(this).find('.ui-slider-handle');
-//			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-//			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-//		},
-//		slide: function(event, ui) {
-//			handle = $(this).find('.ui-slider-handle');
-//			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-//			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-//		}
-//	});
-
-//	var prepared = $('.reviewu > .leave > div > .prepared > div > div');
-//	prepared.hide();
-//	$('.reviewu > .leave > div > .prepared ul li a').click(function () {
-//		prepared.hide();
-//		prepared.filter(this.hash).stop(true, true).fadeIn(0);
-//		$(this).parents('ul').find('li').removeClass('active');
-//		$(this).parent().addClass('active');
-//		var pl = $(this).parent('li').position();
-//		var pw = $(this).parent('li').width();
-//		var pm = pl.left+(pw/2)-12;
-//		$(this).parents('.prepared').children('div').children('span').css({'left': pm+'px'});
-//		return false;
-//	});
-//	$('.reviewu > .leave > div > .prepared > div > div').filter(':first').fadeIn(0);
-//	$('.reviewu > .leave > div > .prepared ul li:first-child').addClass('active');
-
-	$('.reviewu > .leave > div > .prepared ul li a').click(function () {
+  	$('.filter .rating .range').slider({
+  		min: 0,
+  		max: 10,
+  		values: [3,9],
+  		range: true,
+  		stop: function(event, ui) {
+  			handle = $(this).find('.ui-slider-handle');
+  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
+  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
+  		},
+  		slide: function(event, ui) {
+  			handle = $(this).find('.ui-slider-handle');
+  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
+  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
+  		}
+  	});
+  	/*var prepared = $('.reviewu .leave. prepared .templates div');
+  	prepared.hide();
+  	$('.reviewu .leave .prepared ul li a').click(function () {
+  		prepared.hide();
+  		prepared.filter(this.hash).stop(true, true).fadeIn(0);
+  		$(this).parents('ul').find('li').removeClass('active');
+  		$(this).parent().addClass('active');
+  		return false;
+  	});*/
+	$('.reviewu .leave .prepared ul li a').click(function () {
 		var pr = $(this).attr('href');
 		$(this).parents('.prepared').find('ul li').removeClass('active');
 		$(this).parent().addClass('active');
@@ -281,22 +256,20 @@ $(document).ready(function() {
 		$(this).parents('.leave').find('.area textarea').empty().text(pt);
 		return false;
 	});
-	$('.reviewu > .leave > .close').click(function() {
-		$(this).parent().fadeOut(0);
-		return false;
-	});
-	$('.reviewu > div h5 .leave').click(function() {
+	$('.reviewu .all h5 .leave').click(function() {
 		$(this).parents('.reviewu').children('.leave').fadeIn(0);
 		return false;
 	});
 	$('.taski p.more .show a').toggle( 
 		function() {
 			$(this).parents('.taski').find('div.more').fadeIn(0);
+			$(this).parent().addClass('active');
 			$(this).empty().text('Свернуть');
 			return false;
 		},
 		function() {
 			$(this).parents('.taski').find('div.more').fadeOut(0);
+			$(this).parent().removeClass('active');
 			$(this).empty().text('Показать полностью');
 			return false;
 		}
@@ -315,6 +288,15 @@ $(document).ready(function() {
 		number: 10,
 		width: 222,
 		readOnly: true,
+		path: 'img/rate_small',
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+	$('.ratingsmallenabled').raty({
+		number: 10,
+		width: 222,
+		readOnly: false,
 		path: 'img/rate_small',
 		score: function() {
 			return $(this).attr('data-score');
@@ -391,7 +373,7 @@ $(document).ready(function() {
 		$(this).parent().fadeOut(0);
 		return false;
 	});
-
+    
 	$('.taskadd > div > div p:first-child').each(function() {
 		var ph = $(this).height();
 		if (ph > 27) {

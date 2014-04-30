@@ -130,7 +130,7 @@
 					<p class="givetask"><a href="#">Назначить задачу</a></p>
 					<p class="favorite"><a href="#">Люся у вас в избранном</a></p>
 					<div class="video">
-						<!--<iframe src="http://player.vimeo.com/video/87817306" width="230" height="127" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+						<iframe src="http://player.vimeo.com/video/87817306" width="230" height="127" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="information">
@@ -188,74 +188,76 @@
 					<li class="tasks"><a href="#tasks"><span>Задачи</span> (1025)</a></li>
 					<li class="portfolio"><a href="#portfolio"><span>Портфолио</span> (350)</a></li>
 				</ul>
-				<div class="leave">
+				<div class="modal leave">
 					<h2>Оставить отзыв</h2>
 					<div>
-						<p class="wide">
-							<span>За задачу:</span>
-							<select>
-								<option>Помочь с уборкой (N 2556)</option>
-								<option>Помочь с уборкой (N 2556)</option>
-							</select>
-						</p>
-					</div>
-					<div>
-						<h3>Оцените работу исполнителя:</h3>
-						<p>
-							<span>В целом:</span>
-							<select>
-								<option>Положительно</option>
-								<option>Положительно</option>
-							</select>
-						</p>
-						<ul class="marks">
-							<li><span>Качество:</span> <div class="ratingbig"></div></li>
-							<li><span>Вежливость:</span> <div class="ratingbig"></div></li>
-							<li><span>Цена:</span> <div class="ratingbig"></div></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Текст отзыва:</h3>
-						<p class="area"><textarea cols="100" rows="4"></textarea></p>
-					</div>
-					<div>
-						<h3>Быстрый отзыв</h3>
-						<div class="prepared">
-							<ul>
-								<li><a href="#pre1">5</a></li>
-								<li><a href="#pre2">4</a></li>
-								<li><a href="#pre3">3</a></li>
-								<li><a href="#pre4">2</a></li>
-								<li><a href="#pre5">1</a></li>
+						<div class="once">
+							<p>
+								<span>Тип Аккаунта:</span>
+								<select>
+									<option>Физическое лицо</option>
+									<option>Физическое лицо</option>
+								</select>
+							</p>
+						</div>
+						<div class="once">
+							<h3>Оцените работу исполнителя:</h3>
+							<p>
+								<span>В целом:</span>
+								<select>
+									<option>Положительно</option>
+									<option>Положительно</option>
+								</select>
+							</p>
+							<ul class="marks">
+								<li><span>Качество:</span> <div class="ratingsmallenabled"></div></li>
+								<li><span>Вежливость:</span> <div class="ratingsmallenabled"></div></li>
+								<li><span>Цена:</span> <div class="ratingsmallenabled"></div></li>
 							</ul>
-							<div>
-								<div id="pre1">
-									<p>Все отлично, большое спасибо! Рекомендую!</p>
-								</div>
-								<div id="pre2">
-									<p>Хорошо</p>
-								</div>
-								<div id="pre3">
-									<p>Удовлетворительно</p>
-								</div>
-								<div id="pre4">
-									<p>Плохо</p>
-								</div>
-								<div id="pre5">
-									<p>Очень плохо</p>
+						</div>
+						<div class="once">
+							<h3>Текст отзыва:</h3>
+							<p class="area"><textarea cols="100" rows="4"></textarea></p>
+						</div>
+						<div class="once">
+							<h3>Быстрый отзыв</h3>
+							<div class="prepared">
+								<ul>
+									<li><a href="#pre1">5</a></li>
+									<li><a href="#pre2">4</a></li>
+									<li><a href="#pre3">3</a></li>
+									<li><a href="#pre4">2</a></li>
+									<li><a href="#pre5">1</a></li>
+								</ul>
+								<div class="templates">
+									<div id="pre1">
+										<p>Все отлично, большое спасибо! Рекомендую!</p>
+									</div>
+									<div id="pre2">
+										<p>Хорошо</p>
+									</div>
+									<div id="pre3">
+										<p>Удовлетворительно</p>
+									</div>
+									<div id="pre4">
+										<p>Плохо</p>
+									</div>
+									<div id="pre5">
+										<p>Очень плохо</p>
+									</div>
 								</div>
 							</div>
 						</div>
+						<button class="submit">Отправить</button>
 					</div>
-					<button class="submit">Добавить</button>
 				</div>
 				<div class="all" id="reviews">
 					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">(Только автору задачи, исполнителем которой является данный пользователь)</span></h5>
-					<div>
-						<img src="./img/userr1.png" width="123" height="124" alt="">
-						<div>
+					<div class="once">
+						<img src="./img/userr1.png" width="123" height="124" class="user" alt="">
+						<div class="information">
 							<h3><span class="theme"><a href="#" class="name">Петр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
-							<div class="text">
+							<div class="textarea">
 								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
 								<ul class="marks">
 									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
@@ -286,11 +288,11 @@
 							</div>
 						</div>
 					</div>
-					<div>
-						<img src="./img/userr2.png" width="123" height="124" alt="">
-						<div>
+					<div class="once">
+						<img src="./img/userr2.png" width="123" height="124" class="user" alt="">
+						<div class="information">
 							<h3><span class="theme"><a href="#" class="name">Елизавета Зорина</a> по задаче <a href="#" class="task">Решить задания для ЕГЭ по математике</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
-							<div class="text">
+							<div class="textarea">
 								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
 								<ul class="marks">
 									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
@@ -353,10 +355,10 @@
 							<p class="data">24.03.2014г.</p>
 						</div>
 						<div class="message">
-							<img src="./img/userr1.png" width="123" height="124" alt="">
-							<div>
+							<img src="./img/userr1.png" width="123" height="124" class="user" alt="">
+							<div class="information">
 								<h3><a href="#" class="name">Пётр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></h3>
-								<div class="text">
+								<div class="textarea">
 									<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
 									<ul class="marks">
 										<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
@@ -391,10 +393,10 @@
 							<p class="data">24.03.2014г.</p>
 						</div>
 						<div class="message">
-							<img src="./img/userr2.png" width="123" height="124" alt="">
-							<div>
+							<img src="./img/userr2.png" width="123" height="124" class="user" alt="">
+							<div class="information">
 								<h3><a href="#" class="name">Пётр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></h3>
-								<div class="text">
+								<div class="textarea">
 									<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
 									<ul class="marks">
 										<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
@@ -407,7 +409,7 @@
 					</div>
 				</div>
 				<div class="portfolio" id="portfolio">
-					<div>
+					<div class="once">
 						<div class="photos">
 							<div class="main">
 								<img src="./img/portfolio1.png" width="181" height="181" id="img1" alt="">
@@ -431,7 +433,7 @@
 							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка</p>
 						</div>
 					</div>
-					<div>
+					<div class="once">
 						<div class="photos">
 							<div class="main">
 								<img src="./img/portfolio1.png" width="181" height="181" id="img1" alt="">
