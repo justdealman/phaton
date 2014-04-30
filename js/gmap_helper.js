@@ -36,7 +36,7 @@ function reverseGeocodeResult(results, status) {
 //
 // geocodes the address inserted
 function geocode() {
-    var address = document.getElementById("city").value + ', ' + document.getElementById("User_address").value;
+    var address = document.getElementById("city_id").value + ', ' + document.getElementById("User_address").value;
     if(document.getElementById("User_house_number")) {
         address += ',' + document.getElementById("User_house_number").value;
     }

@@ -177,11 +177,7 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		return false;
 	});
-	$('.pagination .quantity li a').click(function() {
-		$(this).parents('.quantity').children().removeClass('active');
-		$(this).parent().addClass('active');
-		return false;
-	});
+
 	$('.userc > div h5 span.like, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
 		$(this).toggleClass('active');
 		return false;
@@ -296,13 +292,11 @@ $(document).ready(function() {
 	$('.taski p.more .show a').toggle( 
 		function() {
 			$(this).parents('.taski').find('div.more').fadeIn(0);
-			$(this).parent().addClass('active');
 			$(this).empty().text('Свернуть');
 			return false;
 		},
 		function() {
 			$(this).parents('.taski').find('div.more').fadeOut(0);
-			$(this).parent().removeClass('active');
 			$(this).empty().text('Показать полностью');
 			return false;
 		}
@@ -397,26 +391,7 @@ $(document).ready(function() {
 		$(this).parent().fadeOut(0);
 		return false;
 	});
-    if($('div.calendar input.data').length) {
-        $.datepicker.regional['ru'] = {
-            closeText: 'Закрыть',
-            prevText: '&#x3c;Пред',
-            nextText: 'След&#x3e;',
-            currentText: 'Сегодня',
-            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-            'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-            'Июл','Авг','Сен','Окт','Ноя','Дек'],
-            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-            dateFormat: 'dd.mm.yy',
-            firstDay: 1,
-            isRTL: false
-        };
-        $.datepicker.setDefaults($.datepicker.regional['ru']);
-        $('div.calendar input.data').datepicker();
-    }
+
 	$('.taskadd > div > div p:first-child').each(function() {
 		var ph = $(this).height();
 		if (ph > 27) {
@@ -438,6 +413,7 @@ $(document).ready(function() {
     $('.content .userform > div > div.performer p input[type="checkbox"]').change(function() {
         if($(this).is(':checked')) {
             $('.content .userform > div.optional').show();
+            google.maps.event.trigger(map, 'resize');
         }
         else {
             $('.content .userform > div.optional').hide();
@@ -445,53 +421,12 @@ $(document).ready(function() {
     });
 	$('.content .userform > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
 	$('.modal').append('<span class="close"></span>');
+	$('.modal').append('<span class="arrow"></span>');
 	$('.modal .close').click(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
 	});
-	$('.specialization > p > a').bind('click', function() {
-		$(this).parents('.specialization').find('.modal').fadeIn(150);
-		/*$(this).parents('.specialization').find('p.list span').each(function() {
-			var addedspec = $(this).text();
-			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('input[type="checkbox"]').prop('checked', true);
-			$(this).parents('.specialization').find('.specselect > ul > li > ul > li:contains("'+addedspec+'")').find('.checker span').addClass('checked');
-		});*/
-		return false;
-	});
-	$('.specselect > ul > li > ul > li > span').toggle(
-		function() {
-			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
-			$(this).parent().find('.checker span').addClass('checked');
-			return false;
-		},
-		function() {
-			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
-			$(this).parent().find('.checker span').removeClass('checked');
-			return false;
-		}
-	);
-	$('.specselect > div button.select').bind('click', function() {
-		$(this).parents('.specselect').find('h6').remove();
-		var specmax = 10;
-		var specnum = $(this).parents('.specselect').find('input[type="checkbox"]:checked').size();
-		if (specnum > specmax) {
-			var specdiff = specnum-specmax;
-			$(this).parents('.specselect').append('<h6>Вы превысили максимальное допустимое число специализаций! Для продолжения избавьтесь по меньшей мере от '+specdiff+' шт.</h6>');
-		}
-		else {
-			$(this).parents('.specialization').find('p.list').empty();
-			$(this).parents('.specselect').find('input[type="checkbox"]:checked').each(function() {
-				var selspec = $(this).parent().parent().parent().text();
-				$(this).parents('.specialization').find('p.list').append('<span>'+selspec+'<em></em></span>');
-			});
-			$(this).parents('.modal').stop(true, true).fadeOut(150);
-			$(this).parents('.specialization').find('p.list span em').bind('click', function() {
-				$(this).parent().fadeOut(0);
-				return false;
-			});
-		}
-		return false;
-	});
+
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
 		$(this).focusin(function(){
@@ -501,19 +436,19 @@ $(document).ready(function() {
 			$(this).attr('placeholder',$(this).data('holder'));
 		});
 	});
-	$('.col1 .catspec > div > ul > li.sub > ul').hide();
-	$('.col1 .catspec > div > ul > li.sub > a').click(function() {
-		$(this).parent().children('ul').slideToggle(0);
-		return false;
-	}).filter(':first').click();
-	$('.col1 .catspec > div').jScrollPane({
-		verticalDragMinHeight: 45,
-		verticalDragMaxHeight: 45,
-		horizontalDragMinWidth: 45,
-		horizontalDragMaxWidth: 45,
-		autoReinitialise: true
-	});
-	$('.about .more').live('click', function() {
+//	$('.col1 .catspec > div > ul > li.sub > ul').hide();
+//	$('.col1 .catspec > div > ul > li.sub > a').click(function() {
+//		$(this).parent().children('ul').slideToggle(0);
+//		return false;
+//	}).filter(':first').click();
+//	$('.col1 .catspec > div').jScrollPane({
+//		verticalDragMinHeight: 45,
+//		verticalDragMaxHeight: 45,
+//		horizontalDragMinWidth: 45,
+//		horizontalDragMaxWidth: 45,
+//		autoReinitialise: true
+//	});
+	$('.description .about .more').live('click', function() {
 		$(this).parent().find('.hidden').show();
 		$(this).empty().text('Скрыть...');
 		$(this).removeClass('more').addClass('less');
@@ -558,11 +493,6 @@ $(document).ready(function() {
 
     var ias;
 	$('.photo span.edit a').bind('click', function() {
-		if ( $('.photo .modal .crop #crop').length == 0 ) {
-			var imgpath = './img/01.jpg';
-			$('.photo .modal .crop').append('<img src="'+imgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+imgpath+'" alt=""><div>');
-		}
-
         var onSelectEnd = function(img, selection) {
             setCoords(selection);
         };
@@ -586,14 +516,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	$('.photo .modal .save').click(function() {
-		var original = $('#crop');
-		var originalWidth = original[0].naturalWidth;
-		var ratio = originalWidth/364;
-		alert('Множитель для координат — '+ratio);
-		return false;
-	});
-	
+
 
 	$('.photo .modal .close').bind('click', function() {
 		$('#crop').imgAreaSelect({
