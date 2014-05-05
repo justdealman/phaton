@@ -422,13 +422,13 @@ $(document).ready(function() {
 //		$(this).parent().children('ul').slideToggle(0);
 //		return false;
 //	}).filter(':first').click();
-//	$('.col1 .catspec > div').jScrollPane({
-//		verticalDragMinHeight: 45,
-//		verticalDragMaxHeight: 45,
-//		horizontalDragMinWidth: 45,
-//		horizontalDragMaxWidth: 45,
-//		autoReinitialise: true
-//	});
+	$('.col1 .catspec .scroll').jScrollPane({
+		verticalDragMinHeight: 45,
+		verticalDragMaxHeight: 45,
+		horizontalDragMinWidth: 45,
+		horizontalDragMaxWidth: 45,
+		autoReinitialise: true
+	});
 	$('.description .about .more').live('click', function() {
 		$(this).parent().find('.hidden').show();
 		$(this).empty().text('Скрыть...');
