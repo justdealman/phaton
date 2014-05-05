@@ -3952,6 +3952,8 @@ button::-moz-focus-inner {
 }
 .offers > div > .td {
 	position:relative;
+	margin:0 0 -1px;
+	border-top:1px solid #cccccc;
 	border-bottom:1px solid #cccccc;
 }
 .offers > div > .td > .short {
@@ -4006,6 +4008,7 @@ button::-moz-focus-inner {
 .offers > div > .td > .short .deadline span {
 	float:left;
 	display:block;
+	font-size:13px;
 	padding:0 0 0 30px;
 }
 .offers > div > .td > .short .deadline.far span {
@@ -4022,12 +4025,14 @@ button::-moz-focus-inner {
 }
 .offers > div > .td.old > .short .deadline span {
 	color:#999999;
+	font-size:13px;
 	background:url('../img/deadline_old_icon.png') no-repeat left 1px;
 }
 .offers > div > .td > .short p.more, .offers > div > .td > .short p.less {
 	display:none;
 	float:right;
 	width:150px;
+	font-size:13px;
 	white-space:nowrap;
 	margin-top:-1px;
 }
@@ -4047,6 +4052,10 @@ button::-moz-focus-inner {
 .offers > div > .td.old > .short p.more span, .offers > div > .td.old > .short p.less span {
 	border-bottom:1px dashed #999999 !important;
 }
+.offers > div > .td.active {
+	background:#f1f1f1;
+	border-bottom:30px solid #fdfdfd;
+}
 .offers > div > .td.active .short {
 	background:none !important;
 }
@@ -4059,7 +4068,7 @@ button::-moz-focus-inner {
 .offers > div > .td > div.more {
 	display:none;
 	padding:16px 0 8px;
-	margin:5px 0 16px;
+	margin:5px 0 6px;
 }
 .offers > div > .td.active > div.more {
 	display:block;
@@ -4112,7 +4121,7 @@ button::-moz-focus-inner {
 }
 .offers > div > .td > div.more .buttons {
 	text-align:right;
-	margin:10px 0 0;
+	margin:10px 15px 0;
 }
 .offers > div > .td > div.more .buttons button {
 	display:inline-block;
@@ -4139,6 +4148,190 @@ button::-moz-focus-inner {
 	cursor:default !important;
 	background:url('../img/offers_disabled.png') no-repeat left top !important;
 }
+.offers > div > .td .auction {
+	padding:16px 15px 2px;
+}
+.offers > div > .td .auction > div {
+	padding:0 0 7px;
+	margin:0 0 20px;
+	border-bottom:1px solid #cccccc;
+}
+.offers > div > .td .auction h3 {
+	color:#000000;
+	font-size:14px;
+	line-height:18px;
+	padding:0;
+	margin:0 0 18px;
+}
+.offers > div > .td .auction div h3 {
+	margin:0 0 2px;
+}
+.offers > div > .td .auction h3 > span {
+	font-weight:normal;
+}
+.offers > div > .td .auction h3 strong {
+	float:right;
+	display:block;
+}
+.offers > div > .td .auction h3 strong > span {
+	font-weight:normal;
+}
+.offers > div > .td .auction h3 strong.increase {
+	color:#00ab63;
+	font-size:18px;
+	margin:-1px 0 0;
+}
+.offers > div > .td .auction h3 strong.decrease {
+	color:#ee4036;
+	font-size:18px;
+	margin:-1px 0 0;
+}
+.offers > div > .td .auction h3 .accept {
+	float:right;
+	display:block;
+	color:#00ab63;
+	font-weight:normal;
+	text-decoration:none;
+	margin:0 0 0 112px;
+	border-bottom:1px solid #c7e1d2;
+}
+.offers > div > .td .auction h3 .accept:hover {
+	border-bottom:1px solid transparent;
+}
+.offers > div > .td .auction h6 {
+	color:#666666;
+	font-size:12px;
+	line-height:15px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 16px;
+}
+.offers > div > .td .auction h6 span {
+	color:#999999;
+}
+.offers > div > .td .auction h4 {
+	color:#000000;
+	font-size:12px;
+	line-height:15px;
+	font-weight:normal;
+	padding:0;
+	margin:-4px 0 16px;
+}
+.offers > div > .td .auction h4 span {
+	border-bottom:1px dashed #000000;
+}
+.offers > div > .td .auction p {
+	color:#000000;
+	line-height:16px;
+	margin:0 0 16px;
+}
+.offers > div > .td .auction div h5 {
+	color:#999999;
+	font-size:12px;
+	line-height:15px;
+	font-weight:normal;
+	text-align:right;
+	padding:0;
+	margin:-5px 0 10px;
+}
+.offers > div > .td .auction h5.decline {
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	text-align:right;
+	padding:10px 0 0;
+	margin:0 0 10px;
+}
+.offers > div > .td .auction h5.decline a {
+	color:#ee4036;
+	text-decoration:none;
+	padding:0 0 0 30px;
+	background:url('../img/decline_icon.png') no-repeat left top;
+}
+.offers > div > .td .auction h5.decline a span {
+	border-bottom:1px solid #f0cdcc;
+}
+.offers > div > .td .auction h5.decline a:hover span {
+	border-bottom:1px solid transparent;
+}
+.offers > div > .td .auction .form {
+	text-align:right;
+	padding:5px 0 0;
+}
+.offers > div > .td .auction .form p {
+	color:#000000;
+	font-size:12px;
+	line-height:14px;
+	text-align:left;
+	margin:0 0 24px;
+}
+.offers > div > .td .auction .form p span {
+	display:inline-block;
+	width:148px;
+	vertical-align:top;
+	padding:9px 0 7px;
+	margin:0 7px 0 0;
+}
+.offers > div > .td .auction .form p span em {
+	display:block;
+	color:#999999;
+	font-style:normal;
+}
+.offers > div > .td .auction .form p > em {
+	display:inline-block;
+	width:148px;
+	font-style:normal;
+	vertical-align:top;
+	padding:9px 12px 7px;
+}
+.offers > div > .td .auction .form p input, .offers > div > .td .auction .form p textarea {
+	position:relative;
+	display:inline-block;
+	width:85px;
+	color:#010101;
+	font-size:14px;
+	vertical-align:top;
+	padding:5px 10px 4px;
+	background:#ffffff;
+	border:2px solid #999999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	behavior:url('./pie.htc');
+}
+.offers > div > .td .auction .form p textarea {
+	width:475px;
+	min-height:70px;
+	margin:0 -3px 0 0;
+	resize:vertical;
+}
+.offers > div > .td .auction .form div {
+	text-align:right;
+	margin:-17px 0 0;
+}
+.offers > div > .td .auction .form button {
+	display:inline-block;
+	width:101px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:6px 0 7px;
+	margin:0 0 16px !important;
+	background:url('../img/reviewu_leave_submit.png') no-repeat left top;
+}
+.offers > div > .td .auction .form button:hover {
+	background-position:0 -30px;
+}
+
+
+/*AAA*/
+
 h4.evaluation {
 	display:inline-block;
 	width:66px;

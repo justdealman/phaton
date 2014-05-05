@@ -403,7 +403,6 @@ $(document).ready(function() {
     });
 	$('.content .userform > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
 	$('.modal').append('<span class="close"></span>');
-	$('.modal').append('<span class="arrow"></span>');
 	$('.modal .close').click(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
