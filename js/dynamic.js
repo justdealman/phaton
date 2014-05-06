@@ -158,7 +158,8 @@ $(document).ready(function() {
 		return false;
 	}).filter(':first').click();
 	$('.categories > div > div > div p, .reviewu div.all, .reviewu div.tasksview, .reviewu div.portfolio').append('<span class="arrow"></span>');
-	$('select, input[type="checkbox"], input[type="radio"], input[type="file"]').uniform();
+	$('input[type="checkbox"], input[type="radio"], input[type="file"]').uniform();
+	$('select').selectbox();
 	$('.filter p.list span em').click(function() {
 		$(this).parent().fadeOut(0);
 		return false;
@@ -380,7 +381,7 @@ $(document).ready(function() {
 			$(this).css({'margin-top': '-8px'});
 		}
 	});
-	$('.userform > div > div .description, .userform > div .files ul li').append('<em></em>');
+	$('.userform > div .files ul li').append('<em></em>');
 	$('.taskadd > div.employer .tip p:last-child').css({'margin-bottom': '0 !important'});
 	
 	$('.userform div.legal').hide();
@@ -401,9 +402,7 @@ $(document).ready(function() {
             $('.content .userform > div.optional').hide();
 		}		
     });
-	$('.content .userform > div.optional').filter(':first').css({'margin-top': '-43px', 'background': 'none'});
 	$('.modal').append('<span class="close"></span>');
-	$('.modal').append('<span class="arrow"></span>');
 	$('.modal .close').click(function() {
 		$(this).parent().stop(true, true).fadeOut(150);
 		return false;
@@ -423,13 +422,13 @@ $(document).ready(function() {
 //		$(this).parent().children('ul').slideToggle(0);
 //		return false;
 //	}).filter(':first').click();
-//	$('.col1 .catspec > div').jScrollPane({
-//		verticalDragMinHeight: 45,
-//		verticalDragMaxHeight: 45,
-//		horizontalDragMinWidth: 45,
-//		horizontalDragMaxWidth: 45,
-//		autoReinitialise: true
-//	});
+	$('.col1 .catspec .scroll').jScrollPane({
+		verticalDragMinHeight: 45,
+		verticalDragMaxHeight: 45,
+		horizontalDragMinWidth: 45,
+		horizontalDragMaxWidth: 45,
+		autoReinitialise: true
+	});
 	$('.description .about .more').live('click', function() {
 		$(this).parent().find('.hidden').show();
 		$(this).empty().text('Скрыть...');
@@ -447,11 +446,11 @@ $(document).ready(function() {
 	function preview(img, selection) { 
 		var jw = $('#crop').width();
 		var jh = $('#crop').height();
-		var fw = 364;
+		var fw = 320;
 		var fh = fw/jw*jh;
 	
-		var scaleX = 234 / (selection.width || 1);
-		var scaleY = 163 / (selection.height || 1);
+		var scaleX = 134 / (selection.width || 1);
+		var scaleY = 134 / (selection.height || 1);
   
 		$('.photo .modal .preview img').css({
 			width: Math.round(scaleX * fw) + 'px',
@@ -475,6 +474,10 @@ $(document).ready(function() {
 
     var ias;
 	$('.photo span.edit a').bind('click', function() {
+		if ( $('.photo .modal .crop #crop').length == 0 ) {
+			var imgpath = './img/01.jpg';
+			$('.photo .modal .crop').append('<img src="'+imgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+imgpath+'" alt=""><div>');
+		}
         var onSelectEnd = function(img, selection) {
             setCoords(selection);
         };
@@ -482,16 +485,16 @@ $(document).ready(function() {
 		$(this).parents('.photo').find('.modal').fadeIn(150);
 		var jw = $('#crop').width();
 		var jh = $('#crop').height();
-		var fw = 364;
+		var fw = 320;
 		var fh = fw/jw*jh;
 		$('.photo .modal .crop #crop, .photo .modal .crop .preview img').css({'width': fw+'px', 'height': fh+'px'});
 		$('#crop').css({'width': fw+'px', 'height': fh+'px'});
 		$('#crop').imgAreaSelect({
 			handles: true,
-			aspectRatio: '234:163',
+			aspectRatio: '1:1',
 			minWidth: 80,
-			minHeight: 80*(163/234),
-			x1: 0, y1: 0, x2: 182, y2: 182*(163/234),
+			minHeight: 80,
+			x1: 0, y1: 0, x2: 134, y2: 134,
 			onInit: preview,
 			onSelectChange: preview,
             onSelectEnd: onSelectEnd
@@ -583,4 +586,21 @@ $(document).ready(function() {
 			return false;
 		}).filter(':first').click();
 	});
+	$('.specialization .modal.absolute').append('<span class="arrow"></span>');
+	$('.specialization .select a').bind('click', function() {
+		$(this).parents('.specialization').find('.modal').fadeIn(150);
+		return false;
+	});
+	$('.specselect ul li span').toggle(
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
+			$(this).parent().find('.checker span').addClass('checked');
+			return false;
+		},
+		function() {
+			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
+			$(this).parent().find('.checker span').removeClass('checked');
+			return false;
+		}
+	);
 });

@@ -183,7 +183,7 @@
 								$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();	
 								var newimgpath = './img/header_bg.png';
 								alert('Картинка поменялась на '+newimgpath);
-								$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+newimgpath+'" alt=""><div>');
+								$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt="">', '<div class="preview"><img src="'+newimgpath+'" alt=""></div>');
 								return false;
 							});
 						</script>
