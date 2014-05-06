@@ -2324,9 +2324,10 @@ button::-moz-focus-inner {
 .col4 {
 	position:relative;
 	z-index:0;
-	float:left;
-	width:760px;
-	margin:0 0 0 10px;
+	display:inline-block;
+	vertical-align:top;
+	width:720px;
+	margin:0 -3px 0 10px;
 }
 .grid .useri .important {
 	margin-top:5px;
@@ -2711,72 +2712,80 @@ button::-moz-focus-inner {
 .usernav {
 	position:relative;
 	z-index:1;
-	float:left;
-	width:180px;
-	margin:0 10px 0 10px;
+	display:inline-block;
+	width:200px;
+	vertical-align:top;
+	margin:-1px 27px 0 10px;
 }
 .usernav ul {
 	margin:0 0 20px;
 }
 .usernav ul li {
 	color:#000000;
-	font-size:18px;
-	line-height:22px;
-	font-weight:300;
-	padding:0 0 6px 30px;
-	margin:0 0 6px;
+	font-size:14px;
+	line-height:17px;
+	white-space:nowrap;
+	padding:0 0 0 30px;
+	margin:0 0 9px;
 }
 .usernav ul li a {
 	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+	border-bottom:1px solid #d0d0d0;
 }
 .usernav ul li.active {
-	color:#e6b131;
+	color:#00ab63;
 }
 .usernav ul li.active a {
-	color:#e6b131;
+	color:#00ab63;
 	text-decoration:none;
+	border-bottom:1px solid transparent;
+}
+.usernav ul li a:hover {
+	border-bottom:1px solid transparent;
 }
 .usernav ul .profile {
-	background:url('../img/user_givetask_icon.png') no-repeat left 5px;
+	background:url('../img/user_givetask_icon.png') no-repeat left 1px;
 }
 .usernav ul .profile.active {
-	background:url('../img/user_givetask_active_icon.png') no-repeat left 5px;
+	background-position:0 -16px;
 }
 .usernav ul .tasks {
-	background:url('../img/userc_services_icon.png') no-repeat left 5px;
+	background:url('../img/userc_services_icon.png') no-repeat left 1px;
 }
 .usernav ul .tasks.active {
-	background:url('../img/userc_services_active_icon.png') no-repeat left 5px;
+	background-position:0 -16px;
 }
 .usernav ul .mytasks {
-	background:url('../img/userc_mytasks_icon.png') no-repeat left 5px;
+	background:url('../img/userc_mytasks_icon.png') no-repeat left 1px;
 }
 .usernav ul .mytasks.active {
-	background:url('../img/userc_mytasks_active_icon.png') no-repeat left 5px;
+	background-position:0 -16px;
 }
 .usernav ul .favorite {
-	background:url('../img/user_favorite_icon.png') no-repeat left 7px;
+	background:url('../img/userc_favorite_icon.png') no-repeat left top;
 }
 .usernav ul .favorite.active {
-	background:url('../img/user_favorite_active_icon.png') no-repeat left 7px;
+	background-position:0 -17px;
 }
 .usernav ul .messages {
-	background:url('../img/user_message_icon.png') no-repeat left 6px;
+	background:url('../img/user_message_icon.png') no-repeat left 3px;
 }
 .usernav ul .messages.active {
-	background:url('../img/user_message_active_icon.png') no-repeat left 6px;
+	background-position:0 -14px;
 }
 .usernav ul .notifications {
-	background:url('../img/user_notification_icon.png') no-repeat left 6px;
+	background:url('../img/user_notification_icon.png') no-repeat left 1px;
 }
 .usernav ul .notifications.active {
-	background:url('../img/user_notification_active_icon.png') no-repeat left 6px;
+	background-position:0 -16px;
 }
 .usernav ul .medals {
-	background:url('../img/user_medal_icon.png') no-repeat left 5px;
+	background:url('../img/user_medal_icon.png') no-repeat 3px top;
 }
 .usernav ul .medals.active {
-	background:url('../img/user_medal_active_icon.png') no-repeat left 5px;
+	background-position:3px -17px;
 }
 .usernav .tip {
 	width:166px;
@@ -5025,28 +5034,15 @@ h4.evaluation .like.active {
 	font-weight:300;
 	margin:0;
 }
-.h1 {
-	padding:0 0 25px;
-	margin:-13px 0 34px;
-	background:url('../img/line_bg.png') repeat-x bottom;
-}
-.h1 h1 {
-	color:#00ab63;
-	font-size:48px;
-	line-height:48px;
-	font-weight:300;
+.content > h1 {
+	color:#000000;
+	font-size:32px;
+	line-height:36px;
+	font-weight:800;
+	font-style:italic;
+	text-transform:uppercase;
 	padding:0;
-	margin:0 0 9px;
-}
-.h1 p {
-	color:#000000;
-	font-size:18px;
-	line-height:22px;
-	font-weight:300;
-	margin:0 0 9px;
-}
-.h1 p a {
-	color:#000000;
+	margin:-30px 0 36px;
 }
 .taskadd  {
 	width:684px;
@@ -5371,24 +5367,22 @@ h4.evaluation .like.active {
 	background-position:0 -27px;
 }
 .content .userform > div {
-	padding:36px 0 0;
-	margin:0 0 34px;
-	background:url('../img/line_bg.png') repeat-x top;
+	margin:0 0 23px;
 }
 .content .col4 .userform > div:first-child {
 	padding-top:0;
 	background:none;
 }
 .content .userform > div > div {
-	margin:0 0 14px;
+	margin:0 0 11px;
 }
 .content .userform h2 {
 	color:#000000;
 	font-size:24px;
-	line-height:28px;
-	font-weight:300;
+	line-height:27px;
+	font-style:italic;
 	padding:0;
-	margin:-3px 0 20px;
+	margin:0 0 21px;
 }
 .content .userform > div > p {
 	color:#999999;
@@ -5400,12 +5394,10 @@ h4.evaluation .like.active {
 .content .userform > div > div p {
 	display:inline-block;
 	color:#000000;
-	font-size:18px;
-	font-size:16px\0;
-	line-height:22px;
-	font-weight:300;
+	font-size:16px;
+	line-height:19px;
 	vertical-align:top;
-	padding:3px 0 4px;
+	padding:6px 0 5px;
 	margin:0 0 0 12px;
 }
 .content .userform > div > div > p > em {
@@ -5418,13 +5410,45 @@ h4.evaluation .like.active {
 .content .userform > div > div p:first-child {
 	position:relative;
 	width:214px;
-	padding:1px 0 4px;
+}
+.content .userform > div > div div.update {
+	width:331px;
+	text-align:right;
+	margin:12px 0 -24px 240px;
+}
+.content .userform > div > div div.update button {
+	display:inline-block;
+	width:90px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:6px 0 7px;
+	margin:1px 0 16px;
+	background:url('../img/update_button.png') no-repeat left top;
+}
+.content .userform > div > div div.update button:hover {
+	background-position:0 -30px;
+}
+
+
+.content .userform > div > div.performer {
+	margin:11px 0 37px;
 }
 .content .userform > div > div.performer p {
 	width:auto !important;
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	padding:17px 0 15px;
+	margin:0;
+	border-top:1px solid #000000;
+	border-bottom:1px solid #000000;
 }
 .content .userform > div > div.performer p .checker {
-	margin:-3px 14px 0 -11px;
+	margin:-2px 7px 0 0;
 }
 .content .userform > div > div p:first-child > span {
 	position:absolute;
@@ -5438,11 +5462,18 @@ h4.evaluation .like.active {
 }
 .content .userform > div > div.photo {
 	position:relative;
+	margin:-3px 0 31px;
 }
 .content .userform > div > div.photo img.current {
+	position:relative;
 	display:inline-block;
-	max-width:149px;
-	margin:6px 8px 3px 11px;
+	width:124px !important;
+	height:124px !important;
+	margin:9px 32px 3px 11px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
 }
 .content .userform > div > div.photo p {
 	color:#999999;
@@ -5460,65 +5491,70 @@ h4.evaluation .like.active {
 }
 .content .userform > div > div.photo p span {
 	display:block;
-	margin:10px 0 0;
+	margin:9px 0 0;
 }
 .content .userform > div > div.photo p span:first-child {
 	margin-top:0;
 }
 .content .userform > div > div.photo p a {
-	color:#e6b131;
+	color:#000000;
 	text-decoration:none;
-	border-bottom:1px dashed #e6b131;
+	border-bottom:1px dashed #000000;
 }
-.content .userform > div > div.photo p a:hover {
-	border-bottom:1px solid #e6b131;
+.content .userform > div > div.photo p span.remove a {
+	color:#ee4036;
+	border-bottom:1px dashed #ee4036;
 }
 .content .userform > div > div.photo .modal {
-	top:5px;
-	left:105px;
-	width:664px;
-	padding:15px 38px 7px;
+	top:9px !important;
+	left:0 !important;
+	width:720px !important;
+	background:#f6f6f6;
 }
 .content .col4 .userform > div > div.photo .modal {
 	left:0;
-	width:675px;
+	width:720px !important;
 }
 .content .userform > div > div.photo .modal .arrow {
 	display:none;
 }
 .content .userform > div > div.photo .modal p {
-	color:#000000;
+	color:#999999;
 	font-size:14px;
-	line-height:18px;
-	margin:0 0 18px;
+	line-height:17px;
+	margin:30px 30px 3px;
 }
 .content .userform > div > div.photo .modal .crop {
 	position:relative;
-	min-height:240px;
-	margin:0 0 22px;
+	min-height:280px;
+	margin:0 0 40px;
 }
 .content .userform > div > div.photo .modal .crop > .preview {
 	overflow:hidden;
 	position:absolute;
-	left:425px;
-	top:0;
-	width:234px;
-	height:163px;
+	left:475px;
+	top:62px;
+	width:124px;
+	height:124px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
 }
 .content .userform > div > div.photo .modal .buttons {
 	position:absolute;
-	left:425px;
+	left:442px;
 	bottom:0;
 }
 .content .userform > div > div.photo .modal .buttons button {
-	width:186px;
+	width:190px;
 	color:#ffffff;
-	font-size:18px;
-	line-height:22px;
+	font-size:14px;
+	line-height:17px;
 	font-weight:600;
 	text-align:center;
 	cursor:pointer;
-	padding:0 0 5px;
+	padding:6px 0 7px;
 	margin:8px 0 0;
 }
 .content .userform > div > div.photo .modal .buttons .save {
@@ -5528,26 +5564,35 @@ h4.evaluation .like.active {
 	background:url('../img/modal_cancel.png') no-repeat left top;
 }
 .content .userform > div > div.photo .modal .buttons button:hover {
-	background-position:0 -27px;
+	background-position:0 -30px;
 }
 .content .userform > div > div input[type="text"], .content .userform > div > div textarea {
-	width:315px;
+	position:relative;
+	width:306px;
+	color:#010101;
+	font-size:14px;
 	vertical-align:top;
-	padding:3px 8px;
+	padding:5px 10px 4px;
 	margin:0 0 0 11px;
 	background:#ffffff;
-	border:1px solid #cecece;
-	border-top:1px solid #d4d4d4;
-	border-bottom:1px solid #d4d4d4;
-	-webkit-box-shadow:inset 3px 3px 5px #f2f2f2;
-	-moz-box-shadow:inset 3px 3px 5px #f2f2f2;
-	box-shadow:inset 3px 3px 5px #f2f2f2;
+	border:2px solid #999999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	behavior:url('./pie.htc');
 }
+/*AAA*/
 .content .userform > div > div input[type="text"]:focus, .content .userform > div > div textarea:focus {
-	border:1px solid #e6b131;
+	border:2px solid #e6b131;
+}
+.content .userform > div > div input[type="text"].success, .content .userform > div > div textarea.success {
+	border:2px solid #00ab63;
 }
 .content .userform > div > div input[type="text"].error, .content .userform > div > div textarea.error {
-	border:1px solid #ee4036;
+	border:2px solid #ee4b41;
 }
 .content .userform > div > div span.erroricon {
 	position:relative;
@@ -5567,40 +5612,47 @@ h4.evaluation .like.active {
 	padding:0;
 	margin:5px 0 0 240px;
 }
-.content .userform > div > div .selector {
-	width:323px !important;
-	margin:0 0 0 11px;
+.content .userform > div > div p.tip {
+	display:block;
+	width:333px;
+	color:#999999;
+	font-size:12px;
+	line-height:16px;
+	padding:0;
+	margin:5px 0 0 240px;
 }
-.content .userform > div > div .selector span {
-	width:298px !important;
+.content .userform > div > div .selectbox {
+	margin:0 3px 0 11px;
 }
-.content .userform > div > div span.day, .content .userform > div > div span.month, .content .userform > div > div span.year {
-	display:inline-block;
-	margin:0 2px 0 11px;
+.content .userform > div > div .selectbox .select {
+	width:292px !important;
 }
-.content .userform > div > div span.day .selector {
-	width:63px !important;
-	margin:0;
+.content .userform > div > div .selectbox .dropdown {
+	width:326px !important;
 }
-.content .userform > div > div span.day .selector span {
-	width:38px !important;
+.content .userform > div > div .day .selectbox .select {
+	width:32px !important;
 }
-.content .userform > div > div span.month .selector {
-	width:110px !important;
-	margin:0;
+.content .userform > div > div .day .selectbox .dropdown {
+	width:66px !important;
 }
-.content .userform > div > div span.month .selector span {
-	width:85px !important;
+.content .userform > div > div .month .selectbox .select {
+	width:83px !important;
 }
-.content .userform > div > div span.year .selector {
-	width:98px !important;
-	margin:0;
+.content .userform > div > div .month .selectbox .dropdown {
+	width:117px !important;
 }
-.content .userform > div > div span.year .selector span {
-	width:73px !important;
+.content .userform > div > div .year .selectbox .select {
+	width:67px !important;
+}
+.content .userform > div > div .year .selectbox .dropdown {
+	width:66px !important;
 }
 .content .userform > div > div input.number {
-	width:79px;
+	width:85px;
+}
+.content .userform > div > div input.house {
+	width:53px;
 }
 .content .col4 .userform > div > div input.number {
 	width:91px;
@@ -5609,18 +5661,20 @@ h4.evaluation .like.active {
 	display:block;
 	clear:both;
 	overflow:hidden;
-	width:521px;
+	width:480px;
 	color:#ffffff;
-	font-size:12px;
-	line-height:15px;
-	margin:0 0 -8px 225px;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	font-style:italic;
+	margin:0 0 -3px 234px;
 }
 .content .userform > div > div p.list span {
 	position:relative;
 	float:left;
 	display:block;
-	padding:4px 25px 4px 8px;
-	margin:2px 0 5px 15px;
+	padding:2px 30px 2px 12px;
+	margin:2px 0 5px 6px;
 	background:#e6b131;
 }
 .content .userform > div > div p.list span em {
@@ -5628,19 +5682,24 @@ h4.evaluation .like.active {
 	right:6px;
 	top:5px;
 	display:block;
-	width:13px;
-	height:14px;
+	width:10px;
+	height:10px;
 	cursor:pointer;
 	background:url('../img/filter_list_delete.png') no-repeat 1px 1px;
 }
 .content .userform > div > div .description {
+	position:relative;
 	display:inline-block;
 	position:relative;
-	width:666px;
-	padding:26px 26px 16px;
-	margin:4px 0 0 11px;
-	background:#e8e8e8;
-	border:1px dashed #bfbfbe;
+	width:432px;
+	vertical-align:top;
+	padding:24px 24px 13px;
+	margin:5px -3px 20px 11px;
+	background:#fdfdfd url('../img/userform_description_bg.png') repeat-x top;
+	-webkit-box-shadow:5px 5px 0 #d7d7d7;
+	-moz-box-shadow:5px 5px 0 #d7d7d7;
+	box-shadow:5px 5px 0 #d7d7d7;
+	behavior:url('./pie.htc');
 }
 .content .userform > div > div .description > em {
 	position:absolute;
@@ -5652,28 +5711,23 @@ h4.evaluation .like.active {
 	background:url('../img/registration_description_em.png') no-repeat left top;
 }
 .content .userform > div > div .description textarea {
-	width:666px;
+	width:126px;
 	min-height:48px;
+	color:#000000;
 	font-size:14px;
 	line-height:16px;
 	vertical-align:top;
-	padding:26px 26px 26px;
-	margin:-26px 0 -16px -26px;
-	background:#e8e8e8;
+	padding:24px 24px 23px;
+	margin:-24px 0 -13px -26px;
+	background:none;
 	border:none;
 	-webkit-box-shadow:none;
 	-moz-box-shadow:none;
 	box-shadow:none;
 }
-.content .col4 .userform > div > div .description {
-	width:466px;
-	padding:16px 26px 16px;
-}
 .content .col4 .userform > div > div .description textarea {
-	width:466px;
-	min-height:70px;
-	padding:16px 26px 26px;
-	margin:-16px 0 -16px -26px;
+	width:432px;
+	min-height:48px;
 }
 .content .userform > div > div .description p {
 	width:auto !important;
@@ -5703,21 +5757,31 @@ h4.evaluation .like.active {
 }
 .content .userform > div .map > div {
 	display:inline-block;
-	width:720px;
-	margin:8px 0 -5px;
+	width:480px;
+	margin:10px -3px 2px 0;
 }
 .content .col4 .userform > div .map > div {
-	width:520px;
+	width:480px;
 }
 .content .userform > div .map > div > div {
 	margin:0 0 17px 11px;
 }
 .content .userform > div .map > div p {
 	color:#999999;
-	font-size:14px;
+	font-size:13px;
 	line-height:16px;
 	padding:0;
 	margin:0 0 11px 11px;
+}
+.content .userform > div .map > div p i {
+	color:#000000;
+}
+.content .userform > div p.tip {
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	padding:1px 0 0;
+	margin:0 0 26px;
 }
 .content .userform > div .agreement {
 	margin:22px 0 10px 241px;
@@ -5770,36 +5834,39 @@ h4.evaluation .like.active {
 }
 .content .userform button.submit, .content .userform button.save {
 	color:#ffffff;
-	font-size:18px;
-	line-height:22px;
+	font-size:14px;
+	line-height:17px;
 	font-weight:600;
 	text-align:center;
 	cursor:pointer;
-	padding:1px 0 4px;
-	margin:9px 0 20px 241px;
+	padding:6px 0 7px;
+	margin:15px 0 20px 240px;
 }
 .content .userform button.submit {
 	width:243px;
-	background:url('../img/taskadd_submit.png') no-repeat left top;
+	background:url('../img/taskadd_submit.png') no-repeat left -30px;
 }
 .content .userform button.save {
-	width:186px;
-	background:url('../img/modal_save.png') no-repeat left top;
+	width:190px;
+	background:url('../img/offers_accept.png') no-repeat left -30px;
 }
 .content .userform button.submit:hover, .content .userform button.save:hover {
-	background-position:0 -27px;
+	background-position:0 0;
 }
 .content .userform .cancel {
 	display:inline-block;
 	width:200px;
 	font-size:14px;
-	line-height:18px;
-	margin:0 -200px 0 0;
+	line-height:17px;
+	margin:0 0 0 18px;
 }
 .content .userform .cancel a {
-	color:#e6b131;
+	color:#000000;
 	text-decoration:none;
-	border-bottom:1px dotted #e6b131;
+	border-bottom:1px dashed #000000;
+}
+.content .userform .optional:first-child {
+	border-top:10px solid green !important;
 }
 .specialization {
 	position:relative;
@@ -5807,8 +5874,16 @@ h4.evaluation .like.active {
 .specialization > p {
 	display:block;
 }
-.specialization > p:first-child {
-	width:960px !important;
+.specialization .select {
+	font-size:14px !important;
+	line-height:17px !important;
+	margin:-8px 0 2px 12px !important;
+}
+.specialization .select span {
+	display:block;
+	color:#999999;
+	font-weight:300;
+	margin:5px 0 0;
 }
 .specialization > p > a {
 	color:#000000;
@@ -5823,13 +5898,25 @@ h4.evaluation .like.active {
 	max-width:auto;
 }
 .specialization > p.list {
-	width:735px;
+	width:480px;
+	margin:0 0 0 240px;
 }
-.col4 .specialization .modal.absolute {
-	left:-200px;
+.specialization .modal.absolute {
+	top:36px;
+	width:960px;
+	left:-240px;
+	background:url('../img/offers_more_information.png') repeat !important;
+	border-top:4px solid #ee4036;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
 }
-.col4 .specialization .modal.absolute .arrow {
-	left:232px;
+.specialization .modal.absolute .arrow {
+	left:428px;
+	top:-20px;
+}
+.specialization .modal .close {
+	background:url('../img/modal_dark_close.png') no-repat left top !important;
 }
 .col4 .notifications {
 	margin:0 0 35px 44px;
@@ -5939,6 +6026,7 @@ h4.evaluation .like.active {
 	background:url('../img/dialog_span.png') repeat-x bottom;
 }*/
 .dialog div.read, .dialog div.unread, .dialog div.answer {
+	position:relative;
 	padding:14px 0 14px 13px;
 	margin:0 0 1px;
 	background:url('../img/dialog_line.png') repeat-x bottom;
@@ -6051,10 +6139,10 @@ h4.evaluation .like.active {
 	display:inline-block !important;
 	color:#999999 !important;
 	font-size:12px !important;
-	line-height:12px !important;
+	line-height:14px !important;
 	text-align:right !important;
 	vertical-align:top !important;
-	margin:1px 0 !important;
+	margin:0 !important;
 }
 .dialog .data span {
 	display:block;
@@ -6075,6 +6163,24 @@ h4.evaluation .like.active {
 }
 .dialog.message div.new .data {
 	vertical-align:top;
+}
+.dialog h6 {
+	position:absolute;
+	right:9px;
+	bottom:9px;
+	color:#000000;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	margin:0;
+}
+.dialog h6 a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid #cfcfcf;
+}
+.dialog h6 a:hover {
+	border-bottom:1px solid transparent;
 }
 .dialog .answer {
 	background:#f1f1f1 !important;
@@ -6124,6 +6230,27 @@ h4.evaluation .like.active {
 .dialog .answer button.submit:hover {
 	background-position:0 -47px;
 }
+.dialog .visibility {
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	margin:3px 0 -5px 81px;
+}
+.dialog .visibility .checker {
+	float:left;
+	margin:0 12px 0 0;
+}
+.dialog .visibility .checker, .dialog .visibility .checker span, .dialog .visibility .checker input {
+    width:14px;
+    height:14px;
+}
+.dialog .visibility .checker span {
+    background:url('../img/checkbox_type2_bg.png') no-repeat left top;
+}
+.dialog .visibility .checker span.checked {
+    background-position:0 -18px;
+}
+
 .col4 .warning {
 	padding:23px 0 0;
 	margin:0 0 25px 42px;
@@ -6568,16 +6695,16 @@ h4.evaluation .like.active {
 .modal .arrow {
 	position:absolute;
 	left:32px;
-	top:-22px;
+	top:-16px;
 	display:block;
-	width:30px;
-	height:22px;
+	width:28px;
+	height:16px;
 	background:url('../img/modal_arrow.png') no-repeat left top;
 }
 .modal .close {
 	position:absolute;
-	right:10px;
-	top:12px;
+	right:11px;
+	top:11px;
 	display:block;
 	width:13px;
 	height:15px;
@@ -6622,37 +6749,38 @@ h4.evaluation .like.active {
 .modal button:hover {
 	background-position:0 0;
 }
-
-
+.modal .specselect {
+	width:933px !important;
+	padding:22px 0 0 27px !important;
+}
 .specselect > ul {
 	clear:both;
 	overflow:hidden;
-	margin:0 0 15px !important;
+	margin:0 0 6px !important;
 }
 .specselect > ul > li {
 	display:inline-block;
-	width:216px;
+	width:220px;
 	vertical-align:top;
-	margin:0 10px 9px 0;
+	margin:0 10px 6px 0;
 }
 .specselect > ul > li h5 {
-	width:216px;
-	color:#000000;
+	width:220px;
+	color:#ffffff;
 	font-size:14px;
-	line-height:18px;
-	font-weight:normal;
+	line-height:16px;
 	padding:0;
-	margin:0 0 8px;
+	margin:0 0 13px;
 }
 .specselect > ul > li > ul {
-	margin:0 0 8px;
+	margin:0 0 23px !important;
 }
 .specselect > ul > li > ul > li {
 	clear:both;
 	overflow:hidden;
-	color:#666666;
+	color:#ffffff;
 	font-size:14px;
-	line-height:14px;
+	line-height:16px;
 	margin:0 0 4px;
 }
 .specselect > ul > li > ul > li > span {
@@ -6660,17 +6788,27 @@ h4.evaluation .like.active {
 	display:block;
 	font-weight:normal;
 	cursor:pointer;
-	padding:0 0 0 22px;
+	padding:0 0 0 28px;
 }
 .specselect > ul > li > ul > li .checker {
 	position:relative;
 	z-index:-1;
 	float:left;
-	margin:1px 10px 0 -22px;
+	margin:1px 14px 0 -28px;
+}
+.specselect > ul > li > ul > li .checker, .specselect > ul > li > ul > li .checker span, .specselect > ul > li > ul > li .checker input {
+    width:14px;
+    height:14px;
+}
+.specselect > ul > li > ul > li .checker span {
+    background:url('../img/checkbox_type2_bg.png') no-repeat left top;
+}
+.specselect > ul > li > ul > li .checker span.checked {
+    background-position:0 -14px;
 }
 .specselect > div {
 	text-align:right;
-	margin:0 1px 15px 0;
+	margin:0 28px 4px 0;
 }
 .specselect h6 {
 	color:#ee4036;
@@ -6679,19 +6817,19 @@ h4.evaluation .like.active {
 	font-weight:normal;
 	text-align:right;
 	padding:0;
-	margin:20px 0 15px;
+	margin:20px 15px 15px 0;
 }
 .specselect > div button {
 	display:inline-block;
-	width:186px;
+	width:89px;
 	color:#ffffff;
-	font-size:18px;
-	line-height:22px;
-	font-weight:600;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
 	text-align:center;
 	cursor:pointer;
-	padding:2px 0 6px;
-	background:url('../img/modal_button.png') no-repeat left top;
+	padding:6px 0 7px;
+	background:url('../img/specselect_button.png') no-repeat left top;
 }
 .specselect > div button:hover {
 	background-position:0 -30px;
@@ -7035,4 +7173,85 @@ h4.evaluation .like.active {
 }
 .bubble.error > div {
 	background:url('../img/buble_error_icon.png') no-repeat 18px center;
+}
+
+/* Selectbox */
+
+.selectbox {
+	position:relative;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.selectbox .select {
+	position:relative;
+	width:320px;
+	color:#010101;
+	font-size:14px;
+	line-height:17px;
+	vertical-align:top;
+	padding:5px 24px 4px 10px;
+	background:#ffffff;
+	border:2px solid #999999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
+	behavior:url('./pie.htc');
+}
+.selectbox .select .text {
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.selectbox .trigger {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 24px;
+	height: 100%;
+}
+.selectbox .trigger .arrow {
+	position: absolute;
+	top: 10px;
+	right:9px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #cccccc;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.selectbox:hover .trigger .arrow {
+	border-top:6px solid #999999;
+}
+.selectbox .dropdown {
+	top:28px;
+	width:240px;
+	margin:0;
+	background:#ffffff;
+	border:2px solid #999999;
+}
+.selectbox ul {
+	margin:0;
+}
+.selectbox li {
+	font-size:14px;
+	line-height:17px;
+	padding:5px 10px 4px;
+	color:#999999;
+	border-top:1px solid #cccccc;
+}
+.selectbox li:first-child {
+	border-top-width:0;
+}
+.selectbox li.selected {
+	color:#999999;
+}
+.selectbox li:hover {
+	color:#666666;
+	background:#f3f3f3 url('../img/selectbox_li.png') repeat-x top;
 }
