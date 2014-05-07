@@ -1577,13 +1577,13 @@ button::-moz-focus-inner {
 	cursor:pointer;
 	padding:11px 0 12px;
 	margin:13px 0 14px;
-	background:url('../img/filter_submit.png') no-repeat 0 -47px;
+	background:url('../img/filter_submit.png') no-repeat 0 0;
 }
 .filter .submit.task {
-	background:url('../img/filter_submit_task.png') no-repeat 0 -47px;
+	background:url('../img/filter_submit_task.png') no-repeat 0 0;
 }
 .filter .submit:hover {
-	background-position:0 0;
+	background-position:0 -47px;
 }
 .filter .clear {
 	color:#000000;
@@ -1884,7 +1884,7 @@ button::-moz-focus-inner {
 	color:#4b4b4b;
 	text-decoration:none;
 }
-.taskc > div .information h2 a:hover {
+.taskc > div:hover .information h2 {
 	text-decoration:underline;
 }
 .taskc > div .information h4 {
@@ -4171,6 +4171,9 @@ button::-moz-focus-inner {
 .offers > div > .td.active .short {
 	background:none !important;
 }
+.offers > div > .td > .short p.more {
+	display:block;
+}
 .offers > div > .td.active > .short p.more {
 	display:none;
 }
@@ -4445,10 +4448,10 @@ button::-moz-focus-inner {
 	cursor:pointer;
 	padding:6px 0 7px;
 	margin:0 0 16px !important;
-	background:url('../img/reviewu_leave_submit.png') no-repeat left top;
+	background:url('../img/reviewu_leave_submit.png') no-repeat left -30px;
 }
 .offers > div > .td .auction .form button:hover {
-	background-position:0 -30px;
+	background-position:0 0;
 }
 
 
@@ -4861,11 +4864,13 @@ h4.evaluation .like.active {
 	margin:48px 0 30px;
 }
 .range {
+	position:relative;
 	width:240px;
 	height:2;
 	background:#666666;
 }
 .ui-slider {
+	z-index:0 !important;
 	position:relative;
 }
 .filter .ui-slider .ui-slider-handle {
@@ -5072,15 +5077,15 @@ h4.evaluation .like.active {
 .header .popup.login .form .submit {
 	width:101px;
 	margin:14px 0 16px 129px;
-	background:url('../img/reviewu_leave_submit.png') no-repeat left top;
+	background:url('../img/reviewu_leave_submit.png') no-repeat left -30px;
 }
 .header .popup.registration .form .submit {
 	width:190px;
 	margin:14px 0 16px 84px;
-	background:url('../img/offers_accept.png') no-repeat left top;
+	background:url('../img/offers_accept.png') no-repeat left -30px;
 }
 .header .popup .form .submit:hover {
-	background-position:0 -30px;
+	background-position:0 0;
 }
 .header .popup .form .tip {
 	position:relative;
@@ -5561,10 +5566,10 @@ h4.evaluation .like.active {
 	cursor:pointer;
 	padding:6px 0 7px;
 	margin:-1px 0 20px 240px;
-	background:url('../img/offers_accept.png') no-repeat left -30px;
+	background:url('../img/offers_accept.png') no-repeat left top;
 }
 .taskadd button.submit:hover {
-	background-position:0 0;
+	background-position:0 -30px;
 }
 .content .userform > div {
 	margin:0 0 23px;
@@ -5627,13 +5632,11 @@ h4.evaluation .like.active {
 	cursor:pointer;
 	padding:6px 0 7px;
 	margin:1px 0 16px;
-	background:url('../img/update_button.png') no-repeat left top;
+	background:url('../img/update_button.png') no-repeat left -30px;
 }
 .content .userform > div > div div.update button:hover {
-	background-position:0 -30px;
+	background-position:0 0;
 }
-
-
 .content .userform > div > div.performer {
 	margin:11px 0 37px;
 }
@@ -5758,13 +5761,13 @@ h4.evaluation .like.active {
 	margin:8px 0 0;
 }
 .content .userform > div > div.photo .modal .buttons .save {
-	background:url('../img/modal_save.png') no-repeat left top;
+	background:url('../img/modal_save.png') no-repeat left -30px;
 }
 .content .userform > div > div.photo .modal .buttons .cancel {
-	background:url('../img/modal_cancel.png') no-repeat left top;
+	background:url('../img/modal_cancel.png') no-repeat left -30px;
 }
 .content .userform > div > div.photo .modal .buttons button:hover {
-	background-position:0 -30px;
+	background-position:0 0;
 }
 .content .userform > div > div input[type="text"], .content .userform > div > div textarea {
 	position:relative;
@@ -6056,14 +6059,14 @@ h4.evaluation .like.active {
 }
 .content .userform button.submit {
 	width:243px;
-	background:url('../img/taskadd_submit.png') no-repeat left -30px;
+	background:url('../img/taskadd_submit.png') no-repeat left top;
 }
 .content .userform button.save {
 	width:190px;
-	background:url('../img/offers_accept.png') no-repeat left -30px;
+	background:url('../img/offers_accept.png') no-repeat left top;
 }
 .content .userform button.submit:hover, .content .userform button.save:hover {
-	background-position:0 0;
+	background-position:0 -30px;
 }
 .content .userform .cancel {
 	display:inline-block;
@@ -6116,6 +6119,7 @@ h4.evaluation .like.active {
 .specialization .modal.absolute {
 	top:36px;
 	left:0;
+	z-index:150 !important;
 	width:960px;
 	background:url('../img/offers_more_information.png') repeat !important;
 	border-top:4px solid #ee4036;
@@ -6440,10 +6444,10 @@ h4.evaluation .like.active {
 	cursor:pointer;
 	vertical-align:top;
 	margin:2px 0 0;
-	background:url('../img/dialog_submit.png') no-repeat left top;
+	background:url('../img/dialog_submit.png') no-repeat left -47px;
 }
 .dialog .answer button.submit:hover {
-	background-position:0 -47px;
+	background-position:0 0;
 }
 .dialog .visibility {
 	color:#999999;
@@ -7023,7 +7027,10 @@ h4.evaluation .like.active {
 }
 .specselect > div {
 	text-align:right;
-	margin:0 28px 4px 0;
+	margin:0 28px 4px 0 !important;
+}
+.filter .specselect > div {
+	margin:0 28px -17px 0 !important;
 }
 .specselect h6 {
 	color:#ee4036;
@@ -7035,19 +7042,19 @@ h4.evaluation .like.active {
 	margin:20px 15px 15px 0;
 }
 .specselect > div button {
-	display:inline-block;
-	width:89px;
-	color:#ffffff;
-	font-size:14px;
-	line-height:17px;
-	font-weight:bold;
-	text-align:center;
+	display:inline-block !important;
+	width:89px !important;
+	color:#ffffff !important;
+	font-size:14px !important;
+	line-height:17px !important;
+	font-weight:bold !important;
+	text-align:center !important;
 	cursor:pointer;
-	padding:6px 0 7px;
-	background:url('../img/specselect_button.png') no-repeat left top;
+	padding:6px 0 7px !important;
+	background:url('../img/specselect_button.png') no-repeat left -30px !important;
 }
 .specselect > div button:hover {
-	background-position:0 -30px;
+	background-position:0 0 !important;
 }
 .col1 .catspec {
 	margin:0 0 28px;
