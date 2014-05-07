@@ -5,7 +5,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
 	<link href="./css/fineuploader-3.4.1.css" rel="stylesheet" type="text/css" title="compact">
-	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
 	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jquery.fineuploader-3.4.1.min.js"></script>
@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="./js/easing.js"></script>
 	<script type="text/javascript" src="./js/mousewheel.js"></script>
 	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
 	<script type="text/javascript" src="./js/slider.js"></script>
 	<script type="text/javascript" src="./js/uniform.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
@@ -26,8 +27,12 @@
 		<div class="header">
 			<div>
 				<div class="logo">
-					<img src="./img/logo.png" width="249" height="51" alt="">
-					<button class="city"><span>Владивосток</span></button>
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
 				</div>
 				<ul class="user">
 					<li class="login"><a href="#">Вход</a></li>
@@ -37,12 +42,12 @@
 					<li><a href="#">Исполнители</a></li>
 					<li><a href="#">Задачи</a></li>
 				</ul>
-				<button class="add">+ Добавить задачу</button>
+				<button class="add">Добавить задачу</button>
 				<div class="popup login">
 					<h2>Вход</h2>
 					<div class="form">
 						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
 						<p class="recover"><a href="#">Забыли пароль?</a></p>
 						<button class="submit">Войти</button>
 						<div class="tip">
@@ -59,25 +64,9 @@
 				</div>
 				<div class="popup registration">
 					<h2>Регистрация</h2>
-					<div class="options">
-						<div>
-							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
-							<div>
-								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
-							</div>
-						</div>
-						<div>
-							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
-							<div>
-								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
-							</div>
-						</div>
-					</div>
-					<div class="form customer">
-						<p><span>Имя:</span> <input type="text"></p>
+					<div class="form">
 						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
-						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
 						<button class="submit">Зарегистрироваться</button>
 						<div class="tip">
 							<p>Или войдите, используя свой аккаунт в социальной сети</p>
@@ -89,25 +78,6 @@
 							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
 							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
 						</ul>
-						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
-					</div>
-					<div class="form performer">
-						<p><span>Имя:</span> <input type="text"></p>
-						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
-						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
-						<button class="submit">Зарегистрироваться</button>
-						<div class="tip">
-							<p>Или войдите, используя свой аккаунт в социальной сети</p>
-						</div>
-						<ul class="social">
-							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
-						</ul>
-						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
 					</div>
 				</div>
 			</div>
@@ -121,70 +91,65 @@
 				<div>
 					<div>
 						<p><em>*</em> Тип аккаунта:</p>
-						<select class="type">
-							<option value="individual">Физическое лицо</option>
-							<option value="legal">Юридическое лицо</option>
+						<select>
+							<option>Физическое лицо</option>
+							<option>Юридическое лицо</option>
 						</select>
 					</div>
-					<div class="legal">
-						<p><em>*</em> Наименование компании:</p> <input type="text" value="ООО «Трейл»">
+					<div>
+						<p><em>*</em> Фамилия:</p> <input type="text" value="Романовская">
 					</div>
 					<div>
-						<p><em>*</em> Фамилия :</p> <input type="text" value="Ивашина">
+						<p><em>*</em> Имя:</p> <input type="text" value="Ольга">
 					</div>
 					<div>
-						<p><em>*</em> Имя:</p> <input type="text" value="Люся">
-					</div>
-					<div>
-						<p>Дата рождения:</p>
+						<p><em>*</em> Дата рождения:</p>
 						<span class="day">
 							<select>
-								<option>5</option>
-								<option>5</option>
+						<option>5</option>
+						<option>5</option>
 							</select>
 						</span>
 						<span class="month">
 							<select>
-								<option>августа</option>
-								<option>августа</option>
+						<option>августа</option>
+						<option>августа</option>
 							</select>
 						</span>
 						<span class="year">
 							<select>
-								<option>1988</option>
-								<option>1988</option>
+						<option>1988</option>
+						<option>1988</option>
 							</select>
 						</span>
 					</div>
 					<div class="photo">
 						<p>Фото:</p>
-						<img src="./img/registration_photo.png" width="149" height="104" class="current" alt="">
-						<div class="controls">
-							<div id="FineUploader"><noscript><p>Please enable JavaScript to use file uploader.</p></noscript></div>
-							<p>
-								<span class="edit"><a href="#">Редактировать</a></span>
-								<span><a href="#">Удалить</a></span>
-								<span>JPG, PNG, не более 5 Мб.</span>
-								<span><a href="#" class="changeimg">Сменить картинку</a></span>
-							</p>
-						</div>
+						<img src="./img/userc1.png" width="124" height="124" class="current" alt="">
+						<p>
+							<span><a href="#">Выбрать другое фото</a></span>
+							<span class="edit"><a href="#">Редактировать</a></span>
+							<span class="remove"><a href="#">Удалить</a></span>
+							<span class="changeimg"><a href="#">Сменить картинку</a></span>
+							<span>JPG, PNG, не более 5 Мб.</span>
+						</p>
 						<div class="modal absolute">
 							<h2>Редактирование фотографии</h2>
 							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
 							<div class="crop">
-								<div class="buttons">
-									<button class="save">Сохранить</button>
-									<button class="cancel">Отменить</button>
-								</div>
+						<div class="buttons">
+							<button class="save">Сохранить</button>
+							<button class="cancel">Отменить</button>
+						</div>
 							</div>
 						</div>
 						<script type="text/javascript">
 							$('.changeimg').bind('click', function() {
-								$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();	
-								var newimgpath = './img/header_bg.png';
-								alert('Картинка поменялась на '+newimgpath);
-								$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt="">', '<div class="preview"><img src="'+newimgpath+'" alt=""></div>');
-								return false;
+						$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();	
+						var newimgpath = './img/header_bg.png';
+						alert('Картинка поменялась на '+newimgpath);
+						$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt="">', '<div class="preview"><img src="'+newimgpath+'" alt=""></div>');
+						return false;
 							});
 						</script>
 					</div>
@@ -192,17 +157,18 @@
 						<p><em>*</em> Контактный телефон:</p> <input type="text" value="8 956 544 12 23">
 					</div>
 					<div>
-						<p><em>*</em> Город:</p>
-						<select>
-							<option>Барнаул</option>
-							<option>Барнаул</option>
-						</select>
-					</div>
-					<div>
-						<p><em>*</em> Город:</p> <input type="text" value="Барнаул" class="error"> <span class="erroricon"></span> <p class="errormessage">Город не должен находиться в Сибири!</p>
+						<p><em>*</em> Город:</p> <input type="text" value="Барнаул">
 					</div>
 					<div>
 						<p><em>*</em> E-mail:</p> <input type="text" value="ivashina-gmail.com">
+					</div>
+				</div>
+				<div>
+					<h2>Загрузить видео</h2>
+					<div>
+						<p><em>*</em> Вставить код с youtube</p> <textarea cols="80" rows="3"></textarea>
+						<p class="tip">Например: http://www.youtube.com/watch?v=pHSPeTu2yIg</p>
+						<div class="update"><button>ок</button></div>
 					</div>
 				</div>
 				<div>
@@ -211,9 +177,10 @@
 					</div>
 				</div>
 				<div class="optional">
+					<h2>Специализации</h2>
 					<div class="specialization">
-						<p><em>*</em> <a href="#">Выбрать специализацию</a> <span>(максимум - 10)</span></p>
-						<p class="list"></p>
+						<p class="select"><em>*</em> <a href="#" class="">Выбрать специализацию</a> <span>(Максимум - 10)</span></p>
+						<p class="list"><span>Уборка / домработница <em></em></span> <span>Приготовление еды <em></em></span></p>
 						<div class="modal absolute">
 							<div class="specselect">
 								<ul>
@@ -354,12 +321,12 @@
 						</div>
 					</div>
 					<div>
-						<p><em>*</em> Средняя цена в час, минуту, секунду:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
+						<p><em>*</em> Средняя цена в час:</p> <input type="text" class="number" value="1100"> <p>рублей</p>
 					</div>
 					<div>
 						<p>Описание:</p>
 						<div class="description">
-							<textarea cols="100" rows="3" placeholder="Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! А еще я пишу статьи. Обращайтесь :)"></textarea>
+							<textarea cols="100" rows="3" placeholder="Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Люблю интересные задания! А еще я пишу статьи."></textarea>
 						</div>
 					</div>
 				</div>
@@ -372,107 +339,78 @@
 						<p><em>*</em> Город/край/поселок:</p> <input type="text">
 					</div>
 					<div>
-						<p><em>*</em> Улица/проезд/переулок:</p> <input type="text"> <p>* Дом:</p> <input type="text" class="number">
+						<p><em>*</em> Улица/проезд/переулок:</p> <input type="text"> <p>* Дом:</p> <input type="text" class="house">
 					</div>
 					<div class="map">
 						<p><em>*</em> Адрес на карте:</p>
 						<div>
 							<div>
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9530.36623287851!2d83.67476693829948!3d53.33266610140425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1395012310754" width="720" height="257" frameborder="0" style="border:0"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9530.36623287851!2d83.67476693829948!3d53.33266610140425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1395012310754" width="720" height="382" frameborder="0" style="border:0"></iframe>
 							</div>
 							<p>Вы можете скорректирвоать положение метки, перетаскивая ее мышью.</p>
-							<p><i>Совет: Если Вы беспокоитесь о конфиденциальности адреса, сместите метку немного в сторону от точного адреса</i></p>
+							<p><i><strong>Совет:</strong> Если Вы беспокоитесь о конфиденциальности адреса, сместите метку немного в сторону от точного адреса</i></p>
 						</div>
 					</div>
 				</div>
 				<div class="optional">
 					<h2>Где вы готовы работать?</h2>
-					<p>Вы можете выбрать неограниченное количество населенных пунктов, в которые Вы готовы выехать для работы.</p>
+					<p class="tip">Вы можете выбрать неограниченное количество населенных пунктов, в которые Вы готовы выехать для работы.</p>
 					<div>
 						<p><em>*</em> Город/край/поселок:</p> <input type="text">
-						<p class="list"><span>Санкт-Петербург <em></em></span> <span>Одинцово <em></em></span></p>
+						<p class="list"><span>Одинцово <em></em></span> <span>Реутово <em></em></span> <span>Москва <em></em></span> <span>Химки <em></em></span></p>
 					</div>
 				</div>
-				<!--<div>
-					<h2>Верификация</h2>
-					<p>Мы проводим удаленную проверку исполнителей, чтобы заказчики могли доверять Вам через наши гарантии. Данные строго конфиденциальны и раскрываются правоохранительным органам только по запросу суда в случае доказанного причинения вреда имуществу или здоровью заказчика.</p>
-					<div>
-						<p><em>*</em> Копии паспорта: <span>Непустые развороты</span></p>
-						<div class="files">
-							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
-							<ul>
-								<li>Страница 1.jpg</li>
-								<li>Страница 2.jpg</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<p><em>*</em> Ваше фото с паспортом: <span>Разворот с Вашим ФИО</span></p>
-						<div class="files">
-							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
-							<ul>
-								<li>Я с паспортом</li>
-							</ul>
-						</div>
-					</div>
-					<div>
-						<p><em>*</em> Подтверждение адреса: <span>Квитанция за коммунальные услуги</span></p>
-						<div class="files">
-							<p><a href="#">Выбрать файл</a> JPG, PNG, не более 5 Мб</p>
-							<ul>
-								<li>Квитанция.jpg</li>
-							</ul>
-						</div>
-					</div>
-				</div>-->
 				<div>
+					<h2>Смена пароля</h2>
 					<div>
-						<p><em>*</em> Пароль:</p> <input type="text">
+						<p><em>*</em> Новый пароль:</p> <input type="text">
 					</div>
 					<div>
 						<p><em>*</em> Повторите пароль:</p> <input type="text">
 					</div>
 					<p class="agreement"><input type="checkbox" checked> Я согласен с <a href="#">правилами использования серсива</a></p>
 				</div>
-				<button class="submit">Зарегистрироваться</button>
+				<button class="save">Зарегистрироваться</button>
 			</div>
 		</div>
 		<div class="footer">
-			<div class="information">
-				<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
-				<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
-				<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены</p>
-			</div>
-			<div class="links">
-				<ul class="nav">
-					<li>
-						<ul>
-							<li><a href="#">Исполнители</a></li>
-							<li><a href="#">Задачи</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">О компании</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="#">Условия использования</a></li>
-							<li><a href="#">Правила сервиса</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div>
-					<ul class="social">
-						<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
-						<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Исполнители</a></li>
+								<li><a href="#">Задачи</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
 					</ul>
-					<p class="author">Разработано в <a href="http://letsrock.pro">Let’s Rock</a></p>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

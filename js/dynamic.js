@@ -313,7 +313,7 @@ $(document).ready(function() {
 		}
 	});
 	$('.reviewu > div:last-child > div').filter(':last').children('div').css({'padding': '0', 'margin': '0 0 -9px', 'background': 'none'});
-	$('.taskc > div .information ul li:last-child, .index .carousel .task > div ul li:last-child').css({'padding-right': '0', 'margin-right': '0', 'background': 'none'});
+	$('.index .carousel .task > div ul li:last-child').css({'padding-right': '0', 'margin-right': '0', 'background': 'none'});
 	$('.categories ul > li > ul  > li:last-child a').css({'text-decoration': 'underline'});
 	$('.categories ul > li > ul  > li:last-child a:hover').css({'text-decoration': 'none'});
 	$('.structure ul li:nth-child(2n)').css({'background-position': 'right 30px'});
@@ -323,8 +323,8 @@ $(document).ready(function() {
 	$('.benefits ul li:nth-child(2)').css({'background': 'url("../img/benefits_li_second.png") no-repeat left 6px'});
 	$('.benefits ul li:nth-child(3)').css({'background': 'url("../img/benefits_li_third.png") no-repeat left 6px'});
 	/* Added 09 Jan 2014 */
-	$('.header .popup .form .tip, .header .popup .options > div > div').append('<span></span>');
-	$('.header .popup').append('<span class="arrow"></span><span class="close"></span>');
+	$('.header .popup .options > div > div').append('<span></span>');
+	$('.header .popup').append('<span class="close"></span>');
 	$('.header .user .login a').click(function(event) {
 		$('.header .popup.registration').slideUp(0);
 		$('.header .popup.login').slideToggle(0);
@@ -335,7 +335,7 @@ $(document).ready(function() {
 		//	$('.header .user li').removeClass('active');
 		//});
 		//event.stopPropagation();
-		//return false;
+		return false;
 	});
 	$('.header .user .registration a').click(function(event) {
 		$('.header .popup.login').slideUp(0);
@@ -586,7 +586,11 @@ $(document).ready(function() {
 			return false;
 		}).filter(':first').click();
 	});
-	$('.specialization .modal.absolute').append('<span class="arrow"></span>');
+	$('.specialization .modal.absolute, .filter .modal.absolute').append('<span class="arrow"></span>');
+	$('.filter .select a').bind('click', function() {
+		$(this).parents('.filter').find('.modal').fadeIn(150);
+		return false;
+	});
 	$('.specialization .select a').bind('click', function() {
 		$(this).parents('.specialization').find('.modal').fadeIn(150);
 		return false;
@@ -603,4 +607,14 @@ $(document).ready(function() {
 			return false;
 		}
 	);
+	$('.header .logo .lang').bind('click', function() {
+		$('.langsel').fadeIn(150);
+		return false;
+	});
+	$('html').bind('click', function() {
+		$('.langsel').fadeOut(150);
+	});
+	$('.langsel').click(function(e) {
+		e.stopPropagation();
+	});
 });
