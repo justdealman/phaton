@@ -474,10 +474,6 @@ $(document).ready(function() {
 
     var ias;
 	$('.photo span.edit a').bind('click', function() {
-		if ( $('.photo .modal .crop #crop').length == 0 ) {
-			var imgpath = './img/01.jpg';
-			$('.photo .modal .crop').append('<img src="'+imgpath+'" id="crop" alt=""><div>', '<div class="preview"><img src="'+imgpath+'" alt=""><div>');
-		}
         var onSelectEnd = function(img, selection) {
             setCoords(selection);
         };
