@@ -25,7 +25,11 @@
 			<div>
 				<div class="logo">
 					<img src="./img/logo.png" width="171" height="60" alt="">
-					<p class="lang"><a href="#">In English</a></p>
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
 				</div>
 				<ul class="user">
 					<li class="login"><a href="#">Вход</a></li>
@@ -40,7 +44,7 @@
 					<h2>Вход</h2>
 					<div class="form">
 						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
 						<p class="recover"><a href="#">Забыли пароль?</a></p>
 						<button class="submit">Войти</button>
 						<div class="tip">
@@ -57,25 +61,9 @@
 				</div>
 				<div class="popup registration">
 					<h2>Регистрация</h2>
-					<div class="options">
-						<div>
-							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
-							<div>
-								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
-							</div>
-						</div>
-						<div>
-							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
-							<div>
-								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
-							</div>
-						</div>
-					</div>
-					<div class="form customer">
-						<p><span>Имя:</span> <input type="text"></p>
+					<div class="form">
 						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
-						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
 						<button class="submit">Зарегистрироваться</button>
 						<div class="tip">
 							<p>Или войдите, используя свой аккаунт в социальной сети</p>
@@ -87,25 +75,6 @@
 							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
 							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
 						</ul>
-						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
-					</div>
-					<div class="form performer">
-						<p><span>Имя:</span> <input type="text"></p>
-						<p><span>E-mail:</span> <input type="text"></p>
-						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
-						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
-						<button class="submit">Зарегистрироваться</button>
-						<div class="tip">
-							<p>Или войдите, используя свой аккаунт в социальной сети</p>
-						</div>
-						<ul class="social">
-							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
-						</ul>
-						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
 					</div>
 				</div>
 			</div>
@@ -118,10 +87,15 @@
 				</div>
 				<h5>40 312 исполнителей<br> в 298 городах</h5>
 			</div>
+			<ul class="breadcrumbs">
+				<li><a href="#">Исполнители</a></li>
+				<li><a href="#">Купить / Доставить</a></li>
+				<li><span>Подарить цветы</span></li>
+			</ul>
 			<div class="grid">
 				<div class="col1">
 					<div class="catspec">
-						<h2>Исполнители</h2>	
+						<h2>Специализации</h2>	
 						<div>
 							<div class="scroll">
 								<ul>
@@ -348,7 +322,7 @@
 							<h3>Город</h3>
 							<p>
 								<select>
-									<option></option>
+									<option>Москва</option>
 									<option>Барнаул</option>
 								</select>
 							</p>
@@ -379,7 +353,7 @@
 								<li><input type="checkbox" name="c1"> Только частные</li>
 							</ul>
 						</div>
-						<button class="submit">Найти</button>
+						<button class="submit user">Найти</button>
 						<button class="clear"><span>Сбросить фильтр</span></button>
 					</div>
 				</div>
