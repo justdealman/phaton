@@ -278,7 +278,7 @@ button::-moz-focus-inner {
 }
 .header .user {
 	position:absolute;
-	left:264px;
+	left:219px;
 	top:33px;
 	margin:0;
 }
@@ -306,7 +306,7 @@ button::-moz-focus-inner {
 }
 .header .nav {
 	position:absolute;
-	right:276px;
+	right:363px;
 	top:30px;
 	margin:0;
 }
@@ -319,6 +319,8 @@ button::-moz-focus-inner {
 }
 .header .nav li:first-child {
 	margin-left:0 !important;
+	padding-left:0 !important;
+	background:none !important;
 }
 .header .nav li a {
 	color:#cccccc;
@@ -329,27 +331,36 @@ button::-moz-focus-inner {
 	color:#ffffff;
 	border-bottom:1px solid transparent;
 }
-.header .add {
+.header .controls {
 	position:absolute;
+	top:26px;
 	right:0;
-	top:16px;
-	width:240px;
+}
+.header button {
+	display:inline-block;
+	width:165px;
 	color:#ffffff;
-	font-size:20px;
-	line-height:23px;
+	font-size:14px;
+	line-height:17px;
 	font-weight:600;
 	text-align:center;
 	cursor:pointer;
-	padding:10px 0 14px;
-	background:url('../img/header_add.png') no-repeat 0 -47px;
+	padding:6px 0 7px;
+	margin:0 0 0 -2px;
 }
-.header .add:hover {
-	background-position:0 0;
+.header button.service {
+	background:url('../img/header_button_type2.png') no-repeat left top;
+}
+.header button.task {
+	background:url('../img/header_button_type1.png') no-repeat left top;
+}
+.header button:hover {
+	background-position:0 -30px;
 }
 .header .userpanel {
 	display:none;
 	position:absolute;
-	left:334px;
+	left:252px;
 	top:7px;
 	margin:0;
 }
@@ -369,6 +380,12 @@ button::-moz-focus-inner {
 }
 .header .userpanel li a:hover {
 	color:#ffffff;
+}
+.header .userpanel .messages a {
+	background:url('../img/userpanel_messages_icon.png') no-repeat left 1px;
+}
+.header .userpanel .messages a:hover {
+	background-position:0 -14px;
 }
 .header .userpanel .notifications a {
 	background:url('../img/userpanel_notification_icon.png') no-repeat left 2px;
@@ -432,8 +449,8 @@ button::-moz-focus-inner {
 .header.autorized .nav {
 	top:58px;
 }
-.header.autorized .add {
-	top:44px;
+.header.autorized .controls {
+	top:54px;
 }
 .header.fixed {
 	position:fixed;
@@ -466,28 +483,49 @@ button::-moz-focus-inner {
 }
 .header.fixed .nav {
 	top:3px;
-	right:189px;
+	right:377px;
 }
 .header.fixed .nav li {
 	font-size:16px;
 	line-height:19px;
-	margin:0 0 0 42px;
+	margin:0 0 0 43px;
 }
-.header.fixed .add {
-	top:2px;
+.header.fixed .controls {
+	top:5px;
+}
+.header.fixed .controls button {
 	width:auto;
 	color:#cccccc;
-	font-size:18px;
-	line-height:24px;
-	padding:0 0 0 14px;
-	background:url('../img/header_fixed_add.png') no-repeat left 6px;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	padding:0 0 0 10px;
+	margin:0 0 0 16px;
 }
-.header.fixed .add:hover {
+.header.fixed .controls .service {
+	background:url('../img/header_fixed_service.png') no-repeat left 5px;
+}
+.header.fixed .controls .service:hover {
+	color:#ee4036;
+	background-position:0 -12px;
+}
+.header.fixed .controls .task {
+	background:url('../img/header_fixed_task.png') no-repeat left 5px;
+}
+.header.fixed .controls .task:hover {
 	color:#00ab63;
-	background-position:0 -18px;
+	background-position:0 -12px;
 }
 .header.autorized.fixed .user {
-	top:7px;
+	top:8px;
+}
+.header.autorized.fixed .user li {
+	font-size:11px !important;
+	line-height:14px !important;
+}
+.header.autorized.fixed .user li a {
+	padding:0;
+	background:none;
 }
 .header.autorized.fixed .user li.profile a .full {
 	display:none;
@@ -498,6 +536,31 @@ button::-moz-focus-inner {
 .header.autorized.fixed .userpanel {
 	left:172px;
 	top:7px;
+}
+.header.autorized.fixed .nav {
+	top:4px;
+	right:306px;
+}
+.header.autorized.fixed .nav li {
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	padding:0 0 0 7px;
+	margin:0 0 0 4px;
+	background:url('../img/autorized_fixed_nav.png') no-repeat left 3px;
+}
+.header.autorized.fixed .userpanel {
+	left:124px;
+	top:8px;
+}
+.header.autorized.fixed .userpanel li {
+	font-size:11px;
+	line-height:14px;
+	margin:0 0 0 10px;
+}
+.header.autorized.fixed .userpanel li a {
+	padding:0;
+	background:none;
 }
 
 /* Index */
@@ -6268,6 +6331,18 @@ h4.evaluation .like.active {
 .dialog.message div.new:hover {
 	background:#e8e8e8 !important;
 }
+.dialog .locked {
+	position:absolute;
+	left:11px;
+	bottom:11px;
+	display:block;
+	width:9px;
+	height:9px;
+	background:url('../img/dialog_locked.png') no-repeat left top;
+}
+.dialog .response .locked {
+	left:31px;
+}
 .dialog .photo {
 	position:relative;
 	display:inline-block;
@@ -6277,6 +6352,9 @@ h4.evaluation .like.active {
 	padding:0 0 0 23px;
 	margin:2px 16px 2px 0;
 	background:url('../img/dialog_photo_arrow.png') no-repeat left center;
+}
+.dialog .response .photo {
+	margin-left:20px;
 }
 .dialog .photo img {
 	width:39px !important;
@@ -6403,6 +6481,9 @@ h4.evaluation .like.active {
 }
 .dialog .answer {
 	background:#f1f1f1 !important;
+}
+.dialog .answer.temporary {
+	margin-top:-2px;
 }
 .dialog .answer .name {
 	width:25px;
