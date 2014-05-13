@@ -305,15 +305,6 @@ $(document).ready(function() {
 			return $(this).attr('data-score');
 		}
 	});
-	$('.ratingsmallenabled').raty({
-		number: 10,
-		width: 222,
-		readOnly: false,
-		path: 'img/rate_small',
-		score: function() {
-			return $(this).attr('data-score');
-		}
-	});
 	$('.ratingbig').raty({
 		number: 10,
 		width: 422,
@@ -531,7 +522,7 @@ $(document).ready(function() {
 	});
 	var reviewu = $('.reviewu > div');
 	reviewu.hide();
-	$('.reviewu .nav li a').click(function () {
+	$('.reviewu .nav li a').bind('click', function () {
 		reviewu.hide();
 		var ra = $(this).parent().attr('class').split(' ')[0];
 		reviewu.filter('#'+ra).stop(true, true).fadeIn(0);
