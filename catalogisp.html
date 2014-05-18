@@ -36,12 +36,12 @@
 					<li class="registration"><a href="#">Регистрация</a></li>
 				</ul>
 				<ul class="nav">
-					<li><a href="#">Исполнители</a></li>
-					<li><a href="#">Задачи</a></li>
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
 				</ul>
 				<div class="controls">
-					<button class="service">Добавить услугу</button>
-					<button class="task">Добавить задачу</button>
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
 				</div>
 				<div class="popup login">
 					<h2>Вход</h2>
@@ -84,11 +84,13 @@
 		</div>
 		<div class="content">
 			<div class="ctitle">
-				<h1>Исполнители</h1>
+				<h1>Герои</h1>
 				<div class="description">
-					<p>Выберите нужную специализацию и посмотрите наших исполнителей! Назначьте задачу понравившемуся.</p>
+					<div>
+						<p>Выберите нужную специализацию и изучите предложения услуг.<br> Сделайте заказ у подходящего вам исполнителя.</p>
+					</div>
+					<h5>40 312 предложений услуг<br> в 298 городах</h5>
 				</div>
-				<h5>40 312 исполнителей<br> в 298 городах</h5>
 			</div>
 			<ul class="breadcrumbs">
 				<li><a href="#">Исполнители</a></li>
@@ -337,7 +339,7 @@
 							</div>
 						</div>
 						<div class="price">
-							<h3>Цена за час</h3>
+							<h3>Цена</h3>
 							<p class="interval">
 								<input type="text" class="min" value="1000"> <span>—</span> <input type="text" class="max" value="7000"> <span>руб.</span>
 							</p>
@@ -362,7 +364,7 @@
 				</div>
 				<div class="col3">
 					<div class="sort user">
-						<p>Вам подходит 125 исполнителей</p>
+						<p>Вам подходит 125 предложений услуг</p>
 						<div class="view">
 							<p>Вид:</p>
 							<ul>
@@ -382,6 +384,7 @@
 						<div>
 							<div>
 								<img src="./img/userc1.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
 									<p class="price">1 100<em>p</em></p>
 									<h4 class="evaluation">
@@ -395,7 +398,7 @@
 								</div>
 							</div>
 							<h3><a href="#">Люся Ивашина</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<p>Быстро, четко, без проблем!))</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -417,9 +420,9 @@
 								</div>
 							</div>
 							<h3><a href="#">Даниил Нестеров</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<p>Профессионально: переезды квартирные, дачные, офисные, доставка</p>
 							<h5>
-								<span class="status">свободен | в сети</span>
+								<span class="status">занят | не в сети</span>
 								<span class="like"><em></em> в избранное</span>
 							</h5>
 						</div>
@@ -439,7 +442,74 @@
 								</div>
 							</div>
 							<h3><a href="#">TRANCO</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<p>Говорят, что лучший отдых - это смена деятельности. Хочу отдохнуть :)</p>
+							<h5>
+								<span class="status">свободен | не в сети</span>
+								<span class="like"><em></em> в избранное</span>
+							</h5>
+						</div>
+						<div>
+							<div>
+								<img src="./img/userc4.png" width="124" height="124" alt="">
+								<div>
+									<p class="price">700<em>p</em></p>
+									<h4 class="evaluation">
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+									</h4>
+								</div>
+							</div>
+							<h3><a href="#">Роман Петров</a></h3>
+							<p>You have made the RIGHT choice!</p>
+							<h5>
+								<span class="status">занят | не в сети</span>
+								<span class="like"><em></em> в избранное</span>
+							</h5>
+						</div>
+						<div>
+							<div>
+								<img src="./img/userc5.png" width="124" height="124" alt="">
+								<div>
+									<p class="price">1 000<em>p</em></p>
+									<h4 class="evaluation">
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+									</h4>
+								</div>
+							</div>
+							<h3><a href="#">Александра Попова</a></h3>
+							<p>Здравствуйте! Я люблю выполнять интересные мне задания на сайте...</p>
+							<h5>
+								<span class="status">занят | в сети</span>
+								<span class="like"><em></em> в избранное</span>
+							</h5>
+						</div>
+						<div>
+							<div>
+								<img src="./img/userc6.png" width="124" height="124" alt="">
+								<span class="online"></span>
+								<div>
+									<p class="price">1 300<em>p</em></p>
+									<h4 class="evaluation">
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+									</h4>
+								</div>
+							</div>
+							<h3><a href="#">Василий Иванов</a></h3>
+							<p>Обажаю свою работу!</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -447,7 +517,31 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc1.png" width="124" height="124" alt="">
+								<img src="./img/userc7.png" width="124" height="124" alt="">
+								<span class="online"></span>
+								<div>
+									<p class="price">1 400<em>p</em></p>
+									<h4 class="evaluation">
+										<span class="rating" title="рейтинг">9,2</span>
+										<span class="reviews" title="кол-во отзывов">
+											<em class="positive"><a href="#">954</a></em>
+											<em class="negative"><a href="#">12</a></em>
+										</span>
+										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
+									</h4>
+								</div>
+							</div>
+							<h3><a href="#">Илья Костин</a></h3>
+							<p>Добросовестная и честная работа в рамках правового поля и в интерне...</p>
+							<h5>
+								<span class="status">свободен | в сети</span>
+								<span class="like"><em></em> в избранное</span>
+							</h5>
+						</div>
+						<div>
+							<div>
+								<img src="./img/userc8.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
 									<p class="price">1 100<em>p</em></p>
 									<h4 class="evaluation">
@@ -460,8 +554,8 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Люся Ивашина</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Егор Давыдов</a></h3>
+							<p>Пешие курьеры, купить и доставить, поиск информации, размещение...</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -469,9 +563,10 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc2.png" width="124" height="124" alt="">
+								<img src="./img/userc9.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">3 000<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -482,8 +577,8 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Даниил Нестеров</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">SLON</a></h3>
+							<p>Профессиональная фотосъемка.</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -491,9 +586,9 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc3.png" width="124" height="124" alt="">
+								<img src="./img/userc10.png" width="124" height="124" alt="">
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">800<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -504,18 +599,19 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">TRANCO</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Елена Белова</a></h3>
+							<p>Тружусь во славу науки, учусь рисовать и с улыбкой смотреть на...</p>
 							<h5>
-								<span class="status">свободен | в сети</span>
+								<span class="status">занят | в сети</span>
 								<span class="like"><em></em> в избранное</span>
 							</h5>
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc1.png" width="124" height="124" alt="">
+								<img src="./img/userc11.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">1 800<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -526,8 +622,8 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Люся Ивашина</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Оксана Попова</a></h3>
+							<p>Инженер, лингвист, водитель, официант и альтруист!</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -535,9 +631,10 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc2.png" width="124" height="124" alt="">
+								<img src="./img/userc12.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">1 000<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -548,8 +645,8 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Даниил Нестеров</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Денис Писоцкий</a></h3>
+							<p>35 лет, Высшее образование, отличные компьютерные и строите...</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -557,9 +654,10 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc3.png" width="124" height="124" alt="">
+								<img src="./img/userc13.png" width="124" height="124" alt="">
+								<span class="online"></span>
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">600<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -570,8 +668,8 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">TRANCO</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Олег Балашов</a></h3>
+							<p>Молодой парень, неполное высшее образование, в свободное время...</p>
 							<h5>
 								<span class="status">свободен | в сети</span>
 								<span class="like"><em></em> в избранное</span>
@@ -579,9 +677,9 @@
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc1.png" width="124" height="124" alt="">
+								<img src="./img/userc14.png" width="124" height="124" alt="">
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">500<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -592,18 +690,18 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Люся Ивашина</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Павел Шугуров</a></h3>
+							<p>студент 2 курса МГСУ МИСИ имею музыкльное образование (скрипка...</p>
 							<h5>
-								<span class="status">свободен | в сети</span>
+								<span class="status">свободен | не в сети</span>
 								<span class="like"><em></em> в избранное</span>
 							</h5>
 						</div>
 						<div>
 							<div>
-								<img src="./img/userc2.png" width="124" height="124" alt="">
+								<img src="./img/userc15.png" width="124" height="124" alt="">
 								<div>
-									<p class="price">1 100<em>p</em></p>
+									<p class="price">1 200<em>p</em></p>
 									<h4 class="evaluation">
 										<span class="rating" title="рейтинг">9,2</span>
 										<span class="reviews" title="кол-во отзывов">
@@ -614,98 +712,10 @@
 									</h4>
 								</div>
 							</div>
-							<h3><a href="#">Даниил Нестеров</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
+							<h3><a href="#">Елена Хмелова</a></h3>
+							<p>Юрист (МГЮА), опыт работы более 5 лет, в т.ч. исполнительное произво...</p>
 							<h5>
-								<span class="status">свободен | в сети</span>
-								<span class="like"><em></em> в избранное</span>
-							</h5>
-						</div>
-						<div>
-							<div>
-								<img src="./img/userc3.png" width="124" height="124" alt="">
-								<div>
-									<p class="price">1 100<em>p</em></p>
-									<h4 class="evaluation">
-										<span class="rating" title="рейтинг">9,2</span>
-										<span class="reviews" title="кол-во отзывов">
-											<em class="positive"><a href="#">954</a></em>
-											<em class="negative"><a href="#">12</a></em>
-										</span>
-										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
-									</h4>
-								</div>
-							</div>
-							<h3><a href="#">TRANCO</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
-							<h5>
-								<span class="status">свободен | в сети</span>
-								<span class="like"><em></em> в избранное</span>
-							</h5>
-						</div>
-						<div>
-							<div>
-								<img src="./img/userc1.png" width="124" height="124" alt="">
-								<div>
-									<p class="price">1 100<em>p</em></p>
-									<h4 class="evaluation">
-										<span class="rating" title="рейтинг">9,2</span>
-										<span class="reviews" title="кол-во отзывов">
-											<em class="positive"><a href="#">954</a></em>
-											<em class="negative"><a href="#">12</a></em>
-										</span>
-										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
-									</h4>
-								</div>
-							</div>
-							<h3><a href="#">Люся Ивашина</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
-							<h5>
-								<span class="status">свободен | в сети</span>
-								<span class="like"><em></em> в избранное</span>
-							</h5>
-						</div>
-						<div>
-							<div>
-								<img src="./img/userc2.png" width="124" height="124" alt="">
-								<div>
-									<p class="price">1 100<em>p</em></p>
-									<h4 class="evaluation">
-										<span class="rating" title="рейтинг">9,2</span>
-										<span class="reviews" title="кол-во отзывов">
-											<em class="positive"><a href="#">954</a></em>
-											<em class="negative"><a href="#">12</a></em>
-										</span>
-										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
-									</h4>
-								</div>
-							</div>
-							<h3><a href="#">Даниил Нестеров</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
-							<h5>
-								<span class="status">свободен | в сети</span>
-								<span class="like"><em></em> в избранное</span>
-							</h5>
-						</div>
-						<div>
-							<div>
-								<img src="./img/userc3.png" width="124" height="124" alt="">
-								<div>
-									<p class="price">1 100<em>p</em></p>
-									<h4 class="evaluation">
-										<span class="rating" title="рейтинг">9,2</span>
-										<span class="reviews" title="кол-во отзывов">
-											<em class="positive"><a href="#">954</a></em>
-											<em class="negative"><a href="#">12</a></em>
-										</span>
-										<span class="thumbsup" title="кол-во выполненных задач">1025</span>
-									</h4>
-								</div>
-							</div>
-							<h3><a href="#">TRANCO</a></h3>
-							<p>Пешие курьеры, Купить и доставить, Поиск информации, Размещение объявлений <a href="#">и еще 9</a></p>
-							<h5>
-								<span class="status">свободен | в сети</span>
+								<span class="status">занят | в сети</span>
 								<span class="like"><em></em> в избранное</span>
 							</h5>
 						</div>
@@ -722,13 +732,13 @@
 							<li class="next"><a href="#"></a></li>
 							<li class="last"><a href="#">Конец</a></li>
 						</ul>
-						<!--<ul class="quantity">
+						<ul class="quantity">
 							<li>Показать по:</li>
 							<li class="active"><a href="#">8</a></li>
 							<li><a href="#">32</a></li>
 							<li><a href="#">65</a></li>
 							<li><a href="#">110</a></li>
-						</ul>-->
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -744,8 +754,8 @@
 					<ul class="nav">
 						<li>
 							<ul>
-								<li><a href="#">Исполнители</a></li>
-								<li><a href="#">Задачи</a></li>
+								<li><a href="#">Герои</a></li>
+								<li><a href="#">Запросы</a></li>
 							</ul>
 						</li>
 						<li>
