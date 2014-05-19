@@ -5620,6 +5620,15 @@ h4.evaluation .like.active {
 	box-shadow:inset 10px 10px 10px rgba(0,0,0,0.05);
 	behavior:url('./pie.htc');
 }
+.taskadd > div > div input[type="text"]:focus, .taskadd > div > div textarea:focus {
+	border:2px solid #e6b131;
+}
+.taskadd > div > div input[type="text"].success, .taskadd > div > div textarea.success {
+	border:2px solid #00ab63;
+}
+.taskadd > div > div input[type="text"].error, .taskadd > div > div textarea.error {
+	border:2px solid #ee4b41;
+}
 .taskadd > div > div.calendar input.data {
 	width:99px;
 	margin:0 7px 0 0;
@@ -5987,6 +5996,18 @@ h4.evaluation .like.active {
 	vertical-align:top;
 	padding:6px 0 5px;
 	margin:0 0 0 12px;
+}
+.content .userform .agreement {
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+}
+.content .userform .agreement .erroricon {
+	display:none;
+}
+.content .userform .agreement .errormessage {
+	width:auto;
+	margin-left:0;
 }
 .content .userform > div > div > p > em {
 	float:left;
@@ -6747,8 +6768,12 @@ h4.evaluation .like.active {
 }
 .dialog .text {
 	display:inline-block;
+	width:453px;
 	margin:0 13px 0 0;
 	vertical-align:top;
+}
+.dialog .response .text {
+	width:433px;
 }
 .dialog .text h3 {
 	color:#000000 !important;
@@ -6770,12 +6795,14 @@ h4.evaluation .like.active {
 	line-height:17px;
 }
 .dialog .data {
+	width:120px;
 	display:inline-block !important;
 	color:#999999 !important;
 	font-size:12px !important;
 	line-height:14px !important;
 	text-align:right !important;
 	vertical-align:top !important;
+	white-space:nowrap;
 	margin:0 !important;
 }
 .dialog .data span {
@@ -7899,4 +7926,14 @@ h4.evaluation .like.active {
 .selectbox li:hover {
 	color:#666666;
 	background:#f3f3f3 url('../img/selectbox_li.png') repeat-x top;
+}
+/*.MultiFile-list {
+	display:none !important;
+}*/
+.ui-datepicker {
+	z-index:100 !important;
+}
+.ui-autocomplete {
+	max-height:218px !important;
+	overflow-y:auto !important;
 }
