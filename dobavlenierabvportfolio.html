@@ -1,0 +1,186 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/fineuploader-3.4.1.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jquery.fineuploader-3.4.1.min.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/imgareaselect.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Исполнители</a></li>
+					<li><a href="#">Задачи</a></li>
+				</ul>
+				<div class="controls">
+					<button class="service">Добавить услугу</button>
+					<button class="task">Добавить задачу</button>
+				</div>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h1>Добавление работы</h1>
+			<div class="userform add">	
+				<div>
+					<div>
+						<p><em>*</em> Название работы:</p> <input type="text" class="name">
+					</div>
+					<div>
+						<p><em>*</em> Описание работы:</p>
+						<textarea cols="100" rows="3" class="desc"></textarea>
+					</div>
+					<div class="photo">
+						<p>Фото:</p>
+						<img src="./img/userc1.png" width="124" height="124" class="current" alt="">
+						<p>
+							<span><a href="#">Выбрать другое фото</a></span>
+							<span class="edit"><a href="#">Редактировать</a></span>
+							<span class="remove"><a href="#">Удалить</a></span>
+							<span class="changeimg"><a href="#">Сменить картинку</a></span>
+							<span>JPG, PNG, не более 5 Мб.</span>
+						</p>
+						<div class="modal absolute">
+							<h2>Редактирование фотографии</h2>
+							<p>Выберите область, которая будет показываться на вашей аватарке.</p>
+							<div class="crop">
+								<div class="buttons">
+									<button class="save">Сохранить</button>
+									<button class="cancel">Отменить</button>
+								</div>
+							</div>
+						</div>
+						<script type="text/javascript">
+							$('.changeimg').bind('click', function() {
+								$('.photo .modal .crop .preview, .photo .modal .crop #crop').remove();	
+								var newimgpath = './img/header_bg.png';
+								alert('Картинка поменялась на '+newimgpath);
+								$('.photo .modal .crop').append('<img src="'+newimgpath+'" id="crop" alt="">', '<div class="preview"><img src="'+newimgpath+'" alt=""></div>');
+								return false;
+							});
+						</script>
+					</div>
+					<div class="addmore">
+						<p><a href="#">Добавить еще одно изображение</a></p>
+					</div>
+					<div>
+						<p><em>*</em> Укажите цену:</p> <input type="text" class="price" value="1000"> <p>руб.</p>
+					</div>
+				</div>
+				<button class="add">Добавить</button>
+				<p class="cancel"><a href="#">Отмена</a></p>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Исполнители</a></li>
+								<li><a href="#">Задачи</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>

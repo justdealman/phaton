@@ -50,10 +50,10 @@
 });
 function float() {
 	if ($('.header').hasClass('autorized')) {
-		var headerheight = 109;
+		var headerheight = 115;
 	}
 	else {
-		var headerheight = 81;
+		var headerheight = 67;
 	}
 	if ($(window).scrollTop() > headerheight) {
 		$('.header').addClass('fixed');
@@ -91,13 +91,13 @@ $(document).ready(function() {
 			$(this).height($(this).height()+1);
 		};
 	});
-	$('.dialog > div').each(function() {
+	/*$('.dialog > div').each(function() {
 		var tw = 576-$(this).find('.data').width();
 		if ( $(this).hasClass('response') ) {
 			tw = tw - 20;
 		}
 		$(this).find('.text').css({'width': tw+'px'});
-	});
+	});*/
 	$('.dialog.message > div.new').each(function() {
 		$(this).prev().css({'background': '#ffffff'});
 	})
@@ -300,6 +300,15 @@ $(document).ready(function() {
 		number: 10,
 		width: 222,
 		readOnly: true,
+		path: 'img/rate_small',
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+	$('.ratingsmallenabled').raty({
+		number: 10,
+		width: 222,
+		readOnly: false,
 		path: 'img/rate_small',
 		score: function() {
 			return $(this).attr('data-score');
@@ -529,6 +538,8 @@ $(document).ready(function() {
 		$(this).parent().siblings().removeClass('active');
 		$(this).parent().addClass('active');
 		$(this).parents('.reviewu').find('div.leave').fadeOut(150);
+		if ( reviewu.filter('#'+ra).find('.once').length || reviewu.filter('#'+ra).find('.tbody').length ) {}
+		else {reviewu.filter('#'+ra).css({'display': 'none'});}
 		return false;
 	}).filter(':first').click();
 	/*$('.reviewu > div.tasksview .thead').each(function() {
@@ -614,5 +625,31 @@ $(document).ready(function() {
 	});
 	$('.langsel').click(function(e) {
 		e.stopPropagation();
+	});
+	$('.userstatus').each(function() {
+		var current = $(this);
+		$(this).find('p').hide();
+		$(this).find('h6.save').hide();	
+		current.find('h6 a').bind('click', function() {
+			if ( current.hasClass('editing') ) {
+				var newstatus = current.find('p input').attr('value');
+				current.removeClass('editing');
+				current.find('p, h6.save').hide();
+				current.find('h5, h6.edit').show();
+				current.find('h5').empty().text(newstatus);
+			}
+			else {
+				var currentstatus = current.find('h5').text();
+				current.addClass('editing');
+				current.find('h5, h6.edit').hide();
+				current.find('p, h6.save').show();
+				current.find('p input').val(currentstatus);
+			}
+			return false;
+		});
+	});
+	$('.taski h3 strong a').bind('click', function() {
+		$(this).parents('.taski').find('.modal.confirm').fadeIn(150);
+		return false;
 	});
 });

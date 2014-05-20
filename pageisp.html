@@ -37,10 +37,13 @@
 					<li class="registration"><a href="#">Регистрация</a></li>
 				</ul>
 				<ul class="nav">
-					<li><a href="#">Исполнители</a></li>
-					<li><a href="#">Задачи</a></li>
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
 				</ul>
-				<button class="add">Добавить задачу</button>
+				<div class="controls">
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
+				</div>
 				<div class="popup login">
 					<h2>Вход</h2>
 					<div class="form">
@@ -82,36 +85,45 @@
 		</div>
 		<div class="content">
 			<div class="goback">
-				<p><a href="#">Вернуться к списку исполнителей</a></p>
+				<p><a href="#">Вернуться к списку героев</a></p>
 			</div>
 			<div class="useri">
 				<div class="important">
 					<span class="show"></span>
 					<ul class="nav">
 						<li class="profile active"><a href="#">Профиль</a></li>
-						<li class="tasks"><a href="#">Мои задачи</a></li>
-						<li class="mytasks"><a href="#">Задачи мне</a></li>
+						<li class="tasks"><a href="#">Я заказчик</a></li>
+						<li class="mytasks"><a href="#">Я исполнитель</a></li>
 						<li class="favorite"><a href="#">Избранное</a></li>
+						<li class="messages"><a href="#">Сообщения</a> (4)</li>
 						<li class="notifications"><a href="#">Уведомления</a> (5)</li>
 						<li class="awards"><a href="#">Награды</a></li>
 					</ul>
 					<div class="photo">
-						<img src="./img/user.png" width="124" height="124" alt="">
+						<img src="./img/user.png" width="142" height="142" alt="">
+						<span class="online"></span>
 					</div>
-					<p class="givetask"><a href="#">Назначить задачу</a></p>
-					<p class="favorite"><a href="#">Люся у вас в избранном</a></p>
+					<p class="message"><a href="#"><span>Отправить сообщение</span></a></p>
+					<p class="givetask"><a href="#"><span>Назначить задачу</span></a></p>
+					<p class="favorite"><a href="#"><span>Роман у вас в избранном</span></a></p>
 					<div class="video">
-						<iframe src="http://player.vimeo.com/video/87817306" width="230" height="127" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe src="http://player.vimeo.com/video/87817306" width="230" height="146" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="information">
 					<div class="name">
-						<h1>Люся Ивашина</h1>
-						<p class="status online" title="исполнитель онлайн"><span></span> онлайн</p>
+						<h1>Роман Петров</h1>
+						<p class="status online" title="исполнитель онлайн">онлайн</p>
+						<p class="experience">На сайте 3 года 2 мес.</p>
+					</div>
+					<div class="userstatus">
+						<h5>You have made the RIGHT choice!</h5>
+						<p><input type="text" value="Добросовестная и честная работа в рамках правового поля и в интернет..."><span>Осталось символов: 72</span></p>
+						<h6 class="edit"><a href="#">Редактировать статус</a></h6>
+						<h6 class="save"><a href="#">Сохранить статус</a></h6>
 					</div>
 					<div class="data">
-						<p>24 года; Московская область, Одинцово, пр. Ленина, 95</p>
-						<p class="experience">На сайте 3 года 2 мес.</p>
+						<p>29 лет; Московская область, Одинцово, пр. Ленина, 95</p>
 					</div>
 					<p class="price rouble">1100<em>p</em></p>
 					<div class="description">
@@ -138,26 +150,23 @@
 						</div>
 					</div>
 					<ul class="services">
-						<li><span>Уборка / Домработница</span></li>
-						<li><span>Приготовление еды</span></li>
-						<li><span>Еда из ресторана</span></li>
-						<li><span>Водители</span></li>
-						<li><span>Грузоперевозки</span></li>
-						<li><span>Детский досуг</span></li>
-						<li><span>Уборка / Домработница</span></li>
-						<li><span>Уборка / Домработница</span></li>
+						<li><span>Видео-операторы</span></li>
+						<li><span>Фотографы</span></li>
+						<li><span>Обработка и редактирование фото</span></li>
+						<li><span>Монтаж видео</span></li>
+						<li><a href="#">еще 6</a></li>
 					</ul>
 					<p class="places"><span>Готова работать в городах:</span> Одинцово, Реутово, Москва, Химки <a href="#">и еще 3 города</a></p>
 					<div class="about">
-						<p>Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания! <span class="hidden">Сообразительная девушка с высшим образованием поможет вам справиться с делами. Английский на хорошем уровне. Умею ладить и сидеть с детьми возрастом от пары месяцев до бесконечности (у меня пять племянников). Люблю интересные задания!</span> <a href="#" class="more">Подробнее...</a></p>
+						<p>Высшее образование: в 2002 г. закончил Государственный университет управления по специальности менеджер высшей квалификации. В сервисе Phaton c марта 2011 года.  Увлекаюсь техникой, фотографией, ну и всем по немногу :)  Готов помочь с заданиями по ремонту. <span class="hidden">Высшее образование: в 2002 г. закончил Государственный университет управления по специальности менеджер высшей квалификации. В сервисе Phaton c марта 2011 года.  Увлекаюсь техникой, фотографией, ну и всем по немногу :)  Готов помочь с заданиями по ремонту/</span> <a href="#" class="more">Подробнее...</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="reviewu">
 				<ul class="nav">
-					<li class="reviews"><a href="#reviews"><span>Отзывы</span> (954)</a></li>
-					<li class="tasks"><a href="#tasks"><span>Задачи</span> (1025)</a></li>
 					<li class="portfolio"><a href="#portfolio"><span>Портфолио</span> (350)</a></li>
+					<li class="tasks"><a href="#tasks"><span>Запросы</span> (1025)</a></li>
+					<li class="reviews"><a href="#reviews"><span>Отзывы</span> (954)</a></li>
 				</ul>
 				<div class="modal leave">
 					<h2>Оставить отзыв</h2>
@@ -225,33 +234,83 @@
 				<div class="all" id="reviews">
 					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">(Только автору задачи, исполнителем которой является данный пользователь)</span></h5>
 					<div class="once">
-						<img src="./img/userr1.png" width="123" height="124" class="user" alt="">
+						<img src="./img/reviewuser1.png" width="124" height="124" class="user" alt="">
 						<div class="information">
-							<h3><span class="theme"><a href="#" class="name">Петр Кащенко</a> по задаче <a href="#" class="task">Помочь с уборкой</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<h3><span class="theme"><a href="#" class="name">Петр Кащенко</a> по запросу <a href="#" class="task">Сделать монтаж видеосъемки</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
 							<div class="textarea">
-								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<p>Спасибо! Отличная работа! Качественно, профессионально, креативно :) Всем рекомендую!</p>
 								<ul class="marks">
 									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
 									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="9"></div></li>
 								</ul>
 								<div class="dialog">
 									<div class="read">
 										<div class="photo">
-											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+											<img src="./img/dialog_review_user1.png" width="39" height="39" alt="">
 										</div>
 										<div class="text">
-											<h3>TRANCO</h3>
-											<p>Реквизиты мы вам скинем на почту.</p>
+											<h3>Петр Кащенко</h3>
+											<p>Спасибо за отличное выполнение!!</p>
 										</div>
-										<p class="data">5 минут назад</p>
+										<p class="data">Сегодня, 12:24 <span>Ответ заказчика</span></p>
+									</div>
+									<div class="read response">
+										<div class="photo">
+											<img src="./img/dialog_review_user2.png" width="39" height="39" alt="">
+										</div>
+										<div class="text">
+											<h3>Роман Петров</h3>
+											<p>Пожалуйста!)</p>
+										</div>
+										<p class="data">Сегодня, 12:24 <span>Ответ Петру</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="once">
+						<img src="./img/reviewuser2.png" width="124" height="124" class="user" alt="">
+						<div class="information">
+							<h3><span class="theme"><a href="#" class="name">Александра</a> по запросу <a href="#" class="task">Отвезти в аэропорт недорого</a></span> <span class="data positive">Сегодня, 15:03</span></h3>
+							<div class="textarea">
+								<p>Благодарим за комфортную поездку и пунктуальность, цена супер и веселый собеседник :) Обязательно обратимся еще!</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="10"></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="once">
+						<img src="./img/reviewuser3.png" width="124" height="124" class="user" alt="">
+						<div class="information">
+							<h3><span class="theme"><a href="#" class="name">Елизавета Зорина</a> по запросу <a href="#" class="task">Нужна помощь с переездом</a></span> <span class="data positive">Сегодня, 16:45</span></h3>
+							<div class="textarea">
+								<p>Роман, огромное спасибо! Без вас бы не справились вовремя, быстрая и аккуратная сборка мебели!<br> Всем советую обращаться к вам за помощью !</p>
+								<ul class="marks">
+									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="10"></div></li>
+								</ul>
+								<div class="dialog">
+									<div class="read">
+										<div class="photo">
+											<img src="./img/dialog_review_user3.png" width="39" height="39" alt="">
+										</div>
+										<div class="text">
+											<h3>Елизавета Зорина</h3>
+											<p>Молодец!</p>
+										</div>
+										<p class="data">Сегодня, 16:50</p>
 									</div>
 									<div class="answer">
 										<div class="photo">
-											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
+											<img src="./img/dialog_review_user2.png" width="39" height="39" alt="">
 										</div>
 										<div class="area">
-											<textarea cols="100" rows="2">Ура!</textarea>
+											<textarea cols="100" rows="2">Спасибо! Обращайтесь!)</textarea>
 										</div>
 										<button class="submit"></button>
 									</div>
@@ -260,37 +319,16 @@
 						</div>
 					</div>
 					<div class="once">
-						<img src="./img/userr2.png" width="123" height="124" class="user" alt="">
+						<img src="./img/reviewuser4.png" width="124" height="124" class="user" alt="">
 						<div class="information">
-							<h3><span class="theme"><a href="#" class="name">Елизавета Зорина</a> по задаче <a href="#" class="task">Решить задания для ЕГЭ по математике</a></span> <span class="data positive">Сегодня, 12:21</span></h3>
+							<h3><span class="theme"><a href="#" class="name">Mika</a> по запросу <a href="#" class="task">Сыграть на аккордеоне Happy Birthday  to you и отправить видео по интернету</a></span> <span class="data positive">Сегодня, 19:03</span></h3>
 							<div class="textarea">
-								<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка в 19 веке.</p>
+								<p>Супер! Спасибо за классное поздравление, подруга была в восторге! Сюрприз удался!</p>
 								<ul class="marks">
 									<li><span>Качество:</span> <div class="ratingsmall" data-score="10"></div></li>
-									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="9"></div></li>
-									<li><span>Цена:</span> <div class="ratingsmall" data-score="8"></div></li>
+									<li><span>Вежливость:</span> <div class="ratingsmall" data-score="10"></div></li>
+									<li><span>Цена:</span> <div class="ratingsmall" data-score="10"></div></li>
 								</ul>
-								<div class="dialog">
-									<div class="read">
-										<div class="photo">
-											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
-										</div>
-										<div class="text">
-											<h3>TRANCO</h3>
-											<p>Реквизиты мы вам скинем на почту.</p>
-										</div>
-										<p class="data">5 минут назад</p>
-									</div>
-									<div class="answer">
-										<div class="photo">
-											<img src="./img/dialog_user2.png" width="39" height="39" alt="">
-										</div>
-										<div class="area">
-											<textarea cols="100" rows="2">Ура!</textarea>
-										</div>
-										<button class="submit"></button>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -400,34 +438,39 @@
 							</ul>
 						</div>
 						<h3>Установка забора на дачном участке.</h3>
+						<p class="price rouble">1 100<em>p</em></p>
 						<div class="message">
-							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка</p>
+							<p><strong>Деревянный забор</strong> - это великолепный  декоративный элемент, который гармонично и стильно вписывается практически  в любой ландшафт. Традиция устанавливать деревянные заборы в качестве ограждения пришла к нам от наших предков из глубины веков.<br>
+							И если в давние времена натуральная древесина была практически единственным доступным материалом, сегодня же для строительства заборов предлагаются металл, кирпич и пластик. Но не смотря на разнообразие материалов и множество современных технологий, многие россияне по-прежнему отдают предпочтение заборам из дерева.</p>
 						</div>
 					</div>
 					<div class="once">
 						<div class="photos">
 							<div class="main">
-								<img src="./img/portfolio1.png" width="181" height="181" id="img1" alt="">
-								<img src="./img/portfolio2.png" width="181" height="181" id="img2" alt="">
-								<img src="./img/portfolio1.png" width="181" height="181" id="img3" alt="">
-								<img src="./img/portfolio2.png" width="181" height="181" id="img4" alt="">
-								<img src="./img/portfolio1.png" width="181" height="181" id="img5" alt="">
-								<img src="./img/portfolio2.png" width="181" height="181" id="img6" alt="">
+								<img src="./img/portfolio3.png" width="181" height="181" id="img1" alt="">
+								<img src="./img/portfolio4.png" width="181" height="181" id="img2" alt="">
+								<img src="./img/portfolio3.png" width="181" height="181" id="img3" alt="">
+								<img src="./img/portfolio4.png" width="181" height="181" id="img4" alt="">
+								<img src="./img/portfolio3.png" width="181" height="181" id="img5" alt="">
+								<img src="./img/portfolio4.png" width="181" height="181" id="img6" alt="">
 							</div>
 							<ul>
-								<li><a href="#img1"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
-								<li><a href="#img2"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
-								<li><a href="#img3"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
-								<li><a href="#img4"><img src="./img/portfolio_preview1.png" width="51" height="50" alt=""></a></li>
-								<li><a href="#img5"><img src="./img/portfolio_preview2.png" width="51" height="50" alt=""></a></li>
-								<li><a href="#img6"><img src="./img/portfolio_preview3.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img1"><img src="./img/portfolio_preview4.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img2"><img src="./img/portfolio_preview5.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img3"><img src="./img/portfolio_preview6.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img4"><img src="./img/portfolio_preview4.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img5"><img src="./img/portfolio_preview5.png" width="51" height="50" alt=""></a></li>
+								<li><a href="#img6"><img src="./img/portfolio_preview6.png" width="51" height="50" alt=""></a></li>
 							</ul>
 						</div>
 						<h3>Установка забора на дачном участке.</h3>
+						<p class="price rouble">30 000<em>p</em></p>
 						<div class="message">
-							<p>Познание текста, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, пространственно отталкивает глубокий композиционный анализ, но языковая игра не приводит к активно-диалогическому пониманию. Языковая материя представляет собой реципиент, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана. Модальность высказывания отталкивает контрапункт, несмотря на отсутствие единого пунктуационного алгоритма. М.М.Бахтин понимал тот факт, что диахрония просветляет мифологический холодный цинизм, особенно подробно рассмотрены трудности, с которыми сталкивалась женщина-крестьянка</p>
+							<p>Перед наклеиванием обоев необходимо правильно подготовить стены — обязательно очистить от старых обоев, выровнять поверхности и обработать грунтовкой. Перед работой очистите и разберите инструменты. Это поможет наклеить обои легко, быстро и качественно.</p>
 						</div>
 					</div>
+					<h6 class="new"><a href="#">Добавить работу в портфолио</a></h6>
+					<h6 class="more"><a href="#">Смотреть все</a></h6>
 				</div>
 			</div>
 		</div>
@@ -442,8 +485,8 @@
 					<ul class="nav">
 						<li>
 							<ul>
-								<li><a href="#">Исполнители</a></li>
-								<li><a href="#">Задачи</a></li>
+								<li><a href="#">Герои</a></li>
+								<li><a href="#">Запросы</a></li>
 							</ul>
 						</li>
 						<li>
