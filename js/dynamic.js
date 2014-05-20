@@ -305,15 +305,6 @@ $(document).ready(function() {
 			return $(this).attr('data-score');
 		}
 	});
-	$('.ratingsmallenabled').raty({
-		number: 10,
-		width: 222,
-		readOnly: false,
-		path: 'img/rate_small',
-		score: function() {
-			return $(this).attr('data-score');
-		}
-	});
 	$('.ratingbig').raty({
 		number: 10,
 		width: 422,
