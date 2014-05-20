@@ -79,11 +79,11 @@ $(window).load(function(){
 });
 $(document).ready(function() {
 	$('.dialog h6 a').bind('click', function() {
-		$(this).parent().parent().after('<div class="answer temporary"><div class="photo"><img src="./img/dialog_user2.png" width="39" height="39" alt=""></div><div class="area"><textarea cols="100" rows="2">Ура!</textarea></div><button class="submit"></button><p class="visibility"><input type="checkbox" checked>Сделать мой вопрос видимым только заказчику</p></div>');
-		$('.answer.temporary input[type="checkbox"]').uniform();
-		$('.answer.temporary .submit').bind('click', function() {
-			$(this).parent('.answer.temporary').remove();
-		});
+        var tempForm = $(this).parent().parent().next('.answer.temporary');
+        $('.answer').hide();
+        tempForm.slideDown();
+        $('.answer.temporary input[type="checkbox"]').uniform();
+
 		return false;
 	});
 	$('.dialog > div textarea').keyup(function(e) {
