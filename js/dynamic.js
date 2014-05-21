@@ -98,7 +98,7 @@ $(document).ready(function() {
 		}
 		$(this).find('.text').css({'width': tw+'px'});
 	});*/
-	$('.dialog.message > div.new').each(function() {
+	/*$('.dialog.message > div.new').each(function() {
 		$(this).prev().css({'background': '#ffffff'});
 	})
 	$('.dialog.message > div:last-child').each(function() {
@@ -135,7 +135,7 @@ $(document).ready(function() {
 				$(this).prev().css({'background': 'url("./img/dialog_line.png") no-repeat 110px bottom'});
 			}
 		}
-	);
+	);*/
 	$('.infoblock .quote').append('<span></span>');
 	$('.offers > div > .td .modal.absolute .quote').append('<span></span>');
 	$('.offers > div > .td .modal.absolute .options .cancel a').click(function() {
@@ -451,8 +451,8 @@ $(document).ready(function() {
 		var fw = 320;
 		var fh = fw/jw*jh;
 	
-		var scaleX = 134 / (selection.width || 1);
-		var scaleY = 134 / (selection.height || 1);
+		var scaleX = 124 / (selection.width || 1);
+		var scaleY = 124 / (selection.height || 1);
   
 		$('.photo .modal .preview img').css({
 			width: Math.round(scaleX * fw) + 'px',
@@ -492,7 +492,7 @@ $(document).ready(function() {
 			aspectRatio: '1:1',
 			minWidth: 80,
 			minHeight: 80,
-			x1: 0, y1: 0, x2: 134, y2: 134,
+			x1: 0, y1: 0, x2: 124, y2: 124,
 			onInit: preview,
 			onSelectChange: preview,
             onSelectEnd: onSelectEnd
