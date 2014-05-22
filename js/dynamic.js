@@ -621,22 +621,11 @@ $(document).ready(function() {
 		var current = $(this);
 		$(this).find('p').hide();
 		$(this).find('h6.save').hide();	
-		current.find('h6 a').bind('click', function() {
-			if ( current.hasClass('editing') ) {
-				var newstatus = current.find('p input').attr('value');
-				current.removeClass('editing');
-				current.find('p, h6.save').hide();
-				current.find('h5, h6.edit').show();
-				current.find('h5').empty().text(newstatus);
-			}
-			else {
-				var currentstatus = current.find('h5').text();
-				current.addClass('editing');
-				current.find('h5, h6.edit').hide();
-				current.find('p, h6.save').show();
-				current.find('p input').val(currentstatus);
-			}
-			return false;
+		current.find('h6.edit a').bind('click', function() {
+            current.addClass('editing');
+            current.find('h5, h6.edit').hide();
+            current.find('p, h6.save').show();
+            return false;
 		});
 	});
 	$('.taski h3 strong a').bind('click', function() {
