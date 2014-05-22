@@ -278,7 +278,7 @@ button::-moz-focus-inner {
 }
 .header .user {
 	position:absolute;
-	left:219px;
+	left:233px;
 	top:33px;
 	padding:0 0 0 31px;
 	margin:0;
@@ -1710,6 +1710,9 @@ button::-moz-focus-inner {
 	height:30px;
 	margin:0 0 18px;
 }
+.col4 .sort {
+	margin-left:24px;
+}
 .sort p {
 	float:left;
 	color:#000000;
@@ -1809,7 +1812,7 @@ button::-moz-focus-inner {
 	margin:0 0 20px;
 }
 .col4 .pagination {
-	margin-left:44px;
+	margin-left:24px;
 }
 .pagination .navigation {
 	float:left;
@@ -1921,7 +1924,7 @@ button::-moz-focus-inner {
 	margin:22px 0 48px;
 }
 .col4 .taskc {
-	margin-left:44px;
+	margin-left:24px;
 }
 .taskc > div {
 	position:relative;
@@ -2608,6 +2611,15 @@ button::-moz-focus-inner {
 	width:720px;
 	margin:0 -3px 0 10px;
 }
+.col4 > h2 {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:-24px 0 2px 24px;
+}
 .grid .useri .important {
 	margin-top:5px;
 }
@@ -3084,11 +3096,10 @@ button::-moz-focus-inner {
 	color:#000000;
 	font-size:14px;
 	line-height:17px;
-	white-space:nowrap;
-	padding:0 0 0 30px;
 	margin:0 0 9px;
 }
 .usernav ul li a {
+	height:17px;
 	color:#000000;
 	font-weight:bold;
 	text-decoration:none;
@@ -3124,16 +3135,16 @@ button::-moz-focus-inner {
 	background-position:0 -16px;
 }
 .usernav ul .favorite {
-	background:url('../img/userc_favorite_icon.png') no-repeat left top;
+	background:url('../img/userc_favorite_icon.png') no-repeat left 1px;
 }
 .usernav ul .favorite.active {
-	background-position:0 -17px;
+	background-position:0 -16px;
 }
 .usernav ul .messages {
-	background:url('../img/user_message_icon.png') no-repeat left 3px;
+	background:url('../img/user_message_icon.png') no-repeat left top;
 }
 .usernav ul .messages.active {
-	background-position:0 -14px;
+	background-position:0 -17px;
 }
 .usernav ul .notifications {
 	background:url('../img/user_notification_icon.png') no-repeat left 1px;
@@ -3142,10 +3153,20 @@ button::-moz-focus-inner {
 	background-position:0 -16px;
 }
 .usernav ul .medals {
-	background:url('../img/user_medal_icon.png') no-repeat 3px top;
+	background:url('../img/user_medal_icon.png') no-repeat 3px 1px;
 }
 .usernav ul .medals.active {
-	background-position:3px -17px;
+	background-position:3px -16px;
+}
+.usernav ul .profile, .usernav ul .tasks, .usernav ul .mytasks, .usernav ul .favorite, .usernav ul .messages, .usernav ul .notifications, .usernav ul .medals {
+	clear:both;
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:right;
+	padding:0 0 0 30px;
+}
+.usernav ul .profile a, .usernav ul .tasks a, .usernav ul .mytasks a, .usernav ul .favorite a, .usernav ul .messages a, .usernav ul .notifications a, .usernav ul .medals a {
+	float:left;
 }
 .usernav .tip {
 	width:166px;
@@ -4647,85 +4668,155 @@ button::-moz-focus-inner {
 	background:url('../img/offers_disabled.png') no-repeat left top !important;
 }
 .offers > div > .td .auction {
-	padding:16px 15px 2px;
+	padding:1px 15px 2px;
 }
 .offers > div > .td .auction > div {
-	padding:0 0 7px;
-	margin:0 0 20px;
-	border-bottom:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+	padding:19px 0 0;
+	margin:18px 0 0;
+}
+.offers > div > .td .auction > div:last-child {
+	margin-bottom:-9px;
+}
+.offers > div > .td .auction h2 {
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	font-style:normal !important;
+	padding:0 0 1px;
+	margin:0;
 }
 .offers > div > .td .auction h3 {
+	clear:both;
+	overflow:hidden;
 	color:#000000;
 	font-size:14px;
 	line-height:18px;
-	padding:0;
-	margin:0 0 18px;
+	padding:0 0 10px;
+	margin:0 0 7px;
 }
 .offers > div > .td .auction div h3 {
-	margin:0 0 2px;
+	margin:0 0 7px;
 }
-.offers > div > .td .auction h3 > span {
-	font-weight:normal;
-}
-.offers > div > .td .auction h3 strong {
+.offers > div > .td .auction h3 .author {
 	float:right;
-	display:block;
+	font-weight:normal;
+	margin:0 36px 0 0;
 }
-.offers > div > .td .auction h3 strong span {
+.offers > div > .td .auction h3 strong.price {
+	float:left;
+	display:block;
+	width:150px;
+	margin:0 65px 0 0 !important;
+}
+.offers > div > .td .auction h3 strong.price span {
 	font-weight:normal;
 }
-.offers > div > .td .auction h3 strong.increase {
+.offers > div > .td .auction h3 strong.price.increase {
 	color:#00ab63;
 	font-size:18px;
 	margin:-1px 0 0;
 }
-.offers > div > .td .auction h3 strong.decrease {
+.offers > div > .td .auction h3 strong.price.decrease {
 	color:#ee4036;
 	font-size:18px;
 	margin:-1px 0 0;
 }
-.offers > div > .td .auction h3 > em {
-	float:right;
-	width:292px;
-	display:block;
-	font-weight:normal;
-	font-style:normal;
-}
-.offers > div > .td .auction h3 > em strong {
+.offers > div > .td .auction h3 span.name {
 	float:left;
-}
-.offers > div > .td .auction h3 .accept {
-	float:right;
 	display:block;
-	color:#00ab63;
-	text-decoration:none;
-	margin:0 0 0 112px;
-	border-bottom:1px solid #c7e1d2;
+	max-width:380px;
 }
-.offers > div > .td .auction h3 .accept:hover {
-	border-bottom:1px solid transparent;
+.offers > div > .td .auction h3 span.name span {
+	font-weight:normal;
 }
-.offers > div > .td .auction h6 {
+.offers > div > .td .auction h3 span.name em {
+	display:block;
 	color:#666666;
 	font-size:12px;
 	line-height:15px;
 	font-weight:normal;
-	padding:0;
-	margin:0 0 16px;
+	font-style:normal;
+	margin:2px 0 0;
 }
-.offers > div > .td .auction h6 span {
+.offers > div > .td .auction h3 span.name em span {
 	color:#999999;
+}
+.offers > div > .td .auction h3 em.decision {
+	float:right;
+	display:block;
+	font-weight:normal;
+	font-style:normal;
+}
+.offers > div > .td .auction h3 em.decision.accept a { 
+	color:#00ab63;
+	text-decoration:none;
+	border-bottom:1px solid #c7e1d2;
+}
+.offers > div > .td .auction h3 em.decision.accept a:hover {
+	border-bottom:1px solid transparent;
+}
+.offers > div > .td .auction h3 em.decision.cancel a { 
+	color:#ee4036;
+	text-decoration:none;
+	border-bottom:1px solid #f0cdcc;
+}
+.offers > div > .td .auction h3 em.decision.cancel a:hover {
+	border-bottom:1px solid transparent;
+}
+.offers > div > .td .auction h3 em.decline {
+	float:left;
+	display:block;
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	font-style:normal;
+	padding:0;
+}
+.offers > div > .td .auction h3 em.decline a {
+	color:#ee4036;
+	text-decoration:none;
+	padding:0 0 0 30px;
+	background:url('../img/decline_icon.png') no-repeat left top;
+}
+.offers > div > .td .auction h3 em.decline a span {
+	border-bottom:1px solid #f0cdcc;
+}
+.offers > div > .td .auction h3 em.decline a:hover span {
+	border-bottom:1px solid transparent;
 }
 .offers > div > .td .auction h4 {
 	color:#000000;
-	font-size:12px;
+	font-size:14px;
 	line-height:15px;
 	font-weight:normal;
 	padding:0;
 	margin:-4px 0 16px;
 }
-.offers > div > .td .auction h4 span {
+.offers > div > .td .auction h4 > span {
 	border-bottom:1px dashed #000000;
+}
+.offers > div > .td .auction h4 em {
+	color:#999999;
+	font-style:normal;
+}
+.offers > div > .td .auction h4 em a {
+	display:inline-block;
+	color:#999999;
+	font-size:12px;
+	text-decoration:none;
+	padding:0 17px 0 0;
+	margin:1px 0 0 8px;
+	vertical-align:top;
+	background:url('../img/auction_cancel_icon.png') no-repeat right 4px;
+}
+.offers > div > .td .auction h4 em a span {
+	border-bottom:1px solid #dddddd;
+}
+.offers > div > .td .auction h4 em a:hover span {
+	border-bottom:1px solid transparent;
 }
 .offers > div > .td .auction p {
 	color:#000000;
@@ -4768,7 +4859,7 @@ button::-moz-focus-inner {
 }
 .offers > div > .td .auction .form p {
 	color:#000000;
-	font-size:12px;
+	font-size:14px;
 	line-height:14px;
 	text-align:left;
 	margin:0 0 24px;
@@ -4783,6 +4874,7 @@ button::-moz-focus-inner {
 .offers > div > .td .auction .form p span em {
 	display:block;
 	color:#999999;
+	font-size:12px;
 	font-style:normal;
 }
 .offers > div > .td .auction .form p > em {
@@ -5575,6 +5667,15 @@ h4.evaluation .like.active {
 }
 .content > h1 span a:hover {
 	border-bottom:1px solid transparent;
+}
+.content > h2 {
+	color:#000000;
+	font-size:24px;
+	line-height:28px;
+	font-weight:bold;
+	font-style:italic;
+	padding:0;
+	margin:-12px 0 41px;
 }
 .taskadd  > div {
 	margin:0 0 43px;
@@ -6559,49 +6660,50 @@ h4.evaluation .like.active {
 	background:url('../img/modal_dark_close.png') no-repat left top !important;
 }
 .col4 .notifications {
-	margin:0 0 35px 44px;
+	margin:0 0 35px 26px;
 }
 .col4 .notifications > div {
-	padding:10px 15px 27px 17px;
-	margin:0 0 15px;
-	background:url('../img/line_bg.png') repeat-x bottom;
-	border:1px dashed transparent;
+	padding:14px 18px 9px 18px;
+	margin:0 0 1px;
+	border-bottom:1px solid #e8e8e8;
+}
+.col4 .notifications > div:hover {
+	padding:14px 18px 10px 18px;
+	background:rgba(218,218,218,0.3);
+	border-bottom-width:0;
 }
 .col4 .notifications > div.newest {
-	padding:14px 15px 12px 17px;
-	margin:0 0 15px;
-	background:none;
-	border:1px dashed #4b4b4b;
+	padding:14px 18px 10px 18px;
+	margin:0 0 1px;
+	background:rgba(174,217,199,0.2);
+	border-bottom-width:0 !important;
+}
+.col4 .notifications > div.newest:hover {
+	background:rgba(174,217,199,0.35);
 }
 .col4 .notifications > div h2 {
 	color:#000000;
-	font-size:18px;
-	line-height:22px;
-	font-weight:300;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
 	padding:0;
-	margin:0 0 10px;
+	margin:0 0 14px;
 }
 .col4 .notifications > div h6 {
 	float:right;
 	color:#999999;
-	font-size:14px;
-	line-height:18px;
-	font-weight:300;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
 	padding:0;
-	margin:4px 0 0 12px;
+	margin:-1px 0 0 20px;
 }
 .col4 .notifications > div p {
 	color:#000000;
 	font-size:14px;
 	line-height:18px;
-	font-weight:300;
-	margin:0 0 6px;
-}
-.col4 .notifications > div p strong {
-	font-weight:600;
-}
-.col4 .notifications > div span {
-	color:#999999;
+	font-weight:normal;
+	margin:0 0 11px;
 }
 .col4 .notifications > div span em {
 	font-weight:normal;
@@ -6609,15 +6711,22 @@ h4.evaluation .like.active {
 .col4 .notifications > div h5 {
 	font-size:14px;
 	line-height:18px;
-	font-weight:300;
+	font-weight:normal;
 	padding:0;
-	margin:10px 0 6px;
+	margin:0 0 11px;
 }
 .col4 .notifications > div h5 a {
 	display:inline-block;
-	color:#e6b131;
-	padding:0 32px 2px 0;
-	background:url('../img/more_icon.png') no-repeat right 1px;
+	color:#000000;
+	text-decoration:none;
+	padding:0 17px 0 0;
+	background:url('../img/more_icon.png') no-repeat right 4px;
+}
+.col4 .notifications > div h5 a span {
+	border-bottom:1px solid #c4cbc8;
+}
+.col4 .notifications > div h5 a:hover span {
+	border-bottom:1px solid transparent;
 }
 .col4 .notifications > div ul {
 	margin:10px 0 6px;
@@ -6641,19 +6750,22 @@ h4.evaluation .like.active {
 	position:relative;
 	margin:30px 0 37px 44px;
 }
+.col4 .dialog {
+	margin:0 0 20px 24px;
+}
 .col3 .dialog {
 	margin:0 0 20px;
 }
-.col3 .comment h2 {
+.col3 .comment h2, .col4 .comment h2 {
 	color:#000000;
 	font-size:18px;
 	line-height:22px;
 	font-weight:normal;
 	font-style:italic;
 	padding:0;
-	margin:0 0 34px;
+	margin:0 0 32px;
 }
-.col3 .comment h2 span {
+.col3 .comment h2 span, .col4 .comment h2 span {
 	color:#ee4036;
 }
 /*.dialog > span {
@@ -6671,23 +6783,28 @@ h4.evaluation .like.active {
 	margin:0 0 1px;
 	background:url('../img/dialog_line.png') repeat-x bottom;
 }
+.dialog :first-child.read {
+	padding-top:13px;
+	border-top:1px solid #e8e8e8;
+}
 .dialog div.unread {
 	background:url('../img/dialog_unread_bg.png') repeat;
+}
+.dialog .read:hover {
+	background:rgba(218,218,218,0.3);
+}
+.dialog .unread {
+	background:rgba(174,217,199,0.2);
+}
+.dialog .unread:hover {
+	background:rgba(174,217,199,0.35);
 }
 .dialog.message div.read, .dialog div.unread {
 	cursor:pointer;
 }
-.dialog.message div.read:last-child, .dialog div.unread:last-child {
-	background:#ffffff;
-}
-.dialog.message div.read:hover, .dialog.message div.unread:hover {
-	background:#e8e8e8;
-}
-.dialog.message div.new {
-	background:#f3f3f3 !important;
-}
-.dialog.message div.new:hover {
-	background:#e8e8e8 !important;
+.dialog.message .photo {
+	padding-left:3px;
+	background:none;
 }
 .dialog .locked {
 	position:absolute;
@@ -6772,6 +6889,22 @@ h4.evaluation .like.active {
 	margin:0 13px 0 0;
 	vertical-align:top;
 }
+.dialog .text h3 a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid transparent;
+}
+.dialog .text h3 a:hover {
+	border-bottom:1px solid #d0d0d0;
+}
+.dialog .text p a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid #d0d0d0;
+}
+.dialog .text p a:hover {
+	border-bottom:1px solid transparent;
+}
 .dialog .response .text {
 	width:433px;
 }
@@ -6795,7 +6928,7 @@ h4.evaluation .like.active {
 	line-height:17px;
 }
 .dialog .data {
-	width:120px;
+	width:130px;
 	display:inline-block !important;
 	color:#999999 !important;
 	font-size:12px !important;
@@ -6803,7 +6936,7 @@ h4.evaluation .like.active {
 	text-align:right !important;
 	vertical-align:top !important;
 	white-space:nowrap;
-	margin:0 !important;
+	margin:0 0 0 -10px !important;
 }
 .dialog .data span {
 	display:block;
@@ -6842,6 +6975,21 @@ h4.evaluation .like.active {
 }
 .dialog h6 a:hover {
 	border-bottom:1px solid transparent;
+}
+.dialog h5 {
+	position:absolute;
+	right:18px;
+	top:50%;
+	color:#000000;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	padding:7px 10px 6px 9px;
+	margin:-18px 0 0;
+	background:rgba(0,171,99,0.2);
+	-webkit-border-radius:16px;
+	-moz-border-radius:16px;
+	border-radius:16px;
 }
 .dialog .answer {
 	background:#f1f1f1 !important;
@@ -7322,6 +7470,71 @@ h4.evaluation .like.active {
 	height:58px;
 	cursor:pointer;
 	background:#8cc63e url('../img/searchform_submit.png') no-repeat center center;
+}
+.forum {
+	margin:-2px 0 46px 24px;
+}
+.forum > div {
+	margin:0 0 42px;
+}
+.forum > div > h3 {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:0 0 8px;
+}
+.forum > div > h3 a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid #cfcfcf;
+}
+.forum > div > h3 a:hover {
+	border-bottom:1px solid transparent;
+}
+.forum > div > h3 span {
+	display:inline-block;
+	color:#ee4036;
+	font-size:14px;
+	line-height:18px;
+	vertical-align:top;
+	padding:0 0 0 21px;
+	margin:5px 0 -1px 8px;
+	background:url('../img/forum_messages_icon.png') no-repeat left 2px;
+}
+.forum > div > h5 {
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:0 0 22px;
+}
+.forum > div > h5 a {
+	color:#000000;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+	margin:0 0 0 11px;
+	border-bottom:1px solid #cfcfcf;
+}
+.forum > div > h5 a:hover {
+	border-bottom:1px solid transparent;
+}
+.forum > div p {
+	color:#000000;
+	font-size:14px;
+	line-height:16px;
+	margin:0 0 12px;
+}
+.forum .comment {
+	margin-top:28px;
+}
+.forum .dialog {
+	margin-left:0 !important;
 }
 
 /* Modal */

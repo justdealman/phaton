@@ -36,12 +36,12 @@
 					<li class="registration"><a href="#">Регистрация</a></li>
 				</ul>
 				<ul class="nav">
-					<li><a href="#">Исполнители</a></li>
-					<li><a href="#">Задачи</a></li>
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
 				</ul>
 				<div class="controls">
-					<button class="service">Добавить услугу</button>
-					<button class="task">Добавить задачу</button>
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
 				</div>
 				<div class="popup login">
 					<h2>Вход</h2>
@@ -281,19 +281,27 @@
 										<button class="trade">Торговаться</button>
 									</div>-->
 									<div class="auction">
+										<h3>
+											<em class="decision cancel"><a href="#">Отменить</a></em>
+											<span class="author">Это ваше предложение</span>
+										</h3>
+										<h2>Идет торг</h2>
 										<div>
-											<h3>Предложение от Роман Петров <span>(это вы)</span> <strong class="decrease">600 <span>руб.</span></strong></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
+											<h3>
+												<strong class="price decrease">600 <span>руб.</span></strong>
+												<span class="name">Предложение от Роман Петров <em><span>В 14:00</span> 12.03. 2014г.</em></span>
+												<em class="decision accept"><a href="#">Принять</a></em>
+											</h3>
 											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
-											<h5>Исполнитель еще не ответил</h5>
 										</div>
 										<div>
-											<h3>Предложение от TRANCO <strong class="increase">1000 <span>руб.</span></strong></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
+											<h3>
+												<strong class="price increase">800 <span>руб.</span></strong>
+												<span class="name">Предложение от TRANCO <span>(это вы)</span><em><span>В 14:00</span> 12.03. 2014г.</em></span>
+											</h3>
 											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
+											<h5>Заказчик еще не ответил</h5>
 										</div>
-										<h3>Начальная цена за задание <strong>500 <span>руб.</span></strong></h3>
-										<h5><a href="#"><span>Отклонить это предложение</span></a></h5>
 									</div>
 								</div>
 							</div>
@@ -327,23 +335,27 @@
 										<button class="trade">Торговаться</button>
 									</div>-->
 									<div class="auction">
+										<h3>
+											<em class="decision cancel"><a href="#">Отменить</a></em>
+											<span class="author">Это ваше предложение</span>
+										</h3>
+										<h2>Идет торг</h2>
 										<div>
-											<h3>Предложение от Роман Петров <em><strong class="decrease">600 <span>руб.</span></strong> <a href="#" class="accept">Принять</a></em></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
+											<h3>
+												<strong class="price decrease">600 <span>руб.</span></strong>
+												<span class="name">Предложение от Роман Петров <em><span>В 14:00</span> 12.03. 2014г.</em></span>
+												<em class="decision accept"><a href="#">Принять</a></em>
+											</h3>
+											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
+										</div>
+										<div>
 											<h4><span>Встречное предложение</span></h4>
 											<div class="form">
-												<p><span>Ваша новая цена</span> <input type="text" value="30 000"><em>руб.</em></p>
+												<p><span>Ваша новая цена</span> <input type="text" value="800"><em>руб.</em></p>
 												<p><span>Комментарий <em>(необязательно)</em></span> <textarea cols="100" rows="3"></textarea></p>
 												<div><button>Отправить</button></div>
 											</div>
 										</div>
-										<div>
-											<h3>Предложение от TRANCO <span>(это вы)</span> <em><strong class="increase">1000 <span>руб.</span></strong></em></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
-											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
-										</div>
-										<h3>Начальная цена за задание <strong>500 <span>руб.</span></strong></h3>
-										<h5><a href="#"><span>Отклонить это предложение</span></a></h5>
 									</div>
 								</div>
 							</div>
@@ -377,20 +389,18 @@
 										<button class="trade">Торговаться</button>
 									</div>-->
 									<div class="auction">
+										<h3>
+											<em class="decline"><a href="#"><span>Отклонить это предложение</span></a></em>
+											<em class="decision accept"><a href="#">Применить</a></em>
+										</h3>
 										<div>
+											<h4><em>Встречное предложение исполнителю: <a href="#"><span>Отмена</span></a></em></h4>
 											<div class="form">
-												<p><span>Ваша новая цена</span> <input type="text" value="30 000"><em>руб.</em></p>
+												<p><span>Ваша новая цена</span> <input type="text" value="600"><em>руб.</em></p>
 												<p><span>Комментарий <em>(необязательно)</em></span> <textarea cols="100" rows="3"></textarea></p>
 												<div><button>Отправить</button></div>
 											</div>
 										</div>
-										<div>
-											<h3>Предложение от TRANCO <span>(это вы)</span> <em><strong class="increase">1000 <span>руб.</span></strong> <a href="#" class="accept">Принять</a></em></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
-											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
-										</div>
-										<h3>Начальная цена за задание <strong>500 <span>руб.</span></strong></h3>
-										<h5><a href="#"><span>Отклонить это предложение</span></a></h5>
 									</div>
 								</div>
 							</div>
@@ -424,24 +434,19 @@
 										<button class="trade">Торговаться</button>
 									</div>-->
 									<div class="auction">
+										<h3>
+											<em class="decline"><a href="#"><span>Отклонить это предложение</span></a></em>
+											<em class="decision accept"><a href="#">Применить</a></em>
+										</h3>
+										<h2>Идет торг</h2>
 										<div>
-											<h3>Предложение от TRANCO <span>(это вы)</span> <strong class="increase">1000 <span>руб.</span></strong></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
+											<h3>
+												<strong class="price decrease">600 <span>руб.</span></strong>
+												<span class="name">Предложение от Роман Петров (это вы)<em><span>В 14:00</span> 12.03. 2014г.</em></span>
+											</h3>
 											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
 											<h5>Исполнитель еще не ответил</h5>
 										</div>
-										<div>
-											<h3>Предложение от Роман Петров <strong class="decrease">600 <span>руб.</span></strong></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
-											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
-										</div>
-										<div>
-											<h3>Предложение от TRANCO <span>(это вы)</span> <strong class="increase">1000 <span>руб.</span></strong></h3>
-											<h6><span>В 14:00</span> 12.03. 2014г.</h6>
-											<p>Наша компания может отвезти Ваши документы с гарантиями доставки. Наше предложение включает в себя налог, поэтому Вы возмещаете только стоимость товара (2000 рублей)</p>
-										</div>
-										<h3>Начальная цена за задание <strong>500 <span>руб.</span></strong></h3>
-										<h5>Это ваше предложение</h5>
 									</div>
 								</div>
 							</div>
