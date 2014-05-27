@@ -443,7 +443,7 @@ $(document).ready(function() {
 		$(this).removeClass('less').addClass('more');
 		return false;
 	});
-	$('.dialog .read').filter(':last').css({'background': 'none'});
+	//$('.dialog .read').filter(':last').css({'background': 'none'});
 
 	function preview(img, selection) { 
 		var jw = $('#crop').width();
@@ -618,15 +618,26 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 	$('.userstatus').each(function() {
-		var current = $(this);
-		$(this).find('p').hide();
-		$(this).find('h6.save').hide();	
-		current.find('h6.edit a').bind('click', function() {
-            current.addClass('editing');
-            current.find('h5, h6.edit').hide();
-            current.find('p, h6.save').show();
-            return false;
-		});
+		if ( $(this).parents('.useri').hasClass('myself') ) {
+			if ( $(this).find('h5').is(':empty') ) {
+				$(this).find('h5').hide();
+			}
+			var current = $(this);
+			$(this).find('p').hide();
+			$(this).find('h6.save').hide();	
+			current.find('h6.edit a').bind('click', function() {
+				current.addClass('editing');
+				current.find('h5, h6.edit').hide();
+				current.find('p, h6.save').show();
+				return false;
+			});
+		}
+		else {
+			$(this).find('h6.save, h6.edit, p').hide();
+			if ( $(this).find('h5').is(':empty') ) {
+				$(this).remove();
+			}
+		}
 	});
 	$('.taski h3 strong a').bind('click', function() {
 		$(this).parents('.taski').find('.modal.confirm').fadeIn(150);
