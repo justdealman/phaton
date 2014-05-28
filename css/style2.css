@@ -3623,6 +3623,8 @@ button::-moz-focus-inner {
 	border-top:1px solid #999999;
 }
 .reviewu div.portfolio .more {
+	position:relative;
+	z-index:1;
 	color:#ffffff;
 	font-size:14px;
 	line-height:17px;
@@ -3711,12 +3713,9 @@ button::-moz-focus-inner {
 	right:0;
 	bottom:0;
 	left:0;
-	width:181px;
-	height:181px;
+	width:181px !important;
+	height:181px !important;
 	margin:auto;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	border-radius:50%;
 	behavior:url('./pie.htc');
 }
 .reviewu div.portfolio .once .photos  .jcarousel-container {
@@ -3745,9 +3744,6 @@ button::-moz-focus-inner {
 	position:relative;
 	width:51px !important;
 	height:50px !important;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	border-radius:50%;
 	behavior:url('./pie.htc');
 }
 .reviewu div.portfolio .once .photos .jcarousel-prev-horizontal {
@@ -6193,6 +6189,11 @@ h4.evaluation .like.active {
 	border-radius:50%;
 	behavior:url('./pie.htc');
 }
+.content .userform.add > div > div.photo img.current {
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+}
 .content .userform > div > div.photo p {
 	color:#999999;
 	font-size:14px;
@@ -6258,6 +6259,11 @@ h4.evaluation .like.active {
 	-moz-border-radius:50%;
 	border-radius:50%;
 	behavior:url('./pie.htc');
+}
+.content .userform.add > div > div.photo .modal .crop > .preview {
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
 }
 .content .userform > div > div.photo .modal .buttons {
 	position:absolute;
