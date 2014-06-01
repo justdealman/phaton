@@ -3187,6 +3187,30 @@ button::-moz-focus-inner {
 	position:relative;
 	margin:31px 0 20px;
 }
+.reviewu .portfolio h4.empty {
+	color:#ffffff;
+	font-size:18px;
+	line-height:18px;
+	font-style:italic;
+	padding:0;
+	margin:16px 0 -4px;
+}
+.reviewu .all h4.empty {
+	color:#ffffff;
+	font-size:18px;
+	line-height:18px;
+	font-style:italic;
+	padding:0;
+	margin:21px 0 16px 25px;
+}
+.reviewu .tasksview h4.empty {
+	color:#ffffff;
+	font-size:18px;
+	line-height:18px;
+	font-style:italic;
+	padding:0;
+	margin:8px 0 9px;
+}
 .reviewu .nav {
 	clear:both;
 	overflow:hidden;

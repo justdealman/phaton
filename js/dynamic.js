@@ -530,7 +530,10 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 		$(this).parents('.reviewu').find('div.leave').fadeOut(150);
 		if ( reviewu.filter('#'+ra).find('.once').length || reviewu.filter('#'+ra).find('.tbody').length ) {}
-		else {reviewu.filter('#'+ra).css({'display': 'none'});}
+		else {
+			reviewu.filter('#'+ra).find('span').siblings().hide(); 
+			reviewu.filter('#'+ra).append('<h4 class="empty">Пока нет записей</h4>');
+		}
 		return false;
 	}).filter(':first').click();
 	/*$('.reviewu > div.tasksview .thead').each(function() {
