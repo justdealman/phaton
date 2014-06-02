@@ -1959,22 +1959,20 @@ button::-moz-focus-inner {
 }
 .taskc > div .information {
 	position:relative;
-	padding:0 176px 0 0;
+	padding:0 23px 0 0;
 	margin:0;
 }
 .taskc > div .information ul {
-	clear:both;
-	overflow:hidden;
 	margin:0 0 11px;
 }
 .taskc > div .information ul li {
-	float:left;
+	display:inline-block;
 	color:#666666;
 	font-size:12px;
 	line-height:15px;
 	font-weight:300;
 	padding:0 0 0 6px;
-	margin:0 0 0 4px;
+	margin:0 -3px 0 4px;
 	background:url('../img/path_li.png') no-repeat left 2px;
 }
 .taskc > div .information ul li:first-child {
@@ -2020,16 +2018,15 @@ button::-moz-focus-inner {
 	text-decoration:underline;
 }
 .taskc > div .information h4 {
-	position:absolute;
-	top:-2px;
-	right:23px;
+	float:right;
 	min-width:107px;
 	color:#ffffff;
 	font-size:24px;
 	line-height:24px;
 	font-weight:normal;
 	text-align:center;
-	margin:0;
+	padding:0;
+	margin:-2px 0 0;
 	background:#ee4036;
 }
 .taskc > div .information h4 span {
@@ -2045,6 +2042,22 @@ button::-moz-focus-inner {
 	font-style:normal;
 	font-family:'Rouble', sans-serif;
 	margin:1px 0 0 5px;
+}
+.taskc > div .information p {
+	float:right;
+	font-size:12px;
+	line-height:15px;
+	font-weight:300;
+	margin:0 15px 0 0;
+}
+.taskc > div .information p.complete {
+	color:#00ab63;
+}
+.taskc > div .information p.posted {
+	color:#666666;
+}
+.taskc > div .information p.progress {
+	color:#e6b131;
 }
 .taskc > div .options {
 	position:relative;
