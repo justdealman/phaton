@@ -2196,7 +2196,7 @@ button::-moz-focus-inner {
 	position:relative;
 	margin:0 0 14px;
 }
-.userc > div > div > img {
+.userc > div > div img {
 	position:relative;
 	width:124px !important;
 	height:124px !important;
@@ -6877,8 +6877,13 @@ h4.evaluation .like.active {
 	margin-left:20px;
 }
 .dialog .photo img {
+	position:relative;
 	width:39px !important;
 	height:39px !important;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
 }
 .dialog .photo .online {
 	position:absolute;
@@ -8198,4 +8203,13 @@ h4.evaluation .like.active {
 .ui-autocomplete {
 	max-height:218px !important;
 	overflow-y:auto !important;
+}
+
+.uploader {
+	height:auto;
+}
+.uploader .MultiFile-label {
+	display:block;
+	width:auto;
+	height:auto;
 }
