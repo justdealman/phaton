@@ -64,8 +64,26 @@ function float() {
 		$('.wrapper').css({'padding-top': '0'});
 	}
 }
+function chat() {
+	$('.footer').hide();
+	var chatheight = 0;
+	$('.dialog .read, .dialog .unread').each(function() {
+		chatheight += $(this).outerHeight();
+	});
+	if ( $(window).height() - chatheight - 320 < 0 ) {
+		$('body.chat .dialog').addClass('fixed');
+	}
+	else {
+		$('body.chat .dialog').removeClass('fixed');
+	}
+}
 $(window).scroll(function(){
 	float();
+});
+$(window).resize(function() {
+	if ( $('body.chat').length > 0 ) {
+		chat();
+	}
 });
 $(window).load(function(){
 	float();
@@ -78,6 +96,9 @@ $(window).load(function(){
 	});*/
 });
 $(document).ready(function() {
+	if ( $('body.chat').length > 0 ) {
+		chat();
+	}
 	$('.dialog h6 a').bind('click', function() {
         var tempForm = $(this).parent().parent().next('.answer.temporary');
         $('.answer').hide();
