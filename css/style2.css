@@ -8213,3 +8213,14 @@ h4.evaluation .like.active {
     width:auto !important;
     height:auto !important;
 }
+body.chat .dialog.fixed .answer {
+	position:fixed;
+	bottom:-2px;
+	right:50%;
+	width:683px;
+	margin-right:-480px;
+}
+.reviewu div.all .once .information .dialog h3 {
+	clear:none;
+	overflow:visible;
+}
