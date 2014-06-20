@@ -8206,10 +8206,10 @@ h4.evaluation .like.active {
 }
 
 .uploader {
-	height:auto;
+    height:auto !important;
 }
 .uploader .MultiFile-label {
-	display:block;
-	width:auto;
-	height:auto;
+    display:block !important;
+    width:auto !important;
+    height:auto !important;
 }

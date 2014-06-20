@@ -41,6 +41,8 @@ function geocode() {
         address += ',' + document.getElementById("User_house_number").value;
     }
     geocoder.geocode({'address': address, 'partialmatch': true}, geocodeResult);
+    $('#User_map_lat').val(mpick.getPosition().lat());
+    $('#User_map_lon').val(mpick.getPosition().lng());
 }
 function geocodeResult(results, status) {
     if (status == 'OK' && results.length > 0) {
