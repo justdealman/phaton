@@ -76,6 +76,27 @@ function chat() {
 	else {
 		$('body.chat .dialog').removeClass('fixed');
 	}
+	var usenavtop = $('.usernav').offset().top-50;
+	$(window).bind('scroll', function() {
+		if ( $(window).scrollTop() > usenavtop ) {
+			$('.usernav').css({
+				'position': 'fixed',
+				'top': '50px'
+			});
+			$('.col4').css({
+				'margin-left': '240px'
+			});
+		}
+		else {
+			$('.usernav').css({
+				'position': 'relative',
+				'top': 'auto'
+			});
+			$('.col4').css({
+				'margin-left': '0'
+			});
+		}
+	});
 }
 $(window).scroll(function(){
 	float();
