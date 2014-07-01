@@ -6388,7 +6388,7 @@ h4.evaluation .like.active {
 	margin:5px 0 0 240px;
 }
 .content .userform > div > div .selectbox {
-	margin:0 3px 0 11px;
+	margin:0 0 0 11px;
 }
 .content .userform > div > div .selectbox .select {
 	width:292px !important;
@@ -6396,17 +6396,26 @@ h4.evaluation .like.active {
 .content .userform > div > div .selectbox .dropdown {
 	width:326px !important;
 }
+.content .userform > div > div .day .selectbox {
+	margin:0 3px 0 11px;
+}
 .content .userform > div > div .day .selectbox .select {
 	width:32px !important;
 }
 .content .userform > div > div .day .selectbox .dropdown {
 	width:66px !important;
 }
+.content .userform > div > div .month .selectbox {
+	margin:0 3px 0 11px;
+}
 .content .userform > div > div .month .selectbox .select {
 	width:83px !important;
 }
 .content .userform > div > div .month .selectbox .dropdown {
 	width:117px !important;
+}
+.content .userform > div > div .year .selectbox {
+	margin:0 0 0 11px;
 }
 .content .userform > div > div .year .selectbox .select {
 	width:67px !important;
@@ -8223,4 +8232,43 @@ body.chat .dialog.fixed .answer {
 .reviewu div.all .once .information .dialog h3 {
 	clear:none;
 	overflow:visible;
+}
+span.tiphover {
+	position:relative;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	vertical-align:middle;
+	margin:7px 0 7px 10px;
+	background:url('../img/useri_contacts_more.png') no-repeat left top;
+}
+span.tiphover em {
+	position:absolute;
+	left:32px;
+	top:50%;
+	width:180px;
+	color:#54555d;
+	font-size:11px;
+	line-height:15px;
+	font-style:normal;
+	padding:12px 10px 10px 15px;
+	background:#ffffff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.34);
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.34);
+	box-shadow:0 0 5px rgba(0,0,0,0.34);
+	behavior:url('./pie.htc');
+}
+span.tiphover em:before {
+	content:'';
+	position:absolute;
+	left:-12px;
+	top:50%;
+	width:12px;
+	height:17px;
+	margin-top:-11px;
+	background:url('../img/tiphover_em_arrow.png') no-repeat left top;
 }

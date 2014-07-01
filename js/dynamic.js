@@ -688,4 +688,15 @@ $(document).ready(function() {
 		$(this).parents('.taski').find('.modal.confirm').fadeIn(150);
 		return false;
 	});
+	$('.tiphover').each(function() {
+		$(this).hover(
+			function() {
+				$(this).append('<em>'+$(this).attr('data-tip')+'</em>');
+				$(this).find('em').css({'margin-top': -($(this).find('em').height()/2+9)+'px'});
+			},
+			function() {
+				$(this).find('em').remove();
+			}
+		);
+	});
 });
