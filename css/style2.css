@@ -2426,17 +2426,16 @@ button::-moz-focus-inner {
 	border-bottom:1px solid transparent;
 }
 .useri {
-	clear:both;
-	overflow:hidden;
 	padding:0 0 33px;
 	margin:-5px 0 12px;
 	border-bottom:2px solid #cccccc;
 }
 .useri .important {
 	position:relative;
-	float:left;
+	display:inline-block;
 	width:230px;
-	margin:5px 0 0;
+	vertical-align:top;
+	margin:5px 14px 0 0;
 }
 .useri .important .show {
 	position:relative;
@@ -2614,8 +2613,10 @@ button::-moz-focus-inner {
 	margin:0 0 20px;
 }
 .useri .information {
-	float:right;
+	display:inline-block;
 	width:710px;
+	vertical-align:top;
+	margin:0 -3px 0 0;
 }
 .col4 {
 	position:relative;
@@ -4717,6 +4718,7 @@ button::-moz-focus-inner {
 }
 .offers > div > .td > div.more > div.information {
 	position:relative;
+	min-height:80px;
 	padding:14px 15px 17px 130px;
 	margin:0 0 10px;
 	border-top:4px solid #ee4036;
@@ -4734,7 +4736,7 @@ button::-moz-focus-inner {
 .offers > div > .td > div.more > div.information > img {
 	position:relative;
 	float:left;
-	margin:7px 0 0 -108px;
+	margin:0 0 0 -108px;
 	-webkit-border-radius:50%;
 	-moz-border-radius:50%;
 	border-radius:50%;
@@ -6985,6 +6987,9 @@ h4.evaluation .like.active {
 	border-radius:50%;
 	behavior:url('./pie.htc');
 }
+.dialog.fixed .photo img {
+	position:static;
+}
 .dialog .photo .online {
 	position:absolute;
 	left:4px;
@@ -7156,7 +7161,6 @@ h4.evaluation .like.active {
 	color:#ffffff;
 }
 .dialog .answer .area {
-	position:relative;
 	display:inline-block;
 	width:527px;
 	vertical-align:top;
