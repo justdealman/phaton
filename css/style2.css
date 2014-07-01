@@ -2118,6 +2118,7 @@ button::-moz-focus-inner {
 	background:url('../img/location_address_icon.png') no-repeat left 1px;
 }
 .taskc > div .options .location.remotely {
+	color:#00ab63;
 	background:url('../img/location_remotely_icon.png') no-repeat left top;
 }
 .taskc > div .options .deadline {
@@ -4038,7 +4039,7 @@ button::-moz-focus-inner {
 .taski h1 {
 	color:#000000;
 	font-size:24px;
-	line-height:27px;
+	line-height:29px;
 	font-weight:bold;
 	font-style:italic;
 	padding:0;
@@ -4055,6 +4056,28 @@ button::-moz-focus-inner {
 }
 .taski h1 .like.active {
 	background-position:0 -16px;
+}
+.taski h1 span.price {
+	float:right;
+	display:block;
+	color:#ffffff;
+	font-size:24px;
+	line-height:24px;
+	font-weight:bold;
+	font-style:normal;
+	vertical-align:top;
+	padding:3px 17px 1px 19px;
+	margin:6px 0 0 12px;
+	background:#ee4036;
+}
+.taski h1 span.price em {
+	display:inline-block;
+	font-size:23px;
+	font-style:normal;
+	font-weight:normal;
+	font-family:'Rouble', sans-serif;
+	vertical-align:top;
+	margin:-1px 0 0 6px;
 }
 .taski h3 {
 	clear:both;
@@ -4119,12 +4142,20 @@ button::-moz-focus-inner {
 .taski h3 strong a:hover em {
 	border-bottom:1px dashed transparent;
 }
+.taski h6.data {
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	padding:0;
+	margin:-2px 0 7px;
+}
 .taski h5 {
 	color:#000000;
 	font-size:14px;
-	line-height:17px;
+	line-height:16px;
 	font-weight:300;
-	margin:0 0 18px;
+	margin:0 0 30px;
 }
 .taski h5 span.address {
 	display:block;
@@ -4156,6 +4187,49 @@ button::-moz-focus-inner {
 	font-family:'Rouble', sans-serif;
 	vertical-align:top;
 	margin:-1px 0 0 6px;
+}
+.taski h6.deadline {
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	padding:0;
+	margin:31px 0 30px;
+}
+.taski h6.deadline span {
+	display:block;
+}
+.taski h6.like {
+	clear:both;
+	overflow:hidden;
+	color:#666666;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	padding:0;
+	margin:35px 0 32px;
+}
+.taski h6.like em {
+	float:left;
+	display:block;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+	margin:2px 8px 0 0;
+	background:url('../img/userc_like_icon.png') no-repeat left top;
+}
+.taski h6.like em.active {
+	background-position:0 -12px;
+}
+
+.taski h4 {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:0 0 -9px;
 }
 .taski p {
 	color:#000000;
@@ -4228,6 +4302,9 @@ button::-moz-focus-inner {
 }
 .taski .files li.xls {
 	background:url('../img/xls_icon.png') no-repeat left 2px;
+}
+.taski .files li.doc {
+	background:url('../img/doc_icon.png') no-repeat left 3px;
 }
 .taski .files li a {
 	color:#000000;
@@ -4406,6 +4483,17 @@ button::-moz-focus-inner {
 	color:#000000;
 	text-decoration:none;
 	border-bottom:1px dashed #000000;
+}
+.offers h5.empty {
+	position:relative;
+	z-index:1;
+	color:#999999;
+	font-size:14px;
+	line-height:16px;
+	font-weight:normal;
+	padding:7px 14px 8px;
+	margin:0 0 -37px;
+	background:#e8e8e8;
 }
 .offers .addtask {
 	position:absolute;
@@ -5902,6 +5990,9 @@ h4.evaluation .like.active {
 }
 .taskadd > div > div .files li.xls {
 	background:url('../img/xls_icon.png') no-repeat left 3px;
+}
+.taskadd > div > div .files li.doc {
+	background:url('../img/doc_icon.png') no-repeat left 3px;
 }
 .taskadd > div > div .files li a {
 	color:#000000;
@@ -8247,6 +8338,7 @@ span.tiphover em {
 	position:absolute;
 	left:32px;
 	top:50%;
+	z-index:15;
 	width:180px;
 	color:#54555d;
 	font-size:11px;

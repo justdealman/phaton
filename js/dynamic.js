@@ -699,4 +699,8 @@ $(document).ready(function() {
 			}
 		);
 	});
+	$('.taski h6.like em').bind('click', function() {
+		$(this).toggleClass('active');
+		return false;
+	});
 });
