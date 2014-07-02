@@ -8403,3 +8403,6 @@ span.tiphover em:before {
 	margin-top:-11px;
 	background:url('../img/tiphover_em_arrow.png') no-repeat left top;
 }
+.userform.add .uploader {
+	margin-left:11px !important;
+}
