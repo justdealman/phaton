@@ -8406,3 +8406,7 @@ span.tiphover em:before {
 .userform.add .uploader {
 	margin-left:11px !important;
 }
+.MultiFile-remove {
+	position:relative;
+	z-index:10;
+}
