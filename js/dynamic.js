@@ -133,6 +133,16 @@ $(document).ready(function() {
 			$(this).height($(this).height()+1);
 		};
 	});
+	$('.header.autorized .user li.profile a, .header.autorized .user li.profile a span').bind('click', function() {
+		$('.header.autorized .user li.profile').addClass('active');
+		return false;
+	});
+	$(document).mouseup(function(e) {
+		var userdrop = $('.header.autorized .user li.profile ul');
+		if (!userdrop.is(e.target) && userdrop.has(e.target).length === 0) {
+			$('.header.autorized .user li.profile').removeClass('active');
+		}
+	});
 	/*$('.dialog > div').each(function() {
 		var tw = 576-$(this).find('.data').width();
 		if ( $(this).hasClass('response') ) {
