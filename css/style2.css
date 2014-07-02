@@ -2118,6 +2118,7 @@ button::-moz-focus-inner {
 	background:url('../img/location_address_icon.png') no-repeat left 1px;
 }
 .taskc > div .options .location.remotely {
+	color:#00ab63;
 	background:url('../img/location_remotely_icon.png') no-repeat left top;
 }
 .taskc > div .options .deadline {
@@ -2425,17 +2426,16 @@ button::-moz-focus-inner {
 	border-bottom:1px solid transparent;
 }
 .useri {
-	clear:both;
-	overflow:hidden;
 	padding:0 0 33px;
 	margin:-5px 0 12px;
 	border-bottom:2px solid #cccccc;
 }
 .useri .important {
 	position:relative;
-	float:left;
+	display:inline-block;
 	width:230px;
-	margin:5px 0 0;
+	vertical-align:top;
+	margin:5px 14px 0 0;
 }
 .useri .important .show {
 	position:relative;
@@ -2613,8 +2613,10 @@ button::-moz-focus-inner {
 	margin:0 0 20px;
 }
 .useri .information {
-	float:right;
+	display:inline-block;
 	width:710px;
+	vertical-align:top;
+	margin:0 -3px 0 0;
 }
 .col4 {
 	position:relative;
@@ -4038,7 +4040,7 @@ button::-moz-focus-inner {
 .taski h1 {
 	color:#000000;
 	font-size:24px;
-	line-height:27px;
+	line-height:29px;
 	font-weight:bold;
 	font-style:italic;
 	padding:0;
@@ -4055,6 +4057,28 @@ button::-moz-focus-inner {
 }
 .taski h1 .like.active {
 	background-position:0 -16px;
+}
+.taski h1 span.price {
+	float:right;
+	display:block;
+	color:#ffffff;
+	font-size:24px;
+	line-height:24px;
+	font-weight:bold;
+	font-style:normal;
+	vertical-align:top;
+	padding:3px 17px 1px 19px;
+	margin:6px 0 0 12px;
+	background:#ee4036;
+}
+.taski h1 span.price em {
+	display:inline-block;
+	font-size:23px;
+	font-style:normal;
+	font-weight:normal;
+	font-family:'Rouble', sans-serif;
+	vertical-align:top;
+	margin:-1px 0 0 6px;
 }
 .taski h3 {
 	clear:both;
@@ -4119,12 +4143,20 @@ button::-moz-focus-inner {
 .taski h3 strong a:hover em {
 	border-bottom:1px dashed transparent;
 }
+.taski h6.data {
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	padding:0;
+	margin:-2px 0 7px;
+}
 .taski h5 {
 	color:#000000;
 	font-size:14px;
-	line-height:17px;
+	line-height:16px;
 	font-weight:300;
-	margin:0 0 18px;
+	margin:0 0 30px;
 }
 .taski h5 span.address {
 	display:block;
@@ -4156,6 +4188,49 @@ button::-moz-focus-inner {
 	font-family:'Rouble', sans-serif;
 	vertical-align:top;
 	margin:-1px 0 0 6px;
+}
+.taski h6.deadline {
+	color:#999999;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	padding:0;
+	margin:31px 0 30px;
+}
+.taski h6.deadline span {
+	display:block;
+}
+.taski h6.like {
+	clear:both;
+	overflow:hidden;
+	color:#666666;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+	padding:0;
+	margin:35px 0 32px;
+}
+.taski h6.like em {
+	float:left;
+	display:block;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+	margin:2px 8px 0 0;
+	background:url('../img/userc_like_icon.png') no-repeat left top;
+}
+.taski h6.like em.active {
+	background-position:0 -12px;
+}
+
+.taski h4 {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:0 0 -9px;
 }
 .taski p {
 	color:#000000;
@@ -4228,6 +4303,9 @@ button::-moz-focus-inner {
 }
 .taski .files li.xls {
 	background:url('../img/xls_icon.png') no-repeat left 2px;
+}
+.taski .files li.doc {
+	background:url('../img/doc_icon.png') no-repeat left 3px;
 }
 .taski .files li a {
 	color:#000000;
@@ -4406,6 +4484,17 @@ button::-moz-focus-inner {
 	color:#000000;
 	text-decoration:none;
 	border-bottom:1px dashed #000000;
+}
+.offers h5.empty {
+	position:relative;
+	z-index:1;
+	color:#999999;
+	font-size:14px;
+	line-height:16px;
+	font-weight:normal;
+	padding:7px 14px 8px;
+	margin:0 0 -37px;
+	background:#e8e8e8;
 }
 .offers .addtask {
 	position:absolute;
@@ -4629,6 +4718,7 @@ button::-moz-focus-inner {
 }
 .offers > div > .td > div.more > div.information {
 	position:relative;
+	min-height:80px;
 	padding:14px 15px 17px 130px;
 	margin:0 0 10px;
 	border-top:4px solid #ee4036;
@@ -4646,7 +4736,7 @@ button::-moz-focus-inner {
 .offers > div > .td > div.more > div.information > img {
 	position:relative;
 	float:left;
-	margin:7px 0 0 -108px;
+	margin:0 0 0 -108px;
 	-webkit-border-radius:50%;
 	-moz-border-radius:50%;
 	border-radius:50%;
@@ -5903,6 +5993,9 @@ h4.evaluation .like.active {
 .taskadd > div > div .files li.xls {
 	background:url('../img/xls_icon.png') no-repeat left 3px;
 }
+.taskadd > div > div .files li.doc {
+	background:url('../img/doc_icon.png') no-repeat left 3px;
+}
 .taskadd > div > div .files li a {
 	color:#000000;
 	text-decoration:none;
@@ -6388,7 +6481,7 @@ h4.evaluation .like.active {
 	margin:5px 0 0 240px;
 }
 .content .userform > div > div .selectbox {
-	margin:0 3px 0 11px;
+	margin:0 0 0 11px;
 }
 .content .userform > div > div .selectbox .select {
 	width:292px !important;
@@ -6396,17 +6489,26 @@ h4.evaluation .like.active {
 .content .userform > div > div .selectbox .dropdown {
 	width:326px !important;
 }
+.content .userform > div > div .day .selectbox {
+	margin:0 3px 0 11px;
+}
 .content .userform > div > div .day .selectbox .select {
 	width:32px !important;
 }
 .content .userform > div > div .day .selectbox .dropdown {
 	width:66px !important;
 }
+.content .userform > div > div .month .selectbox {
+	margin:0 3px 0 11px;
+}
 .content .userform > div > div .month .selectbox .select {
 	width:83px !important;
 }
 .content .userform > div > div .month .selectbox .dropdown {
 	width:117px !important;
+}
+.content .userform > div > div .year .selectbox {
+	margin:0 0 0 11px;
 }
 .content .userform > div > div .year .selectbox .select {
 	width:67px !important;
@@ -6885,6 +6987,9 @@ h4.evaluation .like.active {
 	border-radius:50%;
 	behavior:url('./pie.htc');
 }
+.dialog.fixed .photo img {
+	position:static;
+}
 .dialog .photo .online {
 	position:absolute;
 	left:4px;
@@ -7056,7 +7161,6 @@ h4.evaluation .like.active {
 	color:#ffffff;
 }
 .dialog .answer .area {
-	position:relative;
 	display:inline-block;
 	width:527px;
 	vertical-align:top;
@@ -8223,4 +8327,44 @@ body.chat .dialog.fixed .answer {
 .reviewu div.all .once .information .dialog h3 {
 	clear:none;
 	overflow:visible;
+}
+span.tiphover {
+	position:relative;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	vertical-align:middle;
+	margin:7px 0 7px 10px;
+	background:url('../img/useri_contacts_more.png') no-repeat left top;
+}
+span.tiphover em {
+	position:absolute;
+	left:32px;
+	top:50%;
+	z-index:15;
+	width:180px;
+	color:#54555d;
+	font-size:11px;
+	line-height:15px;
+	font-style:normal;
+	padding:12px 10px 10px 15px;
+	background:#ffffff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.34);
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.34);
+	box-shadow:0 0 5px rgba(0,0,0,0.34);
+	behavior:url('./pie.htc');
+}
+span.tiphover em:before {
+	content:'';
+	position:absolute;
+	left:-12px;
+	top:50%;
+	width:12px;
+	height:17px;
+	margin-top:-11px;
+	background:url('../img/tiphover_em_arrow.png') no-repeat left top;
 }

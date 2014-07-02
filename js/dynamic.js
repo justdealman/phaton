@@ -76,6 +76,27 @@ function chat() {
 	else {
 		$('body.chat .dialog').removeClass('fixed');
 	}
+	var usenavtop = $('.usernav').offset().top-50;
+	$(window).bind('scroll', function() {
+		if ( $(window).scrollTop() > usenavtop ) {
+			$('.usernav').css({
+				'position': 'fixed',
+				'top': '50px'
+			});
+			$('.col4').css({
+				'margin-left': '240px'
+			});
+		}
+		else {
+			$('.usernav').css({
+				'position': 'relative',
+				'top': 'auto'
+			});
+			$('.col4').css({
+				'margin-left': '0'
+			});
+		}
+	});
 }
 $(window).scroll(function(){
 	float();
@@ -665,6 +686,21 @@ $(document).ready(function() {
 	});
 	$('.taski h3 strong a').bind('click', function() {
 		$(this).parents('.taski').find('.modal.confirm').fadeIn(150);
+		return false;
+	});
+	$('.tiphover').each(function() {
+		$(this).hover(
+			function() {
+				$(this).append('<em>'+$(this).attr('data-tip')+'</em>');
+				$(this).find('em').css({'margin-top': -($(this).find('em').height()/2+9)+'px'});
+			},
+			function() {
+				$(this).find('em').remove();
+			}
+		);
+	});
+	$('.taski h6.like em').bind('click', function() {
+		$(this).toggleClass('active');
 		return false;
 	});
 });
