@@ -206,7 +206,7 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 		return false;
 	});
-	$('.userc > div h5 span.like em, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
+	$('.userc > div h5 span.like em, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
