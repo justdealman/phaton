@@ -611,6 +611,41 @@ button::-moz-focus-inner {
 	padding:0;
 	background:none;
 }
+.header.autorized .user li {
+	background:none;
+}
+.header.autorized .user li.profile {
+	position:relative;
+	padding-right:14px;
+	margin-right:6px;
+	background:url('../img/user_profile_arrow.png') no-repeat right 4px !important;
+}
+.header.autorized .user li.profile ul {
+	display:none;
+	position:absolute;
+	left:-31px;
+	top:20px;
+	margin:0;
+	padding:10px 0 11px;
+	background:#323232;
+}
+.header.autorized .user li.profile.active ul {
+	display:block;
+}
+.header.autorized .user li.profile ul li {
+	line-height:14px !important;
+	white-space:nowrap;
+	padding:0;
+	margin:0 26px 0 31px;
+	background:none;
+}
+.header.autorized .user li.profile ul li a {
+	color:#cccccc;
+	text-decoration:none;
+}
+.header.autorized .user li.profile ul li a:hover {
+	color:#ffffff;
+}
 
 /* Index */
 
@@ -8367,4 +8402,25 @@ span.tiphover em:before {
 	height:17px;
 	margin-top:-11px;
 	background:url('../img/tiphover_em_arrow.png') no-repeat left top;
+}
+.userform.add .uploader {
+	margin-left:11px !important;
+}
+.MultiFile-remove {
+	position:relative;
+	z-index:10;
+}
+.reviewu p.empty {
+	color:#ffffff;
+	font-size:12px;
+	line-height:16px;
+	padding:16px 25px 16px;
+	margin:0;
+}
+.reviewu .tasksview p.empty {
+	padding:3px 0 9px;
+}
+.reviewu .portfolio p.empty {
+	padding:11px 0 0;
+	margin:0 0 -4px;
 }
