@@ -3858,6 +3858,10 @@ button::-moz-focus-inner {
 	text-align:justify;
 	margin:0;
 }
+.reviewu div.portfolio .controls a {
+    color: #ffffff;
+}
+
 .reviewu div.leave {
 	display:none;
 	position:absolute;

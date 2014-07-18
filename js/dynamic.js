@@ -133,7 +133,7 @@ $(document).ready(function() {
 			$(this).height($(this).height()+1);
 		};
 	});
-	$('.header.autorized .user li.profile a, .header.autorized .user li.profile a span').bind('click', function() {
+	$('.header.autorized .user li.profile > a').bind('click', function() {
 		$('.header.autorized .user li.profile').addClass('active');
 		return false;
 	});
@@ -241,27 +241,7 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
-  	$('.filter .price .range').slider({
-  		min: 0,
-  		max: 10000,
-  		step: 100,
-  		values: [1000,7000],
-  		range: true,
-  		stop: function(event, ui) {
-  			$(this).parent().parent().find('.min').val($(this).slider('values',0));
-  			$(this).parent().parent().find('.max').val($(this).slider('values',1));
-  			handle = $(this).find('.ui-slider-handle');
-  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-  		},
-  		slide: function(event, ui){
-  			$(this).parent().parent().find('.min').val($(this).slider('values',0));
-  			$(this).parent().parent().find('.max').val($(this).slider('values',1));
-  			handle = $(this).find('.ui-slider-handle');
-  			handle.eq(0).empty().append('<span>'+$(this).slider("values",0)+'</span>');
-  			handle.eq(1).empty().append('<span>'+$(this).slider("values",1)+'</span>');
-  		}
-  	});
+
 	$('.filter .price').each(function() {
 		$(this).find('.min').change(function(){
 			var value1 = $(this).parents('.price').find('.min').val();
