@@ -720,6 +720,22 @@ $(document).ready(function() {
 		$(this).parents('.introduction').addClass('playing');
 		return false;
 	});
+	$('.paidplaces > div > div input[name="title"]').keyup(function() {
+		if ( $(this).val().length > 0 ) {
+			$(this).parents('.paidplaces').find('.preview div h3').empty().text($(this).val());
+		}
+		else {
+			$(this).parents('.paidplaces').find('.preview div h3').empty().text('Заголовок');
+		}
+	});
+	$('.paidplaces > div > div textarea[name="description"]').keyup(function() {
+		if ( $(this).val().length > 0 ) {
+			$(this).parents('.paidplaces').find('.preview div p').empty().text($(this).val());
+		}
+		else {
+			$(this).parents('.paidplaces').find('.preview div p').empty().text('Текст объявления');
+		}
+	});
 });
 $(window).resize(function() {
 	introduction();

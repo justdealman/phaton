@@ -1,0 +1,355 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
+				</ul>
+				<div class="controls">
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
+				</div>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h1>Размещение рекламы в топ объявлениях</h1>
+			<div class="paidplaces">
+				<div>
+					<div>
+						<p>Заголовок:</p>
+						<input type="text" name="title">
+					</div>
+					<div>
+						<p>Текст:</p>
+						<textarea cols="40" rows="6" name="description"></textarea>
+					</div>
+					<div class="preview">
+						<p>Ваше объявление будет выглядеть так</p>
+						<div>
+							<div>
+								<div>
+									<img src="./img/paidplaces_preview_icon.png" width="52" height="52" alt="">
+									<h3>Заголовок</h3>
+									<p>Текст объявления</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h5>Выше объявление будет показываться вверху на страницах каталога героев сайта. Выберите специализации и регион размещения.</h5>
+				</div>
+				<div>
+					<h2>Выбранные разделы</h2>
+					<div class="specialization">
+						<p class="select"><input type="checkbox" checked> Все разделы</p>
+						<p class="select">Или</p>
+						<p class="select"><a href="#" class="">Выбрать специализацию</a> <span>(Максимум - 10)</span></p>
+						<p class="list"><span>Уборка / домработница <em></em></span> <span>Приготовление еды <em></em></span></p>
+						<div class="modal absolute">
+							<div class="specselect">
+								<ul>
+									<li>
+										<h5>Помощь по дому / хозяйству</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Купить / Доставить</h5>
+										<ul>
+											<li><span><input type="checkbox">Еда из ресторана / кофе</span></li>
+											<li><span><input type="checkbox">Подарить цветы</span></li>
+											<li><span><input type="checkbox">Курьерская работа</span></li>
+											<li><span><input type="checkbox">Продукты</span></li>
+											<li><span><input type="checkbox">Одежда</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Переезд / Водители</h5>
+										<ul>
+											<li><span><input type="checkbox">Водители</span></li>
+											<li><span><input type="checkbox">Грузоперевозки</span></li>
+											<li><span><input type="checkbox">Упаковка</span></li>
+											<li><span><input type="checkbox">Погрузка / разгрузка</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Мероприятия / Праздники</h5>
+										<ul>
+											<li><span><input type="checkbox">Аниматоры / Ведущие</span></li>
+											<li><span><input type="checkbox">Детский досуг</span></li>
+											<li><span><input type="checkbox">Фото / Видео</span></li>
+											<li><span><input type="checkbox">Организация праздника</span></li>
+											<li><span><input type="checkbox">Раздача / расклейка листовок</span></li>
+											<li><span><input type="checkbox">Тайный покупатель</span></li>
+											<li><span><input type="checkbox">Подбор персонала</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Красота и здоровье</h5>
+										<ul>
+											<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+											<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+											<li><span><input type="checkbox">Массаж</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Бизнес / Учеба / Страхование</h5>
+										<ul>
+											<li><span><input type="checkbox">Административная работа</span></li>
+											<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+											<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+											<li><span><input type="checkbox">Бухгалтерия</span></li>
+											<li><span><input type="checkbox">Юридические услуги</span></li>
+											<li><span><input type="checkbox">Аудит</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+											<li><span><input type="checkbox">Сопровождение</span></li>
+											<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Уборка / Домработница</span></li>
+											<li><span><input type="checkbox">Мелкий бытовой ремонт</span></li>
+											<li><span><input type="checkbox">Ремонт / настройка техники</span></li>
+											<li><span><input type="checkbox">Приготовление еды</span></li>
+											<li><span><input type="checkbox">Сборка мебели</span></li>
+											<li><span><input type="checkbox">Сезонная работа на участке</span></li>
+											<li><span><input type="checkbox">Пошив</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Красота и здоровье</h5>
+										<ul>
+											<li><span><input type="checkbox">Макияж / Прическа / Стилист</span></li>
+											<li><span><input type="checkbox">Маникюр / Педикюр</span></li>
+											<li><span><input type="checkbox">Массаж</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Бизнес / Учеба / Страхование</h5>
+										<ul>
+											<li><span><input type="checkbox">Административная работа</span></li>
+											<li><span><input type="checkbox">Дипломы / Курсовые</span></li>
+											<li><span><input type="checkbox">Репетитор / он-лайн обучение</span></li>
+											<li><span><input type="checkbox">Бухгалтерия</span></li>
+											<li><span><input type="checkbox">Юридические услуги</span></li>
+											<li><span><input type="checkbox">Аудит</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+									<li>
+										<h5>Уход / Сопровождение / Дети</h5>
+										<ul>
+											<li><span><input type="checkbox">Мед.сестры и сиделки</span></li>
+											<li><span><input type="checkbox">Сопровождение</span></li>
+											<li><span><input type="checkbox">Воспитатель / Няня</span></li>
+											<li><span><input type="checkbox">Прочее</span></li>
+										</ul>
+									</li>
+								</ul>
+								<div>
+									<button class="select">Выбрать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2>Выбранный регион</h2>
+					<div>
+						<p>Выберите регион:</p>
+						<select>
+							<option>Ваш регион</option>
+							<option>Регион 1</option>
+							<option>Регион 2</option>
+						</select>
+					</div>
+				</div>
+				<h6>Итоговая стоимость - <span><strong>1 000</strong> руб.</span></h6>
+				<button class="pay">Оплатить</button>
+				<h5>После оплаты ваша реклама появится в выбранных регионах и разделах каталога по специализациям, первой в блоке Топ объявления — и будет сдвигаться на одну позицию вправо при появлении очередного нового объявления. Объявление полностью скроется из блока после опубликования следующих 20 объявлений. Фактическая длительность вашего присутствия на «Карусели» зависит от конкуренции за этот рекламный блок среди фрилансеров.</h5>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Герои</a></li>
+								<li><a href="#">Запросы</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>
