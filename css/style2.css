@@ -616,9 +616,20 @@ button::-moz-focus-inner {
 }
 .header.autorized .user li.profile {
 	position:relative;
-	padding-right:14px;
 	margin-right:6px;
+}
+.header.autorized .user li.profile a .full {
+	padding-right:14px;
 	background:url('../img/user_profile_arrow.png') no-repeat right 4px !important;
+}
+.header.autorized .user li.profile a:hover .full {
+	background-position:right -16px !important;
+}
+.header.autorized.fixed .user li.profile a .full {
+	background:url('../img/user_profile_arrow.png') no-repeat right 3px !important;
+}
+.header.autorized.fixed .user li.profile a:hover .full {
+	background-position:right -17px !important;
 }
 .header.autorized .user li.profile ul {
 	display:none;
@@ -2553,6 +2564,12 @@ button::-moz-focus-inner {
 .useri .important > .favorite:hover {
 	background-position:0 -17px;
 }
+.useri .important > .favorite.active {
+	background-position:0 -34px;
+}
+.useri .important > .favorite.active:hover {
+	background-position:0 -51px;
+}
 .useri .important > .favorite a span {
 	border-bottom:1px dashed #0f0f0f;
 }
@@ -4279,6 +4296,30 @@ button::-moz-focus-inner {
 	background-position:0 -12px;
 }
 
+
+
+.taski p.favorite {
+	position:relative;
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	margin:35px 0 32px;
+}
+.taski p.favorite a {
+	color:#000000;
+	text-decoration:none;
+	padding:0 0 0 25px;
+	background:url('../img/user_favorite_icon.png') no-repeat left top;
+}
+.taski p.favorite a:hover {
+	background-position:0 -17px;
+}
+.taski p.favorite.active a {
+	background-position:0 -34px;
+}
+.taski p.favorite.active a:hover {
+	background-position:0 -51px;
+}
 .taski h4 {
 	color:#000000;
 	font-size:18px;
@@ -6124,6 +6165,12 @@ h4.evaluation .like.active {
 	font-weight:normal;
 	vertical-align:top;
 }
+.taskadd > div h2 .tiphover {
+	display:inline-block;
+	left:auto;
+	top:auto;
+	vertical-align:top;
+}
 .taskadd > div.address p:first-child .checker {
 	float:left;
 	margin:0 14px 0 -12px;
@@ -6856,8 +6903,11 @@ h4.evaluation .like.active {
 	left:-240px;
 }
 .specialization .modal.absolute .arrow {
-	left:428px;
+	left:188px;
 	top:-20px;
+}
+.col4 .specialization .modal.absolute .arrow {
+	left:428px;
 }
 .specialization .modal .close {
 	background:url('../img/modal_dark_close.png') no-repat left top !important;
@@ -7796,7 +7846,7 @@ h4.evaluation .like.active {
 .modal .close {
 	position:absolute;
 	right:11px;
-	top:11px;
+	top:9px;
 	display:block;
 	width:13px;
 	height:15px;
@@ -7843,7 +7893,7 @@ h4.evaluation .like.active {
 }
 .modal .specselect {
 	width:933px !important;
-	padding:22px 0 18px 27px !important;
+	padding:36px 0 18px 27px !important;
 }
 .specselect > ul {
 	clear:both;
@@ -7928,6 +7978,23 @@ h4.evaluation .like.active {
 }
 .specselect > div button:hover {
 	background-position:0 0 !important;
+}
+.specselect .choice {
+	position:absolute;
+	right:34px;
+	top:9px;
+	font-size:13px;
+	line-height:16px;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+}
+.specselect .choice a {
+	color:#ffffff;
+	text-decoration:none;
+}
+.specselect .choice a:hover {
+	color:#cccccc;
 }
 .col1 .catspec {
 	margin:0 0 28px;
@@ -8639,6 +8706,7 @@ span.tiphover em:before {
 	z-index:0;
 	min-width:1000px;
 	max-width:1280px;
+	height:538px;
 }
 .introduction.playing > div #video {
 	z-index:1;
