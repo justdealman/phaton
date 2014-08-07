@@ -44,6 +44,7 @@ function geocode() {
     $('#User_map_lat').val(mpick.getPosition().lat());
     $('#User_map_lon').val(mpick.getPosition().lng());
 }
+
 function geocodeResult(results, status) {
     if (status == 'OK' && results.length > 0) {
         map.fitBounds(results[0].geometry.viewport);
