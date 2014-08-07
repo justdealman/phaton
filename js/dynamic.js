@@ -693,14 +693,27 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
-    $('iframe').each(function(){
-        var url = $(this).attr('src');
-        $(this).attr('src', url+'?wmode=transparent');
-    });
 	introduction();
 	$('.introduction .play').bind('click', function() {
 		$(this).parents('.introduction').addClass('playing');
+		player.playVideo();
 		return false;
+	});
+	$('.paidplaces > div > div input[name="title"]').keyup(function() {
+		if ( $(this).val().length > 0 ) {
+			$(this).parents('.paidplaces').find('.preview div h3').empty().text($(this).val());
+		}
+		else {
+			$(this).parents('.paidplaces').find('.preview div h3').empty().text('Заголовок');
+		}
+	});
+	$('.paidplaces > div > div textarea[name="description"]').keyup(function() {
+		if ( $(this).val().length > 0 ) {
+			$(this).parents('.paidplaces').find('.preview div p').empty().text($(this).val());
+		}
+		else {
+			$(this).parents('.paidplaces').find('.preview div p').empty().text('Текст объявления');
+		}
 	});
 });
 $(window).resize(function() {

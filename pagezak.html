@@ -1,0 +1,255 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
+				</ul>
+				<div class="controls">
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
+				</div>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="text"></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="options">
+						<div>
+							<h3 class="customer"><a href="#">Я — заказчик</a></h3>
+							<div>
+								<p>Я собираюсь добавлять задачи и выбирать подходящего исполнителя</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="performer"><a href="#">Я — исполнитель</a></h3>
+							<div>
+								<p>Я собираюсь разместить информацию о себе и добавлять предложения к задачам</p>
+							</div>
+						</div>
+					</div>
+					<div class="form customer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве исполнителя</a></p>
+					</div>
+					<div class="form performer">
+						<p><span>Имя:</span> <input type="text"></p>
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password"> <span class="switch"></span></p>
+						<p class="agreement"><input type="checkbox" checked>Я согласен с <a href="#">правилами использования сервиса</a></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+						<p class="another"><a href="#">Перейти к регистрации в качестве заказчика</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h1>Личный кабинет</h1>
+			<h2>Я - заказчик</h2>
+			<div class="hirernotice">
+				<p>Вы можете закрепить любой из своих запросов наверху главной ленты запросов, чтобы получить больше просмотров и предложений от героев.</p>
+				<h5><a href="#"><span>Разместить в срочных запросах</span></a></h5>
+			</div>
+			<div class="grid">
+				<div class="usernav">
+					<ul>
+						<li class="profile active"><a href="#">Редактировать профиль</a></li>
+						<li class="tasks"><a href="#">Мои задачи</a></li>
+						<li class="mytasks"><a href="#">Задачи мне</a></li>
+						<li class="favorite"><a href="#">Избранное</a></li>
+						<li class="messages"><a href="#">Сообщения</a></li>
+						<li class="notifications"><a href="#">Уведомления</a> +5</li>
+						<li class="medals"><a href="#">Награды</a></li>
+					</ul>
+				</div>
+				<div class="col4">
+					<div class="sort task">
+						<p>Вам подходит 1 запрос</p>
+						<div class="priority">
+							<p>Фильтр:</p>
+							<select>
+								<option>Показать все</option>
+								<option>Показать не все</option>
+							</select>
+						</div>
+					</div>
+					<div class="taskc">
+						<div>
+							<a href="#">
+								<div class="information">
+									<h4><span>500<em>p</em></span></h4>
+									<ul>
+										<li>Уборка</li>
+										<li>Приготовление еды</li>
+										<li>Стирка, глажка, химчистка...</li>
+									</ul>
+									<h2>Высушить 9 надувных байдарок</h2>
+								</div>
+								<div class="options">
+									<p class="location address">Новосибирск, ул. Карлма Маркса, дом 58</p>
+									<p class="deadline far">03:30:25</p>
+									<p class="offers">2 предложения</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<div class="information">
+									<h4><span>300<em>o</em></span></h4>
+									<ul>
+										<li>Пешие курьеры</li>
+										<li>Курьеры на авто</li>
+										<li>Грузоперевозки...</li>
+									</ul>
+									<h2>Отвезти договор из Ботанический сад до Химки</h2>
+								</div>
+								<div class="options">
+									<p class="location remotely">Удаленное выполенение</p>
+									<p class="deadline soon">09:12:30</p>
+									<p class="offers">нет предложений</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<div class="information">
+									<h4><span>400<em>o</em></span></h4>
+									<ul>
+										<li>Помощь на мероприятиях</li>
+										<li>Тайные покупатели</li>
+										<li>Промоутеры...</li>
+									</ul>
+									<h2>Участие в психологическом исследовании</h2>
+								</div>
+								<div class="options">
+									<p class="location address">Ростов-на-Дону, пр. Ленина, дом 45</p>
+									<p class="deadline soon">00:30:46</p>
+									<p class="offers">нет предложений</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Герои</a></li>
+								<li><a href="#">Запросы</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>
