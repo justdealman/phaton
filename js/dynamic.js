@@ -209,9 +209,19 @@ $(document).ready(function() {
 	}).filter(':first').click();
 	$('.carousel').jcarousel({
 		scroll: 1,
-		animation: 500,
-		easing: 'easeInOutCubic'
+		animation: 1000,
+		easing: 'easeInOutCubic',
+		auto: 2,
+		wrap: 'circular',
+		initCallback: initCallback
 	});
+	function initCallback(carousel) {
+		carousel.clip.hover(function() {
+			carousel.stopAuto();
+		}, function() {
+			carousel.startAuto();
+		});
+	};
 	var faq = $('.col3 .faq');
 	$('.col1 .faqnav li a').click(function () {
 		faq.hide();
@@ -693,12 +703,6 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
-	introduction();
-	$('.introduction .play').bind('click', function() {
-		$(this).parents('.introduction').addClass('playing');
-		player.playVideo();
-		return false;
-	});
 	$('.paidplaces > div > div input[name="title"]').keyup(function() {
 		if ( $(this).val().length > 0 ) {
 			$(this).parents('.paidplaces').find('.preview div h3').empty().text($(this).val());
@@ -715,6 +719,28 @@ $(document).ready(function() {
 			$(this).parents('.paidplaces').find('.preview div p').empty().text('Текст объявления');
 		}
 	});
+<<<<<<< HEAD
+	$('.introduction .search p input').focusin(function() {
+		$(this).stop(true,true).animate({
+			'width': '320px'
+		});
+	});
+	$('.introduction .search p input').focusout(function() {
+		$(this).stop(true,true).animate({
+			'width': '200px'
+		});
+	});
+	$('.introduction .play').bind('click', function() {
+		$('.modal.video').fadeIn(500);
+		document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+		$('.wrapper, .modal.video .close').bind('click', function() {
+			$('.modal.video').fadeOut(500);
+			document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+		})
+		return false;
+	});
+});
+=======
 });
 $(window).resize(function() {
 	introduction();
@@ -722,3 +748,4 @@ $(window).resize(function() {
 function introduction() {
 	$('.introduction #video, .introduction .cover').width($(window).width());
 }
+>>>>>>> origin/design-2.0
