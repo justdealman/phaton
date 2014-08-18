@@ -719,7 +719,6 @@ $(document).ready(function() {
 			$(this).parents('.paidplaces').find('.preview div p').empty().text('Текст объявления');
 		}
 	});
-<<<<<<< HEAD
 	$('.introduction .search p input').focusin(function() {
 		$(this).stop(true,true).animate({
 			'width': '320px'
@@ -740,12 +739,9 @@ $(document).ready(function() {
 		return false;
 	});
 });
-=======
-});
 $(window).resize(function() {
 	introduction();
 });
 function introduction() {
 	$('.introduction #video, .introduction .cover').width($(window).width());
 }
->>>>>>> origin/design-2.0
