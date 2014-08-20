@@ -85,33 +85,15 @@
 		</div>
 		<div class="introduction">
 			<div>
-				<div class="cover">
-					<h1>Лига Городских Героев</h1>
-					<span class="play"></span>
-					<h3>11 902 <a href="#">героя</a> в 942 городах<br> и 3 042 <a href="#">запроса</a> для них!</h3>
-					<div class="search">
-						<p><input type="text" placeholder="Найти"></p>
-						<button></button>
-					</div>
+				<span class="play"></span>
+				<div class="search">
+					<p><input type="text" placeholder="Найти героя или запрос"></p>
+					<button></button>
 				</div>
-				<div id="video">
-					<script type="text/javascript" src="./js/swfobject.js"></script>    
-					<script type="text/javascript">
-						var params = { allowScriptAccess: "always", allowfullscreen: "true", wmode: "transparent" };
-						var atts = { id: "myplayer" };
-						swfobject.embedSWF("http://www.youtube.com/v/Kqr0yUuSiTs?enablejsapi=1&playerapiid=player", "embed", "100%", "538", "8", null, null, params, atts);
-						function onYouTubePlayerReady(playerId) {
-							player = document.getElementById("myplayer");
-							player.addEventListener("onStateChange", "onytplayerStateChange");
-						}
-						function onytplayerStateChange(newState) {
-							if ( newState == 2 ) {
-								$('.introduction').removeClass('playing');
-							}
-						}
-					</script>
-					<div id="embed"></div>
-				</div>
+				<p class="text1">Находи услуги</p>
+				<p class="text2">Торгуйся</p>
+				<p class="text3">Предлагай услуги</p>
+				<p class="text4">Зарабатывай</p>
 			</div>
 		</div>
 		<ul class="steps">
@@ -336,90 +318,87 @@
 					<h2>Специализации героев</h2>
 					<ul>
 						<li>
-							<h3>Помощь по дому / хозяйству</h3>
+							<h3><a href="#">Еда/Кейтеринг</a></h3>
 							<ul>
-								<li><a href="#">Уборка / Домработница</a></li>
-								<li><a href="#">Мелкий бытовой ремонт</a></li>
-								<li><a href="#">Ремонт / настройка техники</a></li>
 								<li><a href="#">Приготовление еды</a></li>
-								<li><a href="#">Сборка мебели</a></li>
-								<li><a href="#">Сезонная работа на участке</a></li>
-								<li><a href="#">Пошив</a></li>
+								<li><a href="#">Торты, выпечка</a></li>
+								<li><a href="#">Банкеты, фуршеты</a></li>
+								<li><a href="#">Свадебные мероприятия</a></li>
+								<li><a href="#">Прочее (еда/кейтеринг)</a></li>
 							</ul>
 						</li>
 						<li>
-							<h3>Купить / доставить</h3>
+							<h3><a href="#">Мода и стиль</a></h3>
 							<ul>
-								<li><a href="#">Еда из ресторана / кофе</a></li>
-								<li><a href="#">Подарить цветы</a></li>
-								<li><a href="#">Курьерская работа</a></li>
-								<li><a href="#">Продукты</a></li>
-								<li><a href="#">Одежда</a></li>
-								<li><a href="#">Прочее</a></li>
+								<li><a href="#">Дизайн и пошив одежды</a></li>
+								<li><a href="#">Изготовление аксессуаров</a></li>
+								<li><a href="#">Имиджмейкер/персональный стилист</a></li>
+								<li><a href="#">Прочее (мода и стиль)</a></li>
 							</ul>
 						</li>
 						<li>
-							<h3>Переезд / Водители</h3>
+							<h3><a href="#">Отдых/развлечения/туризм</a></h3>
 							<ul>
+								<li><a href="#">Экскурсии, гиды</a></li>
+								<li><a href="#">Активные туры, треккинг</a></li>
+								<li><a href="#">Прочее (отдых/развлечения/туризм)</a></li>
+								<li><a href="#">Курортный отдых</a></li>
+								<li><a href="#">Рыбалка/охота/пенйтболл</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="#">Хобби /ремесло /творчество</a></h3>
+							<ul>
+								<li><a href="#">Ювелирные изделия</a></li>
+								<li><a href="#">Художественные</a></li>
+								<li><a href="#">Рукоделие, handmade</a></li>
+								<li><a href="#">Дерево ,стекло ,керамика</a></li>
+								<li><a href="#">Игрушки, сувениры, подарки</a></li>
+								<li><a href="#">Прочее (хобби/ремесло/творчество)</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="#">Ремонт/строительство</a></h3>
+							<ul>
+								<li><a href="#">Ремонт/строительство</a></li>
+								<li><a href="#">Отделка, монтаж, строительство</a></li>
+								<li><a href="#">Мебель, декор, дизайн интерьера</a></li>
+								<li><a href="#">Благоустройства территории, ландшафтный дизайн</a></li>
+								<li><a href="#">Прочее (ремонт/строительство)</a></li>
+								<li><a href="#">Проектирование</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="#">Трансфер/переезд</a></h3>
+							<ul>
+								<li><a href="#">Попутчики</a></li>
 								<li><a href="#">Водители</a></li>
 								<li><a href="#">Грузоперевозки</a></li>
 								<li><a href="#">Упаковка</a></li>
-								<li><a href="#">Погрузка / разгрузка</a></li>
-								<li><a href="#">Прочее</a></li>
+								<li><a href="#">Погрузка/разгрузка</a></li>
+								<li><a href="#">Трансфер в аэропорт</a></li>
+								<li><a href="#">Прочее (трансфер/переезд)</a></li>
 							</ul>
 						</li>
 						<li>
-							<h3>Мероприятия / Праздники</h3>
+							<h3><a href="#">Авто и мото</a></h3>
 							<ul>
-								<li><a href="#">Аниматоры / Ведущие</a></li>
-								<li><a href="#">Детский досуг</a></li>
-								<li><a href="#">Фото / Видео</a></li>
-								<li><a href="#">Организация праздника</a></li>
-								<li><a href="#">Раздача / расклейка листовок</a></li>
-								<li><a href="#">Тайный покупатель</a></li>
-								<li><a href="#">Подбор персонала</a></li>
+								<li><a href="#">Ремонт и сервис</a></li>
+								<li><a href="#">Реставрация</a></li>
+								<li><a href="#">Аэрография, тюнинг</a></li>
+								<li><a href="#">Шиномонтаж</a></li>
+								<li><a href="#">Прочее (авто/мото)</a></li>
 							</ul>
 						</li>
 						<li>
-							<h3>Уход / Сопровождение / Дети</h3>
+							<h3><a href="#">Красота & Здоровье</a></h3>
 							<ul>
-								<li><a href="#">Мед.сестры и сиделки</a></li>
-								<li><a href="#">Сопровождение</a></li>
-								<li><a href="#">Воспитатель / Няня</a></li>
-								<li><a href="#">Прочее</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Красота и здоровье</h3>
-							<ul>
-								<li><a href="#">Макияж / Прическа</a></li>
-								<li><a href="#">Маникюр / Педикюр</a></li>
+								<li><a href="#">Стилисты/парикмахеры/визажисты</a></li>
+								<li><a href="#">Спа уход, косметология</a></li>
 								<li><a href="#">Массаж</a></li>
-								<li><a href="#">Прочее</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Бизнес / Учеба / Страхование</h3>
-							<ul>
-								<li><a href="#">Административная работа</a></li>
-								<li><a href="#">Дипломы / Курсовые</a></li>
-								<li><a href="#">Репетитор / on-line обучение</a></li>
-								<li><a href="#">Бухгалтерия</a></li>
-								<li><a href="#">Юридические услуги</a></li>
-								<li><a href="#">Аудит</a></li>
-								<li><a href="#">Прочее</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Интернет / Компьютер</h3>
-							<ul>
-								<li><a href="#">Дизайн</a></li>
-								<li><a href="#">Вёрстка</a></li>
-								<li><a href="#">Программирование</a></li>
-								<li><a href="#">Администрирование</a></li>
-								<li><a href="#">Раскрутка (SEO)</a></li>
-								<li><a href="#">Контент-менеджмент / Соц.сети</a></li>
-								<li><a href="#">Копирайт / Машинопись</a></li>
+								<li><a href="#">Маникюр, педикюр</a></li>
+								<li><a href="#">Фитнес/спорт</a></li>
+								<li><a href="#">Прочее (красота и здоровье)</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -555,6 +534,10 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="modal video absolute">
+		<h2>Заголовок ролика (а у встроенного видео прячем чтобы было меньше мусора)</h2>
+		<iframe id="youtube" width="950" height="534" src="http://www.youtube.com/embed/Kqr0yUuSiTs?enablejsapi=1&iv_load_policy=3&showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="home">
 		<span>Наверх</span>

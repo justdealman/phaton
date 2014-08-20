@@ -772,18 +772,18 @@ button::-moz-focus-inner {
 	clear:both;
 	overflow:hidden;
 	width:968px;
-	height:278px;
-	padding:10px 0 0 8px;
-	margin:0 auto 35px;
+	height:146px;
+	padding:13px 0 0 8px;
+	margin:-11px auto 36px;
 }
 .steps li {
 	float:left;
-	width:344px;
-	height:278px;
-	font-size:20px;
-	line-height:24px;
+	width:337px;
+	height:146px;
+	font-size:24px;
+	line-height:27px;
 	font-weight:bold;
-	margin:0 -73px 0 38px;
+	margin:0 -59px 0 38px;
 }
 .steps li:first-child {
 	margin-left:0;
@@ -791,8 +791,8 @@ button::-moz-focus-inner {
 .steps li a {
 	position:relative;
 	display:block;
-	width:344px;
-	height:278px;
+	width:337px;
+	height:146px;
 	color:#ffffff;
 	text-decoration:none;
 	transition:margin 0.25s ease-out;
@@ -804,8 +804,8 @@ button::-moz-focus-inner {
 .steps li a span {
 	position:absolute;
 	left:0;
-	bottom:30px;
-	width:310px;
+	bottom:27px;
+	width:330px;
 	text-align:center;
 }
 .steps li.first a {
@@ -818,8 +818,8 @@ button::-moz-focus-inner {
 	background:url('../img/steps_third.png') no-repeat left top;
 }
 .steps li a:hover {
-	margin-top:-10px;
-	background-position:0 -278px;
+	margin-top:-13px;
+	background-position:0 -146px;
 }
 .categories {
 	margin:0 0 52px;
@@ -863,16 +863,22 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 12px;
 }
+.categories ul > li h3 a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px solid transparent;
+}
+.categories ul > li h3 a:hover {
+	border-bottom:1px solid #6eca9e;
+}
 .categories ul > li > ul {
 	margin:0;
 }
 .categories ul > li > ul  > li {
 	overflow:hidden;
 	display:block;
-	height:16px;
 	font-size:14px;
 	line-height:16px;
-	white-space:nowrap;
 	padding:0 0 4px;
 	margin:0;
 }
@@ -2850,6 +2856,8 @@ button::-moz-focus-inner {
 
 
 .useri .information .promotion {
+	position:relative;
+	z-index:5;
 	float:right;
 	width:212px;
 	margin:-27px 0 -98px 18px;
@@ -8689,19 +8697,7 @@ span.tiphover em:before {
 	max-width:1280px;
 	height:538px;
 	margin:0 auto;
-}
-.introduction > div .cover {
-	position:absolute;
-	left:0;
-	top:0;
-	z-index:1;
-	min-width:1000px;
-	max-width:1280px;
-	height:538px;
 	background:url('../img/introduction_bg.jpg') no-repeat center top;
-}
-.introduction.playing > div .cover {
-	z-index:0;
 }
 .introduction > div #video {
 	position:absolute;
@@ -8718,11 +8714,11 @@ span.tiphover em:before {
 .introduction .play {
 	position:absolute;
 	left:50%;
-	top:188px;
-	width:167px;
-	height:167px;
+	top:210px;
+	width:124px;
+	height:125px;
 	cursor:pointer;
-	margin-left:-84px;
+	margin-left:-62px;
 	background:url('../img/play_icon.png') no-repeat left top;
 	opacity:0.75;
 	filter:alpha(opacity=75);
@@ -8770,15 +8766,16 @@ span.tiphover em:before {
 .introduction .search {
 	position:absolute;
 	right:50%;
-	top:24px;
-	width:250px;
+	top:481px;
 	margin-right:-480px;
 }
 .introduction .search p {
 	margin:0;
 }
 .introduction .search p input {
-	position:relative;
+	position:absolute;
+	right:30px;
+	top:0;
 	width:200px;
 	font-size:14px;
 	padding:5px 8px 4px;
@@ -8809,6 +8806,44 @@ span.tiphover em:before {
 	height:21px;
 	cursor:pointer;
 	background:url('../img/introduction_search_icon.png') no-repeat left top;
+}
+.introduction > div > p {
+	position:absolute;
+	color:#ffffff;
+	font-size:20px;
+	line-height:24px;
+	font-weight:bold;
+	text-align:center;
+	padding:12px 12px 31px;
+	margin:0;
+}
+.introduction > div > p.text1 {
+	left:50%;
+	top:202px;
+	width:189px;
+	margin-left:-480px;
+	background:url('../img/introduction_text1.png') no-repeat left top;
+}
+.introduction > div > p.text2 {
+	left:50%;
+	top:107px;
+	width:125px;
+	margin-left:-285px;
+	background:url('../img/introduction_text2.png') no-repeat left top;
+}
+.introduction > div > p.text3 {
+	right:50%;
+	top:94px;
+	width:225px;
+	margin-right:-363px;
+	background:url('../img/introduction_text3.png') no-repeat left top;
+}
+.introduction > div > p.text4 {
+	right:50%;
+	top:204px;
+	width:175px;
+	margin-right:-480px;
+	background:url('../img/introduction_text4.png') no-repeat left top;
 }
 
 .paidplaces {
@@ -9200,9 +9235,24 @@ span.tiphover em:before {
 	behavior:url('./pie.htc');
 }
 .topslider .carousel .person h3, .topslider .carousel .person p {
-	color:#0000000;
+	color:#000000;
 	font-size:12px;
 	line-height:15px;
 	padding:0;
 	margin:0 0 2px;
+}
+.topslider .carousel .person h3 a, .topslider .carousel .person p a {
+	color:#000000;
+	text-decoration:none;
+}
+.topslider .carousel .person h3 a:hover, .topslider .carousel .person p a:hover {
+	text-decoration:underline;
+}
+
+.modal.video {
+	left:50%;
+	top:50%;
+	width:950px;
+	height:570px;
+	margin:-285px 0 0 -475px !important;
 }
