@@ -685,7 +685,7 @@ $(document).ready(function() {
 		}
 	});
 	$('.taski h3 strong a').bind('click', function() {
-		$(this).parents('.taski').find('.modal.confirm').fadeIn(150);
+		$(this).parents('.taski').find('.modal.confirm.complete').fadeIn(150);
 		return false;
 	});
 	$('.tiphover').each(function() {
