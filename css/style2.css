@@ -591,7 +591,7 @@ button::-moz-focus-inner {
 	right:210px;
 }
 .header.autorized.fixed .nav li {
-	font-size:14px;
+	font-size:12px;
 	line-height:17px;
 	font-weight:bold;
 	padding:0 0 0 7px;
@@ -6399,6 +6399,7 @@ h4.evaluation .like.active {
 .content .userform > div > div.performer p {
 	width:auto !important;
 	color:#000000;
+    font-weight: bold;
 	font-size:14px;
 	line-height:17px;
 	padding:17px 0 15px;
@@ -9255,4 +9256,14 @@ span.tiphover em:before {
 	width:950px;
 	height:570px;
 	margin:-285px 0 0 -475px !important;
+}
+
+.optional_description h3 {
+    color:#ff8b22 !important;
+    margin-left:12px !important;
+}
+
+.optional_description p {
+    font-size:13px !important;
+    line-height:16px !important;
 }
