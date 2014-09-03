@@ -248,7 +248,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('.userc > div h5 span.like, .taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
+	$('.taski h1 .like, .offers > div > .td > div.more h4 .like, .taskc > div .actions li .like').click(function() {
 		$(this).toggleClass('active');
 		return false;
 	});
