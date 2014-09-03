@@ -853,6 +853,11 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	margin:0 37px 25px 0;
 }
+.categories ul > li.other {
+	width:180px;
+	padding:13px 15px 13px;
+	background:#0ed07f;
+}
 .categories ul > li:nth-child(4n) {
 	margin-right:-3px;
 }
@@ -888,6 +893,22 @@ button::-moz-focus-inner {
 	border-bottom:1px solid #6eca9e;
 }
 .categories ul > li > ul  > li a:hover {
+	border-bottom:1px solid transparent;
+}
+.categories ul > li > p {
+	overflow:hidden;
+	display:block;
+	font-size:14px;
+	line-height:16px;
+	padding:0 0 4px;
+	margin:0;
+}
+.categories ul > li > p a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px dashed #ffffff;
+}
+.categories ul > li > p a:hover {
 	border-bottom:1px solid transparent;
 }
 .categories h5 {
@@ -8689,14 +8710,14 @@ span.tiphover em:before {
 	background:url('../img/offers_accept.png') no-repeat left top;
 }
 .introduction {
-	margin:-21px 0 47px;
+	margin:-18px 0 48px;
 	background:#071b36;
 }
 .introduction > div {
 	position:relative;
 	min-width:1000px;
 	max-width:1280px;
-	height:538px;
+	height:440px;
 	margin:0 auto;
 	background:url('../img/introduction_bg.jpg') no-repeat center top;
 }
@@ -8715,7 +8736,7 @@ span.tiphover em:before {
 .introduction .play {
 	position:absolute;
 	left:50%;
-	top:210px;
+	top:158px;
 	width:124px;
 	height:125px;
 	cursor:pointer;
@@ -8744,6 +8765,18 @@ span.tiphover em:before {
 	padding:0;
 	margin:0 0 0 -240px;
 }
+.introduction h2 {
+	position:absolute;
+	left:50%;
+	top:20px;
+	width:960px;
+	color:#ffffff;
+	font-size:28px;
+	line-height:32px;
+	text-align:center;
+	padding:0;
+	margin:0 0 0 -480px;
+}
 .introduction h3 {
 	position:absolute;
 	left:50%;
@@ -8767,7 +8800,7 @@ span.tiphover em:before {
 .introduction .search {
 	position:absolute;
 	right:50%;
-	top:481px;
+	top:380px;
 	margin-right:-480px;
 }
 .introduction .search p {
@@ -8808,45 +8841,190 @@ span.tiphover em:before {
 	cursor:pointer;
 	background:url('../img/introduction_search_icon.png') no-repeat left top;
 }
-.introduction > div > p {
-	position:absolute;
+.introduction > div h4 {
 	color:#ffffff;
 	font-size:20px;
 	line-height:24px;
 	font-weight:bold;
 	text-align:center;
-	padding:12px 12px 31px;
+	cursor:pointer;
+	margin:0;
+	border-bottom:2px dotted #ffffff;
+}
+.introduction > div p {
+	position:relative;
+	color:#ffffff;
+	font-size:12px;
+	line-height:14px;
 	margin:0;
 }
-.introduction > div > p.text1 {
+.introduction > div > .tip1 {
+	position:absolute;
 	left:50%;
-	top:202px;
-	width:189px;
-	margin-left:-480px;
-	background:url('../img/introduction_text1.png') no-repeat left top;
+	top:98px;
+	margin-left:-158px;
 }
-.introduction > div > p.text2 {
+.introduction > div > .tip1 > div {
+	position:absolute;
+	left:-322px;
+	top:30px;
+	width:250px;
+	padding:1px 14px 1px 16px;
+	background:url('../img/tip1_bg.png') repeat-y left;
+}
+.introduction > div > .tip1 > div:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-51px;
+	width:306px;
+	height:51px;
+	background:url('../img/tip1_before.png') no-repeat left top;
+}
+.introduction > div > .tip1 > div:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:280px;
+	height:5px;
+	background:url('../img/tip1_after.png') no-repeat left top;
+}
+.introduction > div > .tip1 > div p {
+	margin:-39px 0 8px;
+}
+.introduction > div > .tip2 {
+	position:absolute;
 	left:50%;
-	top:107px;
-	width:125px;
-	margin-left:-285px;
-	background:url('../img/introduction_text2.png') no-repeat left top;
+	top:175px;
+	margin-left:-422px;
 }
-.introduction > div > p.text3 {
+.introduction > div > .tip2 > div {
+	position:absolute;
+	left:-59px;
+	top:68px;
+	width:306px;
+	padding:1px 14px 1px 16px;
+	background:url('../img/tip2_bg.png') repeat-y left;
+}
+.introduction > div > .tip2 > div:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-29px;
+	width:336px;
+	height:29px;
+	background:url('../img/tip2_before.png') no-repeat left top;
+}
+.introduction > div > .tip2 > div:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:336px;
+	height:5px;
+	background:url('../img/tip2_after.png') no-repeat left top;
+}
+.introduction > div > .tip2 > div p {
+	margin:7px 0 8px;
+}
+.introduction > div > .tip3 {
+	position:absolute;
 	right:50%;
-	top:94px;
-	width:225px;
-	margin-right:-363px;
-	background:url('../img/introduction_text3.png') no-repeat left top;
+	top:115px;
+	margin-right:-254px;
 }
-.introduction > div > p.text4 {
+.introduction > div > .tip3 > div {
+	position:absolute;
+	left:105px;
+	top:26px;
+	width:157px;
+	padding:1px 12px 1px 40px;
+	background:url('../img/tip3_bg.png') repeat-y right;
+}
+.introduction > div > .tip3 > div:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-72px;
+	width:209px;
+	height:72px;
+	background:url('../img/tip3_before.png') no-repeat right top;
+}
+.introduction > div > .tip3 > div:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:209px;
+	height:5px;
+	background:url('../img/tip3_after.png') no-repeat right top;
+}
+.introduction > div > .tip3 > div p {
+	margin:-60px 0 8px;
+}
+.introduction > div > .tip4 {
+	position:absolute;
 	right:50%;
-	top:204px;
-	width:175px;
-	margin-right:-480px;
-	background:url('../img/introduction_text4.png') no-repeat left top;
+	top:210px;
+	margin-right:-464px;
 }
-
+.introduction > div > .tip4 > div {
+	position:absolute;
+	left:-191px;
+	top:69px;
+	width:306px;
+	padding:1px 14px 1px 16px;
+	background:url('../img/tip4_bg.png') repeat-y left;
+}
+.introduction > div > .tip4 > div:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-27px;
+	width:336px;
+	height:27px;
+	background:url('../img/tip4_before.png') no-repeat left top;
+}
+.introduction > div > .tip4 > div:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:336px;
+	height:5px;
+	background:url('../img/tip4_after.png') no-repeat left top;
+}
+.introduction > div > .tip4 > div p {
+	margin:7px 0 7px;
+}
+.introduction .howitworks {
+	position:absolute;
+	left:50%;
+	top:301px;
+	width:180px;
+	text-align:center;
+	margin-left:-90px;
+}
+.introduction .howitworks p {
+	color:#ffffff;
+	font-size:18px;
+	line-height:21px;
+	font-weight:600;
+	font-weight:600;
+	margin:0 0 3px;
+}
+.introduction .howitworks p a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px solid #ffffff;
+}
+.introduction .howitworks p a.watch {
+	border-bottom:1px dashed #ffffff;
+}
+.introduction .howitworks p a:hover {
+	border-bottom:1px solid transparent;
+}
 .paidplaces {
 	margin:-7px 0 0;
 }

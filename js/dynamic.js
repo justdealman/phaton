@@ -729,7 +729,7 @@ $(document).ready(function() {
 			'width': '200px'
 		});
 	});
-	$('.introduction .play').bind('click', function() {
+	$('.introduction .play, .introduction .howitworks p a.watch').bind('click', function() {
 		$('.modal.video').fadeIn(500);
 		document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 		$('.wrapper, .modal.video .close').bind('click', function() {
@@ -737,6 +737,29 @@ $(document).ready(function() {
 			document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 		})
 		return false;
+	});
+	$('.introduction > div > .tip1 > div, .introduction > div > .tip2 > div, .introduction > div > .tip3 > div, .introduction > div > .tip4 > div').hide();
+	$('.introduction > div > .tip1, .introduction > div > .tip2, .introduction > div > .tip3, .introduction > div > .tip4').hover(
+		function() {
+			$(this).children('div').stop(true,true).delay(250).fadeIn(500);
+		},
+		function() {
+			$(this).children('div').stop(true,true).delay(500).fadeOut(500);
+		}
+	);
+	$('.categories ul > li').each(function() {
+		if ( $(this).find('ul li').size() > 3 ) {
+			$(this).find('ul li').hide();
+			$(this).find('ul li:nth-child(1), ul li:nth-child(2), ul li:nth-child(3)').show();
+		}
+		else {
+			$(this).find('p').hide();
+		}
+		$(this).find('p a').bind('click', function() {
+			$(this).parents('li').find('ul li').show();
+			$(this).hide();
+			return false;
+		});
 	});
 });
 $(window).resize(function() {
