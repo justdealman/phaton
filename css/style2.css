@@ -6557,7 +6557,7 @@ h4.evaluation .like.active {
 .content .userform > div > div.photo .modal .buttons button:hover {
 	background-position:0 0;
 }
-.content .userform > div > div input[type="text"], .content .userform > div > div textarea {
+.content .userform > div > div input[type="text"], .content .userform > div > div textarea, .content .userform > div > div input[type="password"] {
 	position:relative;
 	width:306px;
 	color:#010101;
@@ -6583,6 +6583,16 @@ h4.evaluation .like.active {
 }
 .content .userform > div > div input[type="text"].error, .content .userform > div > div textarea.error {
 	border:2px solid #ee4b41;
+}
+.content .userform > div > div .switch {
+	position:relative;
+	display:inline-block;
+	width:21px;
+	height:10px;
+	vertical-align:top;
+	cursor:pointer;
+	margin:11px 10px 0 -31px;
+	background:url('../img/header_popup_switch.png') no-repeat left top;
 }
 .content .userform > div > div span.erroricon {
 	position:relative;
