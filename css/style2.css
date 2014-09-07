@@ -9439,6 +9439,7 @@ span.tiphover em:before {
 }
 
 .modal.video {
+	z-index:1020;
 	left:50%;
 	top:50%;
 	width:950px;
@@ -9454,4 +9455,62 @@ span.tiphover em:before {
 .optional_description p {
     font-size:13px !important;
     line-height:16px !important;
+}
+
+.ui-dialog {
+	background:#f6f6f6;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	behavior:url('./pie.htc');
+}
+.ui-dialog h3 {
+	min-height:22px;
+	color:#ffffff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+	font-style:italic;
+	padding:7px 48px 7px 30px;
+	margin:0;
+	background:#00ab63;
+}
+.ui-dialog .ui-dialog-content > div {
+	padding:20px 30px 12px 30px;
+}
+.ui-dialog .ui-dialog-content p {
+	font-size:14px;
+	line-height:17px;
+	margin:0 0 16px;
+}
+.ui-dialog .ui-dialog-content .controls {
+	text-align:right;
+	padding:10px 0 0;
+	margin:0 0 16px;
+}
+.ui-dialog .ui-dialog-content .controls button.submit {
+	display:inline-block;
+	width:101px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:6px 0 7px;
+	margin:0;
+	background:url('../img/reviewu_leave_submit.png') no-repeat 0 -30px;
+}
+.ui-dialog .ui-dialog-content .controls button.submit:hover {
+	background-position:0 0;
+}
+.ui-dialog .ui-dialog-content .controls .cancel {
+	display:inline-block;
+	padding:6px 22px 7px;
+	margin:0;
+}
+.ui-dialog .ui-dialog-content .controls .cancel a {
+	color:#4b4b4b;
+	text-decoration:none;
+	border-bottom:1px dashed #4b4b4b;
 }
