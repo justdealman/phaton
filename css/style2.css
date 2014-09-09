@@ -6557,7 +6557,7 @@ h4.evaluation .like.active {
 .content .userform > div > div.photo .modal .buttons button:hover {
 	background-position:0 0;
 }
-.content .userform > div > div input[type="text"], .content .userform > div > div textarea {
+.content .userform > div > div input[type="text"], .content .userform > div > div textarea, .content .userform > div > div input[type="password"] {
 	position:relative;
 	width:306px;
 	color:#010101;
