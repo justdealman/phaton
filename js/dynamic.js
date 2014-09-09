@@ -671,6 +671,7 @@ $(document).ready(function() {
 		$('.specselect').children('div').find('h6').css({
 			'visibility': 'hidden'
 		});
+        $('.specselect .select').css('visibility', 'visible');
 	}
 	$('.specselect ul li span').toggle(
 		function() {
@@ -681,6 +682,7 @@ $(document).ready(function() {
 				$(this).parents('.specselect').children('div').find('h6').css({
 					'visibility': 'hidden'
 				});
+                $('.specselect .select').css('visibility', 'visible')
 			}
 			return false;
 		},
@@ -692,6 +694,7 @@ $(document).ready(function() {
 				$(this).parents('.specselect').children('div').find('h6').css({
 					'visibility': 'visible'
 				});
+                $('.specselect .select').css('visibility', 'hidden');
 			}
 			return false;
 		}
