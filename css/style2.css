@@ -965,14 +965,18 @@ button::-moz-focus-inner {
 .index .carousel .jcarousel-container {
 	margin:0 0 18px;
 }
-.index .carousel .jcarousel-container-horizontal {
+.col3 .carousel .jcarousel-container {
+	width:740px;
+	margin:0 0 18px -24px;
+}
+.index .carousel .jcarousel-container-horizontal, .col3 .carousel .jcarousel-container-horizontal {
     width:865px;
     padding:0 43px 0 42px;
 }
-.index .carousel .jcarousel-clip {
+.index .carousel .jcarousel-clip, .col3 .carousel .jcarousel-clip {
     overflow:hidden;
 }
-.index .carousel .jcarousel-clip-horizontal {
+.index .carousel .jcarousel-clip-horizontal, .col3 .carousel .jcarousel-clip-horizontal {
 	position:relative;
     width:865px;
     height:129px;
@@ -981,16 +985,23 @@ button::-moz-focus-inner {
     width:644px;
     padding:0 24px;
 }
+.col3 .carousel .jcarousel-container-horizontal {
+    width:692px;
+    padding:0 24px;
+}
 .index .col3 .carousel .jcarousel-clip-horizontal {
     width:644px;
 }
-.index .carousel .jcarousel-item {
+.col3 .carousel .jcarousel-clip-horizontal {
+    width:692px;
+}
+.index .carousel .jcarousel-item, .col3 .carousel .jcarousel-item {
 	position:relative;
     width:150px;
     height:129px;
 	margin:0 12px 0 11px;
 }
-.index .carousel .jcarousel-prev-horizontal {
+.index .carousel .jcarousel-prev-horizontal, .col3 .carousel .jcarousel-prev-horizontal {
     position:absolute;
     top:50%;
     left:0;
@@ -1000,7 +1011,7 @@ button::-moz-focus-inner {
 	margin:-14px 0 0;
     background:url('../img/carousel_prev.png') no-repeat left top;
 }
-.index .carousel .jcarousel-next-horizontal {
+.index .carousel .jcarousel-next-horizontal, .col3 .carousel .jcarousel-next-horizontal {
     position:absolute;
     top:50%;
     right:0;
@@ -1010,22 +1021,22 @@ button::-moz-focus-inner {
 	margin:-14px 0 0;
     background:url('../img/carousel_next.png') no-repeat left top;
 }
-.index .carousel .jcarousel-prev-disabled-horizontal, .carousel .jcarousel-next-disabled-horizontal {
+.index .carousel .jcarousel-prev-disabled-horizontal, .carousel .jcarousel-next-disabled-horizontal, .col3 .carousel .jcarousel-prev-disabled-horizontal, .col3 .carousel .jcarousel-prev-disabled-horizontal {
     cursor:default;
     background-position:0 -17px !important;
 }
-.index .carousel .person {
+.index .carousel .person, .col3 .carousel .person {
 	position:relative;
 	overflow:hidden;
     width:150px;
     height:140px;
 }
-.index .carousel .person > div {
+.index .carousel .person > div, .col3 .carousel .person > div {
 	position:relative;
 	height:90px;
 	margin:0 0 6px;
 }
-.index .carousel .person img {
+.index .carousel .person img, .col3 .carousel .person img {
 	position:relative;
 	width:83px !important;
 	height:83px !important;
@@ -1034,7 +1045,7 @@ button::-moz-focus-inner {
 	border-radius:50%;
 	behavior:url('./pie.htc');
 }
-.index .carousel .person .online {
+.index .carousel .person .online, .col3 .carousel .person .online {
 	position:absolute;
 	left:0;
 	bottom:7px;
@@ -1066,12 +1077,12 @@ button::-moz-focus-inner {
 	-o-animation-iteration-count:infinite;
 	-o-animation-timing-function:linear;
 }
-.index .carousel .person > div > div {
+.index .carousel .person > div > div, .col3 .carousel .person > div > div {
 	position:absolute;
 	left:93px;
 	top:34px;
 }
-.index .carousel .person > div p.price {
+.index .carousel .person > div p.price, .col3 .carousel .person > div p.price {
 	display:inline-block;
 	min-width:52px;
 	color:#ffffff;
@@ -1083,7 +1094,7 @@ button::-moz-focus-inner {
 	margin:0;
 	background:#00ab63;
 }
-.index .carousel .person > div p.price em {
+.index .carousel .person > div p.price em, .col3 .carousel .person > div p.price em {
 	display:inline-block;
 	font-style:normal;
 	font-weight:normal;
@@ -1091,19 +1102,19 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	margin:-1px 0 0 2px;
 }
-.index .carousel .person > div p.price.pound em {
+.index .carousel .person > div p.price.pound em, .col3 .carousel .person > div p.price.pound em {
 	font-size:14px; 
 	font-family:'Proxima Nova', sans-serif;
 	padding:0 0 0 2px;
 }
-.index .carousel .person h4 {
+.index .carousel .person h4, .col3 .carousel .person h4 {
 	white-space:nowrap;
 	border-left-width:0;
 	padding-left:0;
 	margin-left:0;
 	zoom:0.75;
 }
-.index .carousel .person h3 {
+.index .carousel .person h3, .col3 .carousel .person h3 {
 	overflow:hidden;
 	height:14px;
 	color:#000000;
@@ -1114,14 +1125,14 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 6px;
 }
-.index .carousel .person h3 a {
+.index .carousel .person h3 a, .col3 .carousel .person h3 a {
 	color:#000000;
 	text-decoration:none;
 }
-.index .carousel .person h3 a:hover {
+.index .carousel .person h3 a:hover, .col3 .carousel .person h3 a:hover {
 	text-decoration:underline;
 }
-.index .carousel .person > p {
+.index .carousel .person > p, .col3 .carousel .person > p {
 	overflow:hidden;
 	height:14px;
 	color:#000000;
@@ -1130,15 +1141,15 @@ button::-moz-focus-inner {
 	white-space:nowrap;
 	margin:0;
 }
-.index .carousel .person > p a {
+.index .carousel .person > p a, .col3 .carousel .carousel .person > p a {
 	color:#000000;
 	text-decoration:none;
 	border-bottom:1px dashed #000000;
 }
-.index .carousel .person > p a:hover {
+.index .carousel .person > p a:hover, .col3 .carousel .person > p a:hover {
 	border-bottom:1px dashed transparent;
 }
-.index .carousel .person h5 {
+.index .carousel .person h5, .col3 .carousel .person h5 {
 	clear:both;
 	overflow:hidden;
 	color:#666666;
@@ -1148,15 +1159,15 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:9px 0 0;
 }
-.index .carousel .person h5 .status {
+.index .carousel .person h5 .status, .col3 .carousel .person h5 .status {
 	float:left;
 	display:block;
 }
-.index .carousel .person h5 .like {
+.index .carousel .person h5 .like, .col3 .carousel .person h5 .like {
 	float:right;
 	display:block;
 }
-.index .carousel .person h5 .like em {
+.index .carousel .person h5 .like em, .col3 .carousel .person h5 .like em {
 	float:left;
 	display:block;
 	width:12px;
@@ -1165,7 +1176,7 @@ button::-moz-focus-inner {
 	margin:2px 8px 0 0;
 	background:url('../img/userc_like_icon.png') no-repeat left top;
 }
-.index .carousel .person h5 .like em.active {
+.index .carousel .person h5 .like em.active, .col3 .carousel .person h5 .like em.active {
 	background-position:0 -12px;
 }
 .structure {
@@ -6584,6 +6595,16 @@ h4.evaluation .like.active {
 .content .userform > div > div input[type="text"].error, .content .userform > div > div textarea.error {
 	border:2px solid #ee4b41;
 }
+.content .userform > div > div .switch {
+	position:relative;
+	display:inline-block;
+	width:21px;
+	height:10px;
+	vertical-align:top;
+	cursor:pointer;
+	margin:11px 10px 0 -31px;
+	background:url('../img/header_popup_switch.png') no-repeat left top;
+}
 .content .userform > div > div span.erroricon {
 	position:relative;
 	display:inline-block;
@@ -7998,6 +8019,15 @@ h4.evaluation .like.active {
 	padding:0;
 	margin:20px 15px 15px 0;
 }
+.specselect > div h6 {
+	display:inline-block !important;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	padding:6px 6px 7px;
+	margin:0;
+}
 .specselect > div button {
 	display:inline-block !important;
 	width:89px !important;
@@ -8022,6 +8052,12 @@ h4.evaluation .like.active {
 	font-weight:normal;
 	padding:0;
 	margin:0;
+}
+.specselect .choice strong {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	padding:0 6px 0 0;
 }
 .specselect .choice a {
 	color:#ffffff;
@@ -9429,6 +9465,7 @@ span.tiphover em:before {
 }
 
 .modal.video {
+	z-index:1020;
 	left:50%;
 	top:50%;
 	width:950px;
@@ -9444,4 +9481,62 @@ span.tiphover em:before {
 .optional_description p {
     font-size:13px !important;
     line-height:16px !important;
+}
+
+.ui-dialog {
+	background:#f6f6f6;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	behavior:url('./pie.htc');
+}
+.ui-dialog h3 {
+	min-height:22px;
+	color:#ffffff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+	font-style:italic;
+	padding:7px 48px 7px 30px;
+	margin:0;
+	background:#00ab63;
+}
+.ui-dialog .ui-dialog-content > div {
+	padding:20px 30px 12px 30px;
+}
+.ui-dialog .ui-dialog-content p {
+	font-size:14px;
+	line-height:17px;
+	margin:0 0 16px;
+}
+.ui-dialog .ui-dialog-content .controls {
+	text-align:right;
+	padding:10px 0 0;
+	margin:0 0 16px;
+}
+.ui-dialog .ui-dialog-content .controls button.submit {
+	display:inline-block;
+	width:101px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	text-align:center;
+	cursor:pointer;
+	padding:6px 0 7px;
+	margin:0;
+	background:url('../img/reviewu_leave_submit.png') no-repeat 0 -30px;
+}
+.ui-dialog .ui-dialog-content .controls button.submit:hover {
+	background-position:0 0;
+}
+.ui-dialog .ui-dialog-content .controls .cancel {
+	display:inline-block;
+	padding:6px 22px 7px;
+	margin:0;
+}
+.ui-dialog .ui-dialog-content .controls .cancel a {
+	color:#4b4b4b;
+	text-decoration:none;
+	border-bottom:1px dashed #4b4b4b;
 }

@@ -16,7 +16,6 @@
 	<script type="text/javascript" src="./js/mousewheel.js"></script>
 	<script type="text/javascript" src="./js/raty.js"></script>
 	<script type="text/javascript" src="./js/selectbox.js"></script>
-	<script type="text/javascript" src="./js/slider.js"></script>
 	<script type="text/javascript" src="./js/uniform.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
 </head>
@@ -121,6 +120,8 @@
 				</div>
 			</div>
 		</div>
+		<button id="opener">Вызвать модальное окно</button>
+		<input type="text" id="data" style="border:1px solid #000000">
 		<ul class="steps">
 			<li class="first">
 				<a href="#"><span>Разместить задачу</span></a>
@@ -575,6 +576,17 @@
 	</div>
 	<div class="home">
 		<span>Наверх</span>
+	</div>
+	<div id="dialog">
+		<h3>Внимание!</h3>
+		<div>
+			<p>Задача перейдет в статус "выполненные", вам будет необходимо оставить отзыв и оценить выполнение.</p>
+			<p>Завершить запрос?</p>
+			<div class="controls">
+				<button class="submit">Да</button>
+				<p class="cancel"><a href="#">Отмена</a></p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

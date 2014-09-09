@@ -117,6 +117,25 @@ $(window).load(function(){
 	});*/
 });
 $(document).ready(function() {
+    $('#dialog').dialog({
+		autoOpen: false,
+		width: 357,
+		resizable: false
+    });
+    $('#opener').click(function() {
+		$('#dialog').dialog('open');
+		return false;
+    });
+    $('.ui-dialog .ui-dialog-content .controls .cancel a').click(function() {
+		$(this).parents('.ui-dialog-content').dialog('close');
+		return false;
+    });
+	$('#data').datepicker({
+		dateFormat: 'dd.mm.yy',
+		firstDay: 1,
+		dayNamesMin: [ 'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб' ],
+		monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ]
+	});
 	if ( $('body.chat').length > 0 ) {
 		chat();
 	}
@@ -207,11 +226,18 @@ $(document).ready(function() {
 		$(this).parent().parent().toggleClass('active');
 		return false;
 	}).filter(':first').click();
-	$('.carousel').jcarousel({
+	$('.index .carousel, .topslider .carousel').jcarousel({
 		scroll: 1,
 		animation: 1000,
 		easing: 'easeInOutCubic',
 		auto: 2,
+		wrap: 'circular',
+		initCallback: initCallback
+	});
+	$('.col3 .carousel').jcarousel({
+		scroll: 1,
+		animation: 1000,
+		easing: 'easeInOutCubic',
 		wrap: 'circular',
 		initCallback: initCallback
 	});
@@ -640,15 +666,33 @@ $(document).ready(function() {
 		$(this).parents('.specialization').find('.modal').fadeIn(150);
 		return false;
 	});
+	if ( $('.specselect').find('.checker span.checked').length > 0 ) {
+		$('.specselect').find('.choice strong').hide();
+		$('.specselect').children('div').find('h6').css({
+			'visibility': 'hidden'
+		});
+	}
 	$('.specselect ul li span').toggle(
 		function() {
 			$(this).parent().find('input[type="checkbox"]').prop('checked', true);
 			$(this).parent().find('.checker span').addClass('checked');
+			if ( $(this).parents('.specselect').find('.checker span.checked').length > 0 ) {
+				$(this).parents('.specselect').find('.choice strong').hide();
+				$(this).parents('.specselect').children('div').find('h6').css({
+					'visibility': 'hidden'
+				});
+			}
 			return false;
 		},
 		function() {
 			$(this).parent().find('input[type="checkbox"]').prop('checked', false);
 			$(this).parent().find('.checker span').removeClass('checked');
+			if ( $(this).parents('.specselect').find('.checker span.checked').length == 0 ) {
+				$(this).parents('.specselect').find('.choice strong').show();
+				$(this).parents('.specselect').children('div').find('h6').css({
+					'visibility': 'visible'
+				});
+			}
 			return false;
 		}
 	);
@@ -731,7 +775,9 @@ $(document).ready(function() {
 	});
 	$('.introduction .play, .introduction .howitworks p a.watch').bind('click', function() {
 		$('.modal.video').fadeIn(500);
-		document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+		if ( !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+			document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+		}
 		$('.wrapper, .modal.video .close').bind('click', function() {
 			$('.modal.video').fadeOut(500);
 			document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
