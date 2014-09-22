@@ -372,6 +372,43 @@ button::-moz-focus-inner {
 .header button:hover {
 	background-position:0 -30px;
 }
+.header button.bigservice {
+	position:relative;
+	width:220px;
+	font-size:20px;
+	line-height:23px;
+	font-weight:bold;
+	padding:12px 0;
+	margin:-10px 10px 0 8px;
+	background:url('../img/button_big_green_bg.png') repeat-x top;
+}
+.header button.bigservice:before {
+	content:'';
+	position:absolute;
+	left:-10px;
+	top:0;
+	width:10px;
+	height:47px;
+	background:url('../img/button_big_green_bg.png') no-repeat left -47px;
+}
+.header button.bigservice:after {
+	content:'';
+	position:absolute;
+	right:-10px;
+	top:0;
+	width:10px;
+	height:47px;
+	background:url('../img/button_big_green_bg.png') no-repeat left -94px;
+}
+.header button.bigservice:hover {
+	background-position:0 -141px;
+}
+.header button.bigservice:hover:before {
+	background-position:0 -188px;
+}
+.header button.bigservice:hover:after {
+	background-position:0 -235px;
+}
 .header .userpanel {
 	display:none;
 	position:absolute;
@@ -551,6 +588,9 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 0 24px;
 	background:none;
+}
+.header.fixed .controls button:before, .header.fixed .controls button:after {
+	display:none;
 }
 .header.fixed .controls button span {
 	font-weight:normal;
@@ -2688,6 +2728,26 @@ button::-moz-focus-inner {
 }
 .grid .useri .important .video {
 	margin:0 0 20px;
+}
+.useri .important .video p {
+	color:#999999;
+	font-size:11px;
+	line-height:14px;
+	margin:0 0 7px;
+}
+.useri .important .video p a {
+	color:#999999;
+	text-decoration:none;
+	padding:0;
+	border-bottom:1px solid #e5e5e5;
+}
+.useri .important .video p a:hover {
+	border-bottom:1px solid transparent;
+}
+.useri .important .video > div {
+	width:230px;
+	height:127px;
+	background:#eceeee url('../img/novideo_icon.png') no-repeat center center;
 }
 .useri .information {
 	display:inline-block;
@@ -6058,20 +6118,150 @@ h4.evaluation .like.active {
 	margin:0 0 0 188px;
 }
 .taskadd .specialization .select {
+	width:auto !important;
 	font-size:14px !important;
 	line-height:17px !important;
 	margin:-5px 0 2px 0 !important;
 }
+.userform  .specialization .select {
+	width:auto !important;
+	font-size:14px !important;
+	line-height:17px !important;
+	margin:-5px 0 2px 0 !important;
+}
+.userform  .specialization button.select {
+	width:89px !important;
+}
 .specialization .select span {
-	display:block;
+	display:inline-block;
 	color:#999999;
 	font-weight:300;
+	vertical-align:top;
 	margin:5px 0 0;
+}
+.userform  .specialization .select span {
+	display:block !important;
+	font-size:12px !important;
+	white-space:nowrap;
+	margin:5px 0 0 240px;
+}
+.specialization .select strong {
+	display:inline-block;
+	font-weight:normal;
+	vertical-align:top;
+	width:229px;
+	margin:0 7px 0 0;
+}
+.specialization .select strong em {
+	display:inline-block;
+	font-size:16px;
+	vertical-align:top;
+	margin:0 4px 0 -1px;
+}
+.userform  .specialization .select a {
+	position:relative;
+}
+.userform  .specialization .select a:after {
+	content:'';
+	position:absolute;
+	right:-32px;
+	top:3px;
+	width:23px;
+	height:32px;
+	background:url('../img/select_a_icon.png') no-repeat left top;
+}
+.userform  .specialization .modal .arrow {
+	left:442px !important;
+}
+.col4 .userform  .specialization .modal .arrow {
+	left:682px !important;
 }
 .specialization > p > a {
 	color:#000000;
 	text-decoration:none;
 	border-bottom:1px dotted #000000;
+}
+.userform .switch {
+	margin:-5px 0 37px !important;
+}
+.userform .switch > div {
+	margin:0 0 17px 230px;
+}
+.userform .switch p {
+	display:block !important;
+	color:#000000;
+	font-size:16px;
+	line-height:19px;
+	padding:0 !important;
+	margin:0 !important;
+}
+.userform .switch p a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid #d0d0d0;
+}
+.userform .switch p a:hover {
+	border-bottom:1px solid transparent;
+}
+.userform .switch > div button {
+	position:relative;
+	display:inline-block;
+	width:73px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	padding:6px 0 7px;
+	margin:0 4px 0 7px;
+}
+.userform .switch > div button:hover {
+	z-index:1;
+}
+.userform .switch > div button:before {
+	content:'';
+	position:absolute;
+	left:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+}
+.userform .switch > div button:after {
+	content:'';
+	position:absolute;
+	right:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+}
+.userform .switch > div button.yes {
+	background:url('../img/button_green_bg.png') repeat-x top;
+}
+.userform .switch > div button.yes:before {
+	background:url('../img/button_green_bg.png') no-repeat left -30px;
+}
+.userform .switch > div button.yes:after{
+	background:url('../img/button_green_bg.png') no-repeat left -60px;
+}
+.userform .switch > div button.no {
+	background:url('../img/button_red_bg.png') repeat-x top;
+}
+.userform .switch > div button.no:before {
+	background:url('../img/button_red_bg.png') no-repeat left -30px;
+}
+.userform .switch > div button.no:after {
+	background:url('../img/button_red_bg.png') no-repeat left -60px;
+}
+.userform .switch > div button:hover {
+	background-position:0 -90px;
+}
+.userform .switch > div button:hover:before {
+	background-position:0 -120px;
+}
+.userform .switch > div button:hover:after {
+	background-position:0 -150px;
 }
 .taskadd > div > div p.list {
 	display:inline-block;
@@ -6672,7 +6862,7 @@ h4.evaluation .like.active {
 	width:67px !important;
 }
 .content .userform > div > div .year .selectbox .dropdown {
-	width:66px !important;
+	width:101px !important;
 }
 .content .userform > div > div input.number {
 	width:85px;
@@ -6692,15 +6882,39 @@ h4.evaluation .like.active {
 	font-style:italic;
 	margin:0 0 -3px 234px;
 }
-.content .userform > div > div p.list span {
+.content .userform > div > div div.list {
+	margin:7px 0 64px;
+}
+.content .userform > div > div div.list h6 {
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 2px 234px;
+}
+.content .userform > div > div div.list p {
+	display:block;
+	clear:both;
+	overflow:hidden;
+	width:726px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	font-style:italic;
+	padding:0;
+	margin:0 0 3px 234px;
+}
+.content .userform > div > div p.list span, .content .userform > div > div div.list p span {
 	position:relative;
 	float:left;
 	display:block;
 	padding:2px 30px 2px 12px;
-	margin:2px 0 5px 6px;
+	margin:2px 0 3px 6px;
 	background:#e6b131;
 }
-.content .userform > div > div p.list span em {
+.content .userform > div > div p.list span em, .content .userform > div > div div.list p span em {
 	position:absolute;
 	right:6px;
 	top:5px;
@@ -9539,4 +9753,82 @@ span.tiphover em:before {
 	color:#4b4b4b;
 	text-decoration:none;
 	border-bottom:1px dashed #4b4b4b;
+}
+.useri div.list {
+	margin:25px 0 17px;
+}
+.useri div.list h4 {
+	color:#000000;
+	font-size:24px;
+	line-height:27px;
+	font-style:italic;
+	padding:0;
+	margin:0 0 20px;
+}
+.useri div.list h6 {
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 2px;
+}
+.useri div.list p {
+	display:block;
+	clear:both;
+	overflow:hidden;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:600;
+	font-style:italic;
+	padding:0;
+	margin:0 0 3px -6px;
+}
+.useri div.list p span {
+	position:relative;
+	float:left;
+	display:block;
+	padding:2px 12px 2px 12px;
+	margin:2px 0 3px 6px;
+	background:#e6b131;
+}
+.useri.myself div.list p span {
+	padding:2px 30px 2px 12px;
+}
+.useri div.list p span em {
+	display:none;
+	position:absolute;
+	right:6px;
+	top:5px;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	background:url('../img/filter_list_delete.png') no-repeat 1px 1px;
+}
+.useri.myself div.list p span em {
+	display:block;
+}
+.useri div.occupied {
+	margin:-12px 0 7px;
+}
+.useri div.occupied p {
+	font-size:14px;
+	line-height:17px;
+	margin:0;
+}
+.useri div.occupied p.yes {
+	color:#ee4036;
+}
+.useri div.occupied p.no {
+	color:#00ab63;
+}
+.useri div.occupied .selectbox {
+	margin:7px 0 0;
+}
+.useri div.occupied .selectbox .select {
+	width:90px;
+}
+.useri div.occupied .selectbox .dropdown {
+	width:124px;
 }

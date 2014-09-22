@@ -810,6 +810,14 @@ $(document).ready(function() {
 			return false;
 		});
 	});
+	$('.userform .switch button.yes').bind('click', function() {
+		$(this).parents('.userform').children('div.optional').show();
+		return false;
+	});
+	$('.userform .switch button.no').bind('click', function() {
+		$(this).parents('.userform').children('div.optional').hide();
+		return false;
+	});
 });
 $(window).resize(function() {
 	introduction();
