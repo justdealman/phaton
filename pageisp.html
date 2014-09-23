@@ -104,6 +104,15 @@
 						<img src="./img/user.png" width="142" height="142" alt="">
 						<span class="online"></span>
 					</div>
+					<ul class="nav static">
+						<li class="profile active"><a href="#">Профиль</a></li>
+						<li class="tasks"><a href="#">Я заказчик</a></li>
+						<li class="mytasks"><a href="#">Я исполнитель</a></li>
+						<li class="favorite"><a href="#">Избранное</a></li>
+						<li class="messages"><a href="#">Сообщения</a> (4)</li>
+						<li class="notifications"><a href="#">Уведомления</a> (5)</li>
+						<li class="awards"><a href="#">Награды</a></li>
+					</ul>
 					<p class="message"><a href="#">Отправить сообщение</a></p>
 					<p class="givetask"><a href="#">Заказать услугу</a></p>
 					<!--<p class="favorite"><a href="#">Добавить в избранное</a></p>-->
@@ -120,12 +129,14 @@
 					<div class="name">
 						<h1>Роман Петров</h1>
 						<p class="status online" title="исполнитель онлайн">онлайн</p>
-						<p class="experience">На сайте 3 года 2 мес.</p>
+						<p class="experience">Зарегистрирован 04.04.2005</p>
+						<p class="views">Просмотров: 67</p>
 					</div>
 					<div class="userstatus">
 						<h5>You have made the RIGHT choice!</h5>
 						<p><input type="text" value="Добросовестная и честная работа в рамках правового поля и в интернет..."><span>Осталось символов: 72</span></p>
-						<h6 class="edit"><a href="#">Редактировать статус</a></h6>
+						<h6 class="edit"><a href="#">Редактировать статус</a> 
+						<span class="tiphover" data-tip="Ваш статус виден заказчикам в списках героев. Используйте его как рекламу."></span></h6>
 						<h6 class="save"><a href="#">Сохранить статус</a></h6>
 					</div>
 					<div class="occupied">
@@ -206,7 +217,8 @@
 					<div class="name">
 						<h1>Роман Петров</h1>
 						<p class="status online" title="исполнитель онлайн">онлайн</p>
-						<p class="experience">На сайте 3 года 2 мес.</p>
+						<p class="experience">Зарегистрирован 04.04.2005</p>
+						<p class="views">Просмотров: 67</p>
 					</div>
 					<div class="userstatus">
 						<h5>You have made the RIGHT choice!</h5>
@@ -327,7 +339,17 @@
 					</div>
 				</div>
 				<div class="all" id="reviews">
-					<h5><span class="leave"><a href="#">Оставить отзыв</a></span> <span class="tip">(Только автору задачи, исполнителем которой является данный пользователь)</span></h5>
+					<h5>
+						<button class="standart">Оставить отзыв</button>
+						<span class="tip">(Только автору задачи, исполнителем которой является данный пользователь)</span>
+						<span>
+							<ul id="reviewnav">
+								<li class="all"><a href="/index.php?r=user/view&amp;id=55">Все</a></li>
+								<li class="positive"><a href="/index.php?r=user/view&amp;id=55&amp;review_status=positive">Положительные</a></li>
+								<li class="negative"><a href="/index.php?r=user/view&amp;id=55&amp;review_status=negative">Отрицательные</a></li>
+							</ul>
+						</span>
+					</h5>
 					<div class="once">
 						<img src="./img/reviewuser1.png" width="124" height="124" class="user" alt="">
 						<div class="information">

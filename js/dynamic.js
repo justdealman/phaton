@@ -641,7 +641,7 @@ $(document).ready(function() {
 		return false;
 	});
 	$('.useri .important .show').bind('click', function() {
-		$(this).parent().find('.nav').slideToggle(150);
+		$(this).parent().find('.nav:not(.static)').slideToggle(150);
 		return false;
 	});
 	$('.portfolio .photos ul').jcarousel({

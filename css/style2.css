@@ -2480,6 +2480,12 @@ button::-moz-focus-inner {
 	float:left;
 	display:block;
 }
+.userc > div h5 .status.available {
+	color:#00ab63;
+}
+.userc > div h5 .status.busy {
+	color:#ee4036;
+}
 .userc > div h5 .like {
 	float:right;
 	display:block;
@@ -2495,6 +2501,9 @@ button::-moz-focus-inner {
 }
 .userc > div h5 .like em.active {
 	background-position:0 -12px;
+}
+.userc > div h5 .like a {
+	text-decoration:none;
 }
 .userc .next {
 	float:left;
@@ -2663,6 +2672,12 @@ button::-moz-focus-inner {
 	background:#00ab63;
 	border-top:27px solid #00824b;
 }
+.useri .important .nav.static {
+	position:static;
+	display:block;
+	margin:0 0 15px;
+	border-top-width:0;
+}
 .useri .important .nav li {
 	color:#ffffff;
 	font-size:14px;
@@ -2782,8 +2797,8 @@ button::-moz-focus-inner {
 	position:relative;
 	clear:both;
 	overflow:hidden;
-	padding-right:80px;
-	margin:0 0 6px;
+	padding:0 180px 12px 0;
+	margin:0 0 -6px;
 }
 .useri .information .name h1 {
 	display:inline-block;
@@ -2851,6 +2866,16 @@ button::-moz-focus-inner {
 	position:absolute;
 	right:0;
 	top:16px;
+	color:#999999;
+	font-size:12px;
+	line-height:14px;
+	font-weight:300;
+}
+.useri .information .name .views {
+	position:absolute;
+	right:0;
+	top:32px;
+	z-index:5;
 	color:#999999;
 	font-size:12px;
 	line-height:14px;
@@ -2937,6 +2962,10 @@ button::-moz-focus-inner {
 }
 .useri .information .userstatus h6 a:hover {
 	border-bottom:1px dashed transparent;
+}
+.useri .information .userstatus h6 .tiphover {
+	vertical-align:top;
+	margin:-2px 0 -1px 6px;
 }
 .useri .information .name .status span {
 	float:left;
@@ -3469,18 +3498,20 @@ button::-moz-focus-inner {
 	background:none;
 }
 .reviewu div.all h5 span.tip {
+	display:inline-block;
 	color:#ffffff;
 	font-size:12px;
-	padding:0 0 0 23px;
+	vertical-align:top;
+	padding:7px 0 7px 13px;
 }
 .reviewu div.all h5 span.leave {
 	float:left;
 	display:block;
 }
 .reviewu div.all h5 span.leave a {
-	color:#ffffff;
+	color:#00ab63;
 	text-decoration:none;
-	border-bottom:1px dashed #ffffff;
+	border-bottom:1px dashed #00ab63;
 }
 .reviewu div.all h5 span.leave a:hover {
 	border-bottom:1px dashed transparent;
@@ -4279,6 +4310,10 @@ button::-moz-focus-inner {
 }
 .taski h3 .stage.searching {
 	color:#e6b131;
+}
+.taski .finish {
+	text-align:right;
+	margin:-20px 0 20px;
 }
 .taski h3 .deadline {
 	float:right;
@@ -5713,6 +5748,7 @@ h4.evaluation .like.active {
 .ui-slider-horizontal .ui-slider-range {
 	top:0;
 	height:100%;
+	background:#000000;
 }
 .ui-slider-horizontal .ui-slider-range-min { 
 	left:0;
@@ -6119,8 +6155,8 @@ h4.evaluation .like.active {
 }
 .taskadd .specialization .select {
 	width:auto !important;
-	font-size:14px !important;
-	line-height:17px !important;
+	font-size:16px !important;
+	line-height:19px !important;
 	margin:-5px 0 2px 0 !important;
 }
 .userform  .specialization .select {
@@ -6145,6 +6181,12 @@ h4.evaluation .like.active {
 	white-space:nowrap;
 	margin:5px 0 0 240px;
 }
+.taskadd  .specialization .select span {
+	display:block !important;
+	font-size:12px !important;
+	white-space:nowrap;
+	margin:5px 0 0 230px;
+}
 .specialization .select strong {
 	display:inline-block;
 	font-weight:normal;
@@ -6152,16 +6194,19 @@ h4.evaluation .like.active {
 	width:229px;
 	margin:0 7px 0 0;
 }
+.taskadd .specialization .select strong {
+	width:219px;
+}
 .specialization .select strong em {
 	display:inline-block;
 	font-size:16px;
 	vertical-align:top;
 	margin:0 4px 0 -1px;
 }
-.userform  .specialization .select a {
+.userform  .specialization .select a, .taskadd .specialization .select a {
 	position:relative;
 }
-.userform  .specialization .select a:after {
+.userform  .specialization .select a:after, .taskadd .specialization .select a:after {
 	content:'';
 	position:absolute;
 	right:-32px;
@@ -6173,6 +6218,9 @@ h4.evaluation .like.active {
 .userform  .specialization .modal .arrow {
 	left:442px !important;
 }
+.taskadd .specialization .modal .arrow {
+	left:467px !important;
+}
 .col4 .userform  .specialization .modal .arrow {
 	left:682px !important;
 }
@@ -6181,13 +6229,13 @@ h4.evaluation .like.active {
 	text-decoration:none;
 	border-bottom:1px dotted #000000;
 }
-.userform .switch {
+.userform div.switch {
 	margin:-5px 0 37px !important;
 }
-.userform .switch > div {
+.userform div.switch > div {
 	margin:0 0 17px 230px;
 }
-.userform .switch p {
+.userform div.switch p {
 	display:block !important;
 	color:#000000;
 	font-size:16px;
@@ -6195,15 +6243,15 @@ h4.evaluation .like.active {
 	padding:0 !important;
 	margin:0 !important;
 }
-.userform .switch p a {
+.userform div.switch p a {
 	color:#000000;
 	text-decoration:none;
 	border-bottom:1px solid #d0d0d0;
 }
-.userform .switch p a:hover {
+.userform div.switch p a:hover {
 	border-bottom:1px solid transparent;
 }
-.userform .switch > div button {
+.userform div.switch > div button {
 	position:relative;
 	display:inline-block;
 	width:73px;
@@ -6217,10 +6265,10 @@ h4.evaluation .like.active {
 	padding:6px 0 7px;
 	margin:0 4px 0 7px;
 }
-.userform .switch > div button:hover {
+.userform div.switch > div button:hover {
 	z-index:1;
 }
-.userform .switch > div button:before {
+.userform div.switch > div button:before {
 	content:'';
 	position:absolute;
 	left:-7px;
@@ -6228,7 +6276,7 @@ h4.evaluation .like.active {
 	width:7px;
 	height:30px;
 }
-.userform .switch > div button:after {
+.userform div.switch > div button:after {
 	content:'';
 	position:absolute;
 	right:-7px;
@@ -6236,31 +6284,31 @@ h4.evaluation .like.active {
 	width:7px;
 	height:30px;
 }
-.userform .switch > div button.yes {
+.userform div.switch > div button.yes {
 	background:url('../img/button_green_bg.png') repeat-x top;
 }
-.userform .switch > div button.yes:before {
+.userform div.switch > div button.yes:before {
 	background:url('../img/button_green_bg.png') no-repeat left -30px;
 }
-.userform .switch > div button.yes:after{
+.userform div.switch > div button.yes:after{
 	background:url('../img/button_green_bg.png') no-repeat left -60px;
 }
-.userform .switch > div button.no {
+.userform div.switch > div button.no {
 	background:url('../img/button_red_bg.png') repeat-x top;
 }
-.userform .switch > div button.no:before {
+.userform div.switch > div button.no:before {
 	background:url('../img/button_red_bg.png') no-repeat left -30px;
 }
-.userform .switch > div button.no:after {
+.userform div.switch > div button.no:after {
 	background:url('../img/button_red_bg.png') no-repeat left -60px;
 }
-.userform .switch > div button:hover {
+.userform div.switch > div button:hover {
 	background-position:0 -90px;
 }
-.userform .switch > div button:hover:before {
+.userform div.switch > div button:hover:before {
 	background-position:0 -120px;
 }
-.userform .switch > div button:hover:after {
+.userform div.switch > div button:hover:after {
 	background-position:0 -150px;
 }
 .taskadd > div > div p.list {
@@ -6785,7 +6833,7 @@ h4.evaluation .like.active {
 .content .userform > div > div input[type="text"].error, .content .userform > div > div textarea.error {
 	border:2px solid #ee4b41;
 }
-.content .userform > div > div .switch {
+.content .userform > div > div span.switch {
 	position:relative;
 	display:inline-block;
 	width:21px;
@@ -6937,6 +6985,11 @@ h4.evaluation .like.active {
 	-moz-box-shadow:5px 5px 0 #d7d7d7;
 	box-shadow:5px 5px 0 #d7d7d7;
 	behavior:url('./pie.htc');
+}
+.content .userform > div > div .description .tiphover {
+	position:absolute;
+	left:-36px;
+	top:-4px;
 }
 .content .col4 .userform > div > div .description {
 	width:427px;
@@ -9728,21 +9781,55 @@ span.tiphover em:before {
 	padding:10px 0 0;
 	margin:0 0 16px;
 }
-.ui-dialog .ui-dialog-content .controls button.submit {
+.ui-dialog .ui-dialog-content .controls button {
+	position:relative;
 	display:inline-block;
-	width:101px;
 	color:#ffffff;
 	font-size:14px;
 	line-height:17px;
-	font-weight:600;
+	font-weight:bold;
 	text-align:center;
+	vertical-align:top;
 	cursor:pointer;
-	padding:6px 0 7px;
-	margin:0;
-	background:url('../img/reviewu_leave_submit.png') no-repeat 0 -30px;
+	padding:6px 10px 7px;
+	margin:0 4px 0 7px;
+	background:url('../img/button_green_bg.png') repeat-x top;
 }
-.ui-dialog .ui-dialog-content .controls button.submit:hover {
-	background-position:0 0;
+.ui-dialog .ui-dialog-content .controls button:hover {
+	z-index:1;
+}
+.ui-dialog .ui-dialog-content .controls button:before {
+	content:'';
+	position:absolute;
+	left:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+	background:url('../img/button_green_bg.png') no-repeat left -30px;
+}
+.ui-dialog .ui-dialog-content .controls button:after {
+	content:'';
+	position:absolute;
+	right:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+	background:url('../img/button_green_bg.png') no-repeat left -60px;
+}
+.ui-dialog .ui-dialog-content .controls button:hover {
+	background-position:0 -90px;
+}
+.ui-dialog .ui-dialog-content .controls button:hover:before {
+	background-position:0 -120px;
+}
+.ui-dialog .ui-dialog-content .controls button:hover:after {
+	background-position:0 -150px;
+}
+.ui-dialog .ui-dialog-content .controls p {
+	display:inline-block;
+	padding:6px 6px 7px;
+	vertical-align:top;
+	margin:0 -3px 0 0;
 }
 .ui-dialog .ui-dialog-content .controls .cancel {
 	display:inline-block;
@@ -9831,4 +9918,88 @@ span.tiphover em:before {
 }
 .useri div.occupied .selectbox .dropdown {
 	width:124px;
+}
+
+#reviewnav {
+	margin:12px 0 0;
+}
+#reviewnav li {
+	float:left;
+	margin:0 0 0 12px;
+}
+#reviewnav li:first-child {
+	margin-left:0;
+}
+#reviewnav li a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px solid #cccccc;
+}
+#reviewnav li a:hover {
+	border-bottom:1px solid transparent;
+}
+
+button.standart {
+	position:relative;
+	display:inline-block;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	padding:6px 10px 7px;
+	margin:0 7px 0 7px;
+	background:url('../img/button_green_bg.png') repeat-x top;
+}
+button.standart:before {
+	content:'';
+	position:absolute;
+	left:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+	background:url('../img/button_green_bg.png') no-repeat left -30px;
+}
+button.standart:after {
+	content:'';
+	position:absolute;
+	right:-7px;
+	top:0;
+	width:7px;
+	height:30px;
+	background:url('../img/button_green_bg.png') no-repeat left -60px;
+}
+button.standart:hover {
+	background-position:0 -90px;
+}
+button.standart:hover:before {
+	background-position:0 -120px;
+}
+button.standart:hover:after {
+	background-position:0 -150px;
+}
+
+.hirercard p.message {
+	position:relative;
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	margin:0 0 0 -12px;
+}
+.hirercard p.message a {
+	color:#000000;
+	text-decoration:none;
+	padding:0 0 0 25px;
+	background:url('../img/user_message_icon.png') no-repeat left -1px;
+}
+.hirercard p.message a:hover {
+	background-position:0 -18px;
+}
+.hirercard p.message a span {
+	border-bottom:1px solid #d1d1d1;
+}
+.hirercard p.message a:hover span {
+	border-bottom:1px solid transparent;
 }
