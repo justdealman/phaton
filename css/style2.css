@@ -656,6 +656,7 @@ button::-moz-focus-inner {
 }
 .header.autorized .user li.profile {
 	position:relative;
+	padding-bottom:6px;
 	margin-right:6px;
 }
 .header.autorized .user li.profile a .full {
@@ -862,9 +863,9 @@ button::-moz-focus-inner {
 	background-position:0 -146px;
 }
 .categories {
-	margin:0 0 52px;
+	/*margin:0 0 52px;*/
 	background:#02ad65 url('../img/categories_bg.png') repeat-x top;
-	border-bottom:3px solid #dfdede;
+	/*border-bottom:3px solid #dfdede;*/
 }
 .categories > div {
 	background:url('../img/categories_div.png') repeat-x bottom;
@@ -1218,6 +1219,85 @@ button::-moz-focus-inner {
 }
 .index .carousel .person h5 .like em.active, .col3 .carousel .person h5 .like em.active {
 	background-position:0 -12px;
+}
+.carousel .task {
+	position:relative;
+	overflow:hidden;
+    width:145px;
+    height:122px;
+	background:#f9f9f9;
+	-webkit-box-shadow:5px 5px 0 #d7d7d7;
+	-moz-box-shadow:5px 5px 0 #d7d7d7;
+	box-shadow:5px 5px 0 #d7d7d7;
+	behavior:url('./pie.htc');
+}
+.carousel .task a {
+	display:block;
+    width:145px;
+    height:122px;
+	text-decoration:none;
+}
+.carousel .task h3 {
+	position:absolute;
+	left:12px;
+	top:11px;
+	width:123px;
+	max-height:42px;
+	color:#000000;
+	font-size:12px;
+	line-height:14px;
+	font-style:italic;
+	padding:0;
+	margin:0;
+}
+.carousel .task a:hover h3 {
+	text-decoration:underline;
+}
+.carousel .task h5 {
+	position:absolute;
+	left:12px;
+	top:67px;
+	min-width:43px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	text-align:center;
+	padding:2px 7px 0 7px;
+	margin:0;
+	background:#ee4036;
+}
+.carousel .task h5 em {
+	font-style:normal;
+	font-family:'Rouble', sans-serif;
+	padding:0 0 0 2px;
+}
+.carousel .task h6 {
+	position:absolute;
+	right:17px;
+	top:72px;
+	color:#666666;
+	font-size:16px;
+	line-height:19px;
+	font-weight:normal;
+	padding:0 14px 0 0;
+	margin:0;
+	background:url('../img/carousel_task_h6.png') no-repeat right 3px;
+}
+.carousel .task p {
+	overflow:hidden;
+	position:absolute;
+	left:12px;
+	top:100px;
+	width:128px;
+	color:#666666;
+	font-size:12px;
+	line-height:14px;
+	font-weight:300;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding:0;
+	margin:0;
 }
 .structure {
 	width:960px;
@@ -3346,10 +3426,10 @@ button::-moz-focus-inner {
 .usernav.list li a {
 	color:#ffffff;
 }
-.usernav ul li.active {
+.usernav.list ul li.active {
 	color:#ffffff;
 }
-.usernav ul li.active a {
+.usernav.list ul li.active a {
 	color:#ffffff;
 	text-decoration:none;
 	border-bottom:1px solid transparent;
@@ -5767,8 +5847,8 @@ h4.evaluation .like.active {
 	margin-left:-10px;
 }
 .ui-slider-horizontal .ui-slider-range {
-	top:0;
-	height:100%;
+	top:-2px;
+	height:6px;
 	background:#000000;
 }
 .ui-slider-horizontal .ui-slider-range-min { 

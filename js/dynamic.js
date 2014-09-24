@@ -152,10 +152,14 @@ $(document).ready(function() {
 			$(this).height($(this).height()+1);
 		};
 	});
-	$('.header.autorized .user li.profile > a').bind('click', function() {
-		$('.header.autorized .user li.profile').addClass('active');
-		return false;
-	});
+	$('.header.autorized .user li.profile').hover(
+		function() {
+			$(this).addClass('active');
+		},
+		function() {
+			$(this).removeClass('active');
+		}
+	);
 	$(document).mouseup(function(e) {
 		var userdrop = $('.header.autorized .user li.profile ul');
 		if (!userdrop.is(e.target) && userdrop.has(e.target).length === 0) {
