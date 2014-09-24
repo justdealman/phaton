@@ -3333,6 +3333,27 @@ button::-moz-focus-inner {
 .usernav ul li a:hover {
 	border-bottom:1px solid transparent;
 }
+.usernav.list {
+	width:184px;
+	padding:23px 18px 7px 28px;
+	margin:2px -3px 0 10px;
+	background:#00ab63;
+}
+.usernav.list li {
+	color:#ffffff;
+	font-weight:bold;
+}
+.usernav.list li a {
+	color:#ffffff;
+}
+.usernav ul li.active {
+	color:#ffffff;
+}
+.usernav ul li.active a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px solid transparent;
+}
 .usernav ul .profile {
 	background:url('../img/user_givetask_icon.png') no-repeat left 1px;
 }
@@ -8058,39 +8079,86 @@ h4.evaluation .like.active {
 	background:#8cc63e url('../img/searchform_submit.png') no-repeat center center;
 }
 .forum {
-	margin:-2px 0 46px 24px;
+	margin:-2px 0 46px 10px;
 }
-.forum > div {
-	margin:0 0 42px;
+.forum .nav {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 19px;
 }
-.forum > div > h3 {
-	color:#000000;
-	font-size:18px;
-	line-height:22px;
-	font-weight:normal;
+.forum .nav li {
+	float:left;
+	font-size:16px;
+	line-height:19px;
+	font-weight:bold;
 	font-style:italic;
-	padding:0;
-	margin:0 0 8px;
+	margin:0 0 10px 36px;
 }
-.forum > div > h3 a {
+.forum .nav li:first-child {
+	margin-left:0;
+}
+.forum .nav li a {
 	color:#000000;
 	text-decoration:none;
-	border-bottom:1px solid #cfcfcf;
+	border-bottom:1px solid #000000;
 }
-.forum > div > h3 a:hover {
+.forum .nav li a:hover, .forum .nav li.active a {
 	border-bottom:1px solid transparent;
 }
-.forum > div > h3 span {
+.forum > div {
+	margin:0 0 35px;
+}
+.forum > div > div {
+	padding:13px 18px 5px 18px;
+	margin:0 5px 28px 0;
+	background:#f7f7f7;
+	-webkit-box-shadow:5px 5px 0 #d6d6d6;
+	-moz-box-shadow:5px 5px 0 #d6d6d6;
+	box-shadow:5px 5px 0 #d6d6d6;
+	behavior:url('./pie.htc');
+}
+.forum h3 {
+	color:#000000;
+	font-size:18px;
+	line-height:24px;
+	font-style:italic;
+	padding:0;
+	margin:0 0 6px;
+}
+.forum  h3 a {
+	display:inline-block;
+	color:#000000;
+	text-decoration:none;
+	vertical-align:top;
+	margin:0 6px 0 0;
+	border-bottom:1px solid #cacaca;
+}
+.forum h3 a:hover {
+	border-bottom:1px solid transparent;
+}
+.forum h3 span {
 	display:inline-block;
 	color:#ee4036;
 	font-size:14px;
 	line-height:18px;
+	font-weight:normal;
 	vertical-align:top;
 	padding:0 0 0 21px;
-	margin:5px 0 -1px 8px;
-	background:url('../img/forum_messages_icon.png') no-repeat left 2px;
+	margin:4px 14px 2px 0;
+	background:url('../img/forum_messages_icon.png') no-repeat left 3px;
 }
-.forum > div > h5 {
+.forum h3 em {
+	display:inline-block;
+	color:#999999;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+	vertical-align:top;
+	padding:0 0 0 22px;
+	margin:5px 0 3px 0;
+	background:url('../img/date_icon.png') no-repeat left 3px;
+}
+.forum h5 {
 	color:#999999;
 	font-size:14px;
 	line-height:18px;
@@ -8099,7 +8167,7 @@ h4.evaluation .like.active {
 	padding:0;
 	margin:0 0 22px;
 }
-.forum > div > h5 a {
+.forum h5 a {
 	color:#000000;
 	font-weight:bold;
 	font-style:normal;
@@ -8107,14 +8175,15 @@ h4.evaluation .like.active {
 	margin:0 0 0 11px;
 	border-bottom:1px solid #cfcfcf;
 }
-.forum > div > h5 a:hover {
+.forum h5 a:hover {
 	border-bottom:1px solid transparent;
 }
-.forum > div p {
+.forum p {
 	color:#000000;
 	font-size:14px;
 	line-height:16px;
-	margin:0 0 12px;
+	text-align:justify;
+	margin:0 0 10px;
 }
 .forum .comment {
 	margin-top:28px;
