@@ -1,0 +1,386 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Phaton</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/jqueryui.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/style2.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/raty.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div>
+				<div class="logo">
+					<img src="./img/logo.png" width="171" height="60" alt="">
+					<p class="lang"><a href="#">EN</a></p>
+					<p class="langsel">
+						<span>EN</span>
+						<span>RU</span>
+					</p>
+				</div>
+				<ul class="user">
+					<li class="login"><a href="#">Вход</a></li>
+					<li class="registration"><a href="#">Регистрация</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="#">Герои</a></li>
+					<li><a href="#">Запросы</a></li>
+				</ul>
+				<div class="controls">
+					<button class="service"><span>+</span> Я могу</button>
+					<button class="task"><span>+</span> Мне нужно</button>
+				</div>
+				<div class="popup login">
+					<h2>Вход</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
+						<p class="recover"><a href="#">Забыли пароль?</a></p>
+						<button class="submit">Войти</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup registration">
+					<h2>Регистрация</h2>
+					<div class="form">
+						<p><span>E-mail:</span> <input type="text"></p>
+						<p><span>Пароль:</span> <input type="password" class="password"> <span class="switch"></span></p>
+						<button class="submit">Зарегистрироваться</button>
+						<div class="tip">
+							<p>Или войдите, используя свой аккаунт в социальной сети</p>
+						</div>
+						<ul class="social">
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ctitle">
+				<h1>Запросы</h1>
+				<div class="description">
+					<div>
+						<p>Изучите запросы, размещенными заказчиками, выберите те, которые наиболее<br> интересны для вас. Добавьте свое предложение на выполнение работы.</p>
+					</div>
+					<h5>51 246 запросов<br> в 384 городах</h5>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="col1">
+					<div class="catspec">
+						<h2>Специализации</h2>	
+						<div>
+							<div class="scroll">
+								<ul>
+									<li>
+										<a href="#">Помощь по дому / хозяйству</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li class="active">
+										<a href="#">Красота и здоровье</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li class="active"><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Купить / Доставить</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Бизнес / Учеба /</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Переезд / Водители</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Интернет / Компьютер</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Мероприятия / Праздники</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Животные</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Уход / Сопровождение</a>
+										<ul>
+											<li><a href="#">Еда из ресторана / кофе</a></li>
+											<li><a href="#">Подарить цветы</a></li>
+											<li><a href="#">Курьерская работа</a></li>
+											<li><a href="#">Продукты</a></li>
+											<li><a href="#">Одежда</a></li>
+											<li><a href="#">Прочее</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="filter">
+						<div>
+							<h3>Город</h3>
+							<p>
+								<select>
+									<option>Москва</option>
+									<option>Барнаул</option>
+								</select>
+							</p>
+						</div>
+						<div class="price">
+							<h3>Цена</h3>
+							<p class="interval">
+								<input type="text" class="min" value="1000"> <span>—</span> <input type="text" class="max" value="7000"> <span>руб.</span>
+							</p>
+							<div class="slider">
+								<div class="range"></div>
+							</div>
+						</div>
+						<div>
+							<h3>Ключевое слово</h3>
+							<p><input type="text" value="Дизайн"></p>
+						</div>
+						<button class="submit task">Найти</button>
+						<button class="clear"><span>Сбросить фильтр</span></button>
+					</div>
+				</div>
+				<div class="col3">
+					<div class="sort task">
+						<p>Вам подходит 125 запросов</p>
+						<div class="view">
+							<p>Вид:</p>
+							<ul>
+								<li class="type1 active" title="отображать списком"></li>
+								<li class="type2" title="отображать сеткой"></li>
+							</ul>
+						</div>
+						<div class="priority">
+							<p>Сортировать:</p>
+							<select>
+								<option>По удаленности от меня</option>
+								<option>По удаленности от меня</option>
+							</select>
+						</div>
+					</div>
+					<div class="bigmap">
+						<div>
+							<script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+							<script charset="utf-8" type="text/javascript">new DGWidgetLoader({"width":"692","height":"535","wid":"5515467363f70dcad27b414b86a1444e","pos":{"lon":"83.674747297387","lat":"53.330397051188","zoom":"15"},"opt":{"ref":"hidden","card":["name","contacts"],"city":"barnaul"},"org":[{"id":"563479234547619"}]});</script>
+						</div>
+					</div>
+					<ul class="carousel">
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Обработка pdf файлов, вставка  текста, колонтитулов</h3>
+									<h5>1 100<em>p</em></h5>
+									<h6>0</h6>
+									<p>Поиск информации / Категория</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Отвезти документы из Научного городка до школы № 207</h3>
+									<h5>400<em>p</em></h5>
+									<h6>0</h6>
+									<p>Пешие курьеры / Групповые походы</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Установить МФУ в офис</h3>
+									<h5>1 000<em>p</em></h5>
+									<h6>2</h6>
+									<p>Ремонт ноутбуков / Компьютеры</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Сделать презентацию в формате инфографики</h3>
+									<h5>5 500<em>p</em></h5>
+									<h6>0</h6>
+									<p>Интернет / Дизайн / Категория 1</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Обработка pdf файлов, вставка  текста, колонтитулов</h3>
+									<h5>1 100<em>p</em></h5>
+									<h6>0</h6>
+									<p>Поиск информации / Категория</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Отвезти документы из Научного городка до школы № 207</h3>
+									<h5>400<em>p</em></h5>
+									<h6>0</h6>
+									<p>Пешие курьеры / Групповые походы</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Установить МФУ в офис</h3>
+									<h5>1 000<em>p</em></h5>
+									<h6>2</h6>
+									<p>Ремонт ноутбуков / Компьютеры</p>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="task">
+								<a href="#">
+									<h3>Сделать презентацию в формате инфографики</h3>
+									<h5>5 500<em>p</em></h5>
+									<h6>0</h6>
+									<p>Интернет / Дизайн / Категория 1</p>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div class="information">
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
+					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+				</div>
+				<div class="links">
+					<ul class="nav">
+						<li>
+							<ul>
+								<li><a href="#">Герои</a></li>
+								<li><a href="#">Запросы</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">О компании</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Условия использования</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div>
+						<ul class="social">
+							<li>Follow Phaton:</li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
+							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home">
+		<span>Наверх</span>
+	</div>
+</body>
+</html>
