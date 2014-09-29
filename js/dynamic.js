@@ -822,6 +822,32 @@ $(document).ready(function() {
 		$(this).parents('.userform').children('div.optional').hide();
 		return false;
 	});
+	$('.header .nav > li.drop > ul > li > ul').height($('.header .nav > li.drop > ul').height());
+	$('.header .nav > li.drop').hover(
+		function() {
+			$(this).children('ul').stop(true,true).slideDown(250);
+		},
+		function() {
+			$(this).children('ul').stop(true,true).animate({
+				'width': '250px'
+			}, 250);
+			$(this).children('ul').stop(true,true).slideUp(250);
+		}
+	);
+	$('.header .nav > li.drop > ul > li').hover(
+		function() {
+			$(this).parent().css({
+				'width': '515px'
+			});
+			$(this).children('ul').fadeIn(0);
+		},
+		function() {
+			$(this).parent().css({
+				'width': '250px'
+			}, 0);
+			$(this).children('ul').fadeOut(0);
+		}
+	);
 });
 $(window).resize(function() {
 	introduction();
