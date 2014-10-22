@@ -10277,3 +10277,112 @@ button.standart:hover:after {
 .hirercard p.message a:hover span {
 	border-bottom:1px solid transparent;
 }
+
+.howitworks {
+	clear:both;
+	overflow:hidden;
+	width:960px;
+	margin:49px auto 94px;
+}
+.howitworks > li {
+	float:left;
+	width:310px;
+	text-align:center;
+	margin:0 0 0 15px;
+}
+.howitworks > li:first-child {
+	margin-left:0;
+}
+.howitworks li h3 {
+	position:relative;
+	height:87px;
+	color:#ffffff;
+	font-size:20px;
+	line-height:24px;
+	text-align:left;
+	padding:13px 10px 0 84px;
+	margin:0 16px 28px;
+}
+.howitworks li h3 span {
+	position:relative;
+	display:block;
+	overflow:hidden;
+	max-height:42px;
+	font-size:14px;
+	line-height:14px;
+	font-weight:600;
+	padding:0 0 0 15px;
+	margin:8px 0 0;
+}
+.howitworks li h3 span:before {
+	content:'—';
+	position:absolute;
+	left:0;
+	top:0;
+}
+.howitworks li h3:before {
+	content:'';
+	position:absolute;
+	left:-16px;
+	top:0;
+	border-left:16px solid transparent;
+}
+.howitworks li h3:after {
+	content:'';
+	position:absolute;
+	right:-16px;
+	top:0;
+	border-right:16px solid transparent;
+}
+.howitworks li.active h3 {
+	background:#ee4036 url('../img/howitworks_active.png') no-repeat 11px 17px;
+}
+.howitworks li.active h3:before {
+	border-bottom:100px solid #ee4036;
+}
+.howitworks li.active h3:after {
+	border-top:100px solid #ee4036;
+}
+.howitworks li.profit h3 {
+	background:#00ac64 url('../img/howitworks_profit.png') no-repeat 16px 24px;
+}
+.howitworks li.profit h3:before {
+	border-bottom:100px solid #00ac64;
+}
+.howitworks li.profit h3:after {
+	border-top:100px solid #00ac64;
+}
+.howitworks li.passive h3 {
+	background:#e6b131 url('../img/howitworks_passive.png') no-repeat 16px 22px;
+}
+.howitworks li.passive h3:before {
+	border-bottom:100px solid #e6b131;
+}
+.howitworks li.passive h3:after {
+	border-top:100px solid #e6b131;
+}
+.howitworks ul {
+	text-align:left;
+	padding:19px 18px 8px 36px;
+	margin:0 0 27px;
+	background:#f3f3f3;
+}
+.howitworks ul li {
+	position:relative;
+	color:#000000;
+	font-size:16px;
+	line-height:18px;
+	font-style:italic;
+	margin:12px 0 0;
+}
+.howitworks ul li span {
+	position:absolute;
+	left:-36px;
+	top:0;
+	display:block;
+	width:32px;
+	text-align:right;
+}
+.howitworks button.standart {
+	padding:6px 19px 7px;
+}

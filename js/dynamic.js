@@ -848,6 +848,17 @@ $(document).ready(function() {
 			$(this).children('ul').fadeOut(0);
 		}
 	);
+	if ( $('ul.howitworks').length > 0 ) {
+		var max = 0;
+		$('ul.howitworks').find('li ul').each(function() {
+			var h = $(this).height(); 
+			max = h > max ? h : max;
+		});
+		$('ul.howitworks li ul').height(max);
+		$('ul.howitworks li ul li').each(function() {
+			$(this).prepend('<span>'+eval($(this).index()+1)+')</span>');
+		});
+	}
 });
 $(window).resize(function() {
 	introduction();
