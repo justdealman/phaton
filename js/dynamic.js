@@ -859,6 +859,18 @@ $(document).ready(function() {
 			$(this).prepend('<span>'+eval($(this).index()+1)+')</span>');
 		});
 	}
+	if ( $('.selsubtype').length > 0 ) {
+		var seldivmax = 0;
+		$('.selsubtype > div > div > div').each(function() {
+			var h = $(this).outerHeight(); 
+			max = h > seldivmax ? h : seldivmax;
+		});
+		$('.selsubtype > div > div > div').height(max);
+		$('.selsubtype > div > div').bind('click', function() {
+			$(this).addClass('active').siblings().removeClass('active')
+			return false;
+		}).filter(':first').click();
+	}
 });
 $(window).resize(function() {
 	introduction();

@@ -10386,3 +10386,119 @@ button.standart:hover:after {
 .howitworks button.standart {
 	padding:6px 19px 7px;
 }
+
+.selsubtype {
+	width:960px;
+	margin:42px auto 93px;
+}
+.selsubtype > div {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 49px;
+}
+.selsubtype > div > div {
+	float:left;
+	width:306px;
+	cursor:pointer;
+	padding:10px 0 10px;
+	margin:0 0 0 104px;
+}
+.selsubtype > div > div:first-child {
+	margin-left:0;
+}
+.selsubtype > div > div h5 {
+	position:relative;
+	min-height:32px;
+	color:#000000;
+	font-size:16px;
+	line-height:16px;
+	font-style:italic;
+	padding:0 0 0 38px;
+	margin:0 0 18px;
+}
+.selsubtype > div > div h5:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-3px;
+	width:21px;
+	height:21px;
+	background:url('../img/selsubtype_radio.png') no-repeat left top;
+}
+.selsubtype > div > div.active h5:before {
+	background-position:0 -21px;
+}
+.selsubtype > div > div h6 {
+	position:relative;
+	display:inline-block;
+	color:#ffffff;
+	font-size:24px;
+	line-height:28px;
+	font-style:italic;
+	font-weight:800;
+	text-transform:uppercase;
+	padding:9px 10px 10px;
+	margin:0 0 23px 36px;
+}
+.selsubtype > div > div h6 span {
+	padding:0 13px 0 0;
+}
+.selsubtype > div > div h6:before {
+	content:'';
+	position:absolute;
+	left:-8px;
+	top:0;
+	border-left:8px solid transparent;
+}
+.selsubtype > div > div h6:after {
+	content:'';
+	position:absolute;
+	right:-8px;
+	top:0;
+	border-right:8px solid transparent;
+}
+.selsubtype > div > div.premium h6 {
+	background:#ee4036;
+}
+.selsubtype > div > div.premium h6:before {
+	border-bottom:47px solid #ee4036;
+}
+.selsubtype > div > div.premium h6:after {
+	border-top:47px solid #ee4036;
+}
+.selsubtype > div > div.standart h6 {
+	background:#e6b131;
+}
+.selsubtype > div > div.standart h6:before {
+	border-bottom:47px solid #e6b131;
+}
+.selsubtype > div > div.standart h6:after {
+	border-top:47px solid #e6b131;
+}
+.selsubtype > div > div > div {
+	padding:17px 29px 37px 19px;
+	margin:0 0 21px;
+	background:#f3f3f3;
+}
+.selsubtype > div > div > div p {
+	color:#000000;
+	font-size:14px;
+	line-height:18px;
+	font-style:italic;
+	margin:0;
+}
+.selsubtype > div > div h3 {
+	color:#000000;
+	font-size:24px;
+	line-height:28px;
+	font-style:italic;
+	padding:0;
+	margin:0;
+}
+.selsubtype > div > div h3 i {
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	margin:11px 0 0;
+}
