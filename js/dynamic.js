@@ -770,7 +770,7 @@ $(document).ready(function() {
 			$(this).parents('.paidplaces').find('.preview div p').empty().text('Текст объявления');
 		}
 	});
-	$('.introduction .search p input').focusin(function() {
+	/*$('.introduction .search p input').focusin(function() {
 		$(this).stop(true,true).animate({
 			'width': '320px'
 		});
@@ -779,7 +779,7 @@ $(document).ready(function() {
 		$(this).stop(true,true).animate({
 			'width': '200px'
 		});
-	});
+	});*/
 	$('.introduction .play, .introduction .howitworks p a.watch').bind('click', function() {
 		$('.modal.video').fadeIn(500);
 		if ( !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
@@ -800,7 +800,7 @@ $(document).ready(function() {
 			$(this).children('div').stop(true,true).delay(500).fadeOut(500);
 		}
 	);
-	$('.categories ul > li').each(function() {
+	/*$('.categories ul > li').each(function() {
 		if ( $(this).find('ul li').size() > 3 ) {
 			$(this).find('ul li').hide();
 			$(this).find('ul li:nth-child(1), ul li:nth-child(2), ul li:nth-child(3)').show();
@@ -813,7 +813,7 @@ $(document).ready(function() {
 			$(this).hide();
 			return false;
 		});
-	});
+	});*/
 	$('.userform .switch button.yes').bind('click', function() {
 		$(this).parents('.userform').children('div.optional').show();
 		return false;
@@ -871,6 +871,15 @@ $(document).ready(function() {
 			return false;
 		}).filter(':first').click();
 	}
+	$('.notice > div').append('<span class="close"></span>');
+	$('[data-notice]').bind('click', function() {
+		$('div.notice > div[data-alert='+$(this).attr('data-notice')+']').stop(true,true).fadeIn(500).delay(5000).fadeOut(500);
+		return false;
+	});
+	$('.notice > div .close').bind('click', function() {
+		$(this).stop(true,true).fadeOut(500);
+		return false;
+	})
 });
 $(window).resize(function() {
 	introduction();
