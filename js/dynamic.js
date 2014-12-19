@@ -370,7 +370,7 @@ $(document).ready(function() {
 		number: 10,
 		width: 222,
 		readOnly: true,
-		path: 'img/rate_small',
+		path: '/img/rate_small',
 		score: function() {
 			return $(this).attr('data-score');
 		}
@@ -379,7 +379,7 @@ $(document).ready(function() {
 		number: 10,
 		width: 422,
 		readOnly: false,
-		path: 'img/rate_big',
+		path: '/img/rate_big',
 		score: function() {
 			return $(this).attr('data-score');
 		}
