@@ -197,8 +197,8 @@
 		</div>
 		<div class="introduction">
 			<div>
-				<h2>Современный, удобный способ предлагать и находить любые услуги</h2>
-				<span class="play"></span>
+				<h2>Находи и предлагай любые услуги</h2>
+				<!--<span class="play"></span>-->
 				<div class="search">
 					<p><input type="text" placeholder="Найти героя или запрос"></p>
 					<button></button>
@@ -231,21 +231,19 @@
 					<p>Как это работает? </p>
 					<p><a href="#" class="watch">Смотреть</a> / <a href="#">читать</a></p>
 				</div>
+				<div class="social">
+					<p>Поделиться</p>
+					<ul>
+						<li><a href="#"><img src="./img/intro_vkontakte_icon.png" width="20" height="20" alt=""></a></li>
+						<li><a href="#"><img src="./img/intro_odnoklassniki_icon.png" width="20" height="20" alt=""></a></li>
+						<li><a href="#"><img src="./img/intro_facebook_icon.png" width="20" height="20" alt=""></a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<button id="opener">Вызвать модальное окно</button>
-		<input type="text" id="data" style="border:1px solid #000000">
-		<ul class="steps">
-			<li class="first">
-				<a href="#"><span>Разместить задачу</span></a>
-			</li>
-			<li class="second">
-				<a href="#"><span>Найти исполнителя</span></a>
-			</li>
-			<li class="third">
-				<a href="#"><span>Смотреть задачи</span></a>
-			</li>
-		</ul>
+		<!--<button id="opener">Вызвать модальное окно</button>
+		<input type="text" id="data" style="border:1px solid #000000">-->
+		<a href="#" data-notice="offer">новое предложение</a>, <a href="#" data-notice="message">новое сообщение</a>
 		<div class="index">
 					<h2>Суперуслуги</h2>
 					<ul class="carousel">
@@ -451,6 +449,17 @@
 						</li>
 					</ul>
 		</div>
+		<ul class="steps">
+			<li class="first">
+				<a href="#"><span>Разместить задачу</span></a>
+			</li>
+			<li class="second">
+				<a href="#"><span>Найти исполнителя</span></a>
+			</li>
+			<li class="third">
+				<a href="#"><span>Смотреть задачи</span></a>
+			</li>
+		</ul>
 		<div class="requests">
 			<h2>Запросы</h2>
 			<div class="map">
@@ -521,97 +530,39 @@
 					<h2>Специализации героев</h2>
 					<ul>
 						<li>
-							<h3><a href="#">Еда/Кейтеринг</a></h3>
 							<ul>
-								<li><a href="#">Приготовление еды</a></li>
-								<li><a href="#">Торты, выпечка</a></li>
-								<li><a href="#">Банкеты, фуршеты</a></li>
-								<li><a href="#">Свадебные мероприятия</a></li>
-								<li><a href="#">Прочее (еда/кейтеринг)</a></li>
-								<li><a href="#">Прочее (еда/кейтеринг)</a></li>
+								<li><a href="#">Доставка / Курьеры</a></li>
+								<li><a href="#">Еда / Кейтеринг</a></li>
+								<li><a href="#">Отдых / развлечения / туризм</a></li>
+								<li><a href="#">Дети  / домашний персонал</a></li>
+								<li><a href="#">Авто и мото</a></li>
 							</ul>
-							<p class="more"><a href="#">Еще</a></p>
 						</li>
 						<li>
-							<h3><a href="#">Мода и стиль</a></h3>
 							<ul>
-								<li><a href="#">Дизайн и пошив одежды</a></li>
-								<li><a href="#">Изготовление аксессуаров</a></li>
-								<li><a href="#">Имиджмейкер/персональный стилист</a></li>
-								<li><a href="#">Прочее (мода и стиль)</a></li>
+								<li><a href="#">Мода и стиль</a></li>
+								<li><a href="#">Красота & Здоровье</a></li>
+								<li><a href="#">IT / компьютер / интернет</a></li>
+								<li><a href="#">Животные</a></li>
+								<li><a href="#">Ремонт цифровой техники</a></li>
 							</ul>
-							<p class="more"><a href="#">Еще</a></p>
 						</li>
 						<li>
-							<h3><a href="#">Отдых/развлечения/туризм</a></h3>
 							<ul>
-								<li><a href="#">Экскурсии, гиды</a></li>
-								<li><a href="#">Активные туры, треккинг</a></li>
-								<li><a href="#">Прочее (отдых/развлечения/туризм)</a></li>
-								<li><a href="#">Курортный отдых</a></li>
-								<li><a href="#">Рыбалка/охота/пенйтболл</a></li>
+								<li><a href="#">Хобби / ремесло / творчество</a></li>
+								<li><a href="#">Трансфер / переезд</a></li>
+								<li><a href="#">Ремонт / строительство</a></li>
+								<li><a href="#">Аренда / прокат</a></li>
 							</ul>
-							<p class="more"><a href="#">Еще</a></p>
 						</li>
 						<li>
-							<h3><a href="#">Хобби /ремесло /творчество</a></h3>
 							<ul>
-								<li><a href="#">Ювелирные изделия</a></li>
-								<li><a href="#">Художественные</a></li>
-								<li><a href="#">Рукоделие, handmade</a></li>
-								<li><a href="#">Дерево ,стекло ,керамика</a></li>
-								<li><a href="#">Игрушки, сувениры, подарки</a></li>
-								<li><a href="#">Прочее (хобби/ремесло/творчество)</a></li>
+								<li><a href="#">Праздники / мероприятия</a></li>
+								<li><a href="#">Помощь по дому / хозяйству</a></li>
+								<li><a href="#">Обучение / Бизнес</a></li>
+								<li><a href="#">Маркетинг / реклама</a></li>
+								<li class="other"><a href="#">Разное</a></li>
 							</ul>
-							<p class="more"><a href="#">Еще</a></p>
-						</li>
-						<li>
-							<h3><a href="#">Ремонт/строительство</a></h3>
-							<ul>
-								<li><a href="#">Ремонт/строительство</a></li>
-								<li><a href="#">Отделка, монтаж, строительство</a></li>
-								<li><a href="#">Мебель, декор, дизайн интерьера</a></li>
-								<li><a href="#">Благоустройства территории, ландшафтный дизайн</a></li>
-								<li><a href="#">Прочее (ремонт/строительство)</a></li>
-								<li><a href="#">Проектирование</a></li>
-							</ul>
-							<p class="more"><a href="#">Еще</a></p>
-						</li>
-						<li>
-							<h3><a href="#">Трансфер/переезд</a></h3>
-							<ul>
-								<li><a href="#">Попутчики</a></li>
-								<li><a href="#">Водители</a></li>
-								<li><a href="#">Грузоперевозки</a></li>
-								<li><a href="#">Упаковка</a></li>
-								<li><a href="#">Погрузка/разгрузка</a></li>
-								<li><a href="#">Трансфер в аэропорт</a></li>
-								<li><a href="#">Прочее (трансфер/переезд)</a></li>
-							</ul>
-							<p class="more"><a href="#">Еще</a></p>
-						</li>
-						<li>
-							<h3><a href="#">Авто и мото</a></h3>
-							<ul>
-								<li><a href="#">Ремонт и сервис</a></li>
-								<li><a href="#">Реставрация</a></li>
-								<li><a href="#">Аэрография, тюнинг</a></li>
-								<li><a href="#">Шиномонтаж</a></li>
-								<li><a href="#">Прочее (авто/мото)</a></li>
-							</ul>
-							<p class="more"><a href="#">Еще</a></p>
-						</li>
-						<li class="other">
-							<h3><a href="#">Разное</a></h3>
-							<ul>
-								<li><a href="#">Стилисты/парикмахеры/визажисты</a></li>
-								<li><a href="#">Спа уход, косметология</a></li>
-								<li><a href="#">Массаж</a></li>
-								<li><a href="#">Маникюр, педикюр</a></li>
-								<li><a href="#">Фитнес/спорт</a></li>
-								<li><a href="#">Прочее (красота и здоровье)</a></li>
-							</ul>
-							<p class="more"><a href="#">Еще</a></p>
 						</li>
 					</ul>
 					<h5><a href="#"><span>Перейти к списку героев</span></a></h5>
@@ -621,15 +572,8 @@
 		<div class="join">
 			<div>
 				<div class="information">
-					<h3>Лига Городских Героев Phaton</h3>
-					<ul>
-						<li>Удобный и гибкий способ зарабатывать</li>
-						<li>Получать предложения  и выбирать лучшее по цене и качеству</li>
-						<li>Современный способ решать любые задачи 
-						<li>Размещать запросы и предлагать услуги одновременно</li>
-						<li>Поддержка 24 / 7</li>
-						<li>Возможность размещать услуги и запросы во всех городах России и Европы</li>
-					</ul>
+					<h3>Будьте с нами ВКонтакте!</h3>
+					<div>vk widget 470x304</div>
 				</div>
 				<div class="form">
 					<h3>Присоединяйся сейчас. Это бесплатно!</h3>
@@ -643,43 +587,29 @@
 		<div class="footer">
 			<div>
 				<div class="information">
-					<p>Проблемы или вопросы?</p>
-					<p>Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
-					<p>Удобнее написать? <a href="#">hi@phaton.ru</a></p>
-					<p class="copy">© <strong>Phaton,</strong> 2013. Все права защищены <span>Разработано в <a href="http://letsrock.pro">Let’s Rock</a></span></p>
+					<p>Проблемы или вопросы? Звоните бесплатно <span class="phone">8-800-235-5555</span></p>
+					<p>Удобнее написать? <a href="#">admin@phaton.ru</a></p>
 				</div>
 				<div class="links">
 					<ul class="nav">
 						<li>
 							<ul>
-								<li><a href="#">Герои</a></li>
-								<li><a href="#">Запросы</a></li>
+								<li><a href="#">Поддержка</a></li>
+								<li><a href="#">Как это работает</a></li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">О компании</a></li>
-							</ul>
-						</li>
-						<li>
-							<ul>
+								<li><a href="#">Платные услуги</a></li>
 								<li><a href="#">Условия использования</a></li>
-								<li><a href="#">Правила сервиса</a></li>
 							</ul>
 						</li>
 					</ul>
-					<div>
-						<ul class="social">
-							<li>Follow Phaton:</li>
-							<li><a href="#"><img src="./img/vkontakte_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/facebook_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/twitter_icon.png" width="28" height="28" alt=""></a></li>
-							<li><a href="#"><img src="./img/google_icon.png" width="28" height="28" alt=""></a></li>
-						</ul>
-					</div>
 				</div>
+			</div>
+			<div class="copy">
+				<p>© Phaton, 2014. Все права защищены</p>
+				<h5>Разработка сайта - <a href="http://letsrock.pro" target="_blank"><img src="./img/letsrock_logo.png" width="89" height="22" alt=""></a></h5>
 			</div>
 		</div>
 	</div>
@@ -700,6 +630,14 @@
 				<p class="or">или</p>
 				<button class="submit">Зарегистрироваться</button>
 			</div>
+		</div>
+	</div>
+	<div class="notice">
+		<div data-alert="offer">
+			<p class="offer">Добавлено новое <a href="#">предложение</a> к вашему запросу</a>
+		</div>
+		<div data-alert="message">
+			<p class="message">У вас 1 непрочитанное сообщение</a>
 		</div>
 	</div>
 </body>
