@@ -2944,37 +2944,48 @@ button::-moz-focus-inner {
 	color:#ffffff;
 	font-size:14px;
 	line-height:18px;
-	white-space:nowrap;
 	margin:0 0 6px;
 }
 .useri .important .nav li a {
+	position:relative;
 	display:inline-block;
 	color:#ffffff;
 	font-weight:bold;
 	padding:1px 0 1px 30px;
 }
-.useri .important .nav li.profile a {
+.useri .important .nav li a:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:20px;
+	height:20px;
+}
+.useri .important .nav li.profile a:before {
 	background:url('../img/useri_nav_profile_li.png') no-repeat left top;
 }
-.useri .important .nav li.tasks a {
+.useri .important .nav li.edit a:before {
+	background:url('../img/useri_nav_edit_li.png') no-repeat left top;
+}
+.useri .important .nav li.tasks a:before {
 	background:url('../img/useri_nav_tasks_li.png') no-repeat left top;
 }
-.useri .important .nav li.mytasks a {
+.useri .important .nav li.mytasks a:before {
 	background:url('../img/useri_nav_mytasks_li.png') no-repeat left top;
 }
-.useri .important .nav li.favorite a {
+.useri .important .nav li.favorite a:before {
 	background:url('../img/useri_nav_favorite_li.png') no-repeat left top;
 }
-.useri .important .nav li.messages a {
+.useri .important .nav li.messages a:before {
 	background:url('../img/useri_nav_messages_li.png') no-repeat left top;
 }
-.useri .important .nav li.notifications a {
+.useri .important .nav li.notifications a:before {
 	background:url('../img/useri_nav_notifications_li.png') no-repeat left top;
 }
-.useri .important .nav li.awards a {
+.useri .important .nav li.awards a:before {
 	background:url('../img/useri_nav_awards_li.png') no-repeat left top;
 }
-.useri .important .nav li:hover a, .useri .important .nav li.active a {
+.useri .important .nav li:hover a:before, .useri .important .nav li.active a:before {
 	background-position:0 -20px;
 }
 .useri .important .additional {
