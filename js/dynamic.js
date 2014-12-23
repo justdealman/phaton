@@ -869,7 +869,11 @@ $(document).ready(function() {
 	$('.notice > div .close').bind('click', function() {
 		$(this).stop(true,true).fadeOut(500);
 		return false;
-	})
+	});
+	$('.categories ul > li > ul > li > a').bind('click', function() {
+		$(this).parent().children('ul').slideToggle(500);
+		return false;
+	});
 });
 $(window).resize(function() {
 	introduction();

@@ -248,6 +248,28 @@ button::-moz-focus-inner {
 .header .logo .language:hover span {
 	border-bottom:1px dashed transparent;
 }
+.header .citysel {
+	position:absolute;
+	left:24px;
+	top:57px;
+	min-width:130px;
+	color:#cccccc;
+	font-size:12px;
+	line-height:15px;
+	cursor:pointer;
+	text-align:right;
+	padding:0 16px 0 0;
+	margin:0;
+	background:url('../img/citysel_arrow.png') no-repeat right 5px;
+}
+.header .citysel span {
+	overflow:hidden;
+	display:block;
+	white-space:nowrap;
+}
+.header.fixed .citysel {
+	display:none;
+}
 .header .langsel {
 	position:absolute;
 	left:128px;
@@ -1088,6 +1110,27 @@ button::-moz-focus-inner {
 	border-bottom:1px dashed #ffffff;
 }
 .categories ul > li > p a:hover {
+	border-bottom:1px solid transparent;
+}
+.categories ul > li > ul  > li > ul {
+	display:none;
+	margin:12px 0 0;
+}
+.categories ul > li > ul  > li > ul > li {
+	font-size:12px;
+	line-height:15px;
+	font-weight:normal;
+	margin:3px 0 0;
+}
+.categories ul > li > ul  > li > ul > li:first-child {
+	margin-top:0;
+}
+.categories ul > li > ul  > li > ul > li a {
+	color:#333333;
+	text-decoration:none;
+	border-bottom:1px solid #333333;
+}
+.categories ul > li > ul  > li > ul > li a:hover {
 	border-bottom:1px solid transparent;
 }
 .categories h5 {
