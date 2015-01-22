@@ -8803,20 +8803,26 @@ h4.evaluation .like.active {
 	cursor:pointer;
 	padding:0 0 0 28px;
 }
-.specselect > ul > li > ul > li .checker {
+.specselect > ul > li > h5 > span {
+	display:block;
+	font-weight:normal;
+	cursor:pointer;
+	padding:0 0 0 28px;
+}
+.specselect > ul > li .checker {
 	position:relative;
 	z-index:-1;
 	float:left;
 	margin:1px 14px 0 -28px;
 }
-.specselect > ul > li > ul > li .checker, .specselect > ul > li > ul > li .checker span, .specselect > ul > li > ul > li .checker input {
+.specselect > ul > li .checker, .specselect > ul > li .checker span, .specselect > ul > li .checker input {
     width:14px;
     height:14px;
 }
-.specselect > ul > li > ul > li .checker span {
+.specselect > ul > li .checker span {
     background:url('../img/checkbox_type2_bg.png') no-repeat left top;
 }
-.specselect > ul > li > ul > li .checker span.checked {
+.specselect > ul > li .checker span.checked {
     background-position:0 -14px;
 }
 .specselect > div {
