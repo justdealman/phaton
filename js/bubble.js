@@ -1,7 +1,6 @@
 (function( $ ) {
     $.fn.bubble = function(status, message) {
-        $('.bubble div').html('<p>' + message + '</p>');
-        $('.bubble').addClass(status).stop(true, true).fadeIn(150).delay(4000).fadeOut(150);
+        $('div.notice > div[data-alert='+status+']').html(message).stop(true,true).fadeIn(500).delay(5000).fadeOut(500);
     };
 
 })(jQuery);
