@@ -242,9 +242,26 @@
 				</div>
 			</div>
 		</div>
-		<!--<button id="opener">Вызвать модальное окно</button>
-		<input type="text" id="data" style="border:1px solid #000000">-->
-		<a href="#" data-notice="offer">новое предложение</a>, <a href="#" data-notice="message">новое сообщение</a>
+		<!--<button id="opener">Вызвать модальное окно</button>-->
+		<input type="text" id="pickData" style="border:1px solid #000000">
+		<button id="checkValue">< Проверить value этого поля</button>
+		<script type="text/javascript">
+			$('#pickData').datepicker({
+				dateFormat: 'dd.mm.yy',
+				firstDay: 1,
+				dayNamesMin: [ 'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб' ],
+				monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ],
+				onSelect: function() { 
+					$('input#pickData').val($(this).val());
+				}
+			});
+			var today = new Date();  
+			$('#pickData').datepicker('setDate', today);
+			$('#checkValue').bind('click', function() {
+				alert($('#pickData').val());
+			});
+		</script>
+		<!--<a href="#" data-notice="offer">новое предложение</a>, <a href="#" data-notice="message">новое сообщение</a>-->
 		<div class="index">
 					<h2>Суперуслуги</h2>
 					<ul class="carousel">
