@@ -4679,6 +4679,27 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	margin:-1px 0 0 6px;
 }
+.taski .price_wrapper {
+	float:right;
+	margin:3px 0 0 12px;
+}
+.taski .price_wrapper span {
+	color:#ee4036;
+	font-size:24px;
+	line-height:24px;
+	font-weight:bold;
+	font-style:normal;
+	vertical-align:top;
+}
+.taski .price_wrapper span em {
+	display:inline-block;
+	font-size:23px;
+	font-style:normal;
+	font-weight:normal;
+	font-family:'Rouble', sans-serif;
+	vertical-align:top;
+	margin:-1px 0 0 6px;
+}
 .taski h3 {
 	clear:both;
 	overflow:hidden;
