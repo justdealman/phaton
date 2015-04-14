@@ -1840,10 +1840,11 @@ button::-moz-focus-inner {
 .map {
 	margin:0 0 20px;
 }
-.map h2 {
+.map .title {
 	color:#000000;
 	font-size:24px;
 	line-height:28px;
+	font-weight:bold;
 	font-style:italic;
 	padding:0;
 	margin:0 0 22px;
@@ -2702,7 +2703,7 @@ button::-moz-focus-inner {
 	font-family:'Proxima Nova', sans-serif;
 	padding:0 0 0 2px;
 }
-.userc > div h4 {
+.userc > div div.evaluation {
 	white-space:nowrap;
 	border-left-width:0;
 	padding-left:0;
@@ -2739,7 +2740,7 @@ button::-moz-focus-inner {
 .userc > div > p a:hover {
 	border-bottom:1px dashed transparent;
 }
-.userc > div h5 {
+.userc > div .more {
 	clear:both;
 	overflow:hidden;
 	color:#666666;
@@ -2749,21 +2750,21 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:9px 0 0;
 }
-.userc > div h5 .status {
+.userc > div .more .status {
 	float:left;
 	display:block;
 }
-.userc > div h5 .status.available {
+.userc > div .more .status.available {
 	color:#00ab63;
 }
-.userc > div h5 .status.busy {
+.userc > div .more .status.busy {
 	color:#ee4036;
 }
-.userc > div h5 .like {
+.userc > div .more .like {
 	float:right;
 	display:block;
 }
-.userc > div h5 .like em {
+.userc > div .more .like em {
 	float:left;
 	display:block;
 	width:12px;
@@ -2772,10 +2773,10 @@ button::-moz-focus-inner {
 	margin:2px 8px 0 0;
 	background:url('../img/userc_like_icon.png') no-repeat left top;
 }
-.userc > div h5 .like em.active {
+.userc > div .more .like em.active {
 	background-position:0 -12px;
 }
-.userc > div h5 .like a {
+.userc > div .more .like a {
 	text-decoration:none;
 }
 .userc .next {
@@ -5706,7 +5707,7 @@ button::-moz-focus-inner {
 
 /*AAA*/
 
-h4.evaluation {
+div.evaluation {
 	display:inline-block;
 	width:66px;
 	font-weight:normal;
@@ -5715,7 +5716,7 @@ h4.evaluation {
 	margin:2px -3px 0 0;
 	border-left:1px solid #cccccc;
 }
-h4.evaluation span {
+div.evaluation span {
 	clear:both;
 	overflow:hidden;
 	display:block;
@@ -5724,16 +5725,16 @@ h4.evaluation span {
 	line-height:15px;
 	padding:1px 0 1px 21px;
 }
-h4.evaluation span:last-child {
+div.evaluation span:last-child {
 	margin-bottom:-2px;
 }
-h4.evaluation span.rating {
+div.evaluation span.rating {
 	background:url('../img/userc_star_icon.png') no-repeat left top;
 }
-h4.evaluation span.reviews {
+div.evaluation span.reviews {
 	background:url('../img/userc_review_icon.png') no-repeat left 2px;
 }
-h4.evaluation span.reviews em {
+div.evaluation span.reviews em {
 	float:left;
 	display:block;
 	color:#000000;
@@ -5744,34 +5745,34 @@ h4.evaluation span.reviews em {
 	margin:0 0 0 4px;
 	background:url('../img/userc_review_em_dark.png') no-repeat left 2px;
 }
-h4.evaluation span.reviews em:first-child {
+div.evaluation span.reviews em:first-child {
 	padding-left:0;
 	margin-left:0;
 	background:none;
 }
-h4.evaluation span.reviews em a {
+div.evaluation span.reviews em a {
 	text-decoration:none;
 }
-h4.evaluation span.reviews em a:hover {
+div.evaluation span.reviews em a:hover {
 	text-decoration:underline;
 }
-h4.evaluation span.reviews em.positive {
+div.evaluation span.reviews em.positive {
 	color:#000000;
 }
-h4.evaluation span.reviews em.positive a {
+div.evaluation span.reviews em.positive a {
 	color:#000000;
 }
-h4.evaluation span.reviews em.negative {
+div.evaluation span.reviews em.negative {
 	color:#ee4036;
 }
-h4.evaluation span.reviews em.negative a {
+div.evaluation span.reviews em.negative a {
 	color:#ee4036;
 }
-h4.evaluation span.thumbsup {
+div.evaluation span.thumbsup {
 	margin-top:-2px;
 	background:url('../img/userc_thumbsup_icon.png') no-repeat left 4px;
 }
-h4.evaluation .like {
+div.evaluation .like {
 	float:left;
 	display:block;
 	width:23px;
@@ -5780,7 +5781,7 @@ h4.evaluation .like {
 	margin:2px 0 0;
 	background:url('../img/taski_h1_like.png') no-repeat left top;
 }
-h4.evaluation .like.active {
+div.evaluation .like.active {
 	background-position:0 -23px;
 }
 .offers > div > .td .modal.absolute {
@@ -6246,7 +6247,7 @@ h4.evaluation .like.active {
 	cursor:pointer;
 	background:url('../img/modal_close.png') no-repeat left top;
 }
-.header .popup h2 {
+.header .popup div.title {
 	width:334px;
 	color:#ffffff;
 	font-size:18px;
@@ -7737,6 +7738,24 @@ h4.evaluation .like.active {
 .col4 .notifications > div h2 a:hover {
 	border-bottom:1px solid #cbcbcb;
 }
+.col4 .notifications > div h2.fresh, .col4 .notifications > div h2.fresh a {
+	color:#00ab63;
+}
+.col4 .notifications > div h2.fresh a:hover {
+	border-bottom:1px solid rgba(0,171,99,0.5);
+}
+.col4 .notifications > div h2.accepted, .col4 .notifications > div h2.accepted a {
+	color:#e6b131;
+}
+.col4 .notifications > div h2.accepted a:hover {
+	border-bottom:1px solid rgba(230,177,49,0.5);
+}
+.col4 .notifications > div h2.declined, .col4 .notifications > div h2.declined a {
+	color:#ee4036;
+}
+.col4 .notifications > div h2.declined a:hover {
+	border-bottom:1px solid rgba(238,64,54,0.5);
+}
 .col4 .notifications > div h6 {
 	float:right;
 	color:#999999;
@@ -8924,15 +8943,16 @@ h4.evaluation .like.active {
 .col1 .catspec {
 	margin:0 0 28px;
 }
-.col1 .catspec h2 {
+.col1 .catspec div.title {
 	color:#000000;
 	font-size:24px;
 	line-height:28px;
+	font-weight:bold;
 	font-style:italic;
 	padding:0;
 	margin:0 0 25px;
 }
-.col1 .catspec > div {
+.col1 .catspec .list {
 	position:relative;
 	padding:18px 11px 16px 17px;
 	margin:0 5px 0 0;
@@ -8942,49 +8962,49 @@ h4.evaluation .like.active {
 	box-shadow:5px 5px 0 #cdcdcd;
 	behavior:url('./pie.htc');
 }
-.col1 .catspec > div > div {
+.col1 .catspec .list > div {
 	max-height:307px;
 	overflow-y:auto;
 }
-.col1 .catspec > div ul {
+.col1 .catspec .list ul {
 	margin:0 5px 0 3px;
 }
-.col1 .catspec > div ul li {
+.col1 .catspec .list ul li {
 	font-size:14px;
 	line-height:18px;
 	font-weight:600;
 	margin:6px 0 0;
 }
-.col1 .catspec > div ul li:first-child {
+.col1 .catspec .list ul li:first-child {
 	margin-top:0;
 }
-.col1 .catspec > div ul li a {
+.col1 .catspec .list ul li a {
 	display:inline-block;
 	color:#ffffff;
 	text-decoration:none;
 	border-bottom:1px solid #999999;
 }
-.col1 .catspec > div ul li.active > a {
+.col1 .catspec .list ul li.active > a {
 	color:#000000;
 	padding:0 3px;
 	margin:0 -3px;
 	background:#ffffff;
 	border-bottom:1px solid transparent;
 }
-.col1 .catspec > div ul li a:hover {
+.col1 .catspec .list ul li a:hover {
 	border-bottom:1px solid transparent;
 }
-.col1 .catspec > div ul li ul {
+.col1 .catspec .list ul li ul {
 	display:none;
 	margin:12px 0 12px 8px;
 }
-.col1 .catspec > div ul li.active ul {
+.col1 .catspec .list ul li.active ul {
 	display:block;
 }
-.col1 .catspec > div ul  li ul li {
+.col1 .catspec .list ul  li ul li {
 	margin:0 0 2px;
 }
-.col1 .catspec > div ul  li ul li a {
+.col1 .catspec .list ul  li ul li a {
 	color:#ffffff;
 }
 .ui-autocomplete {
@@ -10258,15 +10278,16 @@ span.tiphover em:before {
 	margin:-34px 0 63px;
 	background:#ebebeb;
 }
-.topslider h2 {
+.topslider div.title {
 	color:#000000;
 	font-size:24px;
 	line-height:28px;
 	font-style:italic;
+	font-weight:bold;
 	padding:0;
 	margin:0 0 20px;
 }
-.topslider h6 {
+.topslider .tip {
 	position:absolute;
 	right:18px;
 	top:15px;
@@ -10276,12 +10297,12 @@ span.tiphover em:before {
 	padding:0;
 	margin:0;
 }
-.topslider h6 a {
+.topslider .tip a {
 	color:#00ab63;
 	text-decoration:none;
 	border-bottom:1px solid #c2dcce;
 }
-.topslider h6 a:hover {
+.topslider .tip a:hover {
 	border-bottom:1px solid transparent;
 }
 .topslider .carousel .jcarousel-container {
@@ -10345,18 +10366,22 @@ span.tiphover em:before {
 	border-radius:50%;
 	behavior:url('./pie.htc');
 }
-.topslider .carousel .person h3, .topslider .carousel .person p {
+.topslider .carousel .person .title, .topslider .carousel .person p {
 	color:#000000;
 	font-size:12px;
 	line-height:15px;
 	padding:0;
 	margin:0 0 2px;
 }
-.topslider .carousel .person h3 a, .topslider .carousel .person p a {
+.topslider .carousel .person .title {
+	font-weight:bold;
+	font-style:normal;
+}
+.topslider .carousel .person .title a, .topslider .carousel .person p a {
 	color:#000000;
 	text-decoration:none;
 }
-.topslider .carousel .person h3 a:hover, .topslider .carousel .person p a:hover {
+.topslider .carousel .person .title a:hover, .topslider .carousel .person p a:hover {
 	text-decoration:underline;
 }
 
