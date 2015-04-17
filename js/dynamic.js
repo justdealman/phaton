@@ -879,6 +879,14 @@ $(document).ready(function() {
 			'background': '#c2e18d'
 		});
 	}
+	$('.col4 .reviews > div > div .openform').bind('click', function() {
+		$(this).parent().find('.form').slideToggle(0);
+		return false;
+	});
+	$('.col4 .reviews > div > div .form h6 span').bind('click', function() {
+		$(this).addClass('active').siblings('span').removeClass('active');
+		return false;
+	});
 });
 $(window).resize(function() {
 	introduction();
