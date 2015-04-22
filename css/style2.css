@@ -8081,6 +8081,7 @@ div.evaluation .like.active {
 	color:#ffffff;
 }
 .dialog .answer .area {
+	position:relative;
 	display:inline-block;
 	width:527px;
 	vertical-align:top;
@@ -11030,22 +11031,22 @@ button.standart:hover:after {
 	border-bottom:2px solid transparent;
 }
 
-.col4 .reviews {
+.col4 .reviews, .col4 .myreviews {
 	margin:-1px 0 0 26px;
 }
-.col4 .reviews > ul {
+.col4 .reviews > ul, .col4 .myreviews > ul {
 	text-align:right;
 	margin:-33px 0 0;
 }
-.col4 .reviews > ul li {
+.col4 .reviews > ul li, .col4 .myreviews > ul li {
 	display:inline-block;
 	vertical-align:top;
 	margin:0 0 6px 23px;
 }
-.col4 .reviews > ul li:first-child {
+.col4 .reviews > ul li:first-child, .col4 .myreviews > ul li:first-child {
 	margin-left:0;
 }
-.col4 .reviews > ul li a {
+.col4 .reviews > ul li a, .col4 .myreviews > ul li a {
 	color:#000000;
 	font-size:14px;
 	line-height:17px;
@@ -11054,7 +11055,7 @@ button.standart:hover:after {
 	text-decoration:none;
 	border-bottom:1px solid #000000;
 }
-.col4 .reviews > ul li a:hover {
+.col4 .reviews > ul li a:hover, .col4 .myreviews > ul li a:hover {
 	border-bottom:1px solid transparent;
 }
 .col4 .reviews > div > div {
@@ -11230,4 +11231,97 @@ button.standart:hover:after {
 }
 .col4 .reviews > div > div .form button {
 	margin:15px 7px 20px;
+}
+
+.col4 .myreviews > div {
+	margin:-2px 0 0;
+}
+.col4 .myreviews > div > div {
+	position:relative;
+	padding:31px 0 18px 163px;
+	border-top:1px solid #000000;
+}
+.col4 .myreviews > div > div:first-child {
+	border-top-width:0;
+}
+.col4 .myreviews > div > div .userpic {
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:35px;
+	width:123px;
+	height:123px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+.col4 .myreviews > div > div .userpic img {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:123px;
+	min-height:123px;
+}
+.col4 .myreviews > div > div h6.data {
+	float:right;
+	color:#999999;
+	font-size:12px;
+	line-height:15px;
+	font-weight:normal;
+	padding:0;
+	margin:2px 0 0 12px;
+}
+.col4 .myreviews > div > div h2 {
+	color:#000000;
+	font-size:18px;
+	line-height:22px;
+	font-style:italic;
+	padding:0;
+	margin:0 0 29px;
+}
+.col4 .myreviews > div > div h2 a.user {
+	color:#00ab63;
+}
+.col4 .myreviews > div > div h2 a.task {
+	color:#ee4036;
+}
+.col4 .myreviews > div > div p {
+	font-size:14px;
+	line-height:16px;
+	margin:0 0 16px;
+}
+.col4 .myreviews > div > div ul {
+	margin:-1px 0 16px;
+}
+.col4 .myreviews > div > div ul li {
+	position:relative;
+	height:25px;
+	text-align:left;
+	padding:0 0 0 93px;
+}
+.col4 .myreviews > div > div ul li p {
+	position:absolute;
+	left:0;
+	top:4px;
+	max-width:81px;
+	margin:0;
+}
+.col4 .myreviews > div > div ul li .ratingsmall {
+	display:inline-block;
+	margin:2px 0 0;
+}
+.col4 .myreviews .dialog {
+	margin:18px 0 16px;
+}
+.col4 .myreviews .dialog .read {
+	background:none;
+}
+.col4 .myreviews .dialog .text {
+	width:376px;
+}
+.col4 .dialog .answer .area {
+	width:358px;
+}
+.col4 .dialog .answer .area textarea {
+	width:338px;
 }
