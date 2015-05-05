@@ -2357,7 +2357,7 @@ button::-moz-focus-inner {
 .taskc > div:hover .information h2 {
 	text-decoration:underline;
 }
-.taskc > div .information h4 {
+.taskc > div .information h4, .taskc > div .information .price {
 	float:right;
 	color:#ee4036;
 	font-size:24px;
@@ -2366,28 +2366,28 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:-2px 0 0;
 }
-.taskc > div .information h4.unknown {
+.taskc > div .information h4.unknown, .taskc > div .information .price.unknown {
 	font-size:16px;
 	line-height:20px;
 	font-weight:600;
 	margin:3px 0 -1px;
 }
-.taskc > div .information h4 span {
+.taskc > div .information h4 span, .taskc > div .information .price span {
 	display:inline-block;
 	font-weight:bold;
 	white-space:nowrap;
 	padding:1px;
 }
-.taskc.top > div .information h4 {
+.taskc.top > div .information h4, .taskc.top > div .information .price {
 	min-width:107px;
 	text-align:center;
 }
-.taskc.top > div .information h4 span {
+.taskc.top > div .information h4 span, .taskc.top > div .information .price span {
 	color:#ffffff;
 	padding:1px 16px 1px 19px;
 	background:#ee4036;
 }
-.taskc > div .information h4 span em {
+.taskc > div .information h4 span em, .taskc > div .information .price span em {
 	display:inline-block;
 	font-size:23px;
 	font-weight:normal;
@@ -5031,7 +5031,7 @@ button::-moz-focus-inner {
 .hirercard > p a:hover {
 	border-bottom:1px solid transparent;
 }
-.hirercard > div h4 {
+.hirercard > div .evaluation2 {
 	position:relative;
 	z-index:1;
 	font-size:20px;
@@ -5040,12 +5040,12 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:-32px 0 13px 133px;
 }
-.hirercard > div h4 span {
+.hirercard > div .evaluation2 span {
 	display:block;
 	color:#ffffff;
 	padding:0 0 0 26px;
 }
-.hirercard > div h4 span {
+.hirercard > div .evaluation2 span {
 	clear:both;
 	overflow:hidden;
 	display:block;
@@ -5054,16 +5054,16 @@ button::-moz-focus-inner {
 	line-height:15px;
 	padding:1px 0 1px 21px;
 }
-.hirercard > div h4 span:last-child {
+.hirercard > div .evaluation2 span:last-child {
 	margin-bottom:-2px;
 }
-.hirercard > div h4 span.rating {
+.hirercard > div .evaluation2 span.rating {
 	background:url('../img/userc_star_icon.png') no-repeat left top;
 }
-.hirercard > div h4 span.reviews {
+.hirercard > div .evaluation2 span.reviews {
 	background:url('../img/userc_review_icon.png') no-repeat left 2px;
 }
-.hirercard > div h4 span.reviews em {
+.hirercard > div .evaluation2 span.reviews em {
 	float:left;
 	display:block;
 	color:#000000;
@@ -5074,30 +5074,30 @@ button::-moz-focus-inner {
 	margin:0 0 0 4px;
 	background:url('../img/userc_review_em_dark.png') no-repeat left 2px;
 }
-.hirercard > div h4 span.reviews em:first-child {
+.hirercard > div .evaluation2 span.reviews em:first-child {
 	padding-left:0;
 	margin-left:0;
 	background:none;
 }
-.hirercard > div h4 span.reviews em a {
+.hirercard > div .evaluation2 span.reviews em a {
 	text-decoration:none;
 }
-.hirercard > div h4 span.reviews em a:hover {
+.hirercard > div .evaluation2 span.reviews em a:hover {
 	text-decoration:underline;
 }
-.hirercard > div h4 span.reviews em.positive {
+.hirercard > div .evaluation2 span.reviews em.positive {
 	color:#000000;
 }
-.hirercard > div h4 span.reviews em.positive a {
+.hirercard > div .evaluation2 span.reviews em.positive a {
 	color:#000000;
 }
-.hirercard > div h4 span.reviews em.negative {
+.hirercard > div .evaluation2 span.reviews em.negative {
 	color:#ee4036;
 }
-.hirercard > div h4 span.reviews em.negative a {
+.hirercard > div .evaluation2 span.reviews em.negative a {
 	color:#ee4036;
 }
-.hirercard > div h4 span.thumbsup {
+.hirercard > div .evaluation2 span.thumbsup {
 	margin-top:-2px;
 	background:url('../img/userc_thumbsup_icon.png') no-repeat left 4px;
 }
@@ -5784,6 +5784,33 @@ div.evaluation .like {
 div.evaluation .like.active {
 	background-position:0 -23px;
 }
+
+
+.carousel div.evaluation {
+	display:inline-block;
+	width:66px;
+	font-weight:normal;
+	vertical-align:top;
+	white-space:nowrap;
+	margin:2px -3px 0 0;
+	padding:0;
+	border-left-width:0;
+	-webkit-transform:scale(0.75);
+	-webkit-transform-origin:left top;
+	-moz-transform:scale(0.75);
+	-moz-transform-origin:left top;
+	-o-transform:scale(0.75);
+	-o-transform-origin:left top;
+	transform:scale(0.75);
+	transform-origin:left top;
+}
+.useri div.evaluation {
+	padding:0;
+	margin:0;
+	border-left-width:0;
+}
+
+
 .offers > div > .td .modal.absolute {
 	top:auto;
 	bottom:109px;
@@ -9500,13 +9527,13 @@ span.tiphover em:before {
 	width:451px;
 	padding:15px 19px 19px 19px;
 }
-.requests .taskc > div .information h4 {
+.requests .taskc > div .information h4, .requests .taskc > div .information .price {
 	min-width:107px;
 	text-align:center;
 	margin-top:5px;
 	margin-left:18px;
 }
-.requests .taskc > div .information h4 span {
+.requests .taskc > div .information h4 span, .requests .taskc > div .information .price span {
 	color:#ffffff;
 	padding:1px 16px 1px 19px;
 	background:#ee4036;
@@ -9761,7 +9788,7 @@ span.tiphover em:before {
 	cursor:pointer;
 	background:url('../img/introduction_search_icon.png') no-repeat left top;
 }
-.introduction > div h4 {
+.introduction > div > div > p {
 	color:#ffffff;
 	font-size:20px;
 	line-height:24px;
@@ -9771,7 +9798,10 @@ span.tiphover em:before {
 	margin:0;
 	border-bottom:2px dotted #ffffff;
 }
-.introduction > div p {
+.introduction > div > div > div {
+	display:none;
+}
+.introduction > div > div > div p {
 	position:relative;
 	color:#ffffff;
 	font-size:12px;
