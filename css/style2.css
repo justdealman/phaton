@@ -9805,7 +9805,7 @@ span.tiphover em:before {
 	margin:0;
 	border-bottom:2px dotted #ffffff;
 }
-.introduction > div > div > div {
+.introduction > div > div > div.hidden {
 	display:none;
 }
 .introduction > div > div > div p {
