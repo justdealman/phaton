@@ -9788,7 +9788,14 @@ span.tiphover em:before {
 	cursor:pointer;
 	background:url('../img/introduction_search_icon.png') no-repeat left top;
 }
-.introduction > div > div > p {
+.introduction > div p {
+	position:relative;
+	color:#ffffff;
+	font-size:12px;
+	line-height:14px;
+	margin:0;
+}
+.introduction > div > div.tip1 > p, .introduction > div > div.tip2 > p, .introduction > div > div.tip3 > p, .introduction > div > div.tip4 > p {
 	color:#ffffff;
 	font-size:20px;
 	line-height:24px;
