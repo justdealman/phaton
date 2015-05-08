@@ -2997,6 +2997,10 @@ button::-moz-focus-inner {
 .useri .important .nav li.awards a:before {
 	background:url('../img/useri_nav_awards_li.png') no-repeat left top;
 }
+.useri .important .nav li.reviews a:before {
+    background: url('../img/useri_nav_reviews_li.png') no-repeat left top;
+}
+
 .useri .important .nav li:hover a:before, .useri .important .nav li.active a:before {
 	background-position:0 -20px;
 }
