@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="./js/mousewheel.js"></script>
 	<script type="text/javascript" src="./js/raty.js"></script>
 	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
 	<script type="text/javascript" src="./js/uniform.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
 </head>
@@ -196,10 +197,50 @@
 				</div>
 			</div>
 		</div>
-		<div class="introduction">
+		<div class="slider-main">
+			<div class="container">
+				<div>
+					<h5 class="type1">Находи и предлагай любые услуги,<br> умения, таланты<br> в Лиге Городских Героев.</h5>
+					<img src="./img/slide1.jpg" width="1900" height="440" alt="">
+				</div>
+				<div>
+					<h5 class="type2">Ваша нерешенная задача -<br> это запрос на сайте.<br> Опишите, что необходимо сделать<br> и получите отклики Героев.</h5>
+					<img src="./img/slide2.jpg" width="1900" height="440" alt="">
+				</div>
+				<div>
+					<h5 class="type1">Отзывы  и рейтинг Героев  помогут сделать лучший выбор.</h5>
+					<img src="./img/slide3.jpg" width="1900" height="440" alt="">
+				</div>
+				<div>
+					<h5 class="type2">Торгуйтесь для получения<br> более выгодной цены.</h5>
+					<img src="./img/slide4.jpg" width="1900" height="440" alt="">
+				</div>
+				<div>
+					<h5 class="type2">В каждом из нас живет Герой!<br> Если вы с чем-то хороши,<br> заявите о себе и зарабатывайте.</h5>
+					<img src="./img/slide5.jpg" width="1900" height="440" alt="">
+				</div>
+			</div>
+			<span class="video">
+				<img src="./img/video_icon.png" width="190" height="127" alt="">
+			</span>
+			<div class="search">
+				<p><input type="text" placeholder="Найти героя или запрос"></p>
+				<button></button>
+			</div>
+			<div class="social">
+				<h6>Поделиться</h6>
+				<ul>
+					<li><a href="#"><img src="./img/social_vkontakte.png" width="29" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/social_facebook.png" width="29" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/social_twitter.png" width="29" height="28" alt=""></a></li>
+					<li><a href="#"><img src="./img/social_odnoklassniki.png" width="29" height="28" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--<div class="introduction">
 			<div>
 				<h2>Находи и предлагай любые услуги</h2>
-				<!--<span class="play"></span>-->
+				<span class="play"></span>
 				<div class="search">
 					<p><input type="text" placeholder="Найти героя или запрос"></p>
 					<button></button>
@@ -241,27 +282,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<!--<button id="opener">Вызвать модальное окно</button>-->
-		<input type="text" id="pickData" style="border:1px solid #000000">
-		<button id="checkValue">< Проверить value этого поля</button>
-		<script type="text/javascript">
-			$('#pickData').datepicker({
-				dateFormat: 'dd.mm.yy',
-				firstDay: 1,
-				dayNamesMin: [ 'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб' ],
-				monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ],
-				onSelect: function() { 
-					$('input#pickData').val($(this).val());
-				}
-			});
-			var today = new Date();  
-			$('#pickData').datepicker('setDate', today);
-			$('#checkValue').bind('click', function() {
-				alert($('#pickData').val());
-			});
-		</script>
-		<!--<a href="#" data-notice="offer">новое предложение</a>, <a href="#" data-notice="message">новое сообщение</a>-->
+		</div>-->
 		<div class="index">
 					<h2>Суперуслуги</h2>
 					<ul class="carousel">

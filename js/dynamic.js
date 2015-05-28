@@ -887,9 +887,43 @@ $(document).ready(function() {
 		$(this).addClass('active').siblings('span').removeClass('active');
 		return false;
 	});
+	if ( $('.slider-main').length > 0 ) {
+		$('.slider-main').slides({
+			generatePagination: false,
+			generateNextPrev: false,
+			container: 'container',
+			effect: 'fade',
+			fadeSpeed: 500,
+			crossfade: true,
+			play: 7000,
+			pause: 0
+		});
+		$('.slider-main .container > div > div').each(function() {
+			$(this).css({
+				'background': 'url("'+$(this).find('img').attr('src')+'") no-repeat center top',
+				'-webkit-background-size': 'cover',
+				'-moz-background-size': 'cover',
+				'-o-background-size': 'cover',
+				'background-size': 'cover'
+			});
+		});
+		$('.slider-main, .slider-main .container, .slider-main .container > div > div').css({
+			'width': $(window).width()+'px'
+		});
+		$('.slider-main .video').bind('click', function() {
+			alert('Сюда необходимо навесить вспывашку с видео');
+		});
+	}
 });
 $(window).resize(function() {
-	introduction();
+	if ( $('.introduction').length > 0 ) {
+		introduction();
+	}
+	if ( $('.slider-main').length > 0 ) {
+		$('.slider-main, .slider-main .container, .slider-main .container > div > div').css({
+			'width': $(window).width()+'px'
+		});
+	}
 });
 function introduction() {
 	$('.introduction #video, .introduction .cover').width($(window).width());
