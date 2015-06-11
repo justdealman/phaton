@@ -911,7 +911,15 @@ $(document).ready(function() {
 			'width': $(window).width()+'px'
 		});
 		$('.slider-main .video').bind('click', function() {
-			alert('Сюда необходимо навесить вспывашку с видео');
+            $('.modal.video').fadeIn(500);
+            if ( !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+            $('.wrapper, .modal.video .close').bind('click', function() {
+                $('.modal.video').fadeOut(500);
+                document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            })
+            return false;
 		});
 	}
 });
